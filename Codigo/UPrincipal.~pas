@@ -366,6 +366,8 @@ begin
                     else If (ULogin.User = 'padrao')
                     then
                     begin
+                    saudes.btnDeletar.visible := false;
+                    Incidentes.btnDeletar.visible := false;
                     pro.visible := true;
                     par.visible := true;
                     con.visible := true;
@@ -411,6 +413,7 @@ end;
 procedure TPrincipal.Sair1Click(Sender: TObject);
 begin
 Application.Terminate;
+WinExec('C:\Asilo\Codigo\Asilo.exe',SW_NORMAL);
 end;
 
 procedure TPrincipal.AvaliClick(Sender: TObject);

@@ -9,10 +9,11 @@ uses
 type
   TLogin = class(TForm)
     Image3: TImage;
-    Image2: TImage;
     edtUsuario: TEdit;
     edtSenha: TEdit;
     BitBtn1: TBitBtn;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure Image1Click(Sender: TObject);
     procedure Image6Click(Sender: TObject);
     procedure Image7Click(Sender: TObject);

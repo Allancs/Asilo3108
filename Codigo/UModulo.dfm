@@ -12,7 +12,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'Database=192.168.0.106:C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -388,7 +388,6 @@ object Modulo: TModulo
     Top = 256
   end
   object sdsParceiro: TSQLDataSet
-    Active = True
     CommandText = 'select * from PARCEIRO'
     MaxBlobSize = -1
     Params = <>
@@ -412,31 +411,24 @@ object Modulo: TModulo
     Left = 704
     Top = 64
     object cdsProfisionalCOD_PRO: TIntegerField
-      DisplayLabel = 'C'#243'digo'
       FieldName = 'COD_PRO'
       Required = True
     end
     object cdsProfisionalNOME: TStringField
-      DisplayLabel = 'Nome'
       FieldName = 'NOME'
-      Size = 10
+      Size = 100
     end
-    object cdsProfisionalTELEFONE: TStringField
-      DisplayLabel = 'Telefone'
+    object c: TStringField
       FieldName = 'TELEFONE'
       EditMask = '!\(99\)0000-0000;1;_'
-      Size = 10
     end
     object cdsProfisionalCELULAR: TStringField
-      DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
       EditMask = '!\(99\)\90000-0000;1;_'
-      Size = 10
     end
     object cdsProfisionalEEMPRESA: TStringField
-      DisplayLabel = 'Empresa'
       FieldName = 'EEMPRESA'
-      Size = 10
+      Size = 100
     end
   end
   object dsProfisional: TDataSource
@@ -679,7 +671,6 @@ object Modulo: TModulo
     Top = 288
   end
   object sdsResidente: TSQLDataSet
-    Active = True
     CommandText = 'select * from RESIDENTE'
     MaxBlobSize = -1
     Params = <>
@@ -696,7 +687,6 @@ object Modulo: TModulo
     Top = 168
   end
   object sdsTarefa: TSQLDataSet
-    Active = True
     CommandText = 'select * from TAREFA'
     MaxBlobSize = -1
     Params = <>
@@ -705,7 +695,6 @@ object Modulo: TModulo
     Top = 216
   end
   object sdsVoluntario: TSQLDataSet
-    Active = True
     CommandText = 'select * from VOLUNTARIO'
     MaxBlobSize = -1
     Params = <>
@@ -851,7 +840,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=C:\Asilo\Banco\LOGIN.FDB'
+      'Database=192.168.0.106:C:\Asilo\Banco\LOGIN.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -910,7 +899,6 @@ object Modulo: TModulo
     Top = 360
   end
   object sqlDSLogin: TSQLDataSet
-    Active = True
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>

@@ -1,9 +1,10 @@
 object Idoso: TIdoso
   Left = 177
   Top = 121
-  Width = 800
-  Height = 500
+  BorderStyle = bsSingle
   Caption = '  Cadastro de Residente - Asilo '
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

@@ -56,11 +56,6 @@ type
     sdsSaude: TSQLDataSet;
     sdsTarefa: TSQLDataSet;
     sdsVoluntario: TSQLDataSet;
-    cdsProfisionalCOD_PRO: TIntegerField;
-    cdsProfisionalNOME: TStringField;
-    cdsProfisionalTELEFONE: TStringField;
-    cdsProfisionalCELULAR: TStringField;
-    cdsProfisionalEEMPRESA: TStringField;
     cdsVoluntarioCOD_VOLUNTARIO: TIntegerField;
     cdsVoluntarioNOME: TStringField;
     cdsVoluntarioTELEFONE: TStringField;
@@ -176,6 +171,11 @@ type
     cdsUserUSU_EMAIL: TStringField;
     cdsUserUSU_LOGIN: TStringField;
     cdsUserUSU_SENHA: TStringField;
+    cdsProfisionalCOD_PRO: TIntegerField;
+    cdsProfisionalNOME: TStringField;
+    c: TStringField;
+    cdsProfisionalCELULAR: TStringField;
+    cdsProfisionalEEMPRESA: TStringField;
   private
     { Private declarations }
   public

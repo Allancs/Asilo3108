@@ -6,7 +6,8 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Mask, DBCtrls,
   jpeg, ExtCtrls,
-  Buttons;
+  Buttons,
+  FMTBcd, DB, SqlExpr;
 
 type
   TParceiros = class(TForm)
@@ -32,9 +33,14 @@ type
     btnInserir: TBitBtn;
     Esquerda: TBitBtn;
     Direita: TBitBtn;
+    sqlAux: TSQLQuery;
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
+    procedure btnInserirClick(Sender: TObject);
+    procedure EsquerdaClick(Sender: TObject);
+    procedure DireitaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,7 +52,8 @@ var
 
 implementation
 
-uses UModulo;
+uses UModulo,
+  UIdoso;
 
 {$R *.dfm}
 
@@ -68,9 +75,9 @@ Modulo.cdsParceiro.Edit;
 
 
           btnGravar.Enabled      := True;
-          DBEdit8.Enabled       := True;
+
           btnGravar.Enabled      := True;
-end;
+
 end;
 
 procedure TParceiros.btnCancelarClick(Sender: TObject);
@@ -84,7 +91,6 @@ Modulo.cdsParceiro.Cancel;
           DBEdit6.Enabled       := false;
 
           btnGravar.Enabled      := False;
-          DBEdit8.Enabled       := False;
           btnInserir.Enabled    := True;
           btnDeletar.Enabled    := True;
           btnEditar.Enabled     := True;
@@ -128,6 +134,58 @@ begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
          end;
+end;
+
+procedure TParceiros.btnGravarClick(Sender: TObject);
+begin
+Modulo.cdsParceiro.Post;
+
+         Modulo.cdsParceiro.ApplyUpdates(-1);
+
+         btnCancelar.Click;
+end;
+
+procedure TParceiros.btnInserirClick(Sender: TObject);
+Var NReg : integer;
+begin
+
+          btnInserir.Enabled    := False;
+          btnDeletar.Enabled    := False;
+          Idoso.Enabled := True;
+
+          btnEditar.Enabled     := False;
+          Direita.Enabled       := False;
+          Esquerda.Enabled      := False;
+
+          DBEdit2.Enabled       := True;
+          DBEdit3.Enabled       := True;
+          DBEdit4.Enabled       := True;
+          DBEdit5.Enabled       := True;
+          DBEdit6.Enabled       := True;
+
+          btnGravar.Enabled      := True;
+          sqlAux.Close;
+          sqlAux.SQL.Clear;
+          sqlAux.SQL.Add('SELECT MAX(COD_PARCEIRO) AS ULTIMO FROM PARCEIRO');
+
+          sqlAux.Open;
+           If sqlAux.FieldByName('ULTIMO').Value = Null
+           Then NReg :=1
+           Else NReg := sqlAux.FieldByName('ULTIMO').Value + 1;
+           Modulo.cdsParceiro.Insert;
+           Modulo.cdsParceiroCOD_PARCEIRO.Value := NReg;
+           DBEdit2.SetFocus;
+
+end;
+
+procedure TParceiros.EsquerdaClick(Sender: TObject);
+begin
+Modulo.cdsParceiro.Prior;
+end;
+
+procedure TParceiros.DireitaClick(Sender: TObject);
+begin
+Modulo.cdsParceiro.Next;
 end;
 
 end.

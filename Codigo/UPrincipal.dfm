@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 212
-  Top = 192
+  Left = 215
+  Top = 230
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -1475,7 +1475,7 @@ object Principal: TPrincipal
   object Ser: TBitBtn
     Left = 600
     Top = 10
-    Width = 140
+    Width = 145
     Height = 33
     Caption = '&Servidor SMTP'
     Font.Charset = ANSI_CHARSET
@@ -1600,7 +1600,7 @@ object Principal: TPrincipal
   object Avali: TBitBtn
     Left = 600
     Top = 50
-    Width = 140
+    Width = 145
     Height = 33
     Caption = '&Avalia'#231#227'o'
     Font.Charset = ANSI_CHARSET
@@ -1866,7 +1866,7 @@ object Principal: TPrincipal
       OnClick = CadastroContaClick
     end
     object Sair1: TMenuItem
-      Caption = 'Sair'
+      Caption = 'Deslogar'
       OnClick = Sair1Click
     end
   end

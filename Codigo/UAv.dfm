@@ -1,10 +1,11 @@
 object Avaliacao: TAvaliacao
   Left = 319
   Top = 142
-  Width = 325
-  Height = 499
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Avaliacao'
+  ClientHeight = 460
+  ClientWidth = 309
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -266,7 +267,7 @@ object Avaliacao: TAvaliacao
     Left = 8
     Top = 17
     Width = 121
-    Height = 23
+    Height = 22
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -308,7 +309,7 @@ object Avaliacao: TAvaliacao
     Left = 8
     Top = 128
     Width = 185
-    Height = 23
+    Height = 22
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -350,7 +351,7 @@ object Avaliacao: TAvaliacao
     Left = 8
     Top = 232
     Width = 185
-    Height = 23
+    Height = 22
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -363,7 +364,7 @@ object Avaliacao: TAvaliacao
     Left = 8
     Top = 288
     Width = 185
-    Height = 23
+    Height = 22
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

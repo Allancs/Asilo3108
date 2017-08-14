@@ -1,10 +1,11 @@
 object Responsavel: TResponsavel
   Left = 349
   Top = 137
-  Width = 800
-  Height = 500
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Responsavel'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

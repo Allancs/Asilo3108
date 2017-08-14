@@ -780,7 +780,7 @@ object Tarefa: TTarefa
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 56
+      Left = 288
       Top = 8
       Width = 23
       Height = 14
@@ -810,7 +810,7 @@ object Tarefa: TTarefa
       TabOrder = 0
     end
     object DBEdit3: TDBEdit
-      Left = 56
+      Left = 288
       Top = 24
       Width = 65
       Height = 22

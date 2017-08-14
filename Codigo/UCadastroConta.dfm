@@ -1,10 +1,11 @@
 object CadastroContas: TCadastroContas
   Left = 210
   Top = 159
-  Width = 800
-  Height = 500
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Cadastro de Usu'#225'rios.'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

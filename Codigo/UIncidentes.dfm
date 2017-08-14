@@ -1,10 +1,11 @@
 object Incidentes: TIncidentes
   Left = 249
   Top = 163
-  Width = 800
-  Height = 500
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Incidentes'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

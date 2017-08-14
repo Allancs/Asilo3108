@@ -1,9 +1,10 @@
 object Funcionario: TFuncionario
   Left = 202
   Top = 190
-  Width = 800
-  Height = 500
+  BorderStyle = bsSingle
   Caption = 'Funcionario'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -236,8 +237,8 @@ object Funcionario: TFuncionario
   object Label1: TLabel
     Left = 16
     Top = 8
-    Width = 34
-    Height = 15
+    Width = 39
+    Height = 14
     Caption = 'C'#243'digo'
     FocusControl = DBEdit1
     Font.Charset = ANSI_CHARSET
@@ -250,8 +251,8 @@ object Funcionario: TFuncionario
   object Label2: TLabel
     Left = 56
     Top = 8
-    Width = 27
-    Height = 15
+    Width = 32
+    Height = 14
     Caption = 'Nome'
     FocusControl = DBEdit2
     Font.Charset = ANSI_CHARSET
@@ -264,8 +265,8 @@ object Funcionario: TFuncionario
   object Label3: TLabel
     Left = 16
     Top = 48
-    Width = 22
-    Height = 15
+    Width = 27
+    Height = 14
     Caption = 'Sexo'
     FocusControl = DBEdit3
     Font.Charset = ANSI_CHARSET
@@ -278,8 +279,8 @@ object Funcionario: TFuncionario
   object Label4: TLabel
     Left = 48
     Top = 48
-    Width = 91
-    Height = 15
+    Width = 108
+    Height = 14
     Caption = 'Data de Nascimento'
     FocusControl = DBEdit4
     Font.Charset = ANSI_CHARSET
@@ -292,8 +293,8 @@ object Funcionario: TFuncionario
   object Label5: TLabel
     Left = 192
     Top = 48
-    Width = 25
-    Height = 15
+    Width = 30
+    Height = 14
     Caption = 'Idade'
     FocusControl = DBEdit5
     Font.Charset = ANSI_CHARSET
@@ -306,8 +307,8 @@ object Funcionario: TFuncionario
   object Label6: TLabel
     Left = 16
     Top = 89
-    Width = 34
-    Height = 15
+    Width = 39
+    Height = 14
     Caption = 'Fun'#231#227'o'
     FocusControl = DBEdit6
     Font.Charset = ANSI_CHARSET
@@ -320,8 +321,8 @@ object Funcionario: TFuncionario
   object Label7: TLabel
     Left = 16
     Top = 128
-    Width = 32
-    Height = 15
+    Width = 37
+    Height = 14
     Caption = 'Salario'
     FocusControl = DBEdit7
     Font.Charset = ANSI_CHARSET
@@ -334,8 +335,8 @@ object Funcionario: TFuncionario
   object Label8: TLabel
     Left = 16
     Top = 168
-    Width = 19
-    Height = 15
+    Width = 21
+    Height = 14
     Caption = 'CPF'
     FocusControl = DBEdit8
     Font.Charset = ANSI_CHARSET
@@ -348,8 +349,8 @@ object Funcionario: TFuncionario
   object Label9: TLabel
     Left = 120
     Top = 168
-    Width = 14
-    Height = 15
+    Width = 15
+    Height = 14
     Caption = 'RG'
     FocusControl = DBEdit9
     Font.Charset = ANSI_CHARSET
@@ -362,8 +363,8 @@ object Funcionario: TFuncionario
   object Label10: TLabel
     Left = 216
     Top = 168
-    Width = 93
-    Height = 15
+    Width = 111
+    Height = 14
     Caption = 'Carteira de Trabalho'
     FocusControl = DBEdit10
     Font.Charset = ANSI_CHARSET
@@ -376,8 +377,8 @@ object Funcionario: TFuncionario
   object Label11: TLabel
     Left = 16
     Top = 216
-    Width = 33
-    Height = 15
+    Width = 39
+    Height = 14
     Caption = 'Celular'
     FocusControl = DBEdit11
     Font.Charset = ANSI_CHARSET
@@ -390,8 +391,8 @@ object Funcionario: TFuncionario
   object Label12: TLabel
     Left = 208
     Top = 216
-    Width = 38
-    Height = 15
+    Width = 48
+    Height = 14
     Caption = 'Telefone'
     FocusControl = DBEdit12
     Font.Charset = ANSI_CHARSET
@@ -405,7 +406,7 @@ object Funcionario: TFuncionario
     Left = 16
     Top = 24
     Width = 20
-    Height = 23
+    Height = 22
     DataField = 'COD_FUN'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -420,7 +421,7 @@ object Funcionario: TFuncionario
     Left = 56
     Top = 24
     Width = 300
-    Height = 23
+    Height = 22
     DataField = 'NOME'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -435,7 +436,7 @@ object Funcionario: TFuncionario
     Left = 16
     Top = 64
     Width = 17
-    Height = 23
+    Height = 22
     DataField = 'SEXO'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -450,7 +451,7 @@ object Funcionario: TFuncionario
     Left = 48
     Top = 64
     Width = 134
-    Height = 23
+    Height = 22
     DataField = 'DATANASCIMENTO'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -465,7 +466,7 @@ object Funcionario: TFuncionario
     Left = 192
     Top = 64
     Width = 43
-    Height = 23
+    Height = 22
     DataField = 'IDADE'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -480,7 +481,7 @@ object Funcionario: TFuncionario
     Left = 16
     Top = 105
     Width = 337
-    Height = 23
+    Height = 22
     DataField = 'FUNCAO'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -495,7 +496,7 @@ object Funcionario: TFuncionario
     Left = 16
     Top = 144
     Width = 89
-    Height = 23
+    Height = 22
     DataField = 'SALARIO'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -510,7 +511,7 @@ object Funcionario: TFuncionario
     Left = 16
     Top = 184
     Width = 97
-    Height = 23
+    Height = 22
     DataField = 'CPF'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -526,7 +527,7 @@ object Funcionario: TFuncionario
     Left = 120
     Top = 184
     Width = 89
-    Height = 23
+    Height = 22
     DataField = 'RG'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -542,7 +543,7 @@ object Funcionario: TFuncionario
     Left = 216
     Top = 184
     Width = 137
-    Height = 23
+    Height = 22
     DataField = 'CARTEIRATRABALHO'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -558,7 +559,7 @@ object Funcionario: TFuncionario
     Left = 16
     Top = 232
     Width = 186
-    Height = 23
+    Height = 22
     DataField = 'CELULAR'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET
@@ -574,7 +575,7 @@ object Funcionario: TFuncionario
     Left = 208
     Top = 232
     Width = 145
-    Height = 23
+    Height = 22
     DataField = 'TELEFONE'
     DataSource = Modulo.dsFun
     Font.Charset = ANSI_CHARSET

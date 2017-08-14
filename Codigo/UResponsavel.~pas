@@ -193,6 +193,16 @@ end;
 
 procedure TResponsavel.btnDeletarClick(Sender: TObject);
 begin
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
           DBEdit4.Enabled       := False;
           DBEdit5.Enabled       := False;
           DBEdit6.Enabled       := False;
@@ -212,6 +222,7 @@ begin
                   Else Begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
+                       end;
 end;
 
 procedure TResponsavel.EsquerdaClick(Sender: TObject);

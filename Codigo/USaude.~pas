@@ -182,6 +182,20 @@ end;
 
 procedure TSaudes.btnDeletarClick(Sender: TObject);
 begin
+
+IF (DBEdit1.Text = '')
+then
+begin
+   MessageDlg ('Não a registros no banco',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+end
+else
+begin
+
+
+
           DBEdit4.Enabled       := False;
           Idoso.Enabled       := False;
           DBEdit3.Enabled       := False;
@@ -204,6 +218,7 @@ begin
                   Else Begin
                           ShowMessage ('Nenhum registro deletado!');
                        End;
+         end;
 end;
 
 procedure TSaudes.EsquerdaClick(Sender: TObject);

@@ -1,9 +1,10 @@
 object Voluntarios: TVoluntarios
   Left = 310
   Top = 184
-  Width = 800
-  Height = 500
+  BorderStyle = bsSingle
   Caption = 'Voluntarios'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

@@ -1,6 +1,6 @@
 object Parceiros: TParceiros
-  Left = 144
-  Top = 124
+  Left = 195
+  Top = 198
   Width = 800
   Height = 500
   Caption = 'Parceiros'
@@ -330,13 +330,14 @@ object Parceiros: TParceiros
       Height = 22
       DataField = 'EMAIL'
       DataSource = Modulo.dsParceiro
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 3
     end
     object DBEdit1: TDBEdit
       Left = 8
@@ -345,13 +346,14 @@ object Parceiros: TParceiros
       Height = 22
       DataField = 'COD_PARCEIRO'
       DataSource = Modulo.dsParceiro
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 5
     end
     object DBEdit2: TDBEdit
       Left = 8
@@ -360,13 +362,14 @@ object Parceiros: TParceiros
       Height = 22
       DataField = 'NOME'
       DataSource = Modulo.dsParceiro
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 0
     end
     object DBEdit3: TDBEdit
       Left = 8
@@ -375,6 +378,7 @@ object Parceiros: TParceiros
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsParceiro
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -382,7 +386,7 @@ object Parceiros: TParceiros
       Font.Style = []
       MaxLength = 13
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 1
     end
     object DBEdit4: TDBEdit
       Left = 112
@@ -391,6 +395,7 @@ object Parceiros: TParceiros
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsParceiro
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -398,7 +403,7 @@ object Parceiros: TParceiros
       Font.Style = []
       MaxLength = 14
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 2
     end
     object DBEdit6: TDBEdit
       Left = 8
@@ -407,13 +412,14 @@ object Parceiros: TParceiros
       Height = 22
       DataField = 'EMPRESA'
       DataSource = Modulo.dsParceiro
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 4
     end
   end
   object Baixo: TPanel
@@ -653,6 +659,7 @@ object Parceiros: TParceiros
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
+      OnClick = btnGravarClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -724,6 +731,7 @@ object Parceiros: TParceiros
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
+      OnClick = btnInserirClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -795,6 +803,7 @@ object Parceiros: TParceiros
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
+      OnClick = EsquerdaClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -866,6 +875,7 @@ object Parceiros: TParceiros
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
+      OnClick = DireitaClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -924,5 +934,12 @@ object Parceiros: TParceiros
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     end
+  end
+  object sqlAux: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Modulo.Conexao
+    Left = 752
+    Top = 8
   end
 end

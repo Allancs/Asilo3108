@@ -413,6 +413,7 @@ end;
 procedure TPrincipal.Sair1Click(Sender: TObject);
 begin
 Application.Terminate;
+WinExec('C:\Asilo\Codigo\Asilo.exe',SW_NORMAL);
 end;
 
 procedure TPrincipal.AvaliClick(Sender: TObject);

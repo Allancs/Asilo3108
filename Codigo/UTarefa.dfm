@@ -1,9 +1,10 @@
 object Tarefa: TTarefa
   Left = 277
   Top = 139
-  Width = 800
-  Height = 500
+  BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Tarefas da Casa'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

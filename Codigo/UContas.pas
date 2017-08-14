@@ -9,25 +9,30 @@ uses
 
 type
   TContas = class(TForm)
-    Label1: TLabel;
+    sqlAux: TSQLQuery;
+    Baixo: TPanel;
+    btnCancelar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    btnGravar: TBitBtn;
+    btnInserir: TBitBtn;
+    Esquerda: TBitBtn;
+    Direita: TBitBtn;
+    Label7: TLabel;
+    OQue: TMemo;
+    Image1: TImage;
+    LadoEsquerdo: TPanel;
     DBEdit1: TDBEdit;
-    Label2: TLabel;
     DBEdit2: TDBEdit;
-    Label3: TLabel;
-    Label4: TLabel;
     DBEdit4: TDBEdit;
-    Label5: TLabel;
     DBEdit5: TDBEdit;
     DBMemo1: TDBMemo;
-    sqlAux: TSQLQuery;
-    Direita: TSpeedButton;
-    Esquerda: TSpeedButton;
-    btnEditar: TBitBtn;
-    btnInserir: TBitBtn;
-    btnDeletar: TBitBtn;
-    btnCancelar: TBitBtn;
-    btnGravar: TBitBtn;
-    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    SQLQuery1: TSQLQuery;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -88,12 +93,7 @@ begin
           DBMemo1.Enabled       := True;
 
           btnGravar.Enabled      := True;
-
-
-
           sqlAux.Close;
-
-
           sqlAux.SQL.Clear;
           sqlAux.SQL.Add('SELECT MAX(COD_CONTA) AS ULTIMO FROM CONTAS ');
 
@@ -105,7 +105,7 @@ begin
            Modulo.cdsConta.Insert;
 
 
-           Modulo.cdsAvisoCOD_AVISO.Value := NReg;
+           Modulo.cdsContaCOD_CONTA.Value := NReg;
 
 
            DBEdit2.SetFocus;

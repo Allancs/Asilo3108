@@ -37,6 +37,8 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
+    procedure EsquerdaClick(Sender: TObject);
+    procedure DireitaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,7 +68,7 @@ else
 begin
           DBEdit2.Enabled       := false;
           DBEdit3.Enabled       := false;
-          DBEdit3.Enabled       := false;
+          DBEdit4.Enabled       := false;
           DBEdit5.Enabled       := false;
 
  If
@@ -99,7 +101,7 @@ begin
 
           DBEdit2.Enabled       := True;
           DBEdit3.Enabled       := True;
-          DBEdit3.Enabled       := True;
+          DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
 
 
@@ -124,7 +126,7 @@ begin
            Modulo.cdsProfisionalCOD_PRO.Value := NReg;
 
 
-           DBEdit1.SetFocus;
+           DBEdit2.SetFocus;
 end;
 
 procedure TProfissionais.btnEditarClick(Sender: TObject);
@@ -139,7 +141,7 @@ Modulo.cdsProfisional.Edit;
 
           DBEdit2.Enabled       := True;
           DBEdit3.Enabled       := True;
-          DBEdit3.Enabled       := True;
+          DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
 
           btnGravar.Enabled      := True;
@@ -151,7 +153,7 @@ Modulo.cdsProfisional.Cancel;
           
           DBEdit2.Enabled       := false;
           DBEdit3.Enabled       := false;
-          DBEdit3.Enabled       := false;
+          DBEdit4.Enabled       := false;
           DBEdit5.Enabled       := false;
 
           btnInserir.Enabled    := True;
@@ -172,6 +174,16 @@ Modulo.cdsProfisional.Post;
          Modulo.cdsProfisional.ApplyUpdates(-1);
 
          btnCancelar.Click;
+end;
+
+procedure TProfissionais.EsquerdaClick(Sender: TObject);
+begin
+Modulo.cdsProfisional.Next;
+end;
+
+procedure TProfissionais.DireitaClick(Sender: TObject);
+begin
+Modulo.cdsProfisional.Prior;
 end;
 
 end.

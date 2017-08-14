@@ -356,6 +356,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsConta: TSQLDataSet
+    Active = True
     CommandText = 'select * from CONTAS'
     MaxBlobSize = -1
     Params = <>
@@ -412,31 +413,24 @@ object Modulo: TModulo
     Left = 704
     Top = 64
     object cdsProfisionalCOD_PRO: TIntegerField
-      DisplayLabel = 'C'#243'digo'
       FieldName = 'COD_PRO'
       Required = True
     end
     object cdsProfisionalNOME: TStringField
-      DisplayLabel = 'Nome'
       FieldName = 'NOME'
-      Size = 10
+      Size = 100
     end
-    object cdsProfisionalTELEFONE: TStringField
-      DisplayLabel = 'Telefone'
+    object c: TStringField
       FieldName = 'TELEFONE'
       EditMask = '!\(99\)0000-0000;1;_'
-      Size = 10
     end
     object cdsProfisionalCELULAR: TStringField
-      DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
       EditMask = '!\(99\)\90000-0000;1;_'
-      Size = 10
     end
     object cdsProfisionalEEMPRESA: TStringField
-      DisplayLabel = 'Empresa'
       FieldName = 'EEMPRESA'
-      Size = 10
+      Size = 100
     end
   end
   object dsProfisional: TDataSource
@@ -910,7 +904,6 @@ object Modulo: TModulo
     Top = 360
   end
   object sqlDSLogin: TSQLDataSet
-    Active = True
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
@@ -975,7 +968,7 @@ object Modulo: TModulo
     end
   end
   object dspUser: TDataSetProvider
-    DataSet = sdsUser
+    DataSet = sqlDSLogin
     Left = 120
     Top = 360
   end

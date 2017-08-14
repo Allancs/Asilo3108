@@ -1,9 +1,10 @@
 object Parceiros: TParceiros
-  Left = 144
-  Top = 124
-  Width = 800
-  Height = 500
+  Left = 195
+  Top = 198
+  BorderStyle = bsSingle
   Caption = 'Parceiros'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -337,7 +338,7 @@ object Parceiros: TParceiros
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 3
     end
     object DBEdit1: TDBEdit
       Left = 8
@@ -353,7 +354,7 @@ object Parceiros: TParceiros
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 5
     end
     object DBEdit2: TDBEdit
       Left = 8
@@ -369,7 +370,7 @@ object Parceiros: TParceiros
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 0
     end
     object DBEdit3: TDBEdit
       Left = 8
@@ -386,7 +387,7 @@ object Parceiros: TParceiros
       Font.Style = []
       MaxLength = 13
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 1
     end
     object DBEdit4: TDBEdit
       Left = 112
@@ -403,7 +404,7 @@ object Parceiros: TParceiros
       Font.Style = []
       MaxLength = 14
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 2
     end
     object DBEdit6: TDBEdit
       Left = 8
@@ -419,7 +420,7 @@ object Parceiros: TParceiros
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 4
     end
   end
   object Baixo: TPanel
