@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 211
-  Top = 179
+  Left = 258
+  Top = 281
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -12,7 +12,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'Database=192.168.0.106:C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -356,7 +356,6 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsConta: TSQLDataSet
-    Active = True
     CommandText = 'select * from CONTAS'
     MaxBlobSize = -1
     Params = <>
@@ -389,7 +388,6 @@ object Modulo: TModulo
     Top = 256
   end
   object sdsParceiro: TSQLDataSet
-    Active = True
     CommandText = 'select * from PARCEIRO'
     MaxBlobSize = -1
     Params = <>
@@ -530,6 +528,7 @@ object Modulo: TModulo
     object cdsResidenteDATANASCIMENTO: TStringField
       DisplayLabel = 'Data de Nascimento'
       FieldName = 'DATANASCIMENTO'
+      EditMask = '!99/99/0000;0;_'
       Size = 10
     end
     object cdsResidenteIDADE: TStringField
@@ -564,10 +563,12 @@ object Modulo: TModulo
     end
     object cdsResidenteRG: TStringField
       FieldName = 'RG'
+      EditMask = '0\.000\.000;1;_'
       Size = 9
     end
     object cdsResidenteCPF: TStringField
       FieldName = 'CPF'
+      EditMask = '000\.000\.000\-00;1;_'
       Size = 13
     end
     object cdsResidentePAI: TStringField
@@ -588,6 +589,7 @@ object Modulo: TModulo
     object cdsResidenteDATAENTRADA: TDateField
       DisplayLabel = 'Data de Entrada'
       FieldName = 'DATAENTRADA'
+      EditMask = '!99/99/0000;1;_'
     end
     object cdsResidenteINFORMACOES: TStringField
       DisplayLabel = 'Informa'#231#245'es'
@@ -597,6 +599,7 @@ object Modulo: TModulo
     object cdsResidenteDATASAIDA: TDateField
       DisplayLabel = 'Data de Saida'
       FieldName = 'DATASAIDA'
+      EditMask = '!99/99/0000;1;_'
     end
   end
   object cdsTarefa: TClientDataSet
@@ -673,7 +676,6 @@ object Modulo: TModulo
     Top = 288
   end
   object sdsResidente: TSQLDataSet
-    Active = True
     CommandText = 'select * from RESIDENTE'
     MaxBlobSize = -1
     Params = <>
@@ -690,7 +692,6 @@ object Modulo: TModulo
     Top = 168
   end
   object sdsTarefa: TSQLDataSet
-    Active = True
     CommandText = 'select * from TAREFA'
     MaxBlobSize = -1
     Params = <>
@@ -699,7 +700,6 @@ object Modulo: TModulo
     Top = 216
   end
   object sdsVoluntario: TSQLDataSet
-    Active = True
     CommandText = 'select * from VOLUNTARIO'
     MaxBlobSize = -1
     Params = <>
@@ -845,7 +845,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=C:\Asilo\Banco\LOGIN.FDB'
+      'Database=192.168.0.106:C:\Asilo\Banco\LOGIN.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'

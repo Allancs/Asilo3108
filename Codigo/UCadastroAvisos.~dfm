@@ -1,10 +1,11 @@
 object CadastroAvisos: TCadastroAvisos
   Left = 195
   Top = 121
-  Width = 800
-  Height = 500
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Avisos da Casa'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -757,7 +758,7 @@ object CadastroAvisos: TCadastroAvisos
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 73
+      Width = 40
       Height = 13
       Caption = 'Codigo'
       FocusControl = DBEdit1
@@ -771,7 +772,7 @@ object CadastroAvisos: TCadastroAvisos
     object Label2: TLabel
       Left = 8
       Top = 48
-      Width = 81
+      Width = 65
       Height = 13
       Caption = 'Observa'#231#227'o'
       Font.Charset = ANSI_CHARSET
@@ -784,7 +785,7 @@ object CadastroAvisos: TCadastroAvisos
     object Label3: TLabel
       Left = 322
       Top = 8
-      Width = 39
+      Width = 26
       Height = 13
       Caption = 'Data'
       FocusControl = DBEdit3

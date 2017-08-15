@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 211
-  Top = 179
+  Left = 258
+  Top = 281
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -528,6 +528,7 @@ object Modulo: TModulo
     object cdsResidenteDATANASCIMENTO: TStringField
       DisplayLabel = 'Data de Nascimento'
       FieldName = 'DATANASCIMENTO'
+      EditMask = '!99/99/0000;1;_'
       Size = 10
     end
     object cdsResidenteIDADE: TStringField
@@ -562,10 +563,12 @@ object Modulo: TModulo
     end
     object cdsResidenteRG: TStringField
       FieldName = 'RG'
+      EditMask = '0\.000\.000;1;_'
       Size = 9
     end
     object cdsResidenteCPF: TStringField
       FieldName = 'CPF'
+      EditMask = '000\.000\.000\-00;1;_'
       Size = 13
     end
     object cdsResidentePAI: TStringField
@@ -586,6 +589,7 @@ object Modulo: TModulo
     object cdsResidenteDATAENTRADA: TDateField
       DisplayLabel = 'Data de Entrada'
       FieldName = 'DATAENTRADA'
+      EditMask = '!99/99/0000;1;_'
     end
     object cdsResidenteINFORMACOES: TStringField
       DisplayLabel = 'Informa'#231#245'es'
@@ -595,6 +599,7 @@ object Modulo: TModulo
     object cdsResidenteDATASAIDA: TDateField
       DisplayLabel = 'Data de Saida'
       FieldName = 'DATASAIDA'
+      EditMask = '!99/99/0000;1;_'
     end
   end
   object cdsTarefa: TClientDataSet

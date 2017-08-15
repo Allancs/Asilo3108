@@ -9,26 +9,28 @@ uses
 
 type
   TDespesas = class(TForm)
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
     DataSource1: TDataSource;
-    Label2: TLabel;
-    DBEdit2: TDBEdit;
-    Label3: TLabel;
-    Label4: TLabel;
-    DBEdit4: TDBEdit;
-    Label5: TLabel;
-    DBEdit5: TDBEdit;
-    DBMemo1: TDBMemo;
     sqlAux: TSQLQuery;
-    Direita: TSpeedButton;
-    Esquerda: TSpeedButton;
-    btnEditar: TBitBtn;
-    btnInserir: TBitBtn;
-    btnDeletar: TBitBtn;
-    btnCancelar: TBitBtn;
-    btnGravar: TBitBtn;
     Image1: TImage;
+    Baixo: TPanel;
+    Direita: TBitBtn;
+    Esquerda: TBitBtn;
+    btnInserir: TBitBtn;
+    btnGravar: TBitBtn;
+    btnCancelar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    LadoEsquerdo: TPanel;
+    Label5: TLabel;
+    Label4: TLabel;
+    Label3: TLabel;
+    Label2: TLabel;
+    Label1: TLabel;
+    DBMemo1: TDBMemo;
+    DBEdit5: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit1: TDBEdit;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
