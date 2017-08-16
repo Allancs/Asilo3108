@@ -23,7 +23,7 @@ object Idoso: TIdoso
     Height = 461
     Align = alClient
     Picture.Data = {
-      0A544A504547496D616765461A0000FFD8FFE000104A46494600010200006400
+      0A544A504547496D616765D0160000FFD8FFE000104A46494600010200006400
       640000FFEC00114475636B79000100040000003C0000FFE10329687474703A2F
       2F6E732E61646F62652E636F6D2F7861702F312E302F003C3F787061636B6574
       20626567696E3D22EFBBBF222069643D2257354D304D7043656869487A726553
@@ -40,14 +40,14 @@ object Idoso: TIdoso
       7474703A2F2F6E732E61646F62652E636F6D2F7861702F312E302F7354797065
       2F5265736F75726365526566232220786D703A43726561746F72546F6F6C3D22
       41646F62652050686F746F73686F70204353362057696E646F77732220786D70
-      4D4D3A496E7374616E636549443D22786D702E6969643A433241373042344537
-      41333031314537414335333842453544443643444345322220786D704D4D3A44
-      6F63756D656E7449443D22786D702E6469643A43324137304234463741333031
-      31453741433533384245354444364344434532223E203C786D704D4D3A446572
+      4D4D3A496E7374616E636549443D22786D702E6969643A303045353636373838
+      32304431314537423634443833374632313837383931342220786D704D4D3A44
+      6F63756D656E7449443D22786D702E6469643A30304535363637393832304431
+      31453742363444383337463231383738393134223E203C786D704D4D3A446572
       6976656446726F6D2073745265663A696E7374616E636549443D22786D702E69
-      69643A4332413730423443374133303131453741433533384245354444364344
-      434532222073745265663A646F63756D656E7449443D22786D702E6469643A43
-      3241373042344437413330313145374143353338424535444436434443453222
+      69643A3030453536363736383230443131453742363444383337463231383738
+      393134222073745265663A646F63756D656E7449443D22786D702E6469643A30
+      3045353636373738323044313145374236344438333746323138373839313422
       2F3E203C2F7264663A4465736372697074696F6E3E203C2F7264663A5244463E
       203C2F783A786D706D6574613E203C3F787061636B657420656E643D2272223F
       3EFFEE000E41646F62650064C000000001FFDB00840006040404050406050506
@@ -55,10 +55,10 @@ object Idoso: TIdoso
       0C1313141413131C1B1B1B1C1F1F1F1F1F1F1F1F1F1F010707070D0C0D181010
       181A1511151A1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F
       1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1F1FFFC000110801F40320
-      03011100021101031101FFC4005F000101010101000000000000000000000000
-      0105020801010003010100000000000000000000000001020405061001000105
-      0101000000000000000000000001116102131451121101000301000000000000
-      0000000000000001111312FFDA000C03010002110311003F00F35BD02C000000
+      03011100021101031101FFC4004C000101000000000000000000000000000000
+      0701010100000000000000000000000000000001100100000000000000000000
+      000000000000110100000000000000000000000000000000FFDA000C03010002
+      110311003F00BF8A000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -171,41 +171,6 @@ object Idoso: TIdoso
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000002D27C134527C0A293E05149F028A4F814527C0A2
-      921452428A4F814527C0A293E05149F028A4851490A293E051490A293E05149F
-      028A485149F028A4F814527C0A29214527C0A2921452428A485149F028A4F814
-      527C0A293E051490A2921452428A4851490A2921452428A4F814527C0A293E05
-      1490A293E05149F028A4F81452428A4F81452428A4851490A293E05149F028A4
-      F81452428A485149F028A4F814527C0A29214527C0A2921452428A4851490A3E
-      67C0A29214527C0A293E05149F028A4F81452428A4F814527C0A2921452428A4
-      F814527C0A2921452428A4851490A293E051490A293E05149F028A4F814527C0
-      A293E05149F028A485149F028A4F814527C0A29214527C0A293E05149F028A4F
-      814527C0A293E053478ECCFA366271D8D0C4E3B1A189C76343138EC686271D8D
-      0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C
-      4E3B1A189C76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E
-      3B1A189C76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B
-      1A189C76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A
-      189C76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A18
-      9C76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C
-      76343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C76
-      343138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C7634
-      3138EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C763431
-      38EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C76343138
-      EC686271D8D0C4E3B1A189C76343138EC686271D8D0C4E3B1A189C76343138EC
-      686271D8D0C4E3B1A189C7634316B6AC592DD0E60D58967306AC4B398356259C
-      C1AB12CE60D58967306AC4B39835E259CC1AB12CE60D58967306BC4B39835625
-      9CC1AB12CE60D58967306BC4B398356259CC1AB12CE60D58967306AC4B398356
-      259CC1AB12CE60D58967306BC4B39835E259CC1AB12CE60D58967306AC4B3983
-      56259CC1AB12CE60D58967306AC4B398356259CC1AB12CE60D58967306AC4B39
-      8356259CC1AB12CE60D58967306AC4B398356259CC1AB12CE60D58967306AC4B
-      398356259CC1AB12CE60D58967306AC4B398356259CC1AB12CE60D58967306AC
-      4B398356259CC1AF12CE60D58967306AC4B398356259CC1AB12CE6175E259CC2
-      6AC4B398356259CC1AB12CE60D58967306AC4B398356259CC1AB12CE60D58967
-      306AC4B398356259CC1AF12CE60D58967306AC4B398356259CC1AB12CE60D589
-      67306AC4B398356259CC1AB12CE60D58967306AC4B398356259CC1AB12CE60D5
-      8967306AC4B398356259CC1AB12CE60D58967306AC4B398356259CC1AB12CE60
-      D58967306AC4B398356259CC1AB12CE60D78967306AC4B398356259CC1AB12CE
-      60D58967306AC4B398356259CC3B42C000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -233,7 +198,14 @@ object Idoso: TIdoso
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000003FFD9}
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000003FFFD9}
   end
   object Baixo: TPanel
     Left = 5
@@ -757,7 +729,7 @@ object Idoso: TIdoso
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 41
+      Width = 39
       Height = 14
       Caption = 'C'#243'digo'
       FocusControl = DBEdit1
@@ -771,7 +743,7 @@ object Idoso: TIdoso
     object Label10: TLabel
       Left = 244
       Top = 89
-      Width = 21
+      Width = 15
       Height = 14
       Caption = 'RG'
       FocusControl = DBEdit10
@@ -782,24 +754,10 @@ object Idoso: TIdoso
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object Label11: TLabel
-      Left = 304
-      Top = 89
-      Width = 49
-      Height = 14
-      Caption = 'CPF'
-      FocusControl = DBEdit11
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Label12: TLabel
       Left = 8
       Top = 132
-      Width = 113
+      Width = 68
       Height = 14
       Caption = 'Nome do Pai'
       FocusControl = DBEdit12
@@ -813,7 +771,7 @@ object Idoso: TIdoso
     object Label13: TLabel
       Left = 195
       Top = 132
-      Width = 110
+      Width = 74
       Height = 14
       Caption = 'Nome da M'#227'e'
       FocusControl = DBEdit13
@@ -827,7 +785,7 @@ object Idoso: TIdoso
     object Label14: TLabel
       Left = 8
       Top = 174
-      Width = 121
+      Width = 73
       Height = 14
       Caption = 'Observa'#231#245'es'
       Font.Charset = ANSI_CHARSET
@@ -840,7 +798,7 @@ object Idoso: TIdoso
     object Label15: TLabel
       Left = 8
       Top = 243
-      Width = 89
+      Width = 84
       Height = 14
       Caption = 'Data de Entrada'
       FocusControl = DBEdit15
@@ -854,7 +812,7 @@ object Idoso: TIdoso
     object Label16: TLabel
       Left = 8
       Top = 286
-      Width = 89
+      Width = 70
       Height = 14
       Caption = 'Informa'#231#245'es'
       FocusControl = DBEdit16
@@ -868,7 +826,7 @@ object Idoso: TIdoso
     object Label17: TLabel
       Left = 96
       Top = 243
-      Width = 105
+      Width = 72
       Height = 14
       Caption = 'Data de Saida'
       FocusControl = DBEdit17
@@ -882,7 +840,7 @@ object Idoso: TIdoso
     object Label2: TLabel
       Left = 48
       Top = 8
-      Width = 57
+      Width = 32
       Height = 14
       Caption = 'Nome'
       FocusControl = DBEdit2
@@ -910,7 +868,7 @@ object Idoso: TIdoso
     object Label4: TLabel
       Left = 288
       Top = 8
-      Width = 41
+      Width = 30
       Height = 14
       Caption = 'Idade'
       FocusControl = DBEdit4
@@ -924,7 +882,7 @@ object Idoso: TIdoso
     object Label5: TLabel
       Left = 8
       Top = 48
-      Width = 89
+      Width = 82
       Height = 14
       Caption = 'Nascionalidade'
       FocusControl = DBEdit5
@@ -938,7 +896,7 @@ object Idoso: TIdoso
     object Label6: TLabel
       Left = 103
       Top = 48
-      Width = 74
+      Width = 68
       Height = 14
       Caption = 'Naturalidade'
       FocusControl = DBEdit6
@@ -952,7 +910,7 @@ object Idoso: TIdoso
     object Label7: TLabel
       Left = 207
       Top = 48
-      Width = 98
+      Width = 63
       Height = 14
       Caption = 'Estado Civil'
       FocusControl = DBEdit7
@@ -966,7 +924,7 @@ object Idoso: TIdoso
     object Label8: TLabel
       Left = 308
       Top = 49
-      Width = 61
+      Width = 43
       Height = 14
       Caption = 'Religi'#227'o'
       FocusControl = DBEdit8
@@ -980,10 +938,24 @@ object Idoso: TIdoso
     object Label9: TLabel
       Left = 8
       Top = 89
-      Width = 129
+      Width = 53
       Height = 14
       Caption = 'Profiss'#227'o'
       FocusControl = DBEdit9
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 264
+      Top = 88
+      Width = 21
+      Height = 14
+      Caption = 'CPF'
+      FocusControl = DBEdit11
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1024,9 +996,9 @@ object Idoso: TIdoso
       TabOrder = 1
     end
     object DBEdit10: TDBEdit
-      Left = 244
+      Left = 203
       Top = 105
-      Width = 47
+      Width = 57
       Height = 22
       DataField = 'RG'
       DataSource = Modulo.dsResidente
@@ -1039,23 +1011,6 @@ object Idoso: TIdoso
       MaxLength = 9
       ParentFont = False
       TabOrder = 2
-    end
-    object DBEdit11: TDBEdit
-      Left = 304
-      Top = 105
-      Width = 71
-      Height = 22
-      DataField = 'CPF'
-      DataSource = Modulo.dsResidente
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      MaxLength = 14
-      ParentFont = False
-      TabOrder = 3
     end
     object DBEdit12: TDBEdit
       Left = 8
@@ -1071,7 +1026,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
     end
     object DBEdit13: TDBEdit
       Left = 195
@@ -1087,7 +1042,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 4
     end
     object DBEdit15: TDBEdit
       Left = 8
@@ -1104,7 +1059,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 5
     end
     object DBEdit16: TDBEdit
       Left = 8
@@ -1120,7 +1075,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 6
     end
     object DBEdit17: TDBEdit
       Left = 96
@@ -1137,7 +1092,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 8
+      TabOrder = 7
     end
     object DBEdit2: TDBEdit
       Left = 48
@@ -1153,7 +1108,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 8
     end
     object DBEdit3: TDBEdit
       Left = 208
@@ -1170,7 +1125,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 10
+      TabOrder = 9
     end
     object DBEdit4: TDBEdit
       Left = 288
@@ -1186,7 +1141,8 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 11
+      TabOrder = 10
+      OnChange = DBEdit4Change
       OnClick = DBEdit4Click
       OnContextPopup = DBEdit4ContextPopup
     end
@@ -1204,7 +1160,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 12
+      TabOrder = 11
     end
     object DBEdit6: TDBEdit
       Left = 103
@@ -1220,7 +1176,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 13
+      TabOrder = 12
     end
     object DBEdit7: TDBEdit
       Left = 207
@@ -1236,7 +1192,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 14
+      TabOrder = 13
     end
     object DBEdit8: TDBEdit
       Left = 308
@@ -1252,12 +1208,12 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 15
+      TabOrder = 14
     end
     object DBEdit9: TDBEdit
       Left = 8
       Top = 105
-      Width = 223
+      Width = 193
       Height = 22
       DataField = 'PROFISSAO'
       DataSource = Modulo.dsResidente
@@ -1267,6 +1223,22 @@ object Idoso: TIdoso
       Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = []
+      ParentFont = False
+      TabOrder = 15
+    end
+    object DBEdit11: TDBEdit
+      Left = 264
+      Top = 104
+      Width = 79
+      Height = 22
+      DataField = 'CPF'
+      DataSource = Modulo.dsResidente
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      MaxLength = 14
       ParentFont = False
       TabOrder = 16
     end

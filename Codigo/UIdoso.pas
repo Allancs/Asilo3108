@@ -23,7 +23,6 @@ type
     DBMemo1: TDBMemo;
     DBEdit1: TDBEdit;
     DBEdit10: TDBEdit;
-    DBEdit11: TDBEdit;
     DBEdit12: TDBEdit;
     DBEdit13: TDBEdit;
     DBEdit15: TDBEdit;
@@ -39,7 +38,6 @@ type
     DBEdit9: TDBEdit;
     Label1: TLabel;
     Label10: TLabel;
-    Label11: TLabel;
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
@@ -54,6 +52,8 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
+    Label11: TLabel;
+    DBEdit11: TDBEdit;
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
@@ -85,12 +85,12 @@ uses UModulo;
 
 procedure TIdoso.DireitaClick(Sender: TObject);
 begin
-Modulo.cdsResidente.Next;
+Modulo.cdsResidente.Prior;
 end;
 
 procedure TIdoso.EsquerdaClick(Sender: TObject);
 begin
-Modulo.cdsResidente.Prior;
+Modulo.cdsResidente.Next;
 end;
 
 procedure TIdoso.btnGravarClick(Sender: TObject);

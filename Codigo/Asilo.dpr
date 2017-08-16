@@ -25,9 +25,11 @@ uses
 {$R *.res}
 
 begin
+
   Application.Initialize;
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TModulo, Modulo);
+
   Application.CreateForm(TEmails, Emails);
   Application.CreateForm(TIdoso, Idoso);
   Application.CreateForm(TVoluntarios, Voluntarios);

@@ -23,7 +23,6 @@ type
     DBMemo1: TDBMemo;
     DBEdit1: TDBEdit;
     DBEdit10: TDBEdit;
-    DBEdit11: TDBEdit;
     DBEdit12: TDBEdit;
     DBEdit13: TDBEdit;
     DBEdit15: TDBEdit;
@@ -39,7 +38,6 @@ type
     DBEdit9: TDBEdit;
     Label1: TLabel;
     Label10: TLabel;
-    Label11: TLabel;
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
@@ -54,6 +52,8 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
+    Label11: TLabel;
+    DBEdit11: TDBEdit;
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
@@ -63,6 +63,9 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure DBEdit4Click(Sender: TObject);
+    procedure DBEdit4Change(Sender: TObject);
+    procedure DBEdit4ContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
   private
     { Private declarations }
   public
@@ -82,12 +85,12 @@ uses UModulo;
 
 procedure TIdoso.DireitaClick(Sender: TObject);
 begin
-Modulo.cdsResidente.Next;
+Modulo.cdsResidente.Prior;
 end;
 
 procedure TIdoso.EsquerdaClick(Sender: TObject);
 begin
-Modulo.cdsResidente.Prior;
+Modulo.cdsResidente.Next;
 end;
 
 procedure TIdoso.btnGravarClick(Sender: TObject);
@@ -281,6 +284,43 @@ Then Begin
 end;
 
 procedure TIdoso.DBEdit4Click(Sender: TObject);
+begin
+If (DBEdit3.Text = '')
+then
+begin
+
+end
+else
+     DtaAtual := DateToStr(Date);
+     DataCopia := (Copy(DtaAtual, 7, 10));
+     Copia := (Copy(DBEdit3.Text, 7, 10));
+     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
+     //DBEdit4.Text := IntToStr(Nasc);
+     //Label18.Caption := copia;
+    // Label19.Caption := IntToStr(Nasc);
+      DBEdit4.Text := IntToStr(Nasc);
+end;
+
+procedure TIdoso.DBEdit4Change(Sender: TObject);
+begin
+If (DBEdit3.Text = '')
+then
+begin
+
+end
+else
+     DtaAtual := DateToStr(Date);
+     DataCopia := (Copy(DtaAtual, 7, 10));
+     Copia := (Copy(DBEdit3.Text, 7, 10));
+     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
+     //DBEdit4.Text := IntToStr(Nasc);
+     //Label18.Caption := copia;
+    // Label19.Caption := IntToStr(Nasc);
+      DBEdit4.Text := IntToStr(Nasc);
+end;
+
+procedure TIdoso.DBEdit4ContextPopup(Sender: TObject; MousePos: TPoint;
+  var Handled: Boolean);
 begin
 If (DBEdit3.Text = '')
 then

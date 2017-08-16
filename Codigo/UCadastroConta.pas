@@ -36,6 +36,7 @@ type
     Admin: TRadioButton;
     Label7: TLabel;
     OQue: TMemo;
+    ti: TLabel;
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -200,13 +201,17 @@ Modulo.cdsUser.Post;
 end;
 
 procedure TCadastroContas.DireitaClick(Sender: TObject);
+
 begin
-Modulo.cdsUser.Prior;
+Modulo.cdsUser.Next;
+ti.Caption := 'Conta tipo : '+DBEdit3.Text+'.';
 end;
 
 procedure TCadastroContas.EsquerdaClick(Sender: TObject);
+
 begin
-Modulo.cdsUser.Next;
+Modulo.cdsUser.Prior;
+ti.Caption := 'Conta tipo : '+DBEdit3.Text+'.';
 end;
 
 procedure TCadastroContas.VeryfiTimer(Sender: TObject);
@@ -215,17 +220,17 @@ begin
     if Admin.Checked = True
      then
      begin
-          Admin.Checked := True;
+         DBEdit3.Text := 'admin'
       end
       Else if Padrao.Checked = True
        then
        Begin
-        Padrao.Checked := True;
+        DBEdit3.Text := 'padrao'
       End
       else if User.Checked = True
       then
       begin
-      User.Checked := true;
+      DBEdit3.Text := 'user'
       end;
 
 

@@ -81,7 +81,6 @@ type
     cdsResidenteRELIGIAO: TStringField;
     cdsResidentePROFISSAO: TStringField;
     cdsResidenteRG: TStringField;
-    cdsResidenteCPF: TStringField;
     cdsResidentePAI: TStringField;
     cdsResidenteMAE: TStringField;
     cdsResidenteOBS: TStringField;
@@ -104,14 +103,12 @@ type
     cdsContaDATAVENCIMENTO: TDateField;
     cdsFunCOD_FUN: TIntegerField;
     cdsFunNOME: TStringField;
-    cdsFunSEXO: TStringField;
     cdsFunDATANASCIMENTO: TStringField;
     cdsFunIDADE: TStringField;
     cdsFunFUNCAO: TStringField;
     cdsFunSALARIO: TFMTBCDField;
     cdsFunCPF: TStringField;
     cdsFunRG: TStringField;
-    cdsFunCARTEIRATRABALHO: TStringField;
     cdsFunCELULAR: TStringField;
     cdsFunTELEFONE: TStringField;
     cdsIncCOD_INCIDENTE: TIntegerField;
@@ -150,17 +147,11 @@ type
     cdsAvisosDATA: TDateField;
     dsAvisos: TDataSource;
     dspAvisos: TDataSetProvider;
-    Conexao2: TSQLConnection;
     sdsUser: TSimpleDataSet;
     dsUser: TDataSource;
     sqlDSLogin: TSQLDataSet;
     cdsUser: TClientDataSet;
     dspUser: TDataSetProvider;
-    sdsUserID: TIntegerField;
-    sdsUserUSU_NOME: TStringField;
-    sdsUserUSU_EMAIL: TStringField;
-    sdsUserUSU_LOGIN: TStringField;
-    sdsUserUSU_SENHA: TStringField;
     sqlDSLoginID: TIntegerField;
     sqlDSLoginUSU_NOME: TStringField;
     sqlDSLoginUSU_EMAIL: TStringField;
@@ -176,6 +167,14 @@ type
     c: TStringField;
     cdsProfisionalCELULAR: TStringField;
     cdsProfisionalEEMPRESA: TStringField;
+    cdsResidenteCPF: TStringField;
+    sdsUserID: TIntegerField;
+    sdsUserUSU_NOME: TStringField;
+    sdsUserUSU_EMAIL: TStringField;
+    sdsUserUSU_LOGIN: TStringField;
+    sdsUserUSU_SENHA: TStringField;
+    cdsFunCARTEIRATRABALHO: TStringField;
+    cdsFunSEXO: TStringField;
   private
     { Private declarations }
   public

@@ -44,6 +44,7 @@ type
     DBEdit5: TDBEdit;
     Label6: TLabel;
     DBEdit6: TDBEdit;
+    Label8: TLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -98,8 +99,6 @@ procedure TResponsavel.BitBtn1Click(Sender: TObject);
 begin
 DBEdit2.Text := Cod.Text;
 DBEdit3.Text := Name.Text;
-DBEdit2.Visible := True;
-DBEdit3.Visible := True;
 end;
 
 procedure TResponsavel.FormCreate(Sender: TObject);

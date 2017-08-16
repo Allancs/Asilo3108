@@ -45,4 +45,6 @@ begin
   Application.CreateForm(TAvaliacao, Avaliacao);
   Application.CreateForm(TCadastroContas, CadastroContas);
   Application.Run;
-end.
+
+  
+  end.

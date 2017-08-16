@@ -1,10 +1,11 @@
 object Emails: TEmails
   Left = 197
   Top = 140
-  Width = 800
-  Height = 500
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Envio de Email'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -247,8 +248,8 @@ object Emails: TEmails
     object Label9: TLabel
       Left = 8
       Top = 131
-      Width = 54
-      Height = 15
+      Width = 69
+      Height = 14
       Caption = 'Menssagem'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -260,8 +261,8 @@ object Emails: TEmails
     object Label6: TLabel
       Left = 8
       Top = 90
-      Width = 27
-      Height = 15
+      Width = 32
+      Height = 14
       Caption = 'Nome'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -273,8 +274,8 @@ object Emails: TEmails
     object Label5: TLabel
       Left = 136
       Top = 90
-      Width = 90
-      Height = 15
+      Width = 107
+      Height = 14
       Caption = 'Destinatario ( Para )'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -286,8 +287,8 @@ object Emails: TEmails
     object Label2: TLabel
       Left = 8
       Top = 47
-      Width = 38
-      Height = 15
+      Width = 47
+      Height = 14
       Caption = 'Assunto'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -299,8 +300,8 @@ object Emails: TEmails
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 75
-      Height = 15
+      Width = 92
+      Height = 14
       Caption = 'Remetente ( De )'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -394,7 +395,7 @@ object Emails: TEmails
       Left = 136
       Top = 105
       Width = 225
-      Height = 23
+      Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -408,7 +409,7 @@ object Emails: TEmails
       Left = 8
       Top = 105
       Width = 121
-      Height = 23
+      Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -422,7 +423,7 @@ object Emails: TEmails
       Left = 8
       Top = 65
       Width = 353
-      Height = 23
+      Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -436,7 +437,7 @@ object Emails: TEmails
       Left = 8
       Top = 24
       Width = 353
-      Height = 23
+      Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -532,8 +533,8 @@ object Emails: TEmails
     object Label11: TLabel
       Left = 8
       Top = 5
-      Width = 25
-      Height = 15
+      Width = 31
+      Height = 14
       Caption = 'SMTP'
       FocusControl = SMTP
       Font.Charset = ANSI_CHARSET
@@ -546,8 +547,8 @@ object Emails: TEmails
     object Label12: TLabel
       Left = 112
       Top = 5
-      Width = 19
-      Height = 15
+      Width = 23
+      Height = 14
       Caption = 'Port'
       FocusControl = Porta
       Font.Charset = ANSI_CHARSET
@@ -560,8 +561,8 @@ object Emails: TEmails
     object Label13: TLabel
       Left = 160
       Top = 5
-      Width = 36
-      Height = 15
+      Width = 42
+      Height = 14
       Caption = 'Usuario'
       FocusControl = Usuario
       Font.Charset = ANSI_CHARSET
@@ -574,8 +575,8 @@ object Emails: TEmails
     object Label14: TLabel
       Left = 320
       Top = 5
-      Width = 28
-      Height = 15
+      Width = 34
+      Height = 14
       Caption = 'Senha'
       FocusControl = Senha
       Font.Charset = ANSI_CHARSET
@@ -589,7 +590,7 @@ object Emails: TEmails
       Left = 8
       Top = 21
       Width = 97
-      Height = 23
+      Height = 22
       DataField = 'SMTP'
       DataSource = DataSource1
       Enabled = False
@@ -605,7 +606,7 @@ object Emails: TEmails
       Left = 112
       Top = 21
       Width = 43
-      Height = 23
+      Height = 22
       DataField = 'PORT'
       DataSource = DataSource1
       Enabled = False
@@ -621,7 +622,7 @@ object Emails: TEmails
       Left = 160
       Top = 21
       Width = 153
-      Height = 23
+      Height = 22
       DataField = 'EMAIL'
       DataSource = DataSource1
       Enabled = False
@@ -637,7 +638,7 @@ object Emails: TEmails
       Left = 320
       Top = 21
       Width = 97
-      Height = 23
+      Height = 22
       DataField = 'SENHA'
       DataSource = DataSource1
       Enabled = False
@@ -957,7 +958,7 @@ object Emails: TEmails
     object Label10: TLabel
       Left = 8
       Top = 73
-      Width = 95
+      Width = 115
       Height = 16
       Caption = 'Email da Consulta'
       FocusControl = getEmail
@@ -971,7 +972,7 @@ object Emails: TEmails
     object Label3: TLabel
       Left = 8
       Top = 17
-      Width = 81
+      Width = 98
       Height = 16
       Caption = 'Pesquisa Nome'
       Font.Charset = ANSI_CHARSET
@@ -984,7 +985,7 @@ object Emails: TEmails
     object EmailReal: TLabel
       Left = 8
       Top = 104
-      Width = 47
+      Width = 59
       Height = 16
       Caption = 'EmailReal'
       Font.Charset = ANSI_CHARSET

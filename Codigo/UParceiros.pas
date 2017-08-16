@@ -180,12 +180,12 @@ end;
 
 procedure TParceiros.EsquerdaClick(Sender: TObject);
 begin
-Modulo.cdsParceiro.Prior;
+Modulo.cdsParceiro.Next;
 end;
 
 procedure TParceiros.DireitaClick(Sender: TObject);
 begin
-Modulo.cdsParceiro.Next;
+Modulo.cdsParceiro.Prior;
 end;
 
 end.

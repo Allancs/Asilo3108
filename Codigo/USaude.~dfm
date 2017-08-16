@@ -1,10 +1,11 @@
 object Saudes: TSaudes
   Left = 228
   Top = 217
-  Width = 800
-  Height = 500
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Sa'#250'de'
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

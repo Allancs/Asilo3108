@@ -116,6 +116,7 @@ begin
 end
 else
 begin
+                     
           DBEdit3.Enabled       := False;
           DBMemo1.Enabled       := False;
 
@@ -126,8 +127,8 @@ begin
                        [mbyes,mbno],
                        0)
           = mryes Then Begin
-                         Modulo.cdsAviso.Delete;
-                         Modulo.cdsAviso.ApplyUpdates(-1);
+                         Modulo.cdsFun.Delete;
+                         Modulo.cdsFun.ApplyUpdates(-1);
                          ShowMessage ('Registro Excluido com sucesso!');
                        End
                   Else Begin
@@ -166,12 +167,12 @@ end;
 
 procedure TCadastroAvisos.DireitaClick(Sender: TObject);
 begin
-Modulo.cdsAviso.Prior;
+Modulo.cdsAviso.Next;
 end;
 
 procedure TCadastroAvisos.EsquerdaClick(Sender: TObject);
 begin
-Modulo.cdsAviso.Next;
+Modulo.cdsAviso.Prior;
 end;
 
 procedure TCadastroAvisos.FormCreate(Sender: TObject);

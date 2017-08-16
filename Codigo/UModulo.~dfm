@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 258
-  Top = 281
+  Left = 273
+  Top = 337
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -131,6 +131,7 @@ object Modulo: TModulo
     end
     object cdsFunSEXO: TStringField
       DisplayLabel = 'Sexo'
+      DisplayWidth = 8
       FieldName = 'SEXO'
       FixedChar = True
       Size = 1
@@ -138,6 +139,7 @@ object Modulo: TModulo
     object cdsFunDATANASCIMENTO: TStringField
       DisplayLabel = 'Data de Nascimento'
       FieldName = 'DATANASCIMENTO'
+      EditMask = '!99/99/0000;1;_'
       Size = 10
     end
     object cdsFunIDADE: TStringField
@@ -167,9 +169,8 @@ object Modulo: TModulo
       Size = 9
     end
     object cdsFunCARTEIRATRABALHO: TStringField
-      DisplayLabel = 'Carteira de Trabalho'
       FieldName = 'CARTEIRATRABALHO'
-      EditMask = '0000000\ 0000\ 00;1;_'
+      EditMask = '0000000\ 0000\ aa;1;_'
       Size = 17
     end
     object cdsFunCELULAR: TStringField
@@ -356,6 +357,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsConta: TSQLDataSet
+    Active = True
     CommandText = 'select * from CONTAS'
     MaxBlobSize = -1
     Params = <>
@@ -364,6 +366,7 @@ object Modulo: TModulo
     Top = 56
   end
   object sqsFun: TSQLDataSet
+    Active = True
     CommandText = 'select * from FUNCIONARIO'
     MaxBlobSize = -1
     Params = <>
@@ -372,6 +375,7 @@ object Modulo: TModulo
     Top = 160
   end
   object sdsInc: TSQLDataSet
+    Active = True
     CommandText = 'select * from INCIDENTES'
     MaxBlobSize = -1
     Params = <>
@@ -380,6 +384,7 @@ object Modulo: TModulo
     Top = 208
   end
   object sdsLigacoes: TSQLDataSet
+    Active = True
     CommandText = 'select * from LIGACOES'
     MaxBlobSize = -1
     Params = <>
@@ -528,7 +533,7 @@ object Modulo: TModulo
     object cdsResidenteDATANASCIMENTO: TStringField
       DisplayLabel = 'Data de Nascimento'
       FieldName = 'DATANASCIMENTO'
-      EditMask = '!99/99/0000;0;_'
+      EditMask = '!99/99/0000;1;_'
       Size = 10
     end
     object cdsResidenteIDADE: TStringField
@@ -566,11 +571,6 @@ object Modulo: TModulo
       EditMask = '0\.000\.000;1;_'
       Size = 9
     end
-    object cdsResidenteCPF: TStringField
-      FieldName = 'CPF'
-      EditMask = '000\.000\.000\-00;1;_'
-      Size = 13
-    end
     object cdsResidentePAI: TStringField
       DisplayLabel = 'Nome do Pai'
       FieldName = 'PAI'
@@ -600,6 +600,12 @@ object Modulo: TModulo
       DisplayLabel = 'Data de Saida'
       FieldName = 'DATASAIDA'
       EditMask = '!99/99/0000;1;_'
+    end
+    object cdsResidenteCPF: TStringField
+      DisplayWidth = 16
+      FieldName = 'CPF'
+      EditMask = '000\.000\.000\-00;1;_'
+      Size = 16
     end
   end
   object cdsTarefa: TClientDataSet
@@ -752,6 +758,7 @@ object Modulo: TModulo
     Top = 112
   end
   object sdsDespesas: TSQLDataSet
+    Active = True
     CommandText = 'select * from DESPESAS'
     MaxBlobSize = -1
     Params = <>
@@ -802,6 +809,7 @@ object Modulo: TModulo
     Top = 304
   end
   object sdsEmail: TSQLDataSet
+    Active = True
     CommandText = 'select * from EMAIL'
     MaxBlobSize = -1
     Params = <>
@@ -837,42 +845,15 @@ object Modulo: TModulo
     Left = 352
     Top = 8
   end
-  object Conexao2: TSQLConnection
-    ConnectionName = 'LoginServer'
-    DriverName = 'Interbase'
-    GetDriverFunc = 'getSQLDriverINTERBASE'
-    LibraryName = 'dbexpint.dll'
-    LoginPrompt = False
-    Params.Strings = (
-      'DriverName=Interbase'
-      'Database=192.168.0.106:C:\Asilo\Banco\LOGIN.FDB'
-      'RoleName=RoleName'
-      'User_Name=sysdba'
-      'Password=masterkey'
-      'ServerCharSet='
-      'SQLDialect=1'
-      'BlobSize=-1'
-      'CommitRetain=False'
-      'WaitOnLocks=True'
-      'ErrorResourceFile='
-      'LocaleCode=0000'
-      'Interbase TransIsolation=ReadCommited'
-      'Trim Char=False')
-    VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
-    Connected = True
-    Left = 16
-    Top = 360
-  end
   object sdsUser: TSimpleDataSet
-    Active = True
     Aggregates = <>
-    Connection = Conexao2
+    Connection = Conexao
     DataSet.CommandText = 'select * from USUARIOS'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 72
-    Top = 360
+    Left = 24
+    Top = 352
     object sdsUserID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -907,7 +888,7 @@ object Modulo: TModulo
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
-    SQLConnection = Conexao2
+    SQLConnection = Conexao
     Left = 248
     Top = 360
     object sqlDSLoginID: TIntegerField
@@ -936,7 +917,6 @@ object Modulo: TModulo
     end
   end
   object cdsUser: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'
@@ -969,7 +949,7 @@ object Modulo: TModulo
   end
   object dspUser: TDataSetProvider
     DataSet = sqlDSLogin
-    Left = 120
-    Top = 360
+    Left = 104
+    Top = 352
   end
 end
