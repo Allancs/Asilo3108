@@ -20,13 +20,15 @@ type
     procedure Image2Click(Sender: TObject);
     procedure mrCancelClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   Tentativas : Smallint;
   public
     { Public declarations }
       ArquivoIni : TIniFile;
+      UsuarioLog : string;
+
+    DataBase , Vendedor : String;
 
   end;
 
@@ -92,6 +94,7 @@ begin
                  End;
 
            Modulo.sqlDSLogin.RecNo; // Estaciona no Registro corrente
+           UsuarioLog := Modulo.sqlDSLogin.Fields[1].AsString;;
            Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
            Principal.Tipo.Caption := 'Permissão : '+Modulo.sqlDSLogin.Fields[2].AsString;
            User := Modulo.sqlDSLogin.Fields[2].AsString;
@@ -107,20 +110,6 @@ end;
 procedure TLogin.btnCancelarClick(Sender: TObject);
 begin
 Application.Terminate;
-end;
-
-procedure TLogin.FormCreate(Sender: TObject);
-begin
-   ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.Ini');
-   ArquivoIni.WriteString ('Asilo','DATABASE', Modulo.Conexao.Params.Values['Database']);
-   ArquivoIni.WriteString ('Asilo','VENDEDORLIB', Modulo.Conexao.VendorLib);
-   //ArquivoIni.WriteString ('Asilo','LOGINPROMPT', (Modulo.Conexao.LoginPrompt));
-   //ArquivoIni.WriteInteger ('Asilo','Largura', 500);
-   //ArquivoIni.WriteString  ('Asilo','Texto_Botao', 'Troquei');
-   ArquivoIni.Free;
-
- //Modulo.Conexao.Params.Values['Database'] := ArquivoIni.ReadString('Asilo','DATABASE','');
- //Modulo.Conexao.VendorLib := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
 end;
 
 end.

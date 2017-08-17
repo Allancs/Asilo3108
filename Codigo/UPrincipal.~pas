@@ -82,6 +82,7 @@ type
     Timer1: TTimer;
     Label5: TLabel;
     Label6: TLabel;
+    Caminhobanco: TLabel;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -299,6 +300,7 @@ end;
 
 procedure TPrincipal.FormShow(Sender: TObject);
 begin
+Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Database'];
      If TLogin.Create(Self).ShowModal = mrCancel
      Then Begin
         Application.Terminate;
@@ -315,6 +317,7 @@ begin
                   SMTP.Visible := true;
                   email.Visible := true;
                   tipo.visible := true;
+                  CaminhoBanco.Visible := true;
                   CadastroAvisos.btnEditar.visible := true;
                   CadastroAvisos.btnInserir.visible := true;
                   CadastroAvisos.btnCancelar.visible := true;

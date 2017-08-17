@@ -345,12 +345,19 @@ object Principal: TPrincipal
     Transparent = True
     Visible = False
   end
-  object Label7: TLabel
-    Left = 280
-    Top = 352
-    Width = 32
-    Height = 13
-    Caption = 'Label7'
+  object Caminhobanco: TLabel
+    Left = 152
+    Top = 427
+    Width = 82
+    Height = 14
+    Caption = 'Caminhobanco'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
   end
   object Env: TBitBtn
     Left = 454
@@ -1694,15 +1701,6 @@ object Principal: TPrincipal
       TabOrder = 1
       OnClick = TarefaAClick
     end
-  end
-  object Button1: TButton
-    Left = 184
-    Top = 352
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 18
-    OnClick = Button1Click
   end
   object PoupUP: TTimer
     Interval = 1

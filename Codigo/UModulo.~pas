@@ -175,10 +175,13 @@ type
     sdsUserUSU_SENHA: TStringField;
     cdsFunCARTEIRATRABALHO: TStringField;
     cdsFunSEXO: TStringField;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    ArquivoIni : TIniFile;
+    DataBase , Vendedor : String;
   end;
 
 var
@@ -187,5 +190,19 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TModulo.DataModuleCreate(Sender: TObject);
+begin
+   ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
+   ArquivoIni.WriteString ('Asilo','DATABASE', Modulo.Conexao.Params.values['DataBase']);
+   ArquivoIni.WriteString ('Asilo','VENDEDORLIB', Modulo.Conexao.VendorLib);
+   DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
+   Vendedor := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
+   ArquivoIni.Free;
+
+
+ //Modulo.Conexao.Params.Values['Database'] := ArquivoIni.ReadString('Asilo','DATABASE','');
+ //Modulo.Conexao.VendorLib := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
+end;
 
 end.

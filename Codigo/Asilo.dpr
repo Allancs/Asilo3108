@@ -22,11 +22,14 @@ uses
   ULogin in 'ULogin.pas' {Login},
   UCadastroConta in 'UCadastroConta.pas' {CadastroContas},
   URelatorio in 'URelatorio.pas' {Relatorio},
-  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel}
-  ;
+  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel},IniFiles;
 
 {$R *.res}
-  
+Var
+     ArquivoIni : TIniFile;
+      UsuarioLog : string;
+
+    DataBase , Vendedor : String;
 begin
 
 
@@ -51,6 +54,14 @@ begin
   Application.CreateForm(TCadastroContas, CadastroContas);
   Application.CreateForm(TRelatorio, Relatorio);
   Application.CreateForm(TPesquisaRel, PesquisaRel);
+
+   ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
+   DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
+   Vendedor := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
+   Modulo.Conexao.ConnectionName := Nome;
+   Modulo.Conexao.Params.Values['Database'] :=DataBase;
+   Modulo.Conexao.VendorLib := Vendedor;
+   ArquivoINI.Free;
   Application.Run;
 
 

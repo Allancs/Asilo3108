@@ -1,6 +1,6 @@
 object Login: TLogin
-  Left = 313
-  Top = 195
+  Left = 368
+  Top = 275
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Login'

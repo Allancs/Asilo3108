@@ -1,8 +1,0 @@
-Qualquer empresa depende de funçoes tanto manuais e manuscritas, essas funçoes vem desde
-a troca de uma lampada ate a criação de um registro manuscrito. Em um asilo nao seria tão diferente
-tem um controle tanto de entrada de caixa como a saida do mesmo. Um asilo tem varias funções manuais
-que podem ser automatizadas com um sistema para a gestão do mesmo como, controle de funcionarios, de gastos,
-de residentes controle de gastos. O sistema ira ter funções como (Cadastros, Relatorios, Avisos e Envio de Email);
-Aba de cadastros (Funcionarios, Residentes, Responsaveis, Profissionais, Avisos, Voluntarios).
-
-

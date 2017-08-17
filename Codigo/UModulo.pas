@@ -179,12 +179,16 @@ type
     { Private declarations }
   public
     { Public declarations }
+    ArquivoIni : TIniFile;
+    DataBase , Vendedor, Nome : String;
   end;
 
 var
   Modulo: TModulo;
 
 implementation
+
+uses ULogin;
 
 {$R *.dfm}
 

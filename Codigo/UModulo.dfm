@@ -26,7 +26,6 @@ object Modulo: TModulo
       'Interbase TransIsolation=ReadCommited'
       'Trim Char=False')
     VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
-    Connected = True
     Left = 65080
     Top = 456
   end

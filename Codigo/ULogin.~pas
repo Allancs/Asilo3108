@@ -25,6 +25,7 @@ type
   Tentativas : Smallint;
   public
     { Public declarations }
+      ArquivoIni : TIniFile;
 
   end;
 
