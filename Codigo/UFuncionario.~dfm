@@ -1,6 +1,7 @@
 object Funcionario: TFuncionario
   Left = 244
   Top = 341
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Funcionario'
   ClientHeight = 461

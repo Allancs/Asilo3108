@@ -1,6 +1,6 @@
 object Responsavel: TResponsavel
-  Left = 242
-  Top = 265
+  Left = 151
+  Top = 258
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Cadastro de Respons'#225'vel'
@@ -906,7 +906,7 @@ object Responsavel: TResponsavel
         Left = 8
         Top = 58
         Width = 91
-        Height = 15
+        Height = 14
         Caption = 'Nome Residente'
         FocusControl = DBEdit4
         Font.Charset = ANSI_CHARSET
@@ -934,7 +934,7 @@ object Responsavel: TResponsavel
         Left = 8
         Top = 78
         Width = 121
-        Height = 23
+        Height = 22
         DataField = 'NOME'
         DataSource = dsAux
         Font.Charset = ANSI_CHARSET

@@ -3,7 +3,7 @@ object Funcionario: TFuncionario
   Top = 341
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Funcionario'
+  Caption = 'ASILO RECANTO DAS FLORES - Funcion'#225'rio'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

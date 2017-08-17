@@ -842,6 +842,7 @@ object Modulo: TModulo
     Top = 8
   end
   object sdsUser: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = Conexao
     DataSet.CommandText = 'select * from USUARIOS'
@@ -913,6 +914,7 @@ object Modulo: TModulo
     end
   end
   object cdsUser: TClientDataSet
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'

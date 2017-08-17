@@ -103,7 +103,6 @@ type
     cdsContaDATAVENCIMENTO: TDateField;
     cdsFunCOD_FUN: TIntegerField;
     cdsFunNOME: TStringField;
-    cdsFunSEXO: TStringField;
     cdsFunDATANASCIMENTO: TStringField;
     cdsFunIDADE: TStringField;
     cdsFunFUNCAO: TStringField;
@@ -175,6 +174,7 @@ type
     sdsUserUSU_LOGIN: TStringField;
     sdsUserUSU_SENHA: TStringField;
     cdsFunCARTEIRATRABALHO: TStringField;
+    cdsFunSEXO: TStringField;
   private
     { Private declarations }
   public

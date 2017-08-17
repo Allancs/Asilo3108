@@ -3,7 +3,7 @@ object SMTPs: TSMTPs
   Top = 150
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Cadastro de servidor Smtp '
+  Caption = 'ASILO RECANTO DAS FLORES - Cadastro de servidor Smtp '
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

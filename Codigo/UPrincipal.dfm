@@ -319,28 +319,28 @@ object Principal: TPrincipal
   object UNome: TLabel
     Left = 8
     Top = 104
-    Width = 60
-    Height = 24
+    Width = 45
+    Height = 19
     Caption = 'Nome'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -21
+    Font.Height = -16
     Font.Name = 'Arial'
-    Font.Style = [fsBold, fsItalic]
+    Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
   end
   object tipo: TLabel
     Left = 9
     Top = 130
-    Width = 45
-    Height = 24
+    Width = 34
+    Height = 19
     Caption = 'Tipo'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -21
+    Font.Height = -16
     Font.Name = 'Arial'
-    Font.Style = [fsBold, fsItalic]
+    Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
     Visible = False
@@ -1504,6 +1504,7 @@ object Principal: TPrincipal
       Height = 17
       Caption = 'Avisos'
       TabOrder = 0
+      OnClick = AvisosPoPClick
     end
     object Tarefas: TCheckBox
       Left = 8
@@ -1512,6 +1513,7 @@ object Principal: TPrincipal
       Height = 17
       Caption = 'Tarefas'
       TabOrder = 1
+      OnClick = TarefasClick
     end
   end
   object Avali: TBitBtn
@@ -1688,7 +1690,6 @@ object Principal: TPrincipal
   end
   object PoupUP: TTimer
     Interval = 1
-    OnTimer = PoupUPTimer
     Left = 816
     Top = 200
   end
@@ -1765,6 +1766,7 @@ object Principal: TPrincipal
     object Rela: TMenuItem
       Caption = '&Relat'#243'rio'
       Visible = False
+      OnClick = RelaClick
     end
     object Saude: TMenuItem
       Caption = '&Saude e Incidentes'

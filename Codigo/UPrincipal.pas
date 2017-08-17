@@ -85,7 +85,6 @@ type
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
-    procedure PoupUPTimer(Sender: TObject);
     procedure SerClick(Sender: TObject);
     procedure ResClick(Sender: TObject);
     procedure RespClick(Sender: TObject);
@@ -122,6 +121,9 @@ type
     procedure TarefaAClick(Sender: TObject);
     procedure TarefaPClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure AvisosPoPClick(Sender: TObject);
+    procedure TarefasClick(Sender: TObject);
+    procedure RelaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -138,7 +140,8 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
   UIncidentes, UParceiros, UProfissionais, USaude, UTarefa,
   UAv,
   ULogin,
-  UCadastroConta;
+  UCadastroConta,
+  URelatorio;
 
 {$R *.dfm}
 
@@ -156,29 +159,6 @@ procedure TPrincipal.AClick(Sender: TObject);
 begin
 CadastroAvisos.Visible := True;
 end;
-
-procedure TPrincipal.PoupUPTimer(Sender: TObject);
-begin
-   if AvisosPop.Checked = true
-     then
-     begin
-           Aviso.Visible := True;
-      end
-      Else
-       Begin
-      Aviso.Visible := False;
-      End;
-
-       if Tarefas.Checked = true
-     then
-     begin
-           TarefaPop.Visible := True;
-      end
-      Else
-       Begin
-      TarefaPop.Visible := False;
-      End;
-  end;
 
 procedure TPrincipal.SerClick(Sender: TObject);
 begin
@@ -287,7 +267,7 @@ end;
 
 procedure TPrincipal.Saude1Click(Sender: TObject);
 begin
-Saude.Visible := True;
+Saudes.Visible := True;
 end;
 
 procedure TPrincipal.arefas1Click(Sender: TObject);
@@ -379,20 +359,23 @@ begin
                     env.visible := true;
                     ser.visible := true;
                     avali.visible := true;
-                    //Saudes.btnDeletar.Visible := false;
-//Incidentes.btnDeletar.Visible := false;
+                    Saudes.btnDeletar.Visible := false;
+Incidentes.btnDeletar.Visible := false;
 Tarefa.btnDeletar.Visible := false;
 CadastroAvisos.btnDeletar.Visible := false;
-//Parceiros.btnDeletar.Visible := false;
+Parceiros.btnDeletar.Visible := false;
 Contas.btnDeletar.Visible := false;
 Despesas.btnDeletar.Visible := false;
-//Responsavel.btnDeletar.Visible := false;
-//Funcionario.btnDeletar.Visible := false;
+Responsavel.btnDeletar.Visible := false;
+Funcionario.btnDeletar.Visible := false;
 Voluntarios.btnDeletar.Visible := false;
 Emails.Mostrar.Visible := false;
 Emails.Ocutar.Visible := false;
 Ser.Visible := false;
 Emails.Baixo.Visible := false;
+Profissionais.btnDeletar.Visible := false;
+Idoso.btnDeletar.Visible := false;
+Avali.Visible := false;
 
 end;
 end;
@@ -487,6 +470,83 @@ If (DBText3.Caption = DtaAtual)
           begin
           DBText2.Font.Color := clGreen;
           end;
+end;
+
+procedure TPrincipal.AvisosPoPClick(Sender: TObject);
+begin
+ if AvisosPop.Checked = true
+     then
+     begin
+           Aviso.Visible := True;
+      end
+      Else
+       Begin
+      Aviso.Visible := False;
+      End;
+
+       if Tarefas.Checked = true and AvisosPop.Checked = false
+     then
+     begin
+           TarefaPop.Top := 96;
+           TarefaPop.Visible := true;
+      end
+      else if (Tarefas.Checked = true and AvisosPop.Checked = true)
+      then
+      begin
+         TarefaPop.Top := 208;
+         TarefaPop.Visible := true;
+      end;
+
+      if Tarefas.Checked = true
+      then
+      begin
+       TarefaPop.Visible := true
+       end
+      Else
+       Begin
+      TarefaPop.Visible := False;
+      End;
+end;
+
+procedure TPrincipal.TarefasClick(Sender: TObject);
+begin
+ if AvisosPop.Checked = true
+     then
+     begin
+           Aviso.Visible := True;
+      end
+      Else
+       Begin
+      Aviso.Visible := False;
+      End;
+
+       if Tarefas.Checked = true and AvisosPop.Checked = false
+     then
+     begin
+           TarefaPop.Top := 96;
+           TarefaPop.Visible := true;
+      end
+      else if (Tarefas.Checked = true and AvisosPop.Checked = true)
+      then
+      begin
+         TarefaPop.Top := 208;
+         TarefaPop.Visible := true;
+      end;
+
+      if Tarefas.Checked = true
+      then
+      begin
+       TarefaPop.Visible := true
+       end
+      Else
+       Begin
+      TarefaPop.Visible := False;
+      End;
+end;
+
+procedure TPrincipal.RelaClick(Sender: TObject);
+begin
+Relatorio.Visible := True;
 end;
 
 end.

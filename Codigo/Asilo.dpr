@@ -20,7 +20,9 @@ uses
   UTarefa in 'UTarefa.pas' {Tarefa},
   UAv in 'UAv.pas' {Avaliacao},
   ULogin in 'ULogin.pas' {Login},
-  UCadastroConta in 'UCadastroConta.pas' {CadastroContas};
+  UCadastroConta in 'UCadastroConta.pas' {CadastroContas},
+  URelatorio in 'URelatorio.pas' {Relatorio},
+  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel};
 
 {$R *.res}
 
@@ -29,7 +31,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TModulo, Modulo);
-
   Application.CreateForm(TEmails, Emails);
   Application.CreateForm(TIdoso, Idoso);
   Application.CreateForm(TVoluntarios, Voluntarios);
@@ -46,7 +47,10 @@ begin
   Application.CreateForm(TTarefa, Tarefa);
   Application.CreateForm(TAvaliacao, Avaliacao);
   Application.CreateForm(TCadastroContas, CadastroContas);
+  Application.CreateForm(TRelatorio, Relatorio);
+  Application.CreateForm(TPesquisaRel, PesquisaRel);
   Application.Run;
 
-  
+
+
   end.

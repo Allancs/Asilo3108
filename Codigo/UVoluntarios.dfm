@@ -2,7 +2,7 @@ object Voluntarios: TVoluntarios
   Left = 310
   Top = 184
   BorderStyle = bsSingle
-  Caption = 'Voluntarios'
+  Caption = 'ASILO RECANTO DAS FLORES - Volunt'#225'rios'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
@@ -801,7 +801,7 @@ object Voluntarios: TVoluntarios
       Top = 8
       Width = 224
       Height = 22
-      Caption = 'Cadastro de Voluntarios'
+      Caption = 'Cadastro de Volunt'#225'rios'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -812,7 +812,7 @@ object Voluntarios: TVoluntarios
     object DBEdit5: TDBEdit
       Left = 8
       Top = 240
-      Width = 300
+      Width = 153
       Height = 22
       DataField = 'EMAIL'
       DataSource = Modulo.dsVoluntario
@@ -828,7 +828,7 @@ object Voluntarios: TVoluntarios
     object DBEdit4: TDBEdit
       Left = 8
       Top = 200
-      Width = 300
+      Width = 97
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsVoluntario
@@ -845,7 +845,7 @@ object Voluntarios: TVoluntarios
     object DBEdit3: TDBEdit
       Left = 8
       Top = 160
-      Width = 300
+      Width = 97
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsVoluntario
@@ -862,7 +862,7 @@ object Voluntarios: TVoluntarios
     object DBEdit2: TDBEdit
       Left = 8
       Top = 120
-      Width = 300
+      Width = 177
       Height = 22
       CharCase = ecUpperCase
       DataField = 'NOME'
@@ -879,7 +879,7 @@ object Voluntarios: TVoluntarios
     object DBEdit1: TDBEdit
       Left = 8
       Top = 80
-      Width = 33
+      Width = 25
       Height = 22
       DataField = 'COD_VOLUNTARIO'
       DataSource = Modulo.dsVoluntario

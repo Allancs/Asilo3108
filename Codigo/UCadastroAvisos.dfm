@@ -1,6 +1,6 @@
 object CadastroAvisos: TCadastroAvisos
-  Left = 419
-  Top = 124
+  Left = 298
+  Top = 341
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Avisos da Casa'

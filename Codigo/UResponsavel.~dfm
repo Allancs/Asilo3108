@@ -3,7 +3,7 @@ object Responsavel: TResponsavel
   Top = 265
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Responsavel'
+  Caption = 'ASILO RECANTO DAS FLORES - Cadastro de Respons'#225'vel'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
