@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 273
-  Top = 337
+  Left = 246
+  Top = 300
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -12,7 +12,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=192.168.0.106:C:\Asilo\Banco\BANCO.FDB'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -354,7 +354,6 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsConta: TSQLDataSet
-    Active = True
     CommandText = 'select * from CONTAS'
     MaxBlobSize = -1
     Params = <>
@@ -371,7 +370,6 @@ object Modulo: TModulo
     Top = 160
   end
   object sdsInc: TSQLDataSet
-    Active = True
     CommandText = 'select * from INCIDENTES'
     MaxBlobSize = -1
     Params = <>
@@ -380,7 +378,6 @@ object Modulo: TModulo
     Top = 208
   end
   object sdsLigacoes: TSQLDataSet
-    Active = True
     CommandText = 'select * from LIGACOES'
     MaxBlobSize = -1
     Params = <>
@@ -754,7 +751,6 @@ object Modulo: TModulo
     Top = 112
   end
   object sdsDespesas: TSQLDataSet
-    Active = True
     CommandText = 'select * from DESPESAS'
     MaxBlobSize = -1
     Params = <>
@@ -805,7 +801,6 @@ object Modulo: TModulo
     Top = 304
   end
   object sdsEmail: TSQLDataSet
-    Active = True
     CommandText = 'select * from EMAIL'
     MaxBlobSize = -1
     Params = <>
@@ -849,7 +844,7 @@ object Modulo: TModulo
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 24
+    Left = 16
     Top = 352
     object sdsUserID: TIntegerField
       FieldName = 'ID'

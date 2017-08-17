@@ -82,6 +82,8 @@ type
     Timer1: TTimer;
     Label5: TLabel;
     Label6: TLabel;
+    Label7: TLabel;
+    Button1: TButton;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -124,6 +126,7 @@ type
     procedure AvisosPoPClick(Sender: TObject);
     procedure TarefasClick(Sender: TObject);
     procedure RelaClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -547,6 +550,11 @@ end;
 procedure TPrincipal.RelaClick(Sender: TObject);
 begin
 Relatorio.Visible := True;
+end;
+
+procedure TPrincipal.Button1Click(Sender: TObject);
+begin
+Label7.Caption := Modulo.Conexao.Params.Values['Database'];
 end;
 
 end.

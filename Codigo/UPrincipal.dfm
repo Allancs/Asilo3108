@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 215
-  Top = 230
+  Left = 258
+  Top = 260
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -344,6 +344,13 @@ object Principal: TPrincipal
     ParentFont = False
     Transparent = True
     Visible = False
+  end
+  object Label7: TLabel
+    Left = 280
+    Top = 352
+    Width = 32
+    Height = 13
+    Caption = 'Label7'
   end
   object Env: TBitBtn
     Left = 454
@@ -1687,6 +1694,15 @@ object Principal: TPrincipal
       TabOrder = 1
       OnClick = TarefaAClick
     end
+  end
+  object Button1: TButton
+    Left = 184
+    Top = 352
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 18
+    OnClick = Button1Click
   end
   object PoupUP: TTimer
     Interval = 1

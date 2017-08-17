@@ -22,11 +22,13 @@ uses
   ULogin in 'ULogin.pas' {Login},
   UCadastroConta in 'UCadastroConta.pas' {CadastroContas},
   URelatorio in 'URelatorio.pas' {Relatorio},
-  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel};
+  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel}
+  ;
 
 {$R *.res}
-
+  
 begin
+
 
   Application.Initialize;
   Application.CreateForm(TPrincipal, Principal);

@@ -123,6 +123,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure AvisosPoPClick(Sender: TObject);
     procedure TarefasClick(Sender: TObject);
+    procedure RelaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -139,7 +140,8 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
   UIncidentes, UParceiros, UProfissionais, USaude, UTarefa,
   UAv,
   ULogin,
-  UCadastroConta;
+  UCadastroConta,
+  URelatorio;
 
 {$R *.dfm}
 
@@ -540,6 +542,11 @@ procedure TPrincipal.TarefasClick(Sender: TObject);
        Begin
       TarefaPop.Visible := False;
       End;
+end;
+
+procedure TPrincipal.RelaClick(Sender: TObject);
+begin
+Relatorio.Visible := True;
 end;
 
 end.

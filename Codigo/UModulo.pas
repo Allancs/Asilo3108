@@ -4,7 +4,7 @@ interface
 
 uses
   SysUtils, Classes, DBXpress, FMTBcd, DB, Provider, DBClient, SqlExpr,
-  SimpleDS;
+  SimpleDS,IniFiles;
 
 type
   TModulo = class(TDataModule)
