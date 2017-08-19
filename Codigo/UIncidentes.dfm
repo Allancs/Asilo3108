@@ -1,9 +1,9 @@
 object Incidentes: TIncidentes
-  Left = 249
-  Top = 163
+  Left = 259
+  Top = 175
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Agenda Medica'
+  Caption = 'Casa de Repouso Jardim das Flores - Agenda Medica'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
@@ -967,7 +967,7 @@ object Incidentes: TIncidentes
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 360
+      Left = 344
       Top = 8
       Width = 62
       Height = 13

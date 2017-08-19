@@ -98,7 +98,7 @@ begin
            Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
            Principal.Tipo.Caption := 'Permissão : '+Modulo.sqlDSLogin.Fields[2].AsString;
            User := Modulo.sqlDSLogin.Fields[2].AsString;
-           Principal.Caption := 'ASILO RECANTO DAS FLORES - Usuário : '+Modulo.sqlDSLogin.Fields[1].AsString;
+           Principal.Caption := 'Casa de Repouso Jardim das Flores - Usuário : '+Modulo.sqlDSLogin.Fields[1].AsString;
 
 end;
 

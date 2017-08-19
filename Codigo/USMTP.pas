@@ -44,6 +44,7 @@ type
     Banco: TBitBtn;
     Base: TLabel;
     Base2: TLabel;
+    BitBtn1: TBitBtn;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -56,6 +57,9 @@ type
     procedure EmailsClick(Sender: TObject);
     procedure OBSClick(Sender: TObject);
     procedure CaregaBancoClick(Sender: TObject);
+    procedure BancoConfigClose(Sender: TObject);
+    procedure BancoConfigCanClose(Sender: TObject; var CanClose: Boolean);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -68,7 +72,8 @@ var
 
 implementation
 
-uses UModulo;
+uses UModulo,
+  UCadastroConta;
 
 {$R *.dfm}
 
@@ -259,7 +264,7 @@ dataBase : string;
 begin
 ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
 DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
-base2.Caption :='Caminho banco atualizado : '+ DataBase ;
+
 if BancoConfig.Execute then begin
 //Edit1.Text := BancoConfig.FileName;
 ArquivoIni.WriteString ('Asilo','DATABASE', BancoConfig.FileName);
@@ -270,4 +275,26 @@ else begin
 ShowMessage('Favor selecionar o arquivo !!!')
 end;
 end;
+procedure TSMTPs.BancoConfigClose(Sender: TObject);
+var
+dataBase : string;
+begin
+DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
+base2.Caption :='Caminho banco atualizado : '+ DataBase ;
+end;
+
+procedure TSMTPs.BancoConfigCanClose(Sender: TObject;
+  var CanClose: Boolean);
+  var
+dataBase : string;
+begin
+DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
+base2.Caption :='Caminho banco atualizado : '+ DataBase ;
+end;
+
+procedure TSMTPs.BitBtn1Click(Sender: TObject);
+begin
+CadastroCOntas.Visible := true;
+end;
+
 end.

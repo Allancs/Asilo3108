@@ -1048,7 +1048,7 @@ object Idoso: TIdoso
     object DBEdit15: TDBEdit
       Left = 8
       Top = 259
-      Width = 55
+      Width = 73
       Height = 22
       DataField = 'DATAENTRADA'
       DataSource = Modulo.dsResidente
@@ -1081,7 +1081,7 @@ object Idoso: TIdoso
     object DBEdit17: TDBEdit
       Left = 96
       Top = 259
-      Width = 55
+      Width = 81
       Height = 22
       DataField = 'DATASAIDA'
       DataSource = Modulo.dsResidente
@@ -1234,6 +1234,7 @@ object Idoso: TIdoso
       Height = 22
       DataField = 'CPF'
       DataSource = Modulo.dsResidente
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

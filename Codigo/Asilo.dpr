@@ -10,7 +10,7 @@ uses
   USMTP in 'USMTP.pas' {SMTPs},
   UResponsavel in 'UResponsavel.pas' {Responsavel},
   UCadastroAvisos in 'UCadastroAvisos.pas' {CadastroAvisos},
-  UContas in 'UContas.pas' {Contas},
+  UContas in 'UContas.pas' {Termor},
   UDespesas in 'UDespesas.pas' {Despesas},
   UFuncionario in 'UFuncionario.pas' {Funcionario},
   UIncidentes in 'UIncidentes.pas' {Incidentes},
@@ -22,7 +22,8 @@ uses
   ULogin in 'ULogin.pas' {Login},
   UCadastroConta in 'UCadastroConta.pas' {CadastroContas},
   URelatorio in 'URelatorio.pas' {Relatorio},
-  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel},IniFiles;
+  UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel},
+  IniFiles;
 
 {$R *.res}
 Var
@@ -43,7 +44,7 @@ begin
   Application.CreateForm(TSMTPs, SMTPs);
   Application.CreateForm(TResponsavel, Responsavel);
   Application.CreateForm(TCadastroAvisos, CadastroAvisos);
-  Application.CreateForm(TContas, Contas);
+  Application.CreateForm(TTermor, Termor);
   Application.CreateForm(TDespesas, Despesas);
   Application.CreateForm(TFuncionario, Funcionario);
   Application.CreateForm(TIncidentes, Incidentes);
@@ -55,7 +56,7 @@ begin
   Application.CreateForm(TCadastroContas, CadastroContas);
   Application.CreateForm(TRelatorio, Relatorio);
   Application.CreateForm(TPesquisaRel, PesquisaRel);
-   soma := (Copy(Application.Exename, 1, 15));
+  soma := (Copy(Application.Exename, 1, 15));
    ArquivoIni := TIniFile.Create(soma+'\Config.ini');
    DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
    Vendedor := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');

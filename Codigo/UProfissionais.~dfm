@@ -1,6 +1,7 @@
 object Profissionais: TProfissionais
   Left = 226
   Top = 163
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Profissionais'
   ClientHeight = 461

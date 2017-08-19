@@ -3,7 +3,7 @@ object Profissionais: TProfissionais
   Top = 163
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Profissionais'
+  Caption = 'Casa de Repouso Jardim das Flores - Profissionais'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

@@ -30,38 +30,14 @@ type
     Ser: TBitBtn;
     GP1: TGroupBox;
     AvisosPoP: TCheckBox;
-    MainMenu1: TMainMenu;
-    Cadastro: TMenuItem;
-    Funcionarios1: TMenuItem;
-    Residentes1: TMenuItem;
-    Responsaveis1: TMenuItem;
-    email: TMenuItem;
-    EnviodeEmail1: TMenuItem;
-    SMTP: TMenuItem;
-    Conta: TMenuItem;
-    Conta1: TMenuItem;
-    Despesas1: TMenuItem;
-    Parceiros1: TMenuItem;
-    Profissionais1: TMenuItem;
-    Voluntarios1: TMenuItem;
-    Avisos: TMenuItem;
-    Avisos1: TMenuItem;
-    arefas1: TMenuItem;
-    Idosos1: TMenuItem;
-    Saude: TMenuItem;
-    Saude1: TMenuItem;
-    incidentes1: TMenuItem;
     UNome: TLabel;
-    Rela: TMenuItem;
     Avali: TBitBtn;
     px: TButton;
     an: TButton;
     DBText1: TDBText;
     Label1: TLabel;
     Label2: TLabel;
-    CadastroConta: TMenuItem;
     tipo: TLabel;
-    Sair1: TMenuItem;
     sdsAux: TSimpleDataSet;
     DataSource1: TDataSource;
     Image1: TImage;
@@ -83,8 +59,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Caminhobanco: TLabel;
-    Button1: TButton;
-    Label7: TLabel;
+    Relato: TBitBtn;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -101,22 +76,18 @@ type
     procedure TClick(Sender: TObject);
     procedure Funcionarios1Click(Sender: TObject);
     procedure Avisos1Click(Sender: TObject);
-    procedure Conta1Click(Sender: TObject);
     procedure Despesas1Click(Sender: TObject);
     procedure incidentes1Click(Sender: TObject);
     procedure Responsaveis1Click(Sender: TObject);
-    procedure EnviodeEmail1Click(Sender: TObject);
     procedure Parceiros1Click(Sender: TObject);
     procedure Profissionais1Click(Sender: TObject);
     procedure Idosos1Click(Sender: TObject);
     procedure Saude1Click(Sender: TObject);
     procedure arefas1Click(Sender: TObject);
     procedure Voluntarios1Click(Sender: TObject);
-    procedure SMTPClick(Sender: TObject);
     procedure pxClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure anClick(Sender: TObject);
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure AvaliClick(Sender: TObject);
@@ -127,7 +98,7 @@ type
     procedure AvisosPoPClick(Sender: TObject);
     procedure TarefasClick(Sender: TObject);
     procedure RelaClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -186,7 +157,7 @@ end;
 
 procedure TPrincipal.ConClick(Sender: TObject);
 begin
-Contas.Visible := True;
+Termor.Visible := true;
 end;
 
 procedure TPrincipal.FunClick(Sender: TObject);
@@ -229,11 +200,6 @@ begin
 CadastroAvisos.Visible := True;
 end;
 
-procedure TPrincipal.Conta1Click(Sender: TObject);
-begin
-Contas.Visible := True;
-end;
-
 procedure TPrincipal.Despesas1Click(Sender: TObject);
 begin
 Despesas.Visible := True;
@@ -247,11 +213,6 @@ end;
 procedure TPrincipal.Responsaveis1Click(Sender: TObject);
 begin
 Responsavel.Visible := True;
-end;
-
-procedure TPrincipal.EnviodeEmail1Click(Sender: TObject);
-begin
-Email.Visible := True;
 end;
 
 procedure TPrincipal.Parceiros1Click(Sender: TObject);
@@ -284,11 +245,6 @@ begin
 Voluntarios.visible := true;
 end;
 
-procedure TPrincipal.SMTPClick(Sender: TObject);
-begin
-SMTP.Visible := True;
-end;
-
 procedure TPrincipal.pxClick(Sender: TObject);
 begin
 sdsAux.Next;
@@ -314,11 +270,7 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
              Tarefa.btnDeletar.Enabled := true;
              Tarefa.btnEditar.Enabled := true;
              Tarefa.btnCancelar.Enabled := true;
-                  Cadastro.Visible := true;
-                  Conta.Visible := true;
-                  Rela.Visible := true;
-                  SMTP.Visible := true;
-                  email.Visible := true;
+                   Relato.Visible := true;
                   tipo.visible := true;
                   CaminhoBanco.Visible := true;
                   CadastroAvisos.btnEditar.visible := true;
@@ -342,7 +294,6 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
                   env.visible := true;
                   ser.visible := true;
                   avali.visible := true;
-                  CadastroConta.Visible := true;
                   Tarefa.btnInserir.Enabled := true;
                   Tarefa.btnGravar.Enabled := true;
                   
@@ -370,7 +321,6 @@ Incidentes.btnDeletar.Visible := false;
 Tarefa.btnDeletar.Visible := false;
 CadastroAvisos.btnDeletar.Visible := false;
 Parceiros.btnDeletar.Visible := false;
-Contas.btnDeletar.Visible := false;
 Despesas.btnDeletar.Visible := false;
 Responsavel.btnDeletar.Visible := false;
 Funcionario.btnDeletar.Visible := false;
@@ -387,12 +337,6 @@ end;
 end;
 
 
-
-procedure TPrincipal.anClick(Sender: TObject);
-begin
-sdsAux.Prior;
-//Modulo.cdsAviso.Next;
-end;
 
 procedure TPrincipal.CadastroContaClick(Sender: TObject);
 begin
@@ -493,13 +437,13 @@ procedure TPrincipal.AvisosPoPClick(Sender: TObject);
        if Tarefas.Checked = true and AvisosPop.Checked = false
      then
      begin
-           TarefaPop.Top := 96;
+           TarefaPop.Top := 144;
            TarefaPop.Visible := true;
       end
       else if (Tarefas.Checked = true and AvisosPop.Checked = true)
       then
       begin
-         TarefaPop.Top := 208;
+         TarefaPop.Top := 256;
          TarefaPop.Visible := true;
       end;
 
@@ -529,13 +473,13 @@ procedure TPrincipal.TarefasClick(Sender: TObject);
        if Tarefas.Checked = true and AvisosPop.Checked = false
      then
      begin
-           TarefaPop.Top := 96;
+           TarefaPop.Top := 144;
            TarefaPop.Visible := true;
       end
       else if (Tarefas.Checked = true and AvisosPop.Checked = true)
       then
       begin
-         TarefaPop.Top := 208;
+         TarefaPop.Top := 256;
          TarefaPop.Visible := true;
       end;
 
@@ -555,9 +499,9 @@ procedure TPrincipal.RelaClick(Sender: TObject);
 Relatorio.Visible := True;
 end;
 
-procedure TPrincipal.Button1Click(Sender: TObject);
+procedure TPrincipal.BitBtn1Click(Sender: TObject);
 begin
-Label7.Caption :=   (Application.Exename);
+Relatorio.Visible := true;
 end;
 
 end.

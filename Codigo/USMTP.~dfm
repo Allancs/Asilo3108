@@ -3,7 +3,7 @@ object SMTPs: TSMTPs
   Top = 295
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Configura'#231#245'es '
+  Caption = 'Casa de Repouso Jardim das Flores - Configura'#231#245'es '
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
@@ -288,7 +288,7 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 8
       Width = 259
-      Height = 33
+      Height = 22
       Caption = 'Cadastro de Servidor SMTP'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText

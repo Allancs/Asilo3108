@@ -829,7 +829,7 @@ object Voluntarios: TVoluntarios
     object DBEdit4: TDBEdit
       Left = 8
       Top = 200
-      Width = 97
+      Width = 89
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsVoluntario

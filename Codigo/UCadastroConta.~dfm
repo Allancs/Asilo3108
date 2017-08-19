@@ -798,7 +798,7 @@ object CadastroContas: TCadastroContas
     end
     object ti: TLabel
       Left = 8
-      Top = 248
+      Top = 221
       Width = 3
       Height = 13
       FocusControl = DBEdit1
@@ -974,7 +974,6 @@ object CadastroContas: TCadastroContas
         'Quatro fun'#231#245'es voltadas a Sa'#250'de')
       ParentFont = False
       TabOrder = 0
-      Visible = False
     end
   end
   object sqlAux: TSQLQuery

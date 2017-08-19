@@ -216,9 +216,13 @@ Modulo.cdsEmail.Next;
 end;
 
 procedure TSMTPs.FormCreate(Sender: TObject);
+var
+dataBase : string;
 begin
+ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
+DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
 SMTPs.Caption := 'Cadastro de servidor Smtp';
-Base.Caption :='Caminho banco atual : '+Modulo.Conexao.Params.Values['Database'] ;
+Base.Caption :='Caminho banco atual : '+DataBase;
 
 end;
 

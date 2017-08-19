@@ -781,7 +781,7 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label12: TLabel
-      Left = 208
+      Left = 112
       Top = 192
       Width = 48
       Height = 14
@@ -795,7 +795,7 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 72
+      Left = 64
       Top = 8
       Width = 32
       Height = 14
@@ -837,7 +837,7 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 232
+      Left = 184
       Top = 57
       Width = 30
       Height = 14
@@ -865,7 +865,7 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label7: TLabel
-      Left = 280
+      Left = 264
       Top = 103
       Width = 37
       Height = 14
@@ -957,9 +957,9 @@ object Funcionario: TFuncionario
       TabOrder = 11
     end
     object DBEdit12: TDBEdit
-      Left = 208
+      Left = 112
       Top = 214
-      Width = 73
+      Width = 81
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsFun
@@ -974,7 +974,7 @@ object Funcionario: TFuncionario
       TabOrder = 12
     end
     object DBEdit2: TDBEdit
-      Left = 72
+      Left = 64
       Top = 26
       Width = 257
       Height = 22
@@ -992,7 +992,7 @@ object Funcionario: TFuncionario
     object DBEdit3: TDBEdit
       Left = 16
       Top = 248
-      Width = 147
+      Width = 57
       Height = 22
       BevelWidth = 8
       DataField = 'SEXO'
@@ -1025,7 +1025,7 @@ object Funcionario: TFuncionario
       OnExit = DBEdit4Exit
     end
     object DBEdit5: TDBEdit
-      Left = 233
+      Left = 185
       Top = 76
       Width = 23
       Height = 22
@@ -1058,9 +1058,9 @@ object Funcionario: TFuncionario
       TabOrder = 5
     end
     object DBEdit7: TDBEdit
-      Left = 280
+      Left = 264
       Top = 123
-      Width = 33
+      Width = 49
       Height = 22
       DataField = 'SALARIO'
       DataSource = Modulo.dsFun

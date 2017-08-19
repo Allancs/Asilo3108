@@ -1,11 +1,11 @@
 object Responsavel: TResponsavel
-  Left = 151
-  Top = 258
+  Left = 268
+  Top = 231
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Cadastro de Respons'#225'vel'
+  Caption = 'Casa de Repouso Jardim das Flores - Cadastro de Respons'#225'vel'
   ClientHeight = 461
-  ClientWidth = 784
+  ClientWidth = 783
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,7 @@ object Responsavel: TResponsavel
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 784
+    Width = 783
     Height = 461
     Align = alClient
     Picture.Data = {

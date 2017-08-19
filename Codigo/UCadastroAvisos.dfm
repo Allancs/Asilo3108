@@ -3,7 +3,7 @@ object CadastroAvisos: TCadastroAvisos
   Top = 341
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Avisos da Casa'
+  Caption = 'Casa de Repouso Jardim das Flores - Avisos da Casa'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

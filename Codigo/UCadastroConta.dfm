@@ -3,7 +3,7 @@ object CadastroContas: TCadastroContas
   Top = 159
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Cadastro de Usu'#225'rios.'
+  Caption = 'Casa de Repouso Jardim das Flores - Cadastro de Usu'#225'rios.'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

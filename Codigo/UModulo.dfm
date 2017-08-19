@@ -279,13 +279,13 @@ object Modulo: TModulo
     object cdsParceiroTELEFONE: TStringField
       DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
-      EditMask = '!\(99\)0000-0000;1;_'
+      EditMask = '\(00\)0000-0000;1; '
       Size = 13
     end
     object cdsParceiroCELULAR: TStringField
       DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
-      EditMask = '!\(99\)\90000-0000;1;_'
+      EditMask = '\(00\)\90000-0000;1; '
       Size = 14
     end
     object cdsParceiroEMAIL: TStringField
@@ -590,29 +590,24 @@ object Modulo: TModulo
     Left = 704
     Top = 288
     object cdsVoluntarioCOD_VOLUNTARIO: TIntegerField
-      DisplayLabel = 'C'#243'digo'
       FieldName = 'COD_VOLUNTARIO'
       Required = True
     end
     object cdsVoluntarioNOME: TStringField
-      DisplayLabel = 'Nome'
       FieldName = 'NOME'
       Size = 45
     end
     object cdsVoluntarioTELEFONE: TStringField
-      DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
-      EditMask = '!\(99\)0000-0000;1;_'
+      EditMask = '\(00\)0000-0000;1; '
       Size = 13
     end
     object cdsVoluntarioCELULAR: TStringField
-      DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
-      EditMask = '!\(99\)\90000-0000;1;_'
+      EditMask = '\(00\)\90000-0000;1; '
       Size = 14
     end
     object cdsVoluntarioEMAIL: TStringField
-      DisplayLabel = 'Email'
       FieldName = 'EMAIL'
       Size = 100
     end

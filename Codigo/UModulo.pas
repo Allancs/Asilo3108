@@ -52,11 +52,6 @@ type
     sdsSaude: TSQLDataSet;
     sdsTarefa: TSQLDataSet;
     sdsVoluntario: TSQLDataSet;
-    cdsVoluntarioCOD_VOLUNTARIO: TIntegerField;
-    cdsVoluntarioNOME: TStringField;
-    cdsVoluntarioTELEFONE: TStringField;
-    cdsVoluntarioCELULAR: TStringField;
-    cdsVoluntarioEMAIL: TStringField;
     cdsTarefaCOD_TAREFA: TIntegerField;
     cdsTarefaTAREFA: TStringField;
     cdsTarefaDATA: TDateField;
@@ -166,6 +161,11 @@ type
     sdsUserUSU_SENHA: TStringField;
     cdsFunCARTEIRATRABALHO: TStringField;
     cdsFunSEXO: TStringField;
+    cdsVoluntarioCOD_VOLUNTARIO: TIntegerField;
+    cdsVoluntarioNOME: TStringField;
+    cdsVoluntarioTELEFONE: TStringField;
+    cdsVoluntarioCELULAR: TStringField;
+    cdsVoluntarioEMAIL: TStringField;
   private
     { Private declarations }
   public

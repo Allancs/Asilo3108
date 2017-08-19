@@ -3,7 +3,7 @@ object Emails: TEmails
   Top = 140
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Envio de Email'
+  Caption = 'ASILO RECANTO DAS FLORES - Envio de Email'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

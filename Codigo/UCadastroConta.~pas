@@ -204,14 +204,14 @@ procedure TCadastroContas.DireitaClick(Sender: TObject);
 
 begin
 Modulo.cdsUser.Next;
-ti.Caption := DBEdit3.Text;
+ti.Caption := 'Conta tipo : '+DBEdit3.Text+'.';
 end;
 
 procedure TCadastroContas.EsquerdaClick(Sender: TObject);
 
 begin
 Modulo.cdsUser.Prior;
-ti.Caption := 'Conta tipo : '+DBEdit3.Text+',';
+ti.Caption := 'Conta tipo : '+DBEdit3.Text+'.';
 end;
 
 procedure TCadastroContas.VeryfiTimer(Sender: TObject);

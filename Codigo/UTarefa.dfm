@@ -1,8 +1,8 @@
 object Tarefa: TTarefa
-  Left = 277
-  Top = 139
+  Left = 280
+  Top = 262
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Tarefas da Casa'
+  Caption = 'Casa de Repouso Jardim das Flores - Tarefas da Casa'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

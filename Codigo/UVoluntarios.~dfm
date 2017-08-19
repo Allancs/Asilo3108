@@ -815,7 +815,7 @@ object Voluntarios: TVoluntarios
       Top = 240
       Width = 153
       Height = 22
-      DataField = 'EMAIL'
+      DataField = 'NOMEV'
       DataSource = Modulo.dsVoluntario
       Enabled = False
       Font.Charset = ANSI_CHARSET
@@ -865,8 +865,7 @@ object Voluntarios: TVoluntarios
       Top = 120
       Width = 177
       Height = 22
-      CharCase = ecUpperCase
-      DataField = 'NOME'
+      DataField = 'NOMEV'
       DataSource = Modulo.dsVoluntario
       Enabled = False
       Font.Charset = ANSI_CHARSET
