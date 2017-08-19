@@ -1,6 +1,7 @@
 object Despesas: TDespesas
-  Left = 192
-  Top = 211
+  Left = 259
+  Top = 219
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Despesas'
   ClientHeight = 461
@@ -808,7 +809,7 @@ object Despesas: TDespesas
       Width = 239
       Height = 89
       DataField = 'DESCRICAO'
-      DataSource = Modulo.dsDespesa
+      DataSource = DataSource1
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText

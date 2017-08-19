@@ -1,6 +1,6 @@
 object Funcionario: TFuncionario
-  Left = 244
-  Top = 341
+  Left = 249
+  Top = 275
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Funcion'#225'rio'
@@ -741,7 +741,7 @@ object Funcionario: TFuncionario
     object Label1: TLabel
       Left = 16
       Top = 8
-      Width = 65
+      Width = 39
       Height = 14
       Caption = 'C'#243'digo'
       FocusControl = DBEdit1
@@ -755,7 +755,7 @@ object Funcionario: TFuncionario
     object Label10: TLabel
       Left = 216
       Top = 149
-      Width = 129
+      Width = 111
       Height = 14
       Caption = 'Carteira de Trabalho'
       FocusControl = DBEdit10
@@ -769,7 +769,7 @@ object Funcionario: TFuncionario
     object Label11: TLabel
       Left = 16
       Top = 192
-      Width = 41
+      Width = 39
       Height = 14
       Caption = 'Celular'
       FocusControl = DBEdit11
@@ -781,9 +781,9 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label12: TLabel
-      Left = 208
+      Left = 112
       Top = 192
-      Width = 49
+      Width = 48
       Height = 14
       Caption = 'Telefone'
       FocusControl = DBEdit12
@@ -795,9 +795,9 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 72
+      Left = 64
       Top = 8
-      Width = 49
+      Width = 32
       Height = 14
       Caption = 'Nome'
       FocusControl = DBEdit2
@@ -811,7 +811,7 @@ object Funcionario: TFuncionario
     object Label3: TLabel
       Left = 16
       Top = 57
-      Width = 89
+      Width = 84
       Height = 14
       Caption = 'Selecione Sexo'
       FocusControl = DBEdit6
@@ -825,7 +825,7 @@ object Funcionario: TFuncionario
     object Label4: TLabel
       Left = 112
       Top = 57
-      Width = 89
+      Width = 65
       Height = 14
       Caption = 'Nascimento'
       FocusControl = DBEdit4
@@ -837,9 +837,9 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 232
+      Left = 184
       Top = 57
-      Width = 49
+      Width = 30
       Height = 14
       Caption = 'Idade'
       FocusControl = DBEdit5
@@ -853,7 +853,7 @@ object Funcionario: TFuncionario
     object Label6: TLabel
       Left = 16
       Top = 103
-      Width = 41
+      Width = 33
       Height = 14
       Caption = 'Cargo'
       FocusControl = DBEdit6
@@ -865,9 +865,9 @@ object Funcionario: TFuncionario
       ParentFont = False
     end
     object Label7: TLabel
-      Left = 280
+      Left = 264
       Top = 103
-      Width = 57
+      Width = 37
       Height = 14
       Caption = 'Salario'
       FocusControl = DBEdit7
@@ -881,7 +881,7 @@ object Funcionario: TFuncionario
     object Label8: TLabel
       Left = 16
       Top = 149
-      Width = 49
+      Width = 21
       Height = 14
       Caption = 'CPF'
       FocusControl = DBEdit8
@@ -895,7 +895,7 @@ object Funcionario: TFuncionario
     object Label9: TLabel
       Left = 119
       Top = 149
-      Width = 41
+      Width = 15
       Height = 14
       Caption = 'RG'
       FocusControl = DBEdit9
@@ -935,6 +935,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 15
       ParentFont = False
       TabOrder = 9
     end
@@ -951,13 +952,14 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 14
       ParentFont = False
       TabOrder = 11
     end
     object DBEdit12: TDBEdit
-      Left = 208
+      Left = 112
       Top = 214
-      Width = 73
+      Width = 81
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsFun
@@ -967,11 +969,12 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 13
       ParentFont = False
       TabOrder = 12
     end
     object DBEdit2: TDBEdit
-      Left = 72
+      Left = 64
       Top = 26
       Width = 257
       Height = 22
@@ -989,7 +992,7 @@ object Funcionario: TFuncionario
     object DBEdit3: TDBEdit
       Left = 16
       Top = 248
-      Width = 147
+      Width = 57
       Height = 22
       BevelWidth = 8
       DataField = 'SEXO'
@@ -1019,9 +1022,10 @@ object Funcionario: TFuncionario
       MaxLength = 10
       ParentFont = False
       TabOrder = 3
+      OnExit = DBEdit4Exit
     end
     object DBEdit5: TDBEdit
-      Left = 233
+      Left = 185
       Top = 76
       Width = 23
       Height = 22
@@ -1035,7 +1039,7 @@ object Funcionario: TFuncionario
       Font.Style = []
       ParentFont = False
       TabOrder = 4
-      OnClick = DBEdit5Click
+      OnEnter = DBEdit5Enter
     end
     object DBEdit6: TDBEdit
       Left = 16
@@ -1054,9 +1058,9 @@ object Funcionario: TFuncionario
       TabOrder = 5
     end
     object DBEdit7: TDBEdit
-      Left = 280
+      Left = 264
       Top = 123
-      Width = 33
+      Width = 49
       Height = 22
       DataField = 'SALARIO'
       DataSource = Modulo.dsFun

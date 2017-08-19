@@ -13,7 +13,6 @@ type
     DetailBand1: TQRBand;
     PageFooterBand1: TQRBand;
     PageHeaderBand1: TQRBand;
-    SummaryBand1: TQRBand;
     TitleBand1: TQRBand;
     QRDBText2: TQRDBText;
     QRLabel3: TQRLabel;
@@ -21,6 +20,10 @@ type
     QRDBText1: TQRDBText;
     QRLabel1: TQRLabel;
     QRLabel4: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRDBText4: TQRDBText;
   private
     { Private declarations }
   public

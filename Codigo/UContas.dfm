@@ -14,7 +14,6 @@ object Contas: TContas
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -229,7 +228,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
-      OnClick = btnCancelarClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -301,7 +299,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
-      OnClick = btnEditarClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -373,7 +370,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
-      OnClick = btnDeletarClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -445,7 +441,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
-      OnClick = btnGravarClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -517,7 +512,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
-      OnClick = btnInserirClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -589,7 +583,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
-      OnClick = EsquerdaClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -661,7 +654,6 @@ object Contas: TContas
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
-      OnClick = DireitaClick
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -772,156 +764,6 @@ object Contas: TContas
     Width = 400
     Height = 353
     TabOrder = 2
-    object Label1: TLabel
-      Left = 8
-      Top = 8
-      Width = 39
-      Height = 14
-      Caption = 'C'#243'digo'
-      FocusControl = DBEdit1
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label2: TLabel
-      Left = 8
-      Top = 48
-      Width = 32
-      Height = 14
-      Caption = 'Nome'
-      FocusControl = DBEdit2
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label3: TLabel
-      Left = 8
-      Top = 88
-      Width = 54
-      Height = 14
-      Caption = 'Descri'#231#227'o'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label4: TLabel
-      Left = 8
-      Top = 208
-      Width = 28
-      Height = 14
-      Caption = 'Valor'
-      FocusControl = DBEdit4
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label5: TLabel
-      Left = 80
-      Top = 208
-      Width = 66
-      Height = 14
-      Caption = 'Vencimento'
-      FocusControl = DBEdit5
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object DBEdit1: TDBEdit
-      Left = 8
-      Top = 24
-      Width = 19
-      Height = 22
-      DataField = 'COD_CONTA'
-      DataSource = Modulo.dsConta
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 4
-    end
-    object DBEdit2: TDBEdit
-      Left = 8
-      Top = 64
-      Width = 339
-      Height = 22
-      DataField = 'NOME'
-      DataSource = Modulo.dsConta
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-    end
-    object DBEdit4: TDBEdit
-      Left = 8
-      Top = 224
-      Width = 65
-      Height = 22
-      DataField = 'VALOR'
-      DataSource = Modulo.dsConta
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-    end
-    object DBEdit5: TDBEdit
-      Left = 80
-      Top = 224
-      Width = 65
-      Height = 22
-      DataField = 'DATAVENCIMENTO'
-      DataSource = Modulo.dsConta
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      MaxLength = 10
-      ParentFont = False
-      TabOrder = 3
-    end
-    object DBMemo1: TDBMemo
-      Left = 8
-      Top = 112
-      Width = 341
-      Height = 89
-      DataField = 'DESCRICAO'
-      DataSource = Modulo.dsConta
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-    end
   end
   object sqlAux: TSQLQuery
     MaxBlobSize = -1

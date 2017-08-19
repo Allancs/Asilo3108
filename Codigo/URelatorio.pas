@@ -34,8 +34,17 @@ type
     dsAux: TDataSource;
     Timer1: TTimer;
     Label2: TLabel;
-    Button1: TButton;
-    BitBtn1: TBitBtn;
+    RelatorioTodos: TSimpleDataSet;
+    dsTodos: TDataSource;
+    sdsAuxEMAIL: TStringField;
+    sdsAuxNOME: TStringField;
+    RlVolun: TBitBtn;
+    RlParceiros: TBitBtn;
+    RLTodos: TBitBtn;
+    RelatorioTodosEMAIL: TStringField;
+    RelatorioTodosEMAIL_1: TStringField;
+    RelatorioTodosNOME: TStringField;
+    RelatorioTodosNOME_1: TStringField;
     procedure TodosEClick(Sender: TObject);
     procedure VoluntariosEClick(Sender: TObject);
     procedure ParceirosEClick(Sender: TObject);
@@ -50,8 +59,9 @@ type
     procedure AniversariantesClick(Sender: TObject);
     procedure DadosRClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure RlVolunClick(Sender: TObject);
+    procedure RLTodosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -72,15 +82,19 @@ begin
 If TodosE.Checked = true
 then
 begin
-
+RLTodos.Visible := true;
 VoluntariosE.Enabled := false;
 ParceirosE.Enabled := False;
 Telefone.Enabled := false;
 Residente.Enabled := false;
 Responsavel.Enabled := false;
+sdsAux.Close;
+sdsAux.DataSet.CommandText := 'select PARCEIRO.EMAIL , VOLUNTARIO.EMAIL, PARCEIRO.NOME, VOLUNTARIO.NOME from PARCEIRO, VOLUNTARIO';
+sdsAux.Open;
 end
 else
 begin
+RLTodos.Visible := false;
 Telefone.Enabled := True;
 Residente.Enabled := True;
 Responsavel.Enabled := True;
@@ -98,30 +112,41 @@ Telefone.Enabled := false;
 Residente.Enabled := false;
 Responsavel.Enabled := false;
 TodosE.Enabled := false;
+RlVolun.Visible := true;
 sdsAux.Close;
 sdsAux.DataSet.CommandText := 'select EMAIL ,NOME from VOLUNTARIO';
 sdsAux.Open;
 end
 else
 begin
+RlParceiros.Visible := false;
 Telefone.Enabled := True;
 Residente.Enabled := True;
 Responsavel.Enabled := True;
 TodosE.Enabled := true;
+RlVolun.Visible := true;
 end;
+
+
 IF VoluntariosE.Checked = True and ParceirosE.Checked = true
 then
 begin
+
+RlVolun.Visible := false;
+RlParceiros.Visible := false;
+TodosE.Enabled := false;
+RLTodos.Enabled := true;
+RlVolun.Visible := false;
 Telefone.Enabled := false;
 Residente.Enabled := false;
 Responsavel.Enabled := false;
-TodosE.Enabled := false;
-sdsAux.Close;
-sdsAux.DataSet.CommandText := 'select PARCEIRO.EMAIL ,PARCEIRO.NOME, VOLUNTARIO.EMAIL, VOLUNTARIO.NOME from VOLUNTARIO, PARCEIRO';
-sdsAux.Open;
+RelatorioTodos.Close;
+RelatorioTodos.DataSet.CommandText := 'select PARCEIRO.EMAIL ,PARCEIRO.NOME, VOLUNTARIO.EMAIL, VOLUNTARIO.NOME from VOLUNTARIO, PARCEIRO';
+RelatorioTodos.Open;
 end
 else
 begin
+RlTodos.Visible := false;
 Telefone.Enabled := True;
 Residente.Enabled := True;
 Responsavel.Enabled := True;
@@ -134,6 +159,8 @@ begin
 If ParceirosE.Checked = true
 then
 begin
+TodosE.Enabled := false;
+RlParceiros.Visible := true;
 Telefone.Enabled := false;
 Residente.Enabled := false;
 Responsavel.Enabled := false;
@@ -143,28 +170,39 @@ sdsAux.Open;
 end
 else
 begin
+
+RlParceiros.Visible := false;
 Telefone.Enabled := True;
 Residente.Enabled := True;
 Responsavel.Enabled := True;
+TodosE.Enabled := True;
 end;
+
+
 IF VoluntariosE.Checked = True and ParceirosE.Checked = true
 then
 begin
+
+RlVolun.Visible := false;
+RlParceiros.Visible := false;
+TodosE.Enabled := true;
+RlTodos.Visible := true;
 Telefone.Enabled := false;
 Residente.Enabled := false;
 Responsavel.Enabled := false;
 TodosE.Enabled := false;
-sdsAux.Close;
-sdsAux.DataSet.CommandText := 'select PARCEIRO.EMAIL ,PARCEIRO.NOME, VOLUNTARIO.EMAIL, VOLUNTARIO.NOME from VOLUNTARIO, PARCEIRO';
-sdsAux.Open;
+RelatorioTodos.Close;
+RelatorioTodos.DataSet.CommandText := 'select PARCEIRO.EMAIL ,PARCEIRO.NOME, VOLUNTARIO.EMAIL, VOLUNTARIO.NOME from VOLUNTARIO, PARCEIRO';
+RelatorioTodos.Open;
 end
 else
 begin
+TodosE.Enabled :=true;
+RlTodos.Visible := false;
 Telefone.Enabled := True;
 Residente.Enabled := True;
 Responsavel.Enabled := True;
-TodosE.Enabled := true;
-end
+end ;
 end;
 
 procedure TRelatorio.TodosTClick(Sender: TObject);
@@ -348,12 +386,17 @@ sdsAux.Open;
 end
 end;
 
-procedure TRelatorio.Button1Click(Sender: TObject);
+procedure TRelatorio.BitBtn1Click(Sender: TObject);
+begin
+PesquisaRel.Todos.Preview;
+end;
+
+procedure TRelatorio.RlVolunClick(Sender: TObject);
 begin
 If TodosE.Checked = true
 then
 begin
-
+PesquisaRel.volu.Preview;
 end
 else if VoluntariosE.Checked = true
 then
@@ -362,11 +405,9 @@ PesquisaRel.volu.Preview;
 end
 end;
 
-procedure TRelatorio.BitBtn1Click(Sender: TObject);
+procedure TRelatorio.RLTodosClick(Sender: TObject);
 begin
-  sdsAux.Close;
-sdsAux.DataSet.CommandText := 'select * from VOLUNTARIO';
-  sdsAux.Open;
+PesquisaRel.Todos.Preview;
 end;
 
 end.

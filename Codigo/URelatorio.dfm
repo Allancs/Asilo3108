@@ -1,6 +1,6 @@
 object Relatorio: TRelatorio
-  Left = 254
-  Top = 251
+  Left = 264
+  Top = 313
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Relat'#243'rio'
@@ -392,23 +392,34 @@ object Relatorio: TRelatorio
         OnClick = NumeroRClick
       end
     end
-    object Button1: TButton
+    object RlVolun: TBitBtn
       Left = 8
       Top = 240
       Width = 75
       Height = 25
-      Caption = 'Button1'
+      Caption = 'RlVolun'
       TabOrder = 4
-      OnClick = Button1Click
+      Visible = False
+      OnClick = RlVolunClick
     end
-    object BitBtn1: TBitBtn
-      Left = 72
+    object RlParceiros: TBitBtn
+      Left = 8
       Top = 272
       Width = 75
       Height = 25
-      Caption = 'BitBtn1'
+      Caption = 'RlParceiros'
       TabOrder = 5
-      OnClick = BitBtn1Click
+      Visible = False
+    end
+    object RLTodos: TBitBtn
+      Left = 8
+      Top = 312
+      Width = 75
+      Height = 25
+      Caption = 'RLTodos'
+      TabOrder = 6
+      Visible = False
+      OnClick = RLTodosClick
     end
   end
   object TPanel
@@ -443,14 +454,22 @@ object Relatorio: TRelatorio
     Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
     Connection.Connected = True
     DataSet.CommandText = 
-      'select * from  from VOLUNTARIO, FUNCIONARIO , LIGACOES ,PARCEIRO' +
-      ' , PROFISSIONAIS ,RESIDENTE'
+      'select PARCEIRO.EMAIL , VOLUNTARIO.EMAIL, PARCEIRO.NOME, VOLUNTA' +
+      'RIO.NOME from PARCEIRO, VOLUNTARIO'
     DataSet.DataSource = dsAux
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
     Left = 744
     Top = 216
+    object sdsAuxEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 45
+    end
+    object sdsAuxNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
   end
   object dsAux: TDataSource
     DataSet = sdsAux
@@ -462,5 +481,61 @@ object Relatorio: TRelatorio
     OnTimer = Timer1Timer
     Left = 416
     Top = 216
+  end
+  object RelatorioTodos: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 
+      'select PARCEIRO.EMAIL , VOLUNTARIO.EMAIL, PARCEIRO.NOME, VOLUNTA' +
+      'RIO.NOME from PARCEIRO, VOLUNTARIO'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 744
+    Top = 248
+    object RelatorioTodosEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 45
+    end
+    object RelatorioTodosEMAIL_1: TStringField
+      FieldName = 'EMAIL_1'
+      Size = 100
+    end
+    object RelatorioTodosNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object RelatorioTodosNOME_1: TStringField
+      FieldName = 'NOME_1'
+      Size = 45
+    end
+  end
+  object dsTodos: TDataSource
+    DataSet = RelatorioTodos
+    Left = 712
+    Top = 248
   end
 end

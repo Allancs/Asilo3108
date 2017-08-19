@@ -188,12 +188,12 @@ begin
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
           Idoso.Enabled := True;
-
+          btnGravar.Enabled := true;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
 
-     DBEdit3.Enabled       := True;
+          DBEdit3.Enabled       := True;
           DBEdit6.Enabled       := True;
           DBMemo1.Enabled       := True;
           DBMemo2.Enabled       := True;

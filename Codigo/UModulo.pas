@@ -16,14 +16,11 @@ type
     cdsAvisoCOD_AVISO: TIntegerField;
     cdsAvisoOBS: TStringField;
     cdsAvisoDATA: TDateField;
-    dsConta: TDataSource;
     dsFun: TDataSource;
     dsInc: TDataSource;
     dsLigacoes: TDataSource;
     dsParceiro: TDataSource;
-    dspConta: TDataSetProvider;
     cdsFun: TClientDataSet;
-    cdsConta: TClientDataSet;
     cdsInc: TClientDataSet;
     dspFun: TDataSetProvider;
     dspInc: TDataSetProvider;
@@ -31,7 +28,6 @@ type
     cdsParceiro: TClientDataSet;
     dspLigacoes: TDataSetProvider;
     dspParceiro: TDataSetProvider;
-    sdsConta: TSQLDataSet;
     sqsFun: TSQLDataSet;
     sdsInc: TSQLDataSet;
     sdsLigacoes: TSQLDataSet;
@@ -96,11 +92,6 @@ type
     cdsDespesasDESCRICAO: TStringField;
     cdsDespesasVALOR: TStringField;
     cdsDespesasDATA: TDateField;
-    cdsContaCOD_CONTA: TIntegerField;
-    cdsContaNOME: TStringField;
-    cdsContaDESCRICAO: TStringField;
-    cdsContaVALOR: TFMTBCDField;
-    cdsContaDATAVENCIMENTO: TDateField;
     cdsFunCOD_FUN: TIntegerField;
     cdsFunNOME: TStringField;
     cdsFunDATANASCIMENTO: TStringField;

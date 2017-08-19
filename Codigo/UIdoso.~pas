@@ -62,10 +62,9 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure DBEdit3Exit(Sender: TObject);
     procedure DBEdit4Click(Sender: TObject);
-    procedure DBEdit4Change(Sender: TObject);
-    procedure DBEdit4ContextPopup(Sender: TObject; MousePos: TPoint;
-      var Handled: Boolean);
+    procedure DBEdit4Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -283,15 +282,25 @@ Then Begin
       End;
 end;
 
+procedure TIdoso.DBEdit3Exit(Sender: TObject);
+begin
+if (DBEDit4.Text = '')
+then
+begin
+DtaAtual := DateToStr(Date);
+     DataCopia := (Copy(DtaAtual, 7, 10));
+     Copia := (Copy(DBEdit3.Text, 7, 10));
+     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
+     //DBEdit4.Text := IntToStr(Nasc);
+     //Label18.Caption := copia;
+    // Label19.Caption := IntToStr(Nasc);
+      DBEdit4.Text := IntToStr(Nasc);
+      end;
+      end;
+
 procedure TIdoso.DBEdit4Click(Sender: TObject);
 begin
-If (DBEdit3.Text = '')
-then
-begin
-
-end
-else
-     DtaAtual := DateToStr(Date);
+DtaAtual := DateToStr(Date);
      DataCopia := (Copy(DtaAtual, 7, 10));
      Copia := (Copy(DBEdit3.Text, 7, 10));
      Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
@@ -301,15 +310,12 @@ else
       DBEdit4.Text := IntToStr(Nasc);
 end;
 
-procedure TIdoso.DBEdit4Change(Sender: TObject);
+procedure TIdoso.DBEdit4Enter(Sender: TObject);
 begin
-If (DBEdit3.Text = '')
+if (DBEDit4.Text = '')
 then
 begin
-
-end
-else
-     DtaAtual := DateToStr(Date);
+DtaAtual := DateToStr(Date);
      DataCopia := (Copy(DtaAtual, 7, 10));
      Copia := (Copy(DBEdit3.Text, 7, 10));
      Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
@@ -317,25 +323,7 @@ else
      //Label18.Caption := copia;
     // Label19.Caption := IntToStr(Nasc);
       DBEdit4.Text := IntToStr(Nasc);
-end;
-
-procedure TIdoso.DBEdit4ContextPopup(Sender: TObject; MousePos: TPoint;
-  var Handled: Boolean);
-begin
-If (DBEdit3.Text = '')
-then
-begin
-
-end
-else
-     DtaAtual := DateToStr(Date);
-     DataCopia := (Copy(DtaAtual, 7, 10));
-     Copia := (Copy(DBEdit3.Text, 7, 10));
-     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
-     //DBEdit4.Text := IntToStr(Nasc);
-     //Label18.Caption := copia;
-    // Label19.Caption := IntToStr(Nasc);
-      DBEdit4.Text := IntToStr(Nasc);
+      end;
 end;
 
 end.

@@ -1,6 +1,7 @@
 object Idoso: TIdoso
   Left = 293
   Top = 212
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES -  Cadastro de Residente'
   ClientHeight = 461
@@ -977,7 +978,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 12
     end
     object DBEdit1: TDBEdit
       Left = 8
@@ -993,7 +994,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 16
     end
     object DBEdit10: TDBEdit
       Left = 203
@@ -1010,7 +1011,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 9
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 8
     end
     object DBEdit12: TDBEdit
       Left = 8
@@ -1026,7 +1027,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 10
     end
     object DBEdit13: TDBEdit
       Left = 195
@@ -1042,12 +1043,12 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 11
     end
     object DBEdit15: TDBEdit
       Left = 8
       Top = 259
-      Width = 55
+      Width = 73
       Height = 22
       DataField = 'DATAENTRADA'
       DataSource = Modulo.dsResidente
@@ -1059,7 +1060,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 13
     end
     object DBEdit16: TDBEdit
       Left = 8
@@ -1075,12 +1076,12 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 15
     end
     object DBEdit17: TDBEdit
       Left = 96
       Top = 259
-      Width = 55
+      Width = 81
       Height = 22
       DataField = 'DATASAIDA'
       DataSource = Modulo.dsResidente
@@ -1092,7 +1093,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 14
     end
     object DBEdit2: TDBEdit
       Left = 48
@@ -1108,7 +1109,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 8
+      TabOrder = 0
     end
     object DBEdit3: TDBEdit
       Left = 208
@@ -1125,7 +1126,8 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 1
+      OnExit = DBEdit3Exit
     end
     object DBEdit4: TDBEdit
       Left = 288
@@ -1141,10 +1143,9 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 10
-      OnChange = DBEdit4Change
+      TabOrder = 2
       OnClick = DBEdit4Click
-      OnContextPopup = DBEdit4ContextPopup
+      OnEnter = DBEdit4Enter
     end
     object DBEdit5: TDBEdit
       Left = 8
@@ -1160,7 +1161,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 11
+      TabOrder = 3
     end
     object DBEdit6: TDBEdit
       Left = 103
@@ -1176,7 +1177,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 12
+      TabOrder = 4
     end
     object DBEdit7: TDBEdit
       Left = 207
@@ -1192,7 +1193,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 13
+      TabOrder = 5
     end
     object DBEdit8: TDBEdit
       Left = 308
@@ -1208,7 +1209,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 14
+      TabOrder = 6
     end
     object DBEdit9: TDBEdit
       Left = 8
@@ -1224,7 +1225,7 @@ object Idoso: TIdoso
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 15
+      TabOrder = 7
     end
     object DBEdit11: TDBEdit
       Left = 264
@@ -1233,6 +1234,7 @@ object Idoso: TIdoso
       Height = 22
       DataField = 'CPF'
       DataSource = Modulo.dsResidente
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1240,7 +1242,7 @@ object Idoso: TIdoso
       Font.Style = []
       MaxLength = 14
       ParentFont = False
-      TabOrder = 16
+      TabOrder = 9
     end
   end
   object sqlAux: TSQLQuery

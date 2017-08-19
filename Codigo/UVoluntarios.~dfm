@@ -1,6 +1,7 @@
 object Voluntarios: TVoluntarios
   Left = 310
   Top = 184
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Volunt'#225'rios'
   ClientHeight = 461
@@ -862,7 +863,7 @@ object Voluntarios: TVoluntarios
     object DBEdit2: TDBEdit
       Left = 8
       Top = 120
-      Width = 300
+      Width = 177
       Height = 22
       CharCase = ecUpperCase
       DataField = 'NOME'

@@ -71,7 +71,7 @@ begin
            Else NReg := sqlAux.FieldByName('ULTIMO').Value + 1;
            Modulo.cdsTarefa.Insert;
            Modulo.cdsTarefaCOD_TAREFA.Value := NReg;
-           DBEdit2.SetFocus;
+           DBEdit3.SetFocus;
 
 end;
 

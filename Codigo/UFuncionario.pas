@@ -50,7 +50,6 @@ type
     Label9: TLabel;
     Select: TComboBox;
     procedure btnEditarClick(Sender: TObject);
-    procedure DBEdit5Click(Sender: TObject);
     procedure SelectChange(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -61,6 +60,8 @@ type
     procedure EstadoClick(Sender: TObject);
     procedure SelectClick(Sender: TObject);
     procedure EstadoChange(Sender: TObject);
+    procedure DBEdit4Exit(Sender: TObject);
+    procedure DBEdit5Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -99,21 +100,6 @@ Modulo.cdsFun.Edit;
           DBEdit11.Enabled       := True;
           DBEdit12.Enabled       := True;
           btnGravar.Enabled      := True;
-end;
-
-procedure TFuncionario.DBEdit5Click(Sender: TObject);
-begin
-If (DBEdit4.Text = '')
-then
-begin
-
-end
-else
-     DtaAtual := DateToStr(Date);
-     DataCopia := (Copy(DtaAtual, 7, 10));
-     Copia := (Copy(DBEdit4.Text, 7, 10));
-     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
-     DBEdit5.Text := IntToStr(Nasc);
 end;
 
 procedure TFuncionario.SelectChange(Sender: TObject);
@@ -249,12 +235,12 @@ end;
 
 procedure TFuncionario.EsquerdaClick(Sender: TObject);
 begin
-Modulo.cdsAviso.Prior;
+Modulo.cdsFun.Prior;
 end;
 
 procedure TFuncionario.DireitaClick(Sender: TObject);
 begin
-Modulo.cdsAviso.Next;
+Modulo.cdsFun.Next;
 end;
 
 procedure TFuncionario.EstadoClick(Sender: TObject);
@@ -277,6 +263,24 @@ begin
 Copia := (Copy(DBEdit10.Text, 1, 12));
 DBEdit10.Text :=  Copia+' '+Estado.Text;
 
+end;
+
+procedure TFuncionario.DBEdit4Exit(Sender: TObject);
+begin
+     DtaAtual := DateToStr(Date);
+     DataCopia := (Copy(DtaAtual, 7, 10));
+     Copia := (Copy(DBEdit4.Text, 7, 10));
+     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
+     DBEdit5.Text := IntToStr(Nasc);
+end;
+
+procedure TFuncionario.DBEdit5Enter(Sender: TObject);
+begin
+     DtaAtual := DateToStr(Date);
+     DataCopia := (Copy(DtaAtual, 7, 10));
+     Copia := (Copy(DBEdit4.Text, 7, 10));
+     Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
+     DBEdit5.Text := IntToStr(Nasc);
 end;
 
 end.

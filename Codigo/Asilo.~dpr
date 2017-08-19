@@ -29,7 +29,7 @@ Var
      ArquivoIni : TIniFile;
       UsuarioLog : string;
 
-    DataBase , Vendedor : String;
+    DataBase , Vendedor, Local, soma : String;
 begin
 
 
@@ -54,11 +54,8 @@ begin
   Application.CreateForm(TCadastroContas, CadastroContas);
   Application.CreateForm(TRelatorio, Relatorio);
   Application.CreateForm(TPesquisaRel, PesquisaRel);
-
-   //ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
-   ArquivoIni.WriteString('Asilo','Nome',Modulo.Conexao.ConnectionName);
-   ArquivoIni.WriteString ('Asilo','DATABASE', Modulo.Conexao.Params.values['DataBase']);
-   ArquivoIni.WriteString ('Asilo','VENDEDORLIB', Modulo.Conexao.VendorLib);
+   soma := (Copy(Application.Exename, 1, 15));
+   ArquivoIni := TIniFile.Create(soma+'\Config.ini');
    DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
    Vendedor := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
    Modulo.Conexao.ConnectionName := Nome;
@@ -66,6 +63,8 @@ begin
    Modulo.Conexao.VendorLib := Vendedor;
    ArquivoINI.Free;
   Application.Run;
+
+
 
 
 

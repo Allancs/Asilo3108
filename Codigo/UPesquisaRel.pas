@@ -20,10 +20,21 @@ type
     QRDBText1: TQRDBText;
     QRLabel1: TQRLabel;
     QRLabel4: TQRLabel;
-    QRDBText3: TQRDBText;
-    QRLabel5: TQRLabel;
-    QRLabel6: TQRLabel;
-    QRDBText4: TQRDBText;
+    QRStringsBand1: TQRStringsBand;
+    Todos: TQuickRep;
+    PageFooterBand2: TQRBand;
+    DetailBand2: TQRBand;
+    ColumnHeaderBand2: TQRBand;
+    PageHeaderBand2: TQRBand;
+    SummaryBand1: TQRBand;
+    QRLabel7: TQRLabel;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRDBText7: TQRDBText;
+    QRDBText8: TQRDBText;
+    QRLabel10: TQRLabel;
   private
     { Private declarations }
   public

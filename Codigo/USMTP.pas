@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, DB, Mask, DBCtrls, FMTBcd, SqlExpr,
-  jpeg, ExtCtrls;
+  jpeg, ExtCtrls, IniFiles;
 
 type
   TSMTPs = class(TForm)
@@ -40,6 +40,10 @@ type
     Label7: TLabel;
     OBS: TButton;
     OQue3: TMemo;
+    BancoConfig: TOpenDialog;
+    Banco: TBitBtn;
+    Base: TLabel;
+    Base2: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -51,10 +55,12 @@ type
     procedure OqueeClick(Sender: TObject);
     procedure EmailsClick(Sender: TObject);
     procedure OBSClick(Sender: TObject);
+    procedure CaregaBancoClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    ArquivoIni : TIniFile;
   end;
 
 var
@@ -210,8 +216,14 @@ Modulo.cdsEmail.Next;
 end;
 
 procedure TSMTPs.FormCreate(Sender: TObject);
+var
+dataBase : string;
 begin
+ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
+DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
 SMTPs.Caption := 'Cadastro de servidor Smtp';
+Base.Caption :='Caminho banco atual : '+DataBase;
+
 end;
 
 procedure TSMTPs.OqueeClick(Sender: TObject);
@@ -241,4 +253,21 @@ URL.Text := 'https://myaccount.google.com/lesssecureapps?rfn=27&rfnc=1&eid=29508
 URL.Visible := true;
 end;
 
+procedure TSMTPs.CaregaBancoClick(Sender: TObject);
+var
+dataBase : string;
+begin
+ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
+DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
+base2.Caption :='Caminho banco atualizado : '+ DataBase ;
+if BancoConfig.Execute then begin
+//Edit1.Text := BancoConfig.FileName;
+ArquivoIni.WriteString ('Asilo','DATABASE', BancoConfig.FileName);
+
+ArquivoIni.Free;
+end
+else begin
+ShowMessage('Favor selecionar o arquivo !!!')
+end;
+end;
 end.

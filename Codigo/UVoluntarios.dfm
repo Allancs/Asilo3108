@@ -1,6 +1,7 @@
 object Voluntarios: TVoluntarios
   Left = 310
   Top = 184
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'ASILO RECANTO DAS FLORES - Volunt'#225'rios'
   ClientHeight = 461
@@ -864,7 +865,6 @@ object Voluntarios: TVoluntarios
       Top = 120
       Width = 177
       Height = 22
-      CharCase = ecUpperCase
       DataField = 'NOME'
       DataSource = Modulo.dsVoluntario
       Enabled = False
