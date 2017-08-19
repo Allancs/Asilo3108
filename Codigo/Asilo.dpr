@@ -11,7 +11,7 @@ uses
   UResponsavel in 'UResponsavel.pas' {Responsavel},
   UCadastroAvisos in 'UCadastroAvisos.pas' {CadastroAvisos},
   UContas in 'UContas.pas' {Termor},
-  UDespesas in 'UDespesas.pas' {Despesas},
+  UDespesas in 'UDespesas.pas' {medicacao},
   UFuncionario in 'UFuncionario.pas' {Funcionario},
   UIncidentes in 'UIncidentes.pas' {Incidentes},
   UParceiros in 'UParceiros.pas' {Parceiros},
@@ -45,7 +45,7 @@ begin
   Application.CreateForm(TResponsavel, Responsavel);
   Application.CreateForm(TCadastroAvisos, CadastroAvisos);
   Application.CreateForm(TTermor, Termor);
-  Application.CreateForm(TDespesas, Despesas);
+  Application.CreateForm(Tmedicacao, medicacao);
   Application.CreateForm(TFuncionario, Funcionario);
   Application.CreateForm(TIncidentes, Incidentes);
   Application.CreateForm(TParceiros, Parceiros);

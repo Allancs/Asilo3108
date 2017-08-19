@@ -1,9 +1,9 @@
 object Relatorio: TRelatorio
-  Left = 222
-  Top = 304
+  Left = 243
+  Top = 395
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Relat'#243'rio'
+  Caption = 'Casa de Repouso Jardim das Flores - Relat'#243'rio'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
@@ -328,6 +328,7 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = TodosTClick
       end
       object ProfissionaisT: TCheckBox
         Left = 8
@@ -535,6 +536,22 @@ object Relatorio: TRelatorio
       Visible = False
       OnClick = todosrespClick
     end
+    object RT: TBitBtn
+      Left = 112
+      Top = 312
+      Width = 95
+      Height = 25
+      Caption = 'Gerar Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 8
+      Visible = False
+      OnClick = RTClick
+    end
   end
   object TPanel
     Left = 416
@@ -735,13 +752,66 @@ object Relatorio: TRelatorio
       FieldName = 'NOMER'
       Size = 45
     end
-    object sdsResponsavelFONE: TStringField
-      FieldName = 'FONE'
-      Size = 14
-    end
     object sdsResponsavelCELULAR: TStringField
       FieldName = 'CELULAR'
       Size = 13
     end
+    object sdsResponsavelTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 14
+    end
+  end
+  object TodosTele: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 
+      'SELECT nome, telefone, celular FROM profissionais union all SELE' +
+      'CT nome, telefone, celular FROM parceiro union all SELECT nome, ' +
+      'telefone, celular FROM voluntario union all SELECT nome, telefon' +
+      'e, celular FROM ligacoes union all Select nome, telefone, celula' +
+      'r from funcionario'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 672
+    Top = 216
+    object TodosTeleNOME: TStringField
+      FieldName = 'NOME'
+      Size = 100
+    end
+    object TodosTeleTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+    end
+    object TodosTeleCELULAR: TStringField
+      FieldName = 'CELULAR'
+    end
+  end
+  object TelefonesT: TDataSource
+    DataSet = TodosTele
+    Left = 640
+    Top = 216
   end
 end

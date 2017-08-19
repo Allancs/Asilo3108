@@ -45,6 +45,7 @@ type
     Base: TLabel;
     Base2: TLabel;
     BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -60,6 +61,7 @@ type
     procedure BancoConfigClose(Sender: TObject);
     procedure BancoConfigCanClose(Sender: TObject; var CanClose: Boolean);
     procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -295,6 +297,11 @@ end;
 procedure TSMTPs.BitBtn1Click(Sender: TObject);
 begin
 CadastroCOntas.Visible := true;
+end;
+
+procedure TSMTPs.BitBtn2Click(Sender: TObject);
+begin
+winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
 end;
 
 end.

@@ -724,7 +724,7 @@ object Responsavel: TResponsavel
   object LadoEsquerdo: TPanel
     Left = 5
     Top = 8
-    Width = 396
+    Width = 388
     Height = 353
     TabOrder = 1
     object Label3: TLabel
@@ -789,7 +789,6 @@ object Responsavel: TResponsavel
       Width = 27
       Height = 14
       Caption = 'Fone'
-      FocusControl = DBEdit5
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -825,7 +824,7 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
     end
     object DBEdit2: TDBEdit
       Left = 8
@@ -841,7 +840,7 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 4
     end
     object DBEdit4: TDBEdit
       Left = 8
@@ -873,7 +872,7 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 5
     end
     object Idoso: TGroupBox
       Left = 8
@@ -1034,23 +1033,6 @@ object Responsavel: TResponsavel
         Visible = False
       end
     end
-    object DBEdit5: TDBEdit
-      Left = 8
-      Top = 264
-      Width = 81
-      Height = 22
-      DataField = 'FONE'
-      DataSource = DataSource1
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
-      MaxLength = 13
-      ParentFont = False
-      TabOrder = 2
-    end
     object DBEdit6: TDBEdit
       Left = 96
       Top = 264
@@ -1064,9 +1046,19 @@ object Responsavel: TResponsavel
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 14
+      MaxLength = 13
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 2
+    end
+    object DBEdit5: TDBEdit
+      Left = 8
+      Top = 264
+      Width = 73
+      Height = 21
+      DataField = 'TELEFONE'
+      DataSource = DataSource1
+      MaxLength = 14
+      TabOrder = 6
     end
   end
   object DataSource1: TDataSource

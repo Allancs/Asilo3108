@@ -51,7 +51,7 @@ type
     QRLabel1: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
-    Corpo2: TQRLabel;
+    corpo2: TQRLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
@@ -113,20 +113,33 @@ HoraC := HoraChegada.Text;
 
 Corpo.Caption :=
 'Eu '+NomeRes+' inscrito(a) no CPF sob o nº '+cpf.Text+' e no RG nº '+rg.Text+','+#13+'por meio deste instrumento declaro me responsabilizar pelo bem estar de, '+NomeResi+','+#13+
-'de responsabilidade da Casa de Repouso jardin das Flores,'+#13+'pelo(s) dias apartir de '+DataS+' hora :'+Horas+ 'h, até '+DataC+' hora: '+HoraC+'h.'+
+'de responsabilidade da Casa de Repouso jardim das Flores,'+#13+'pelo(s) dias apartir de '+DataS+' hora : '+Horas+ ', até '+DataC+' hora: '+HoraC+'.'+
 ''+#13+#13+
 'Me comprometo a devolver o mesmo bem como foi me entregue , ao fim do prazo estabelecido.'+
 ''+#13+#13+#13+#13+
-''+'Responsavel '+NomeRes
+''+'Responsavel '+NomeRes+'.'
 +''+#13+#13+
 '________________________'+
 ''+#13+#13+#13+
 
-'Responsável pela Instituição'+
+'Responsável legal pela Instituição'+#13+'Adriana Colombo.'+
 ''+#13+#13+
 '________________________';
-Corpo2.Caption := Corpo.Caption;
 
+Corpo2.Caption :=
+'Eu '+NomeRes+' inscrito(a) no CPF sob o nº '+cpf.Text+' e no RG nº '+rg.Text+','+#13+'por meio deste instrumento declaro me responsabilizar pelo bem estar de, '+NomeResi+','+#13+
+'de responsabilidade da Casa de Repouso jardim das Flores,'+#13+'pelo(s) dias apartir de '+DataS+' hora : '+Horas+ ', até '+DataC+' hora: '+HoraC+'.'+
+''+#13+#13+
+'Me comprometo a devolver o mesmo bem como foi me entregue , ao fim do prazo estabelecido.'+
+''+#13+#13+#13+#13+
+''+'Responsavel '+NomeRes+'.'
++''+#13+#13+
+'________________________'+
+''+#13+#13+#13+
+
+'Responsável legal pela Instituição'+#13+'Adriana Colombo.'+
+''+#13+#13+
+'________________________';
 Termo.Preview;
 
 end;

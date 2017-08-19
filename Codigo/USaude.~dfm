@@ -3,7 +3,7 @@ object Saudes: TSaudes
   Top = 217
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Sa'#250'de'
+  Caption = 'Casa de Repouso Jardim das Flores - Sa'#250'de'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

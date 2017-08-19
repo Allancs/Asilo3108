@@ -60,6 +60,7 @@ type
     Label6: TLabel;
     Caminhobanco: TLabel;
     Relato: TBitBtn;
+    suport: TBitBtn;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -152,7 +153,7 @@ end;
 
 procedure TPrincipal.DesClick(Sender: TObject);
 begin
-Despesas.Visible := True;
+medicacao.Visible := True;
 end;
 
 procedure TPrincipal.ConClick(Sender: TObject);
@@ -202,7 +203,7 @@ end;
 
 procedure TPrincipal.Despesas1Click(Sender: TObject);
 begin
-Despesas.Visible := True;
+medicacao.Visible := True;
 end;
 
 procedure TPrincipal.incidentes1Click(Sender: TObject);
@@ -321,7 +322,7 @@ Incidentes.btnDeletar.Visible := false;
 Tarefa.btnDeletar.Visible := false;
 CadastroAvisos.btnDeletar.Visible := false;
 Parceiros.btnDeletar.Visible := false;
-Despesas.btnDeletar.Visible := false;
+
 Responsavel.btnDeletar.Visible := false;
 Funcionario.btnDeletar.Visible := false;
 Voluntarios.btnDeletar.Visible := false;

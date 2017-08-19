@@ -1,6 +1,6 @@
 object Incidentes: TIncidentes
-  Left = 259
-  Top = 175
+  Left = 279
+  Top = 194
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Agenda Medica'
@@ -990,11 +990,11 @@ object Incidentes: TIncidentes
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 184
-      Top = 56
-      Width = 54
+      Left = 8
+      Top = 184
+      Width = 128
       Height = 14
-      Caption = 'Descri'#231#227'o'
+      Caption = 'M'#233'dico(a) / Especialista'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1004,7 +1004,7 @@ object Incidentes: TIncidentes
     end
     object Label5: TLabel
       Left = 8
-      Top = 184
+      Top = 248
       Width = 65
       Height = 14
       Caption = 'Observa'#231#227'o'
@@ -1016,8 +1016,8 @@ object Incidentes: TIncidentes
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 8
-      Top = 280
+      Left = 216
+      Top = 184
       Width = 23
       Height = 14
       Caption = 'Data'
@@ -1037,7 +1037,7 @@ object Incidentes: TIncidentes
       DataField = 'COD_INCIDENTE'
       DataSource = Modulo.dsInc
       Enabled = False
-      TabOrder = 4
+      TabOrder = 3
     end
     object DBEdit2: TDBEdit
       Left = 360
@@ -1046,7 +1046,7 @@ object Incidentes: TIncidentes
       Height = 21
       DataField = 'COD_IDOSO'
       DataSource = Modulo.dsInc
-      TabOrder = 5
+      TabOrder = 4
       Visible = False
     end
     object DBEdit3: TDBEdit
@@ -1060,40 +1060,40 @@ object Incidentes: TIncidentes
       TabOrder = 0
     end
     object DBEdit6: TDBEdit
-      Left = 8
-      Top = 296
+      Left = 216
+      Top = 208
       Width = 81
       Height = 21
       DataField = 'DATA'
       DataSource = Modulo.dsInc
       Enabled = False
       MaxLength = 10
-      TabOrder = 3
-    end
-    object DBMemo1: TDBMemo
-      Left = 184
-      Top = 72
-      Width = 193
-      Height = 73
-      DataField = 'DESCRICAO'
-      DataSource = Modulo.dsInc
-      Enabled = False
-      TabOrder = 1
+      TabOrder = 2
     end
     object DBMemo2: TDBMemo
       Left = 8
-      Top = 200
-      Width = 367
+      Top = 264
+      Width = 345
       Height = 73
       DataField = 'OBCERVACAO'
       DataSource = Modulo.dsInc
       Enabled = False
-      TabOrder = 2
+      TabOrder = 1
+    end
+    object DBMemo1: TDBEdit
+      Left = 8
+      Top = 208
+      Width = 193
+      Height = 21
+      DataField = 'DESCRICAO'
+      DataSource = Modulo.dsInc
+      Enabled = False
+      TabOrder = 5
     end
     object Idoso: TGroupBox
       Left = 8
       Top = 56
-      Width = 169
+      Width = 345
       Height = 121
       Caption = 'Pesquisar Residente'
       Enabled = False
@@ -1107,9 +1107,22 @@ object Incidentes: TIncidentes
       object Label7: TLabel
         Left = 8
         Top = 16
-        Width = 32
+        Width = 127
         Height = 14
-        Caption = 'Nome'
+        Caption = 'Pesquisa de Residente'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 8
+        Top = 64
+        Width = 106
+        Height = 14
+        Caption = 'Resposta Pesquisa'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -1132,9 +1145,9 @@ object Incidentes: TIncidentes
         OnChange = edtPesquisaChange
       end
       object Name: TDBEdit
-        Left = 40
-        Top = 56
-        Width = 121
+        Left = 8
+        Top = 80
+        Width = 153
         Height = 22
         DataField = 'NOME'
         DataSource = dsAux
@@ -1147,9 +1160,9 @@ object Incidentes: TIncidentes
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
-        Left = 32
+        Left = 192
         Top = 80
-        Width = 129
+        Width = 145
         Height = 33
         Caption = '&Inserir Cadastro'
         Font.Charset = ANSI_CHARSET
@@ -1219,8 +1232,8 @@ object Incidentes: TIncidentes
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       end
       object Cod: TDBEdit
-        Left = 8
-        Top = 56
+        Left = 360
+        Top = -8
         Width = 25
         Height = 22
         DataField = 'COD_IDOSO'
@@ -1232,6 +1245,7 @@ object Incidentes: TIncidentes
         Font.Style = []
         ParentFont = False
         TabOrder = 3
+        Visible = False
       end
     end
   end

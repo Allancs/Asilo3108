@@ -1,6 +1,6 @@
 object CadastroContas: TCadastroContas
-  Left = 210
-  Top = 159
+  Left = 329
+  Top = 235
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Cadastro de Usu'#225'rios.'
@@ -732,7 +732,6 @@ object CadastroContas: TCadastroContas
       Width = 34
       Height = 13
       Caption = 'Senha'
-      FocusControl = DBEdit5
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -746,7 +745,6 @@ object CadastroContas: TCadastroContas
       Width = 43
       Height = 13
       Caption = 'Usuario'
-      FocusControl = DBEdit4
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -760,7 +758,6 @@ object CadastroContas: TCadastroContas
       Width = 77
       Height = 13
       Caption = 'Tipo de Conta'
-      FocusControl = DBEdit3
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -774,7 +771,6 @@ object CadastroContas: TCadastroContas
       Width = 31
       Height = 13
       Caption = 'Nome'
-      FocusControl = DBEdit2
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -788,7 +784,6 @@ object CadastroContas: TCadastroContas
       Width = 40
       Height = 13
       Caption = 'C'#243'digo'
-      FocusControl = DBEdit1
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -801,7 +796,6 @@ object CadastroContas: TCadastroContas
       Top = 221
       Width = 3
       Height = 13
-      FocusControl = DBEdit1
       Font.Charset = ANSI_CHARSET
       Font.Color = clRed
       Font.Height = -11
@@ -809,13 +803,30 @@ object CadastroContas: TCadastroContas
       Font.Style = [fsBold, fsItalic]
       ParentFont = False
     end
+    object Label11: TLabel
+      Left = 144
+      Top = 384
+      Width = 66
+      Height = 13
+      Caption = 'USU_SENHA'
+    end
+    object DBEdit3: TDBEdit
+      Left = 8
+      Top = 256
+      Width = 95
+      Height = 21
+      DataField = 'USU_EMAIL'
+      DataSource = Modulo.User
+      TabOrder = 0
+      Visible = False
+    end
     object DBEdit5: TDBEdit
       Left = 8
-      Top = 192
+      Top = 196
       Width = 100
       Height = 22
       DataField = 'USU_SENHA'
-      DataSource = Modulo.dsUser
+      DataSource = Modulo.User
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -827,60 +838,12 @@ object CadastroContas: TCadastroContas
     end
     object DBEdit4: TDBEdit
       Left = 8
-      Top = 152
+      Top = 156
       Width = 100
       Height = 22
       DataField = 'USU_LOGIN'
-      DataSource = Modulo.dsUser
+      DataSource = Modulo.User
       Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 4
-    end
-    object DBEdit3: TDBEdit
-      Left = 104
-      Top = 264
-      Width = 65
-      Height = 22
-      DataField = 'USU_EMAIL'
-      DataSource = Modulo.dsUser
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      Visible = False
-    end
-    object DBEdit2: TDBEdit
-      Left = 8
-      Top = 72
-      Width = 100
-      Height = 22
-      DataField = 'USU_NOME'
-      DataSource = Modulo.dsUser
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-    end
-    object DBEdit1: TDBEdit
-      Left = 8
-      Top = 32
-      Width = 17
-      Height = 22
-      DataField = 'ID'
-      DataSource = Modulo.dsUser
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -889,12 +852,44 @@ object CadastroContas: TCadastroContas
       ParentFont = False
       TabOrder = 5
     end
-    object User: TRadioButton
-      Left = 136
+    object DBEdit2: TDBEdit
+      Left = 8
+      Top = 72
+      Width = 100
+      Height = 22
+      DataField = 'USU_NOME'
+      DataSource = Modulo.User
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Top = 32
+      Width = 25
+      Height = 22
+      DataField = 'ID'
+      DataSource = Modulo.User
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 7
+    end
+    object Admin: TRadioButton
+      Left = 8
       Top = 112
-      Width = 65
+      Width = 57
       Height = 17
-      Caption = 'Usuario'
+      Caption = 'Admin'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -904,7 +899,7 @@ object CadastroContas: TCadastroContas
       TabOrder = 2
     end
     object Padrao: TRadioButton
-      Left = 72
+      Left = 64
       Top = 112
       Width = 57
       Height = 17
@@ -915,29 +910,29 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 3
     end
-  end
-  object Admin: TRadioButton
-    Left = 16
-    Top = 120
-    Width = 57
-    Height = 17
-    Caption = 'Admin'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Arial'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 2
+    object User: TRadioButton
+      Left = 120
+      Top = 112
+      Width = 65
+      Height = 17
+      Caption = 'Usuario'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+    end
   end
   object TPanel
     Left = 416
     Top = 8
     Width = 353
     Height = 201
-    TabOrder = 3
+    TabOrder = 2
     object Label7: TLabel
       Left = 8
       Top = 8
@@ -977,8 +972,10 @@ object CadastroContas: TCadastroContas
     end
   end
   object sqlAux: TSQLQuery
+    DataSource = Modulo.User
     MaxBlobSize = -1
     Params = <>
+    SQLConnection = Modulo.Conexao
     Left = 528
     Top = 464
   end

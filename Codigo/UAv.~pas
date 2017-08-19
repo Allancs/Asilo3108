@@ -35,16 +35,22 @@ type
     N3: TRadioButton;
     N4: TRadioButton;
     N5: TRadioButton;
-    Timer1: TTimer;
     Timer2: TTimer;
     Image1: TImage;
     procedure enviarClick(Sender: TObject);
-    procedure Timer1Timer(Sender: TObject);
-    procedure Timer2Timer(Sender: TObject);
+    procedure GNClick(Sender: TObject);
+    procedure CNClick(Sender: TObject);
+    procedure GSClick(Sender: TObject);
+    procedure CSClick(Sender: TObject);
+    procedure N1Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+GSS, GNN, PNN, CEE, CSS , CNN, PNC, Msggs, Msgcs,Msgcss, Msgm, OQM, N11, N22, N33, N44, N55 : String;
     Menssagem : String;
   end;
 
@@ -60,6 +66,7 @@ uses USMTP;
 procedure TAvaliacao.enviarClick(Sender: TObject);
 
 var
+
   // objetos necessários para o funcionamento
   IdSSLIOHandlerSocket: TIdSSLIOHandlerSocket;
   IdSMTP: TIdSMTP;
@@ -67,6 +74,9 @@ var
   //CaminhoAnexo: string;
 //  i : Integer;
 begin
+      Msgm := 'O que melhoraria o Sistema?';
+      OQM := OQMS.Text;
+         Menssagem := Msggs +' '+GSS + ' '+GNN + ' '+PNN+#13+Msgcss +' '+CSS +' '+CNN +' '+PNC+#13+ 'O que melhoraria o sistema ?'+ ' '+OQMS.Text+#13+ Msgcs + ' ' +N11+N22+N33+N44+N55+#13+'Finalizado com Sucesso!';
   // instanciação dos objetos
   IdSSLIOHandlerSocket := TIdSSLIOHandlerSocket.Create(Self);
   IdSMTP := TIdSMTP.Create(Self);
@@ -138,9 +148,9 @@ begin
   end;
 end;
 
-procedure TAvaliacao.Timer1Timer(Sender: TObject);
+procedure TAvaliacao.GNClick(Sender: TObject);
 begin
-   if GN.Checked = True
+  if GN.Checked = True
      then
      begin
           EN.Visible := True;
@@ -151,7 +161,10 @@ begin
          EN.Visible := False;
           LE.Visible := False;
       End;
+end;
 
+procedure TAvaliacao.CNClick(Sender: TObject);
+begin
         if CN.Checked = True
      then
      begin
@@ -163,14 +176,11 @@ begin
          CL.Visible := False;
           CE.Visible := False;
       End;
-
 end;
 
-procedure TAvaliacao.Timer2Timer(Sender: TObject);
-Var GSS, GNN, PNN, CEE, CSS , CNN, PNC, Msggs, Msgcs,Msgcss, Msgm, OQM, N11, N22, N33, N44, N55 : String;
-
+procedure TAvaliacao.GSClick(Sender: TObject);
 begin
-          if GS.Checked = True
+                 if GS.Checked = True
      then
      begin
           Msggs := 'Gostou do Sistema?';
@@ -184,7 +194,11 @@ begin
          PNN := 'Porque não gostou? '+ EN.Text+'.';
 
       End;
-    if CS.Checked = True
+end;
+
+procedure TAvaliacao.CSClick(Sender: TObject);
+begin
+  if CS.Checked = True
      then
      begin
           Msgcss := 'Achou o Sistema completo e intuitivo?';
@@ -196,8 +210,10 @@ begin
          CNN := Nome.Text +' , Não';
          PNC := 'Porque não gostou? '+ CE.Text+'.';
       End;
-      Msgm := 'O que melhoraria o Sistema?';
-      OQM := OQMS.Text;
+end;
+
+procedure TAvaliacao.N1Click(Sender: TObject);
+begin
 
       if N1.Checked = True
      then
@@ -206,43 +222,59 @@ begin
           N11 := '1, Poderia melhorar mais.';
           //Image1.Picture := 'C:\Asilo\Icones\Avaliacao1.jpg';
           Image1.Picture.LoadFromFile('C:\Asilo\Icones\Avaliacao1.jpg');
-      end
-      Else
-       if N2.Checked = True
+      end;
+end;
+
+procedure TAvaliacao.N2Click(Sender: TObject);
+begin
+
+      if N2.Checked = True
        then
        Begin
           Msgcs := 'Qual nota daria ao Sistema';
           N22 := '2, Esta quase bom.';
           Image1.Picture.LoadFromFile('C:\Asilo\Icones\Avaliacao2.jpg');
-      End
-      Else
+      End;
+end;
+
+procedure TAvaliacao.N3Click(Sender: TObject);
+begin
+
       if N3.Checked = True
       then
        Begin
          Msgcs := 'Gostou do Sistema';
           N33 := '3, Ele esta no caminho certo';
           Image1.Picture.LoadFromFile('C:\Asilo\Icones\Avaliacao3.jpg');
-      end
-       Else
+      end;
+end;
+
+procedure TAvaliacao.N4Click(Sender: TObject);
+begin
+
         if N4.Checked = True
         then
        Begin
          Msgcs := 'Qual nota daria ao Sistema';
           N44 := '4, O sistema esta rodando perfeitamente';
           Image1.Picture.LoadFromFile('C:\Asilo\Icones\Avaliacao4.jpg');
-          end
-           Else
-            if N5.Checked = True
-            then
+          end;
+end;
+
+procedure TAvaliacao.N5Click(Sender: TObject);
+begin
+
+
+
+
+
+       if N5.Checked = True
+       then
        Begin
          Msgcs := 'Qual nota daria ao Sistema';
           N55 := '5, O Sistema esta 100%, Otimo!';
           Image1.Picture.LoadFromFile('C:\Asilo\Icones\Avaliacao5.jpg');
-          END      ;
-          Menssagem := Msggs +' '+GSS + ' '+GNN + ' '+PNN+#13+Msgcss +' '+CSS +' '+CNN +' '+PNC+#13+ 'O que melhoraria o sistema ?'+ ' '+OQMS.Text+#13+ Msgcs + ' ' +N11+N22+N33+N44+N55+#13+'Finalizado com Sucesso!';
-
-
-
+          END;
 end;
 
 end.

@@ -52,8 +52,14 @@ type
     sdsResponsavelCOD_IDOSO: TIntegerField;
     sdsResponsavelNOME: TStringField;
     sdsResponsavelNOMER: TStringField;
-    sdsResponsavelFONE: TStringField;
     sdsResponsavelCELULAR: TStringField;
+    sdsResponsavelTELEFONE: TStringField;
+    RT: TBitBtn;
+    TodosTele: TSimpleDataSet;
+    TelefonesT: TDataSource;
+    TodosTeleNOME: TStringField;
+    TodosTeleTELEFONE: TStringField;
+    TodosTeleCELULAR: TStringField;
     procedure TodosEClick(Sender: TObject);
     procedure VoluntariosEClick(Sender: TObject);
     procedure ParceirosEClick(Sender: TObject);
@@ -63,6 +69,8 @@ type
     procedure CancelClick(Sender: TObject);
     procedure TodosresClick(Sender: TObject);
     procedure todosrespClick(Sender: TObject);
+    procedure TodosTClick(Sender: TObject);
+    procedure RTClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -209,6 +217,7 @@ end;
 
 procedure TRelatorio.CancelClick(Sender: TObject);
 begin
+RT.Visible := false;
 TodosE.Enabled :=true;
 Voluntariose.Enabled := true;
 Parceirose.Enabled := true;
@@ -249,6 +258,31 @@ sdsResponsavel.Close;
 sdsResponsavel.dataset.CommandText := 'select * from LIGACOES';
 sdsResponsavel.Open;
  PesquisaRel.Respo.Preview;
+end;
+
+procedure TRelatorio.TodosTClick(Sender: TObject);
+begin
+If TodosT.Checked = true
+then
+begin
+VoluntariosE.Enabled := false;
+ParceirosE.Enabled := False;
+Residente.Enabled := false;
+Responsavel.Enabled := false;
+RT.Visible := true;
+
+end
+else
+begin
+Cancel.Click;
+end
+end;
+
+procedure TRelatorio.RTClick(Sender: TObject);
+begin
+//TodosTele.Close;
+//TodosTele.dataset.CommandText := 'SELECT nome,telefone,celular FROM profissionais union all SELECT nome,telefone,celular FROM parceiro union all SELECT nome,telefone,celular FROM voluntario union all SELECT nome,telefone,celular FROM ligacoes union all Select nome,telefone,celular from funcionario';
+//TodosTele.Open;PesquisaRel.TodosT.Preview;
 end;
 
 end.

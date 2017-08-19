@@ -1,6 +1,6 @@
 object Relatorio: TRelatorio
-  Left = 222
-  Top = 304
+  Left = 209
+  Top = 336
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Relat'#243'rio'
@@ -216,6 +216,13 @@ object Relatorio: TRelatorio
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
     TabOrder = 0
+    object Label2: TLabel
+      Left = 64
+      Top = 24
+      Width = 32
+      Height = 13
+      Caption = 'Label2'
+    end
   end
   object LadoEsquerdo: TPanel
     Left = 5
@@ -269,7 +276,6 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 2
-        OnClick = ParceirosEClick
       end
       object VoluntariosE: TCheckBox
         Left = 8
@@ -284,7 +290,6 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 1
-        OnClick = VoluntariosEClick
       end
       object TodosE: TCheckBox
         Left = 8
@@ -299,14 +304,13 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        OnClick = TodosEClick
       end
     end
     object Telefone: TGroupBox
       Left = 176
       Top = 48
       Width = 185
-      Height = 113
+      Height = 97
       Caption = 'Relat'#243'rio de Telefones'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -315,23 +319,9 @@ object Relatorio: TRelatorio
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      object TodosT: TCheckBox
-        Left = 8
-        Top = 24
-        Width = 161
-        Height = 17
-        Caption = 'Todos Telefones Cadastrado'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-      end
       object ProfissionaisT: TCheckBox
         Left = 8
-        Top = 40
+        Top = 24
         Width = 97
         Height = 17
         Caption = 'Profissionais'
@@ -341,11 +331,11 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
       end
       object ParceirosT: TCheckBox
         Left = 8
-        Top = 56
+        Top = 40
         Width = 97
         Height = 17
         Caption = 'Parceiros'
@@ -355,11 +345,11 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 1
       end
       object ResponsaveisT: TCheckBox
         Left = 8
-        Top = 72
+        Top = 56
         Width = 97
         Height = 17
         Caption = 'Responsaveis'
@@ -369,11 +359,11 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 3
+        TabOrder = 2
       end
       object FuncionariosT: TCheckBox
         Left = 8
-        Top = 88
+        Top = 72
         Width = 97
         Height = 17
         Caption = 'Funcionarios'
@@ -383,12 +373,12 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 4
+        TabOrder = 3
       end
     end
     object Residente: TGroupBox
       Left = 176
-      Top = 168
+      Top = 152
       Width = 185
       Height = 81
       Caption = 'Relat'#243'rio de Residentes'
@@ -427,20 +417,6 @@ object Relatorio: TRelatorio
         ParentFont = False
         TabOrder = 1
       end
-      object DadosR: TCheckBox
-        Left = 8
-        Top = 56
-        Width = 161
-        Height = 17
-        Caption = 'Dados Cadastrado'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 2
-      end
     end
     object Responsavel: TGroupBox
       Left = 8
@@ -468,7 +444,6 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        OnClick = TodosresClick
       end
     end
     object RlVolun: TBitBtn
@@ -484,12 +459,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
-      Visible = False
       OnClick = RlVolunClick
     end
     object RlParceiros: TBitBtn
       Left = 8
-      Top = 312
+      Top = 216
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -500,12 +474,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
-      Visible = False
       OnClick = RlParceirosClick
     end
     object RLTodos: TBitBtn
       Left = 8
-      Top = 312
+      Top = 248
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -516,12 +489,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
-      Visible = False
       OnClick = RLTodosClick
     end
     object todosresp: TBitBtn
       Left = 8
-      Top = 312
+      Top = 280
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -532,8 +504,22 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 7
-      Visible = False
       OnClick = todosrespClick
+    end
+    object pt: TBitBtn
+      Left = 112
+      Top = 312
+      Width = 95
+      Height = 25
+      Caption = 'Gerar Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 8
+      OnClick = ptClick
     end
   end
   object TPanel
@@ -569,8 +555,8 @@ object Relatorio: TRelatorio
     Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
     Connection.Connected = True
     DataSet.CommandText = 
-      'select PARCEIRO.EMAIL , VOLUNTARIO.EMAIL, PARCEIRO.NOME, VOLUNTA' +
-      'RIO.NOME from PARCEIRO, VOLUNTARIO'
+      'SELECT nome, email FROM voluntario union all SELECT nome, email ' +
+      'FROM parceiro'
     DataSet.DataSource = dsAux
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
@@ -735,13 +721,65 @@ object Relatorio: TRelatorio
       FieldName = 'NOMER'
       Size = 45
     end
-    object sdsResponsavelFONE: TStringField
-      FieldName = 'FONE'
-      Size = 14
-    end
     object sdsResponsavelCELULAR: TStringField
       FieldName = 'CELULAR'
       Size = 13
     end
+    object sdsResponsavelTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 14
+    end
+  end
+  object prot: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select  NOME, CELULAR,TELEFONE, EEMPRESA from PROFISSIONAIS'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 448
+    Top = 216
+    object protNOME: TStringField
+      FieldName = 'NOME'
+      Size = 100
+    end
+    object protCELULAR: TStringField
+      FieldName = 'CELULAR'
+    end
+    object protTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+    end
+    object protEEMPRESA: TStringField
+      FieldName = 'EEMPRESA'
+      Size = 100
+    end
+  end
+  object proot: TDataSource
+    DataSet = prot
+    Left = 416
+    Top = 216
   end
 end

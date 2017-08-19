@@ -1,6 +1,6 @@
 object Saudes: TSaudes
-  Left = 228
-  Top = 217
+  Left = 340
+  Top = 261
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Sa'#250'de'
@@ -755,20 +755,6 @@ object Saudes: TSaudes
       ParentFont = False
       Visible = False
     end
-    object Label3: TLabel
-      Left = 184
-      Top = 72
-      Width = 184
-      Height = 14
-      Caption = 'Nome Medico (a) / Emfermeiro (a)'
-      FocusControl = DBEdit3
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Label4: TLabel
       Left = 56
       Top = 8
@@ -783,9 +769,37 @@ object Saudes: TSaudes
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label3: TLabel
+      Left = 8
+      Top = 192
+      Width = 184
+      Height = 14
+      Caption = 'Nome Medico (a) / Emfermeiro (a)'
+      FocusControl = DBEdit3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 269
+      Top = 192
+      Width = 34
+      Height = 14
+      Caption = 'Data'
+      FocusControl = DBEdit8
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object Label6: TLabel
-      Left = 184
-      Top = 112
+      Left = 8
+      Top = 234
       Width = 40
       Height = 14
       Caption = 'Receita'
@@ -797,25 +811,11 @@ object Saudes: TSaudes
       ParentFont = False
     end
     object Label7: TLabel
-      Left = 8
-      Top = 192
+      Left = 192
+      Top = 234
       Width = 73
       Height = 14
       Caption = 'Observa'#231#245'es'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Label8: TLabel
-      Left = 8
-      Top = 304
-      Width = 23
-      Height = 14
-      Caption = 'Data'
-      FocusControl = DBEdit8
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -852,24 +852,8 @@ object Saudes: TSaudes
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 2
       Visible = False
-    end
-    object DBEdit3: TDBEdit
-      Left = 184
-      Top = 88
-      Width = 217
-      Height = 22
-      DataField = 'NOMEM'
-      DataSource = Modulo.dsSaude
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 3
     end
     object DBEdit4: TDBEdit
       Left = 56
@@ -887,27 +871,10 @@ object Saudes: TSaudes
       ParentFont = False
       TabOrder = 1
     end
-    object DBEdit8: TDBEdit
-      Left = 8
-      Top = 320
-      Width = 89
-      Height = 22
-      DataField = 'DATA'
-      DataSource = Modulo.dsSaude
-      Enabled = False
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = []
-      MaxLength = 10
-      ParentFont = False
-      TabOrder = 6
-    end
     object Idoso: TGroupBox
       Left = 8
       Top = 56
-      Width = 169
+      Width = 345
       Height = 121
       Caption = 'Pesquisar Residente'
       Enabled = False
@@ -917,13 +884,26 @@ object Saudes: TSaudes
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
-      object Label9: TLabel
+      TabOrder = 3
+      object Label5: TLabel
         Left = 8
         Top = 16
-        Width = 32
+        Width = 127
         Height = 14
-        Caption = 'Nome'
+        Caption = 'Pesquisa de Residente'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label9: TLabel
+        Left = 8
+        Top = 64
+        Width = 106
+        Height = 14
+        Caption = 'Resposta Pesquisa'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -946,9 +926,9 @@ object Saudes: TSaudes
         OnChange = edtPesquisaChange
       end
       object Name: TDBEdit
-        Left = 40
-        Top = 56
-        Width = 121
+        Left = 8
+        Top = 80
+        Width = 153
         Height = 22
         DataField = 'NOME'
         DataSource = dsAux
@@ -961,9 +941,9 @@ object Saudes: TSaudes
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
-        Left = 32
+        Left = 192
         Top = 80
-        Width = 129
+        Width = 145
         Height = 33
         Caption = '&Inserir Cadastro'
         Font.Charset = ANSI_CHARSET
@@ -1033,8 +1013,8 @@ object Saudes: TSaudes
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       end
       object Cod: TDBEdit
-        Left = 8
-        Top = 56
+        Left = 360
+        Top = -8
         Width = 25
         Height = 22
         DataField = 'COD_IDOSO'
@@ -1046,27 +1026,61 @@ object Saudes: TSaudes
         Font.Style = []
         ParentFont = False
         TabOrder = 3
+        Visible = False
       end
     end
-    object DBMemo1: TDBMemo
-      Left = 184
-      Top = 128
+    object DBEdit3: TDBEdit
+      Left = 8
+      Top = 208
       Width = 217
-      Height = 57
+      Height = 22
+      DataField = 'NOMEM'
+      DataSource = Modulo.dsSaude
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+    end
+    object DBEdit8: TDBEdit
+      Left = 267
+      Top = 208
+      Width = 85
+      Height = 22
+      DataField = 'DATA'
+      DataSource = Modulo.dsSaude
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = []
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 5
+    end
+    object DBMemo1: TDBMemo
+      Left = 8
+      Top = 250
+      Width = 177
+      Height = 95
       DataField = 'RECEITA'
       DataSource = Modulo.dsSaude
       Enabled = False
-      TabOrder = 4
+      TabOrder = 6
     end
     object DBMemo2: TDBMemo
-      Left = 8
-      Top = 208
-      Width = 393
-      Height = 89
+      Left = 192
+      Top = 250
+      Width = 161
+      Height = 95
       DataField = 'OBS'
       DataSource = Modulo.dsSaude
       Enabled = False
-      TabOrder = 5
+      TabOrder = 7
     end
   end
   object sqlAux: TSQLQuery

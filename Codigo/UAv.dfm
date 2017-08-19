@@ -1,6 +1,6 @@
 object Avaliacao: TAvaliacao
-  Left = 319
-  Top = 142
+  Left = 377
+  Top = 140
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Avaliacao'
@@ -211,6 +211,7 @@ object Avaliacao: TAvaliacao
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
+    Visible = False
   end
   object Label5: TLabel
     Left = 8
@@ -282,6 +283,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnClick = GSClick
   end
   object GN: TCheckBox
     Left = 56
@@ -296,6 +298,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = GNClick
   end
   object EN: TEdit
     Left = 8
@@ -324,6 +327,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = CSClick
   end
   object CN: TCheckBox
     Left = 56
@@ -338,6 +342,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 6
+    OnClick = CNClick
   end
   object CE: TEdit
     Left = 8
@@ -351,6 +356,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    Visible = False
   end
   object OQMS: TEdit
     Left = 8
@@ -378,6 +384,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 9
+    OnClick = N1Click
   end
   object N2: TRadioButton
     Left = 40
@@ -392,6 +399,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 10
+    OnClick = N2Click
   end
   object N3: TRadioButton
     Left = 72
@@ -406,6 +414,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 11
+    OnClick = N3Click
   end
   object N4: TRadioButton
     Left = 104
@@ -420,6 +429,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 12
+    OnClick = N4Click
   end
   object N5: TRadioButton
     Left = 136
@@ -434,6 +444,7 @@ object Avaliacao: TAvaliacao
     Font.Style = []
     ParentFont = False
     TabOrder = 13
+    OnClick = N5Click
   end
   object IdSMTP1: TIdSMTP
     MaxLineAction = maException
@@ -461,15 +472,8 @@ object Avaliacao: TAvaliacao
     Left = 1064
     Top = 8
   end
-  object Timer1: TTimer
-    Interval = 1
-    OnTimer = Timer1Timer
-    Left = 272
-    Top = 8
-  end
   object Timer2: TTimer
     Interval = 1
-    OnTimer = Timer2Timer
     Left = 272
     Top = 40
   end

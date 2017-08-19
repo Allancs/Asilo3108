@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 246
-  Top = 300
+  Left = 202
+  Top = 296
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -228,34 +228,28 @@ object Modulo: TModulo
     Left = 192
     Top = 208
     object cdsLigacoesCOD_LIGACOES: TIntegerField
-      DisplayLabel = 'C'#243'digo'
       FieldName = 'COD_LIGACOES'
       Required = True
     end
     object cdsLigacoesCOD_IDOSO: TIntegerField
-      DisplayLabel = 'C'#243'digo'
       FieldName = 'COD_IDOSO'
     end
     object cdsLigacoesNOME: TStringField
-      DisplayLabel = 'Nome Idoso'
       FieldName = 'NOME'
       Size = 45
     end
     object cdsLigacoesNOMER: TStringField
-      DisplayLabel = 'Nome Responsavel'
       FieldName = 'NOMER'
       Size = 45
     end
-    object cdsLigacoesFONE: TStringField
-      DisplayLabel = 'Fone'
-      FieldName = 'FONE'
-      EditMask = '!\(99\)0000-0000;1;_'
+    object cdsLigacoesTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      EditMask = '\(00)\90000-0000;1;_'
       Size = 14
     end
     object cdsLigacoesCELULAR: TStringField
-      DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
-      EditMask = '!\(99\)\90000-0000;1;_'
+      EditMask = '\(00\)0000\-0000;1;_'
       Size = 13
     end
   end
@@ -316,6 +310,55 @@ object Modulo: TModulo
     SQLConnection = Conexao
     Left = 16
     Top = 112
+    object sqsFunCOD_FUN: TIntegerField
+      FieldName = 'COD_FUN'
+      Required = True
+    end
+    object sqsFunNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object sqsFunSEXO: TStringField
+      FieldName = 'SEXO'
+      Size = 8
+    end
+    object sqsFunDATANASCIMENTO: TStringField
+      FieldName = 'DATANASCIMENTO'
+      Size = 10
+    end
+    object sqsFunIDADE: TStringField
+      FieldName = 'IDADE'
+      Size = 3
+    end
+    object sqsFunFUNCAO: TStringField
+      FieldName = 'FUNCAO'
+      Size = 45
+    end
+    object sqsFunSALARIO: TFMTBCDField
+      FieldName = 'SALARIO'
+      Precision = 15
+      Size = 2
+    end
+    object sqsFunCPF: TStringField
+      FieldName = 'CPF'
+      Size = 14
+    end
+    object sqsFunRG: TStringField
+      FieldName = 'RG'
+      Size = 9
+    end
+    object sqsFunCARTEIRATRABALHO: TStringField
+      FieldName = 'CARTEIRATRABALHO'
+      Size = 17
+    end
+    object sqsFunCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 14
+    end
+    object sqsFunTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 13
+    end
   end
   object sdsInc: TSQLDataSet
     CommandText = 'select * from INCIDENTES'
@@ -332,6 +375,29 @@ object Modulo: TModulo
     SQLConnection = Conexao
     Left = 16
     Top = 208
+    object sdsLigacoesCOD_LIGACOES: TIntegerField
+      FieldName = 'COD_LIGACOES'
+      Required = True
+    end
+    object sdsLigacoesCOD_IDOSO: TIntegerField
+      FieldName = 'COD_IDOSO'
+    end
+    object sdsLigacoesNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object sdsLigacoesNOMER: TStringField
+      FieldName = 'NOMER'
+      Size = 45
+    end
+    object sdsLigacoesTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 14
+    end
+    object sdsLigacoesCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 13
+    end
   end
   object sdsParceiro: TSQLDataSet
     CommandText = 'select * from PARCEIRO'
@@ -788,7 +854,7 @@ object Modulo: TModulo
     DataSet.Params = <>
     Params = <>
     Left = 16
-    Top = 352
+    Top = 360
     object sdsUserID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -816,16 +882,17 @@ object Modulo: TModulo
   end
   object dsUser: TDataSource
     DataSet = cdsUser
-    Left = 208
-    Top = 360
+    Left = 240
+    Top = 312
   end
   object sqlDSLogin: TSQLDataSet
     CommandText = 'select * from USUARIOS'
+    DataSource = dsUser
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Conexao
-    Left = 248
-    Top = 360
+    Left = 16
+    Top = 312
     object sqlDSLoginID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -856,8 +923,8 @@ object Modulo: TModulo
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'
-    Left = 168
-    Top = 360
+    Left = 192
+    Top = 312
     object cdsUserID: TIntegerField
       FieldName = 'ID'
       Required = True
@@ -886,6 +953,52 @@ object Modulo: TModulo
   object dspUser: TDataSetProvider
     DataSet = sqlDSLogin
     Left = 104
-    Top = 352
+    Top = 312
+  end
+  object sdUser: TSQLDataSet
+    CommandText = 'select * from USUARIOS'
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Conexao
+    Left = 16
+    Top = 416
+  end
+  object cdUser: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dsUsers'
+    Left = 200
+    Top = 400
+    object cdUserID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object cdUserUSU_NOME: TStringField
+      FieldName = 'USU_NOME'
+      Size = 40
+    end
+    object cdUserUSU_EMAIL: TStringField
+      FieldName = 'USU_EMAIL'
+      Size = 7
+    end
+    object cdUserUSU_LOGIN: TStringField
+      FieldName = 'USU_LOGIN'
+      Size = 40
+    end
+    object cdUserUSU_SENHA: TStringField
+      FieldName = 'USU_SENHA'
+    end
+  end
+  object dsUsers: TDataSetProvider
+    DataSet = sdUser
+    Left = 104
+    Top = 408
+  end
+  object User: TDataSource
+    AutoEdit = False
+    DataSet = cdUser
+    Left = 264
+    Top = 392
   end
 end

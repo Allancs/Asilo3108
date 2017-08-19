@@ -17,7 +17,6 @@ type
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;
     DBEdit6: TDBEdit;
-    DBMemo1: TDBMemo;
     DBMemo2: TDBMemo;
     Label1: TLabel;
     Label2: TLabel;
@@ -25,12 +24,6 @@ type
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
-    Idoso: TGroupBox;
-    Label7: TLabel;
-    edtPesquisa: TEdit;
-    Name: TDBEdit;
-    BitBtn1: TBitBtn;
-    Cod: TDBEdit;
     Image2: TImage;
     sqlAux: TSQLQuery;
     sdsAux: TSimpleDataSet;
@@ -42,6 +35,14 @@ type
     btnCancelar: TBitBtn;
     btnEditar: TBitBtn;
     btnDeletar: TBitBtn;
+    DBEdit4: TDBEdit;
+    Idoso: TGroupBox;
+    Label7: TLabel;
+    Label8: TLabel;
+    edtPesquisa: TEdit;
+    Name: TDBEdit;
+    BitBtn1: TBitBtn;
+    Cod: TDBEdit;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);

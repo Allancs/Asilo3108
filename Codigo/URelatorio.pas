@@ -18,7 +18,6 @@ type
     VoluntariosE: TCheckBox;
     ParceirosE: TCheckBox;
     Telefone: TGroupBox;
-    TodosT: TCheckBox;
     ProfissionaisT: TCheckBox;
     ParceirosT: TCheckBox;
     ResponsaveisT: TCheckBox;
@@ -26,7 +25,6 @@ type
     Residente: TGroupBox;
     TodosR: TCheckBox;
     Aniversariantes: TCheckBox;
-    DadosR: TCheckBox;
     Responsavel: TGroupBox;
     Todosres: TCheckBox;
     sdsTodos: TSimpleDataSet;
@@ -52,17 +50,22 @@ type
     sdsResponsavelCOD_IDOSO: TIntegerField;
     sdsResponsavelNOME: TStringField;
     sdsResponsavelNOMER: TStringField;
-    sdsResponsavelFONE: TStringField;
     sdsResponsavelCELULAR: TStringField;
-    procedure TodosEClick(Sender: TObject);
-    procedure VoluntariosEClick(Sender: TObject);
-    procedure ParceirosEClick(Sender: TObject);
+    sdsResponsavelTELEFONE: TStringField;
+    pt: TBitBtn;
+    prot: TSimpleDataSet;
+    proot: TDataSource;
+    Label2: TLabel;
+    protNOME: TStringField;
+    protCELULAR: TStringField;
+    protTELEFONE: TStringField;
+    protEEMPRESA: TStringField;
     procedure RLTodosClick(Sender: TObject);
     procedure RlVolunClick(Sender: TObject);
     procedure RlParceirosClick(Sender: TObject);
     procedure CancelClick(Sender: TObject);
-    procedure TodosresClick(Sender: TObject);
     procedure todosrespClick(Sender: TObject);
+    procedure ptClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,103 +81,6 @@ uses UModulo, UPesquisaRel, UResponsavel;
 
 {$R *.dfm}
 
-procedure TRelatorio.TodosEClick(Sender: TObject);
-begin
-If TodosE.Checked = true
-then
-begin
-RLTodos.Visible := true;
-VoluntariosE.Enabled := false;
-ParceirosE.Enabled := False;
-Telefone.Enabled := false;
-Residente.Enabled := false;
-Responsavel.Enabled := false;
-
-end
-else
-begin
-Cancel.Click;
-end
-end;
-
-procedure TRelatorio.VoluntariosEClick(Sender: TObject);
-begin
-If TodosE.Checked = true
-then
-begin
-RLTodos.Visible := false;
-VoluntariosE.Enabled := false;
-ParceirosE.Enabled := true;
-Telefone.Enabled := false;
-Residente.Enabled := false;
-Responsavel.Enabled := false;
-end
-else
-begin
-Cancel.Click;
-end;
-
-IF VoluntariosE.Checked = True and ParceirosE.Checked = true
-then
-begin
-RlTodos.Visible := true;
-RlVolun.Visible := false;
-RlParceiros.Visible := false;
-TodosE.Enabled := false;
-Telefone.Enabled := false;
-Residente.Enabled := false;
-Responsavel.Enabled := false;
-end
-else
-begin
-RlTodos.Visible := false;
-Telefone.Enabled := True;
-Residente.Enabled := True;
-Responsavel.Enabled := True;
-TodosE.Enabled := true;
-end
-end;
-
-procedure TRelatorio.ParceirosEClick(Sender: TObject);
-begin
-If TodosE.Checked = true
-then
-begin
-RLTodos.Visible := false;
-VoluntariosE.Enabled := false;
-ParceirosE.Enabled := true;
-Telefone.Enabled := false;
-Residente.Enabled := false;
-Responsavel.Enabled := false;
-
-end
-else
-begin
-Cancel.Click;
-end;
-
-
-
-IF VoluntariosE.Checked = True and ParceirosE.Checked = true
-then
-begin
-RlTodos.Visible := true;
-RlVolun.Visible := false;
-RlParceiros.Visible := false;
-TodosE.Enabled := false;
-Telefone.Enabled := false;
-Residente.Enabled := false;
-Responsavel.Enabled := false;
-end
-else
-begin
-RlTodos.Visible := false;
-Telefone.Enabled := True;
-Residente.Enabled := True;
-Responsavel.Enabled := True;
-TodosE.Enabled := true;
-end
-end;
 
 procedure TRelatorio.RLTodosClick(Sender: TObject);
 begin
@@ -209,46 +115,36 @@ end;
 
 procedure TRelatorio.CancelClick(Sender: TObject);
 begin
+Email.Enabled := true;
+Responsavel.Enabled := true;
+Residente.Enabled := true;
 TodosE.Enabled :=true;
 Voluntariose.Enabled := true;
 Parceirose.Enabled := true;
 Todosres.Enabled := true;
-todost.Enabled  := true;
 profissionaist.Enabled := true;
 parceirost.Enabled    := true;
 responsaveist.Enabled := true;
 funcionariost.Enabled := true;
 todosr.Enabled       := true;
 aniversariantes.Enabled  := true;
-dadosr.Enabled   := true;
 Email.Enabled := true;
 Responsavel.Enabled := true;
 Telefone.Enabled := true;
 residente.Enabled := true;
 end;
 
-procedure TRelatorio.TodosresClick(Sender: TObject);
-begin
-If Todosres.Checked = true
-then
-begin
-Email.Enabled := false;
-Telefone.Enabled := false;
-Residente.Enabled := false;
-todosresp.Visible := true;
-end
-else
-begin
-cancel.Click;
-todosresp.Visible := false;
-end;
-end;
 procedure TRelatorio.todosrespClick(Sender: TObject);
 begin
 sdsResponsavel.Close;
 sdsResponsavel.dataset.CommandText := 'select * from LIGACOES';
 sdsResponsavel.Open;
  PesquisaRel.Respo.Preview;
+end;
+
+procedure TRelatorio.ptClick(Sender: TObject);
+begin
+PesquisaRel.TelefonePro.Preview;
 end;
 
 end.

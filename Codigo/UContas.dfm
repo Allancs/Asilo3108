@@ -1,6 +1,6 @@
 object Termor: TTermor
-  Left = 182
-  Top = 231
+  Left = 214
+  Top = 56
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Termo de Responsabilidade'
@@ -209,8 +209,8 @@ object Termor: TTermor
       000000000000000000000000000000000000000000000000000000003FFFD9}
   end
   object Termo: TQuickRep
-    Left = 1000
-    Top = 10
+    Left = 474
+    Top = 34
     Width = 794
     Height = 1123
     Frame.Color = clBlack
@@ -304,28 +304,28 @@ object Termor: TTermor
       object QRLabel2: TQRLabel
         Left = 8
         Top = 40
-        Width = 228
-        Height = 17
+        Width = 263
+        Height = 19
         Frame.Color = clBlack
         Frame.DrawTop = False
         Frame.DrawBottom = False
         Frame.DrawLeft = False
         Frame.DrawRight = False
         Size.Values = (
-          44.979166666666670000
+          50.270833333333330000
           21.166666666666670000
           105.833333333333300000
-          603.250000000000000000)
+          695.854166666666700000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
-        Caption = 'Casa de Repouso Jardin das Flores.'
+        Caption = 'Casa de Repouso Jardim das Flores.'
         Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'Arial'
+        Font.Name = 'Arial Black'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
@@ -335,7 +335,7 @@ object Termor: TTermor
       object QRLabel1: TQRLabel
         Left = 9
         Top = 8
-        Width = 297
+        Width = 253
         Height = 25
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -346,22 +346,22 @@ object Termor: TTermor
           66.145833333333330000
           23.812500000000000000
           21.166666666666670000
-          785.812500000000000000)
+          669.395833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
-        Caption = 'Termo de Responsabilidade - Chegada'
+        Caption = 'Termo de Responsabilidade - Saida'
         Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
+        Font.Height = -13
+        Font.Name = 'Arial Black'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = True
-        FontSize = 12
+        FontSize = 10
       end
     end
     object DetailBand1: TQRBand
@@ -423,7 +423,7 @@ object Termor: TTermor
       object QRLabel3: TQRLabel
         Left = 9
         Top = 8
-        Width = 297
+        Width = 277
         Height = 25
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -434,55 +434,55 @@ object Termor: TTermor
           66.145833333333330000
           23.812500000000000000
           21.166666666666670000
-          785.812500000000000000)
+          732.895833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
         Caption = 'Termo de Responsabilidade - Chegada'
         Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-        WordWrap = True
-        FontSize = 12
-      end
-      object QRLabel4: TQRLabel
-        Left = 8
-        Top = 40
-        Width = 228
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          44.979166666666670000
-          21.166666666666670000
-          105.833333333333300000
-          603.250000000000000000)
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
-        Caption = 'Casa de Repouso Jardin das Flores.'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'Arial'
+        Font.Name = 'Arial Black'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = True
         FontSize = 10
       end
-      object Corpo2: TQRLabel
+      object QRLabel4: TQRLabel
+        Left = 8
+        Top = 40
+        Width = 259
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          21.166666666666670000
+          105.833333333333300000
+          685.270833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Casa de Repouso Jardim das Flores'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial Black'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object corpo2: TQRLabel
         Left = 8
         Top = 80
         Width = 689

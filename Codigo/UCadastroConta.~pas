@@ -26,17 +26,18 @@ type
     Label3: TLabel;
     Label2: TLabel;
     Label1: TLabel;
-    DBEdit5: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit2: TDBEdit;
-    DBEdit1: TDBEdit;
-    User: TRadioButton;
-    Padrao: TRadioButton;
-    Admin: TRadioButton;
     Label7: TLabel;
     OQue: TMemo;
     ti: TLabel;
+    Label11: TLabel;
+    DBEdit3: TDBEdit;
+    DBEdit5: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit1: TDBEdit;
+    Admin: TRadioButton;
+    Padrao: TRadioButton;
+    User: TRadioButton;
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
@@ -90,14 +91,14 @@ begin
            Then NReg :=1
            Else NReg := sqlAux.FieldByName('ULTIMO').Value + 1;
 
-           Modulo.cdsUser.Insert;
-           Modulo.cdsUserID.Value := NReg;
+           Modulo.cdUser.Insert;
+           Modulo.cdUserID.Value := NReg;
 
            DBEdit2.SetFocus;
 end;
 procedure TCadastroContas.btnEditarClick(Sender: TObject);
 begin
-Modulo.cdsUser.Edit;
+Modulo.dsUser.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
 
@@ -116,7 +117,7 @@ end;
 
 procedure TCadastroContas.btnCancelarClick(Sender: TObject);
 begin
-Modulo.cdsUser.Cancel;
+Modulo.cdUser.Cancel;
           DBEdit2.Enabled       := False;
           DBEdit3.Enabled       := False;
           DBEdit4.Enabled       := False;
@@ -158,8 +159,8 @@ begin
                        [mbyes,mbno],
                        0)
           = mryes Then Begin
-                         Modulo.cdsUser.Delete;
-                         Modulo.cdsUser.ApplyUpdates(-1);
+                         Modulo.cdUser.Delete;
+                         Modulo.cdUser.ApplyUpdates(-1);
                          ShowMessage ('Registro Excluido com sucesso!');
                        End
                   Else Begin
@@ -192,9 +193,9 @@ begin
       end;
 
 
-Modulo.cdsUser.Post;
+Modulo.cdUser.Post;
 
-         Modulo.cdsUser.ApplyUpdates(-1);
+         Modulo.cdUser.ApplyUpdates(-1);
 
          btnCancelar.Click;
         
@@ -203,14 +204,14 @@ end;
 procedure TCadastroContas.DireitaClick(Sender: TObject);
 
 begin
-Modulo.cdsUser.Next;
+Modulo.cdUser.Next;
 ti.Caption := 'Conta tipo : '+DBEdit3.Text+'.';
 end;
 
 procedure TCadastroContas.EsquerdaClick(Sender: TObject);
 
 begin
-Modulo.cdsUser.Prior;
+Modulo.cdUser.Prior;
 ti.Caption := 'Conta tipo : '+DBEdit3.Text+'.';
 end;
 

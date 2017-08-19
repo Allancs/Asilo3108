@@ -1,9 +1,9 @@
 object Parceiros: TParceiros
-  Left = 195
-  Top = 198
+  Left = 238
+  Top = 239
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Parceiros.'
+  Caption = 'Casa de Repouso Jardim das Flores - Parceiros.'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
@@ -256,7 +256,7 @@ object Parceiros: TParceiros
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 112
+      Left = 88
       Top = 96
       Width = 39
       Height = 14
@@ -348,7 +348,7 @@ object Parceiros: TParceiros
     object DBEdit3: TDBEdit
       Left = 8
       Top = 112
-      Width = 100
+      Width = 75
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsParceiro
@@ -363,9 +363,9 @@ object Parceiros: TParceiros
       TabOrder = 1
     end
     object DBEdit4: TDBEdit
-      Left = 112
+      Left = 88
       Top = 112
-      Width = 100
+      Width = 77
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsParceiro
