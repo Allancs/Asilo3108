@@ -1,6 +1,6 @@
 object Funcionario: TFuncionario
-  Left = 249
-  Top = 275
+  Left = 314
+  Top = 280
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Funcion'#225'rio'
@@ -14,6 +14,7 @@ object Funcionario: TFuncionario
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage

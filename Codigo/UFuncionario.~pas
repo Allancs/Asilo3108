@@ -62,6 +62,7 @@ type
     procedure EstadoChange(Sender: TObject);
     procedure DBEdit4Exit(Sender: TObject);
     procedure DBEdit5Enter(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -236,11 +237,15 @@ end;
 procedure TFuncionario.EsquerdaClick(Sender: TObject);
 begin
 Modulo.cdsFun.Prior;
+DBEdit3.Text := Select.Text;
+Estado.Text := (copy(DBEdit10.Text, 13,15));
 end;
 
 procedure TFuncionario.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsFun.Next;
+DBEdit3.Text := Select.Text;
+Estado.Text := (copy(DBEdit10.Text, 13,15));
 end;
 
 procedure TFuncionario.EstadoClick(Sender: TObject);
@@ -281,6 +286,12 @@ begin
      Copia := (Copy(DBEdit4.Text, 7, 10));
      Nasc := (StrToInt(DataCopia)) - (StrToInt(Copia));
      DBEdit5.Text := IntToStr(Nasc);
+end;
+
+procedure TFuncionario.FormCreate(Sender: TObject);
+begin
+DBEdit3.Text := Select.Text;
+Estado.Text := (copy(DBEdit10.Text, 13,15));
 end;
 
 end.

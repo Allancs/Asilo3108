@@ -1,9 +1,9 @@
-object Despesas: TDespesas
+object medicacao: Tmedicacao
   Left = 266
   Top = 220
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Despesas'
+  Caption = 'Casa de Repouso Jardim das Flores - M'#233'dica'#231#227'o'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

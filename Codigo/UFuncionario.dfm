@@ -1114,6 +1114,7 @@ object Funcionario: TFuncionario
       Width = 44
       Height = 21
       Style = csDropDownList
+      Enabled = False
       ItemHeight = 13
       TabOrder = 10
       OnChange = EstadoChange

@@ -61,6 +61,8 @@ type
     Caminhobanco: TLabel;
     Relato: TBitBtn;
     suport: TBitBtn;
+    Backup: TTimer;
+    Label7: TLabel;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -100,6 +102,8 @@ type
     procedure TarefasClick(Sender: TObject);
     procedure RelaClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure suportClick(Sender: TObject);
+    procedure BackupTimer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -117,7 +121,8 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
   UAv,
   ULogin,
   UCadastroConta,
-  URelatorio;
+  URelatorio,
+  USuport;
 
 {$R *.dfm}
 
@@ -297,7 +302,7 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
                   avali.visible := true;
                   Tarefa.btnInserir.Enabled := true;
                   Tarefa.btnGravar.Enabled := true;
-                  
+
 
 
                     end
@@ -318,21 +323,30 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
                     ser.visible := true;
                     avali.visible := true;
                     Saudes.btnDeletar.Visible := false;
-Incidentes.btnDeletar.Visible := false;
-Tarefa.btnDeletar.Visible := false;
-CadastroAvisos.btnDeletar.Visible := false;
-Parceiros.btnDeletar.Visible := false;
+                    Incidentes.btnDeletar.Visible := false;
+                    Tarefa.btnDeletar.Visible := false;
+                    CadastroAvisos.btnDeletar.Visible := false;
+                    Parceiros.btnDeletar.Visible := false;
+                    Responsavel.btnDeletar.Visible := false;
+                    Funcionario.btnDeletar.Visible := false;
+                    Voluntarios.btnDeletar.Visible := false;
+                    Emails.Mostrar.Visible := false;
+                    Emails.Ocutar.Visible := false;
+                    Ser.Visible := false;
+                    Emails.Baixo.Visible := false;
+                    Profissionais.btnDeletar.Visible := false;
+                    Idoso.btnDeletar.Visible := false;
+                    Avali.Visible := false;
+ end
+ else If (ULogin.User = 'user')
+                    then
+                    begin
+                    Incidentes.btnDeletar.Visible := false;
+                    CadastroAvisos.btnDeletar.Visible := false;
+                    Tarefa.btnDeletar.Visible := false;
+                    Saudes.btnDeletar.Visible := false;
+                    //medicacao.btnDeletar.Visible := false;
 
-Responsavel.btnDeletar.Visible := false;
-Funcionario.btnDeletar.Visible := false;
-Voluntarios.btnDeletar.Visible := false;
-Emails.Mostrar.Visible := false;
-Emails.Ocutar.Visible := false;
-Ser.Visible := false;
-Emails.Baixo.Visible := false;
-Profissionais.btnDeletar.Visible := false;
-Idoso.btnDeletar.Visible := false;
-Avali.Visible := false;
 
 end;
 end;
@@ -503,6 +517,38 @@ end;
 procedure TPrincipal.BitBtn1Click(Sender: TObject);
 begin
 Relatorio.Visible := true;
+end;
+
+procedure TPrincipal.suportClick(Sender: TObject);
+begin
+Suporte.Visible := True;
+end;
+
+procedure TPrincipal.BackupTimer(Sender: TObject);
+begin
+//Label7.Caption := TimeToStr(Time);
+
+If (TimeToStr(Time)= '12:00:00')
+then
+begin
+winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+Label7.Caption := 'Backup Completo, 12h.'
+end;
+
+If (TimeToStr(Time)= '15:00:00')
+then
+begin
+winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+Label7.Caption := 'Backup Completo, 15h.'
+end;
+
+If (TimeToStr(Time)= '17:00:00')
+then
+begin
+winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+Label7.Caption := 'Backup Completo, 17h.'
+end;
+
 end;
 
 end.

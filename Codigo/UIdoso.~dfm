@@ -3,7 +3,7 @@ object Idoso: TIdoso
   Top = 212
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES -  Cadastro de Residente'
+  Caption = 'Casa de Repouso Jardim das Flores -  Cadastro de Residente'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace

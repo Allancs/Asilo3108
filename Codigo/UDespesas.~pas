@@ -8,7 +8,7 @@ uses
   jpeg, ExtCtrls;
 
 type
-  TDespesas = class(TForm)
+  Tmedicacao = class(TForm)
     DataSource1: TDataSource;
     sqlAux: TSQLQuery;
     Image1: TImage;
@@ -20,7 +20,7 @@ type
   end;
 
 var
-  Despesas: TDespesas;
+  medicacao: Tmedicacao;
 
 implementation
 

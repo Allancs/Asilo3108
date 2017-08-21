@@ -88,7 +88,7 @@ Modulo.cdsFun.Edit;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
-
+          Estado.Enabled := true;
           DBEdit2.Enabled       := True;
           Select.Enabled       := True;
           DBEdit4.Enabled       := True;
@@ -131,6 +131,7 @@ begin
           DBEdit10.Enabled      := false;
           DBEdit11.Enabled      := false;
           DBEdit12.Enabled      := false;
+          Estado.Enabled        := false;
 
 
  If
@@ -163,6 +164,7 @@ Modulo.cdsFun.Cancel;
           DBEdit10.Enabled      := false;
           DBEdit11.Enabled      := false;
           DBEdit12.Enabled      := false;
+          Estado.Enabled        := false;
 
 
 
@@ -199,18 +201,18 @@ begin
 
 
           DBEdit2.Enabled       := True;
-          Select.Enabled       := True;
+          Select.Enabled        := True;
           DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
           DBEdit6.Enabled       := True;
           DBEdit7.Enabled       := True;
           DBEdit8.Enabled       := True;
           DBEdit9.Enabled       := True;
-          DBEdit10.Enabled       := True;
-          DBEdit11.Enabled       := True;
-          DBEdit12.Enabled       := True;
-
-          btnGravar.Enabled      := True;
+          DBEdit10.Enabled      := True;
+          DBEdit11.Enabled      := True;
+          DBEdit12.Enabled      := True;
+          Estado.Enabled        := true;
+          btnGravar.Enabled     := True;
 
 
 

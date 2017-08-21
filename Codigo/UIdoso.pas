@@ -54,6 +54,7 @@ type
     Label9: TLabel;
     Label11: TLabel;
     DBEdit11: TDBEdit;
+    Resp: TBitBtn;
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
@@ -65,6 +66,7 @@ type
     procedure DBEdit3Exit(Sender: TObject);
     procedure DBEdit4Click(Sender: TObject);
     procedure DBEdit4Enter(Sender: TObject);
+    procedure RespClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,7 +80,8 @@ var
 
 implementation
 
-uses UModulo;
+uses UModulo,
+  UResponsavel;
 
 {$R *.dfm}
 
@@ -324,6 +327,11 @@ DtaAtual := DateToStr(Date);
     // Label19.Caption := IntToStr(Nasc);
       DBEdit4.Text := IntToStr(Nasc);
       end;
+end;
+
+procedure TIdoso.RespClick(Sender: TObject);
+begin
+Responsavel.Visible := true;
 end;
 
 end.

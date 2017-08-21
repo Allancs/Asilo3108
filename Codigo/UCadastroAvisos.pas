@@ -127,8 +127,8 @@ begin
                        [mbyes,mbno],
                        0)
           = mryes Then Begin
-                         Modulo.cdsFun.Delete;
-                         Modulo.cdsFun.ApplyUpdates(-1);
+                         Modulo.cdsAviso.Delete;
+                         Modulo.cdsAviso.ApplyUpdates(-1);
                          ShowMessage ('Registro Excluido com sucesso!');
                        End
                   Else Begin

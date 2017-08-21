@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 196
-  Top = 223
+  Left = 186
+  Top = 239
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -411,6 +411,19 @@ object Principal: TPrincipal
     Caption = 'Caminhobanco'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object Label7: TLabel
+    Left = 856
+    Top = 544
+    Width = 3
+    Height = 14
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
     Font.Height = -11
     Font.Name = 'Arial'
     Font.Style = [fsBold]
@@ -1551,12 +1564,12 @@ object Principal: TPrincipal
     object Label5: TLabel
       Left = 8
       Top = 87
-      Width = 139
-      Height = 15
+      Width = 132
+      Height = 14
       Caption = 'Data, vermelha dia atual.'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
@@ -1564,13 +1577,13 @@ object Principal: TPrincipal
     object Label6: TLabel
       Left = 8
       Top = 104
-      Width = 144
-      Height = 15
+      Width = 139
+      Height = 14
       Caption = 'Data, verde proximos dia.'
       Color = clWhite
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentColor = False
@@ -1853,6 +1866,7 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 19
+    OnClick = suportClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -2008,5 +2022,10 @@ object Principal: TPrincipal
     OnTimer = Timer1Timer
     Left = 952
     Top = 8
+  end
+  object Backup: TTimer
+    OnTimer = BackupTimer
+    Left = 952
+    Top = 368
   end
 end

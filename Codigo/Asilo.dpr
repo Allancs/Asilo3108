@@ -23,7 +23,8 @@ uses
   UCadastroConta in 'UCadastroConta.pas' {CadastroContas},
   URelatorio in 'URelatorio.pas' {Relatorio},
   UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel},
-  IniFiles;
+  IniFiles,
+  USuport in 'USuport.pas' {Suporte};
 
 {$R *.res}
 Var
@@ -56,6 +57,7 @@ begin
   Application.CreateForm(TCadastroContas, CadastroContas);
   Application.CreateForm(TRelatorio, Relatorio);
   Application.CreateForm(TPesquisaRel, PesquisaRel);
+  Application.CreateForm(TSuporte, Suporte);
   soma := (Copy(Application.Exename, 1, 15));
    ArquivoIni := TIniFile.Create(soma+'\Config.ini');
    DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
