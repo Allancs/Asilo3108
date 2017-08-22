@@ -112,10 +112,10 @@ begin
 
     // Configuração da mensagem
 
-    IdMessage.From.Address := 'allancolombo@hotmail.com';
+    IdMessage.From.Address := 'cssoftwaresuporte@hotmail.com';
     IdMessage.From.Name := Nome.Text;
     IdMessage.ReplyTo.EMailAddresses := IdMessage.From.Address;
-    IdMessage.Recipients.EMailAddresses := 'allancolombo@hotmail.com, allancolobo@gmail.com';
+    IdMessage.Recipients.EMailAddresses := 'cssoftwaresuporte@hotmail.com';
     IdMessage.Subject := 'Avaliação do Sistema';
     IdMessage.Body.Text := Menssagem;
 

@@ -492,7 +492,7 @@ object Suporte: TSuporte
       'Suporte via e-mail ou contato '
       ''
       'E-mail para Suporte : '
-      'allancolombo@hotmail.com '
+      'cssoftwaresuporte@hotmail.com'
       ''
       'Contato : (**)***-**** '
       ' ')

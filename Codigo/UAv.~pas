@@ -112,7 +112,7 @@ begin
 
     // Configuração da mensagem
 
-    IdMessage.From.Address := 'allancolombo@hotmail.com';
+    IdMessage.From.Address := 'cssoftwaresuporte@hotmail.com';
     IdMessage.From.Name := Nome.Text;
     IdMessage.ReplyTo.EMailAddresses := IdMessage.From.Address;
     IdMessage.Recipients.EMailAddresses := 'allancolombo@hotmail.com, allancolobo@gmail.com';
@@ -263,10 +263,6 @@ end;
 
 procedure TAvaliacao.N5Click(Sender: TObject);
 begin
-
-
-
-
 
        if N5.Checked = True
        then
