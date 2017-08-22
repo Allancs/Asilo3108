@@ -41,10 +41,10 @@ type
     BitBtn1: TBitBtn;
     Cod: TDBEdit;
     Label5: TLabel;
-    DBEdit5: TDBEdit;
     Label6: TLabel;
     DBEdit6: TDBEdit;
     Label8: TLabel;
+    DBEdit5: TDBEdit;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);

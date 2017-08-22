@@ -1,6 +1,6 @@
 object SMTPs: TSMTPs
-  Left = 237
-  Top = 295
+  Left = 320
+  Top = 290
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Configura'#231#245'es '
@@ -993,7 +993,7 @@ object SMTPs: TSMTPs
       Top = 9
       Width = 169
       Height = 33
-      Caption = '     Cadastrar Usuarios'
+      Caption = 'Cadastrar Usuarios'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1293,7 +1293,7 @@ object SMTPs: TSMTPs
     FileName = 'C:\Asilo\Codigo\UAv.dfm'
     Filter = 'Banco Firebird (*.fdb)|*.fdb'
     OnCanClose = BancoConfigCanClose
-    Left = 741
-    Top = 376
+    Left = 709
+    Top = 328
   end
 end

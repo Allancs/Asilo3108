@@ -181,17 +181,18 @@ type
     cdUserUSU_EMAIL: TStringField;
     cdUserUSU_LOGIN: TStringField;
     cdUserUSU_SENHA: TStringField;
-    cdsLigacoesCOD_LIGACOES: TIntegerField;
-    cdsLigacoesCOD_IDOSO: TIntegerField;
-    cdsLigacoesNOME: TStringField;
-    cdsLigacoesNOMER: TStringField;
-    cdsLigacoesCELULAR: TStringField;
     sdsLigacoesCOD_LIGACOES: TIntegerField;
     sdsLigacoesCOD_IDOSO: TIntegerField;
     sdsLigacoesNOME: TStringField;
     sdsLigacoesNOMER: TStringField;
-    sdsLigacoesFONE: TStringField;
+    sdsLigacoesTELEFONE: TStringField;
     sdsLigacoesCELULAR: TStringField;
+    cdsLigacoesCOD_LIGACOES: TIntegerField;
+    cdsLigacoesCOD_IDOSO: TIntegerField;
+    cdsLigacoesNOME: TStringField;
+    cdsLigacoesNOMER: TStringField;
+    cdsLigacoesTELEFONE: TStringField;
+    cdsLigacoesCELULAR: TStringField;
   private
     { Private declarations }
   public

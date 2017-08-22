@@ -1,6 +1,6 @@
 object Idoso: TIdoso
-  Left = 293
-  Top = 212
+  Left = 144
+  Top = 200
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores -  Cadastro de Residente'

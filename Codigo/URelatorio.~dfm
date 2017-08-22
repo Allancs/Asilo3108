@@ -1,6 +1,6 @@
 object Relatorio: TRelatorio
-  Left = 243
-  Top = 395
+  Left = 263
+  Top = 295
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Relat'#243'rio'
@@ -216,6 +216,13 @@ object Relatorio: TRelatorio
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
     TabOrder = 0
+    object Label2: TLabel
+      Left = 64
+      Top = 24
+      Width = 32
+      Height = 13
+      Caption = 'Label2'
+    end
   end
   object LadoEsquerdo: TPanel
     Left = 5
@@ -269,7 +276,6 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 2
-        OnClick = ParceirosEClick
       end
       object VoluntariosE: TCheckBox
         Left = 8
@@ -284,7 +290,6 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 1
-        OnClick = VoluntariosEClick
       end
       object TodosE: TCheckBox
         Left = 8
@@ -299,14 +304,13 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        OnClick = TodosEClick
       end
     end
     object Telefone: TGroupBox
       Left = 176
       Top = 48
       Width = 185
-      Height = 113
+      Height = 97
       Caption = 'Relat'#243'rio de Telefones'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -315,24 +319,9 @@ object Relatorio: TRelatorio
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      object TodosT: TCheckBox
-        Left = 8
-        Top = 24
-        Width = 161
-        Height = 17
-        Caption = 'Todos Telefones Cadastrado'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        OnClick = TodosTClick
-      end
       object ProfissionaisT: TCheckBox
         Left = 8
-        Top = 40
+        Top = 24
         Width = 97
         Height = 17
         Caption = 'Profissionais'
@@ -342,11 +331,11 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
       end
       object ParceirosT: TCheckBox
         Left = 8
-        Top = 56
+        Top = 40
         Width = 97
         Height = 17
         Caption = 'Parceiros'
@@ -356,11 +345,11 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 1
       end
       object ResponsaveisT: TCheckBox
         Left = 8
-        Top = 72
+        Top = 56
         Width = 97
         Height = 17
         Caption = 'Responsaveis'
@@ -370,11 +359,11 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 3
+        TabOrder = 2
       end
       object FuncionariosT: TCheckBox
         Left = 8
-        Top = 88
+        Top = 72
         Width = 97
         Height = 17
         Caption = 'Funcionarios'
@@ -384,12 +373,12 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 4
+        TabOrder = 3
       end
     end
     object Residente: TGroupBox
       Left = 176
-      Top = 168
+      Top = 152
       Width = 185
       Height = 81
       Caption = 'Relat'#243'rio de Residentes'
@@ -428,20 +417,6 @@ object Relatorio: TRelatorio
         ParentFont = False
         TabOrder = 1
       end
-      object DadosR: TCheckBox
-        Left = 8
-        Top = 56
-        Width = 161
-        Height = 17
-        Caption = 'Dados Cadastrado'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Arial'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 2
-      end
     end
     object Responsavel: TGroupBox
       Left = 8
@@ -469,12 +444,11 @@ object Relatorio: TRelatorio
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        OnClick = TodosresClick
       end
     end
     object RlVolun: TBitBtn
       Left = 8
-      Top = 312
+      Top = 232
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -485,12 +459,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
-      Visible = False
       OnClick = RlVolunClick
     end
     object RlParceiros: TBitBtn
       Left = 8
-      Top = 312
+      Top = 264
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -501,12 +474,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
-      Visible = False
       OnClick = RlParceirosClick
     end
     object RLTodos: TBitBtn
       Left = 8
-      Top = 312
+      Top = 200
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -517,12 +489,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
-      Visible = False
       OnClick = RLTodosClick
     end
     object todosresp: TBitBtn
       Left = 8
-      Top = 312
+      Top = 296
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -533,12 +504,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 7
-      Visible = False
       OnClick = todosrespClick
     end
-    object RT: TBitBtn
-      Left = 112
-      Top = 312
+    object pt: TBitBtn
+      Left = 104
+      Top = 200
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -549,8 +519,67 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 8
-      Visible = False
-      OnClick = RTClick
+      OnClick = ptClick
+    end
+    object Parceiros: TBitBtn
+      Left = 104
+      Top = 232
+      Width = 95
+      Height = 25
+      Caption = 'Gerar Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 9
+      OnClick = ParceirosClick
+    end
+    object BitBtn2: TBitBtn
+      Left = 104
+      Top = 264
+      Width = 95
+      Height = 25
+      Caption = 'Gerar Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 10
+      OnClick = BitBtn2Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 104
+      Top = 296
+      Width = 95
+      Height = 25
+      Caption = 'Gerar Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 11
+      OnClick = BitBtn3Click
+    end
+    object Todosresidentesss: TBitBtn
+      Left = 208
+      Top = 296
+      Width = 95
+      Height = 25
+      Caption = 'Gerar Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 12
+      OnClick = TodosresidentesssClick
     end
   end
   object TPanel
@@ -586,8 +615,8 @@ object Relatorio: TRelatorio
     Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
     Connection.Connected = True
     DataSet.CommandText = 
-      'select PARCEIRO.EMAIL , VOLUNTARIO.EMAIL, PARCEIRO.NOME, VOLUNTA' +
-      'RIO.NOME from PARCEIRO, VOLUNTARIO'
+      'SELECT nome, email FROM voluntario union all SELECT nome, email ' +
+      'FROM parceiro'
     DataSet.DataSource = dsAux
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
@@ -703,7 +732,7 @@ object Relatorio: TRelatorio
   object DataSource2: TDataSource
     DataSet = sdsResponsavel
     Left = 712
-    Top = 320
+    Top = 312
   end
   object sdsResponsavel: TSimpleDataSet
     Active = True
@@ -736,7 +765,7 @@ object Relatorio: TRelatorio
     DataSet.Params = <>
     Params = <>
     Left = 744
-    Top = 320
+    Top = 312
     object sdsResponsavelCOD_LIGACOES: TIntegerField
       FieldName = 'COD_LIGACOES'
       Required = True
@@ -761,7 +790,7 @@ object Relatorio: TRelatorio
       Size = 14
     end
   end
-  object TodosTele: TSimpleDataSet
+  object prot: TSimpleDataSet
     Active = True
     Aggregates = <>
     Connection.ConnectionName = 'Asilo'
@@ -786,32 +815,347 @@ object Relatorio: TRelatorio
       'Trim Char=False')
     Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
     Connection.Connected = True
-    DataSet.CommandText = 
-      'SELECT nome, telefone, celular FROM profissionais union all SELE' +
-      'CT nome, telefone, celular FROM parceiro union all SELECT nome, ' +
-      'telefone, celular FROM voluntario union all SELECT nome, telefon' +
-      'e, celular FROM ligacoes union all Select nome, telefone, celula' +
-      'r from funcionario'
+    DataSet.CommandText = 'select  NOME, CELULAR,TELEFONE, EEMPRESA from PROFISSIONAIS'
     DataSet.DataSource = dsAux
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 672
+    Left = 680
     Top = 216
-    object TodosTeleNOME: TStringField
+    object protNOME: TStringField
       FieldName = 'NOME'
       Size = 100
     end
-    object TodosTeleTELEFONE: TStringField
-      FieldName = 'TELEFONE'
-    end
-    object TodosTeleCELULAR: TStringField
+    object protCELULAR: TStringField
       FieldName = 'CELULAR'
     end
+    object protTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+    end
+    object protEEMPRESA: TStringField
+      FieldName = 'EEMPRESA'
+      Size = 100
+    end
   end
-  object TelefonesT: TDataSource
-    DataSet = TodosTele
-    Left = 640
+  object proot: TDataSource
+    DataSet = prot
+    Left = 648
     Top = 216
+  end
+  object parceiro: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'Select NOME, TELEFONE, CELULAR, EMPRESA from PARCEIRO'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 680
+    Top = 248
+    object parceiroNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object parceiroTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 13
+    end
+    object parceiroCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 14
+    end
+    object parceiroEMPRESA: TStringField
+      FieldName = 'EMPRESA'
+      Size = 45
+    end
+  end
+  object parceiross: TDataSource
+    DataSet = parceiro
+    Left = 648
+    Top = 248
+  end
+  object Funcionario: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'Select NOME, CELULAR, TELEFONE from FUNCIONARIO'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 680
+    Top = 280
+    object FuncionarioNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object FuncionarioCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 14
+    end
+    object FuncionarioTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 13
+    end
+  end
+  object funnc: TDataSource
+    DataSet = Funcionario
+    Left = 648
+    Top = 280
+  end
+  object responsa: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'Select NOMER, TELEFONE, CELULAR, NOME from LIGACOES'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 680
+    Top = 312
+    object responsaNOMER: TStringField
+      FieldName = 'NOMER'
+      Size = 45
+    end
+    object responsaTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 14
+    end
+    object responsaCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 13
+    end
+    object responsaNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+  end
+  object respp: TDataSource
+    DataSet = responsa
+    Left = 648
+    Top = 312
+  end
+  object Aniversario: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'Select NOMER, TELEFONE, CELULAR, NOME from LIGACOES'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 448
+    Top = 248
+    object StringField1: TStringField
+      FieldName = 'NOMER'
+      Size = 45
+    end
+    object StringField2: TStringField
+      FieldName = 'TELEFONE'
+      Size = 14
+    end
+    object StringField3: TStringField
+      FieldName = 'CELULAR'
+      Size = 13
+    end
+    object StringField4: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+  end
+  object Aniversarios: TDataSource
+    DataSet = Aniversario
+    Left = 416
+    Top = 248
+  end
+  object TodosResidentess: TDataSource
+    DataSet = TodosResidentes
+    Left = 416
+    Top = 216
+  end
+  object TodosResidentes: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select * from RESIDENTE'
+    DataSet.DataSource = dsAux
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 448
+    Top = 216
+    object TodosResidentesCOD_IDOSO: TIntegerField
+      FieldName = 'COD_IDOSO'
+      Required = True
+    end
+    object TodosResidentesNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object TodosResidentesDATANASCIMENTO: TStringField
+      FieldName = 'DATANASCIMENTO'
+      Size = 10
+    end
+    object TodosResidentesIDADE: TStringField
+      FieldName = 'IDADE'
+      Size = 3
+    end
+    object TodosResidentesNASCIONALIDADE: TStringField
+      FieldName = 'NASCIONALIDADE'
+      Size = 45
+    end
+    object TodosResidentesNATURALIDADE: TStringField
+      FieldName = 'NATURALIDADE'
+      Size = 45
+    end
+    object TodosResidentesESTADOCIVIL: TStringField
+      FieldName = 'ESTADOCIVIL'
+      Size = 45
+    end
+    object TodosResidentesRELIGIAO: TStringField
+      FieldName = 'RELIGIAO'
+      Size = 45
+    end
+    object TodosResidentesPROFISSAO: TStringField
+      FieldName = 'PROFISSAO'
+      Size = 45
+    end
+    object TodosResidentesRG: TStringField
+      FieldName = 'RG'
+      Size = 9
+    end
+    object TodosResidentesCPF: TStringField
+      FieldName = 'CPF'
+      Size = 16
+    end
+    object TodosResidentesPAI: TStringField
+      FieldName = 'PAI'
+      Size = 45
+    end
+    object TodosResidentesMAE: TStringField
+      FieldName = 'MAE'
+      Size = 45
+    end
+    object TodosResidentesOBS: TStringField
+      FieldName = 'OBS'
+      Size = 10
+    end
+    object TodosResidentesDATAENTRADA: TDateField
+      FieldName = 'DATAENTRADA'
+    end
+    object TodosResidentesINFORMACOES: TStringField
+      FieldName = 'INFORMACOES'
+      Size = 100
+    end
+    object TodosResidentesDATASAIDA: TDateField
+      FieldName = 'DATASAIDA'
+    end
   end
 end

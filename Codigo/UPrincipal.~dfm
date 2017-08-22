@@ -1,5 +1,5 @@
 object Principal: TPrincipal
-  Left = 186
+  Left = 246
   Top = 239
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -388,24 +388,9 @@ object Principal: TPrincipal
     ParentFont = False
     Transparent = True
   end
-  object tipo: TLabel
-    Left = 9
-    Top = 34
-    Width = 34
-    Height = 19
-    Caption = 'Tipo'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clBlack
-    Font.Height = -16
-    Font.Name = 'Arial'
-    Font.Style = [fsBold]
-    ParentFont = False
-    Transparent = True
-    Visible = False
-  end
   object Caminhobanco: TLabel
     Left = 4
-    Top = 546
+    Top = 530
     Width = 82
     Height = 14
     Caption = 'Caminhobanco'
@@ -418,7 +403,7 @@ object Principal: TPrincipal
     Transparent = True
   end
   object Label7: TLabel
-    Left = 856
+    Left = 4
     Top = 544
     Width = 3
     Height = 14
@@ -430,9 +415,37 @@ object Principal: TPrincipal
     ParentFont = False
     Transparent = True
   end
+  object Data: TLabel
+    Left = 8
+    Top = 32
+    Width = 23
+    Height = 14
+    Caption = 'Data'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object Hora: TLabel
+    Left = 8
+    Top = 44
+    Width = 23
+    Height = 14
+    Caption = 'Data'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
   object Env: TBitBtn
     Left = 8
-    Top = 464
+    Top = 344
     Width = 180
     Height = 33
     Caption = '&Envio Email'
@@ -648,81 +661,9 @@ object Principal: TPrincipal
       77A18A77A28B77A38B76A28B76A48B75A58B76A58C75A68D74A68D75A78D75A9
       8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object Des: TBitBtn
+  object func: TBitBtn
     Left = 8
-    Top = 224
-    Width = 180
-    Height = 33
-    Caption = '&M'#233'dica'#231#227'o'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Arial'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 3
-    OnClick = DesClick
-    Glyph.Data = {
-      F6060000424DF606000000000000360000002800000018000000180000000100
-      180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFD6D8FF1021EE1224E05D67F4EEEFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDADCFF333FEE1123DD2330F0FBFBFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0D3FF0F20F02035E91224E830
-      3DF4B0B5FEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA9ADFE1A27F11327E61E33E7
-      101FF2F9F9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9F9FF1928
-      F71B30E71B31E6162BE51122ED5C66F9F0F1FFFFFFFFF1F1FF5A62F90F1FED19
-      2EE6192DE41429E74650F8FEFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF525CFB162BEC1C31E61C31E61C31E61529E91C2AF27A81FB2C38
-      F41326E81B31E6172CE3172CE31123E97178FBFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFA1A6FE1326F02237EA2035E91E33E71F34E8
-      1C31E61225E9192EE61C31E6192DE4192DE4192DE41021ED9DA2FEFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0D2FF0E20F32338EB22
-      37EA2237EA2137EA2137EA2237EA1E33E71E33E72137EA1E33E71B31E60D1FF1
-      CDCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEAEB
-      FF3744F91E34EC2339EB2338EB2338EB2237EA2237EA2137EA2338EB2237EA1F
-      34E81B30E72432F5E2E3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFF6E78FB192EED243AEC2339EB2339EB2339EB2339EB2339
-      EB2338EB2338EB1F34E81B30E83A47F6EFF0FFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFD8DBFF3A49F42238ED263CED243AEC243AEC
-      243AEC243AEC243AEC243AEC2339EB2137EA2035E91F2EECA4A9FCFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA9B0FE293AF42E44F46B7FFF33
-      48F5263CED253BEC253BEC253BEC253BEC243AEC243AEC2339EB273DEE2035E9
-      1123EC7179FBF6F7FFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFF737DFC192EF1566B
-      FF6B7FFF6B7FFF6679FF4C61FF364CF72F45F32B40F03348F5364CF7394FF939
-      4FF9364CF73247F4263CED152AE83E49F6E3E5FFFFFFFFFFFFFFE4E6FF4956F9
-      253BF1C8D2FF7A8BFF6B7FFF6B7FFF6B7FFF6B7FFF6B7FFF6679FF6679FF6679
-      FF6679FF5D71FF5D71FF5D71FF5D71FF5D71FF3E54FD1E33EA202DF1B8BCFDFF
-      FFFF2E42F53A51FBE5EAFFE5EAFFB2C0FFBAC7FFCFD8FFCFD8FFC8D2FF7A8BFF
-      6B7FFF6B7FFF6B7FFF6679FF94A3FFA6B4FFB2C0FFB2C0FFB2C0FFB2C0FFA2B0
-      FF394FF91326E3FFFFFF192FF83C54FE465FFF4A61FF536BFF536BFF4961FF47
-      5FFF8595FFBAC7FF7688FF7688FF6B7FFF8595FF94A3FF384EFA3349F9263DF7
-      1D33F61C32F61A32F6162CF62635F8FFFFFFC6CBFEAFB6FEAFB6FEAFB6FEAFB6
-      FEAFB5FEB0B6FF9EA6FD1E33F2D1D9FF90A2FF7A8BFF7688FFC8D2FF2A3FF147
-      55F6828AFDA3AAFEAFB4FFABB1FEB4B9FFDBDDFFF1F2FFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFF5763FB6679FFC8D2FF7A8BFF90A2
-      FFD1D9FF182DF5DCDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB2B8FF263DF8
-      F3F6FFA2B0FFCFD8FF6679FF5765FBFCFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFE4E6FF3648FAC7D2FFFDFEFFFDFEFF253DF6AAB0FEFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFF7983FE6579FFFFFFFFD1D9FF3044F8E0E2FFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBDC2FF293FF9F1F3FF7488
-      FF6B77FCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      4152FB8495FF2A40F8B1B8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFF959EFF1C32ED4153F7F7F8FFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-  end
-  object Fun: TBitBtn
-    Left = 8
-    Top = 384
+    Top = 424
     Width = 180
     Height = 33
     Caption = '&Funcionarios'
@@ -732,9 +673,9 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
     Visible = False
-    OnClick = FunClick
+    OnClick = funcClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000936645936645
@@ -805,7 +746,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     OnClick = IClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -877,7 +818,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
     Visible = False
     OnClick = RespClick
     Glyph.Data = {
@@ -940,7 +881,7 @@ object Principal: TPrincipal
   end
   object Par: TBitBtn
     Left = 8
-    Top = 424
+    Top = 384
     Width = 180
     Height = 33
     Caption = '&Parceiros'
@@ -950,7 +891,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 6
     Visible = False
     OnClick = ParClick
     Glyph.Data = {
@@ -1013,7 +954,7 @@ object Principal: TPrincipal
   end
   object Pro: TBitBtn
     Left = 8
-    Top = 304
+    Top = 264
     Width = 180
     Height = 33
     Caption = '&Profissionais'
@@ -1023,7 +964,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 8
+    TabOrder = 7
     Visible = False
     OnClick = ProClick
     Glyph.Data = {
@@ -1096,7 +1037,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 8
     Visible = False
     OnClick = ResClick
     Glyph.Data = {
@@ -1169,7 +1110,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 10
+    TabOrder = 9
     OnClick = SClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -1244,7 +1185,7 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentBiDiMode = False
     ParentFont = False
-    TabOrder = 11
+    TabOrder = 10
     OnClick = TClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -1306,7 +1247,7 @@ object Principal: TPrincipal
   end
   object Vol: TBitBtn
     Left = 8
-    Top = 344
+    Top = 304
     Width = 180
     Height = 33
     Caption = '&Voluntario'
@@ -1316,7 +1257,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 12
+    TabOrder = 11
     Visible = False
     OnClick = VolClick
     Glyph.Data = {
@@ -1389,7 +1330,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 13
+    TabOrder = 12
     Visible = False
     object DBText2: TDBText
       Left = 62
@@ -1487,7 +1428,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 13
     Visible = False
     OnClick = SerClick
     Glyph.Data = {
@@ -1560,7 +1501,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 15
+    TabOrder = 14
     object Label5: TLabel
       Left = 8
       Top = 87
@@ -1610,7 +1551,7 @@ object Principal: TPrincipal
   end
   object Avali: TBitBtn
     Left = 8
-    Top = 504
+    Top = 464
     Width = 180
     Height = 33
     Caption = '&Avalia'#231#227'o'
@@ -1620,7 +1561,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 15
     Visible = False
     OnClick = AvaliClick
     Glyph.Data = {
@@ -1693,7 +1634,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 17
+    TabOrder = 16
     Visible = False
     object DBText3: TDBText
       Left = 68
@@ -1792,7 +1733,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 18
+    TabOrder = 17
     Visible = False
     OnClick = BitBtn1Click
     Glyph.Data = {
@@ -1855,7 +1796,7 @@ object Principal: TPrincipal
   end
   object suport: TBitBtn
     Left = 8
-    Top = 264
+    Top = 224
     Width = 180
     Height = 33
     Caption = '&Suporte'
@@ -1865,7 +1806,7 @@ object Principal: TPrincipal
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 19
+    TabOrder = 18
     OnClick = suportClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -2025,7 +1966,7 @@ object Principal: TPrincipal
   end
   object Backup: TTimer
     OnTimer = BackupTimer
-    Left = 152
-    Top = 16
+    Left = 112
+    Top = 520
   end
 end

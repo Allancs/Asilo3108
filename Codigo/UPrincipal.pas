@@ -14,8 +14,6 @@ type
     Env: TBitBtn;
     A: TBitBtn;
     Con: TBitBtn;
-    Des: TBitBtn;
-    Fun: TBitBtn;
     I: TBitBtn;
     Resp: TBitBtn;
     Par: TBitBtn;
@@ -37,7 +35,6 @@ type
     DBText1: TDBText;
     Label1: TLabel;
     Label2: TLabel;
-    tipo: TLabel;
     sdsAux: TSimpleDataSet;
     DataSource1: TDataSource;
     Image1: TImage;
@@ -61,8 +58,11 @@ type
     Caminhobanco: TLabel;
     Relato: TBitBtn;
     suport: TBitBtn;
-    Backup: TTimer;
     Label7: TLabel;
+    Backup: TTimer;
+    Data: TLabel;
+    Hora: TLabel;
+    func: TBitBtn;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -71,7 +71,7 @@ type
     procedure RespClick(Sender: TObject);
     procedure DesClick(Sender: TObject);
     procedure ConClick(Sender: TObject);
-    procedure FunClick(Sender: TObject);
+    procedure funcClick(Sender: TObject);
     procedure IClick(Sender: TObject);
     procedure ParClick(Sender: TObject);
     procedure ProClick(Sender: TObject);
@@ -166,7 +166,7 @@ begin
 Termor.Visible := true;
 end;
 
-procedure TPrincipal.FunClick(Sender: TObject);
+procedure TPrincipal.funcClick(Sender: TObject);
 begin
 Funcionario.Visible := True;
 end;
@@ -276,8 +276,8 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
              Tarefa.btnDeletar.Enabled := true;
              Tarefa.btnEditar.Enabled := true;
              Tarefa.btnCancelar.Enabled := true;
-                   Relato.Visible := true;
-                  tipo.visible := true;
+                  Relato.Visible := true;
+
                   CaminhoBanco.Visible := true;
                   CadastroAvisos.btnEditar.visible := true;
                   CadastroAvisos.btnInserir.visible := true;
@@ -292,9 +292,8 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
                   pro.visible := true;
                   par.visible := true;
                   con.visible := true;
-                  des.visible := true;
                   res.visible := true;
-                  fun.visible := true;
+                  func.visible := true;
                   resp.visible := true;
                   vol.visible := true;
                   env.visible := true;
@@ -314,9 +313,7 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
                     pro.visible := true;
                     par.visible := true;
                     con.visible := true;
-                    des.visible := true;
                     res.visible := true;
-                    fun.visible := true;
                     resp.visible := true;
                     vol.visible := true;
                     env.visible := true;
@@ -397,7 +394,8 @@ begin
           Aux.Close;
           Aux.DataSet.CommandText := TxxtConsulta;
           Aux.Open;
-          
+          Data.Caption := 'Data : '+DateToStr(Date);
+
 end;
 
 procedure TPrincipal.TarefaAClick(Sender: TObject);
@@ -527,25 +525,25 @@ end;
 procedure TPrincipal.BackupTimer(Sender: TObject);
 begin
 //Label7.Caption := TimeToStr(Time);
-
+Hora.Caption := 'Hora : '+TimeToStr(Time);
 If (TimeToStr(Time)= '12:00:00')
 then
 begin
-winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
 Label7.Caption := 'Backup Completo, 12h.'
 end;
 
 If (TimeToStr(Time)= '15:00:00')
 then
 begin
-winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
 Label7.Caption := 'Backup Completo, 15h.'
 end;
 
 If (TimeToStr(Time)= '17:00:00')
 then
 begin
-winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
 Label7.Caption := 'Backup Completo, 17h.'
 end;
 

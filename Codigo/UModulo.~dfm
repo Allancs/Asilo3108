@@ -26,7 +26,6 @@ object Modulo: TModulo
       'Interbase TransIsolation=ReadCommited'
       'Trim Char=False')
     VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
-    Connected = True
     Left = 65080
     Top = 456
   end
@@ -242,8 +241,14 @@ object Modulo: TModulo
       FieldName = 'NOMER'
       Size = 45
     end
+    object cdsLigacoesTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      EditMask = '\(00)\90000-0000;1;_'
+      Size = 14
+    end
     object cdsLigacoesCELULAR: TStringField
       FieldName = 'CELULAR'
+      EditMask = '\(00\)0000\-0000;1;_'
       Size = 13
     end
   end
@@ -384,8 +389,8 @@ object Modulo: TModulo
       FieldName = 'NOMER'
       Size = 45
     end
-    object sdsLigacoesFONE: TStringField
-      FieldName = 'FONE'
+    object sdsLigacoesTELEFONE: TStringField
+      FieldName = 'TELEFONE'
       Size = 14
     end
     object sdsLigacoesCELULAR: TStringField

@@ -75,7 +75,8 @@ var
 implementation
 
 uses UModulo,
-  UCadastroConta;
+  UCadastroConta,
+  UPrincipal;
 
 {$R *.dfm}
 
@@ -107,8 +108,8 @@ begin
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
 
-        //  DBEdit2.Enabled       := True;
-        //  DBEdit3.Enabled       := True;
+          //DBEdit2.Enabled       := True;
+        // DBEdit3.Enabled       := True;
           DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
 
@@ -301,7 +302,7 @@ end;
 
 procedure TSMTPs.BitBtn2Click(Sender: TObject);
 begin
-winexec('C:\Asilo\Codigo\Backup.bat',sw_normal);
+winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
 end;
 
 end.

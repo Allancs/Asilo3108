@@ -348,7 +348,7 @@ object Parceiros: TParceiros
     object DBEdit3: TDBEdit
       Left = 8
       Top = 112
-      Width = 75
+      Width = 77
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsParceiro
@@ -365,7 +365,7 @@ object Parceiros: TParceiros
     object DBEdit4: TDBEdit
       Left = 88
       Top = 112
-      Width = 77
+      Width = 83
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsParceiro

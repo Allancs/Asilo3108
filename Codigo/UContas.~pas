@@ -47,11 +47,11 @@ type
     Label6: TLabel;
     PageHeaderBand1: TQRBand;
     Corpo: TQRLabel;
-    QRLabel2: TQRLabel;
     QRLabel1: TQRLabel;
     QRLabel3: TQRLabel;
+    Corpo2: TQRLabel;
     QRLabel4: TQRLabel;
-    corpo2: TQRLabel;
+    QRLabel5: TQRLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
@@ -112,10 +112,10 @@ DataC := DataChegada.Text;
 HoraC := HoraChegada.Text;
 
 Corpo.Caption :=
-'Eu '+NomeRes+' inscrito(a) no CPF sob o nº '+cpf.Text+' e no RG nº '+rg.Text+','+#13+'por meio deste instrumento declaro me responsabilizar pelo bem estar de, '+NomeResi+','+#13+
-'de responsabilidade da Casa de Repouso jardin das Flores,'+#13+'pelo(s) dias apartir de '+DataS+' hora : '+Horas+ ', até '+DataC+' hora: '+HoraC+'.'+
+'Eu '+NomeRes+' inscrito(a) no CPF sob o nº '+cpf.Text+' e no RG nº '+rg.Text+','+#13+'por meio deste documento declaro me responsabilizar pelo bem estar de, '+NomeResi+','+#13+
+'residente da Casa de Repouso Jardim das Flores,'+#13+'pelo(s) dias a partir de '+DataS+' hora : '+Horas+ ', até '+DataC+' hora: '+HoraC+'.'+
 ''+#13+#13+
-'Me comprometo a devolver o mesmo bem como foi me entregue , ao fim do prazo estabelecido.'+
+'Me comprometo a devolver o mesmo como foi me entregue, ao fim do prazo estabelecido.'+
 ''+#13+#13+#13+#13+
 ''+'Responsavel '+NomeRes+'.'
 +''+#13+#13+
@@ -127,10 +127,10 @@ Corpo.Caption :=
 '________________________';
 
 Corpo2.Caption :=
-'Eu '+NomeRes+' inscrito(a) no CPF sob o nº '+cpf.Text+' e no RG nº '+rg.Text+','+#13+'por meio deste instrumento declaro me responsabilizar pelo bem estar de, '+NomeResi+','+#13+
-'de responsabilidade da Casa de Repouso jardin das Flores,'+#13+'pelo(s) dias apartir de '+DataS+' hora : '+Horas+ ', até '+DataC+' hora: '+HoraC+'.'+
+'Eu '+NomeRes+' inscrito(a) no CPF sob o nº '+cpf.Text+' e no RG nº '+rg.Text+','+#13+'por meio deste documento declaro me responsabilizar pelo bem estar de, '+NomeResi+','+#13+
+'residente da Casa de Repouso Jardim das Flores,'+#13+'pelo(s) dias a partir de '+DataS+' hora : '+Horas+ ', até '+DataC+' hora: '+HoraC+'.'+
 ''+#13+#13+
-'Me comprometo a devolver o mesmo bem como foi me entregue , ao fim do prazo estabelecido.'+
+'Me comprometo a devolver o mesmo como foi me entregue, ao fim do prazo estabelecido.'+
 ''+#13+#13+#13+#13+
 ''+'Responsavel '+NomeRes+'.'
 +''+#13+#13+
@@ -145,3 +145,4 @@ Termo.Preview;
 end;
 
 end.
+

@@ -3,7 +3,7 @@ object Parceiros: TParceiros
   Top = 239
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'ASILO RECANTO DAS FLORES - Parceiros.'
+  Caption = 'Casa de Repouso Jardim das Flores - Parceiros.'
   ClientHeight = 461
   ClientWidth = 784
   Color = clBtnFace
