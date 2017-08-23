@@ -284,6 +284,7 @@ dataBase : string;
 begin
 DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
 base2.Caption :='Caminho banco atualizado : '+ DataBase ;
+
 end;
 
 procedure TSMTPs.BancoConfigCanClose(Sender: TObject;
@@ -301,8 +302,12 @@ CadastroCOntas.Visible := true;
 end;
 
 procedure TSMTPs.BitBtn2Click(Sender: TObject);
+var
+hora : string;
 begin
+hora := (copy(TimeToStr(Time), 1 , 5 ));
 winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
+Principal.Label7.Caption := 'Backup manual '+ hora+'h';
 end;
 
 end.

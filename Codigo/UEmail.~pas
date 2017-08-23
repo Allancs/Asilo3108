@@ -96,7 +96,7 @@ uses UModulo;
 
 procedure TEmails.FormCreate(Sender: TObject);
 begin
-Menssagem.Clear;
+
 De.Text:=Usuario.Text;
 end;
 

@@ -7,7 +7,8 @@ uses
   Dialogs, StdCtrls, Mask, DBCtrls,
   jpeg, ExtCtrls,
   Buttons,
-  FMTBcd, DB, SqlExpr;
+  FMTBcd, DB, SqlExpr,
+  DBClient, SimpleDS;
 
 type
   TProfissionais = class(TForm)
@@ -32,6 +33,18 @@ type
     Label4: TLabel;
     Label5: TLabel;
     sqlAux: TSQLQuery;
+    Name: TDBEdit;
+    edtPesquisa: TEdit;
+    sdsAux: TSimpleDataSet;
+    dsAux: TDataSource;
+    sdsAuxCOD_PRO: TIntegerField;
+    sdsAuxNOME: TStringField;
+    sdsAuxTELEFONE: TStringField;
+    sdsAuxCELULAR: TStringField;
+    sdsAuxEEMPRESA: TStringField;
+    DBEdit6: TDBEdit;
+    DBEdit7: TDBEdit;
+    DBEdit8: TDBEdit;
     procedure btnDeletarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
@@ -39,6 +52,7 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -184,6 +198,32 @@ end;
 procedure TProfissionais.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Prior;
+end;
+
+procedure TProfissionais.edtPesquisaChange(Sender: TObject);
+var Texto, TSQL, Parametro : String;
+ begin
+      sdsAux.Close;
+
+      TSQL := 'select * from PROFISSIONAIS ';
+      If edtPesquisa.Text = ''
+      Then Begin
+      Texto := TSQL;
+      sdsAux.DataSet.CommandText := Texto;
+      End
+      Else Begin
+      Texto := TSQL + ' WHERE NOME LIKE :PROCURE ' ;
+      sdsAux.DataSet.CommandText := Texto;
+      Parametro := edtPesquisa.Text + '%';
+      sdsAux.DataSet.Params.ParamByName('PROCURE').AsString := Parametro;
+
+      End;
+      sdsAux.Open;
+      //DBEdit2.Text := Cod.Text;
+      //DBEdit3.Text := Name.Text;
+      exit;
+
+
 end;
 
 end.

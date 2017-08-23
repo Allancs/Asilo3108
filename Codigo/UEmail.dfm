@@ -359,7 +359,10 @@ object Emails: TEmails
       Font.Name = 'Arial Narrow'
       Font.Style = []
       Lines.Strings = (
-        'Menssagem')
+        ''
+        'Casa de repouso Jardim das Flores '
+        'Adriana Colombo - Dona'
+        'Jardim das Flores')
       ParentFont = False
       TabOrder = 4
     end
@@ -1303,9 +1306,7 @@ object Emails: TEmails
     Top = 48
   end
   object sdsAux: TSimpleDataSet
-    Active = True
     Aggregates = <>
-    Connection = Modulo.Conexao
     DataSet.CommandText = 'select EMAIL from PARCEIRO'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>

@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 202
-  Top = 296
+  Left = 227
+  Top = 343
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -26,6 +26,7 @@ object Modulo: TModulo
       'Interbase TransIsolation=ReadCommited'
       'Trim Char=False')
     VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connected = True
     Left = 65080
     Top = 456
   end

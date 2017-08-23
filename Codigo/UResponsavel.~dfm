@@ -1,6 +1,6 @@
 object Responsavel: TResponsavel
-  Left = 268
-  Top = 231
+  Left = 599
+  Top = 218
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Cadastro de Respons'#225'vel'
