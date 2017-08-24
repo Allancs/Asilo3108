@@ -14,18 +14,9 @@ type
     Image1: TImage;
     LadoEsquerdo: TPanel;
     Email: TGroupBox;
-    VoluntariosE: TCheckBox;
-    ParceirosE: TCheckBox;
     Telefone: TGroupBox;
-    ProfissionaisT: TCheckBox;
-    ParceirosT: TCheckBox;
-    ResponsaveisT: TCheckBox;
-    FuncionariosT: TCheckBox;
     Residente: TGroupBox;
-    TodosR: TCheckBox;
-    Aniversariantes: TCheckBox;
     Responsavel: TGroupBox;
-    Todosres: TCheckBox;
     sdsTodos: TSimpleDataSet;
     dsAux: TDataSource;
     sdsVolu: TSimpleDataSet;
@@ -105,7 +96,6 @@ type
     Label4: TLabel;
     Label18: TLabel;
     Relatorio: TTimer;
-    todosmeial: TCheckBox;
     Edit1: TEdit;
     AniversarioCOD_IDOSO: TIntegerField;
     AniversarioNOME: TStringField;
@@ -125,6 +115,16 @@ type
     AniversarioINFORMACOES: TStringField;
     AniversarioDATASAIDA: TDateField;
     Cancel: TBitBtn;
+    todosmeial: TRadioButton;
+    VoluntariosE: TRadioButton;
+    ParceirosE: TRadioButton;
+    Todosres: TRadioButton;
+    ParceirosT: TRadioButton;
+    ProfissionaisT: TRadioButton;
+    ResponsaveisT: TRadioButton;
+    FuncionariosT: TRadioButton;
+    TodosR: TRadioButton;
+    Aniversariantes: TRadioButton;
     procedure RLTodosClick(Sender: TObject);
     procedure RlParceirosClick(Sender: TObject);
     procedure RlVolunClick(Sender: TObject);
@@ -136,16 +136,16 @@ type
     procedure TodosresidentesssClick(Sender: TObject);
     procedure AniClick(Sender: TObject);
     procedure CancelClick(Sender: TObject);
-    procedure todosmeialClick(Sender: TObject);
-    procedure ParceirosEClick(Sender: TObject);
-    procedure VoluntariosEClick(Sender: TObject);
-    procedure TodosresClick(Sender: TObject);
-    procedure ProfissionaisTClick(Sender: TObject);
-    procedure ParceirosTClick(Sender: TObject);
-    procedure ResponsaveisTClick(Sender: TObject);
-    procedure FuncionariosTClick(Sender: TObject);
-    procedure TodosRClick(Sender: TObject);
-    procedure AniversariantesClick(Sender: TObject);
+    procedure todosmeial1Click(Sender: TObject);
+    procedure ParceirosE1Click(Sender: TObject);
+    procedure VoluntariosE1Click(Sender: TObject);
+    procedure TodosressClick(Sender: TObject);
+    procedure ProfissionaisTtClick(Sender: TObject);
+    procedure ParceirosTsClick(Sender: TObject);
+    procedure ResponsaveisTsClick(Sender: TObject);
+    procedure FuncionariosTsClick(Sender: TObject);
+    procedure TodosRsClick(Sender: TObject);
+    procedure AniversarianteClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -300,11 +300,12 @@ todosr.Checked          := false;
 aniversariantes.Checked := false;
 end;
 
-procedure TRelatorio.todosmeialClick(Sender: TObject);
+procedure TRelatorio.todosmeial1Click(Sender: TObject);
 begin
 If todosmeial.Checked = true
 then
 begin
+todosmeial.Checked := true;
 RLTodos.Visible := true;
 //RLTodos.visible := false;
 RlVolun.visible := false;
@@ -333,11 +334,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.ParceirosEClick(Sender: TObject);
+procedure TRelatorio.ParceirosE1Click(Sender: TObject);
 begin
 If Parceirose.Checked = true
 then
 begin
+Parceirose.Checked := true;
 RlParceiros.Visible     := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -369,11 +371,12 @@ end;
 
 
 
-procedure TRelatorio.VoluntariosEClick(Sender: TObject);
+procedure TRelatorio.VoluntariosE1Click(Sender: TObject);
 begin
 If Voluntariose.Checked = true
 then
 begin
+Voluntariose.Checked := true;
 RlVolun.Visible := true;
 RLTodos.visible := false;
 //RlVolun.visible := false;
@@ -402,11 +405,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.TodosresClick(Sender: TObject);
+procedure TRelatorio.TodosressClick(Sender: TObject);
 begin
 If Todosres.Checked = true
 then
 begin
+Todosres.Checked := true;
 todosresp.Visible := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -435,11 +439,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.ProfissionaisTClick(Sender: TObject);
+procedure TRelatorio.ProfissionaisTtClick(Sender: TObject);
 begin
 If profissionaist.Checked = true
 then
 begin
+profissionaist.Checked := true;
 pt.Visible := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -468,11 +473,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.ParceirosTClick(Sender: TObject);
+procedure TRelatorio.ParceirosTsClick(Sender: TObject);
 begin
 If parceirost.Checked = true
 then
 begin
+parceirost.Checked := true;
 Parceiros.Visible       := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -501,11 +507,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.ResponsaveisTClick(Sender: TObject);
+procedure TRelatorio.ResponsaveisTsClick(Sender: TObject);
 begin
 If responsaveist.Checked = true
 then
 begin
+responsaveist.Checked := true;
 responsaveistele.Visible := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -534,11 +541,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.FuncionariosTClick(Sender: TObject);
+procedure TRelatorio.FuncionariosTsClick(Sender: TObject);
 begin
 If funcionariost.Checked = true
 then
 begin
+funcionariost.Checked := true;
 funtele.Visible := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -567,11 +575,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.TodosRClick(Sender: TObject);
+procedure TRelatorio.TodosRsClick(Sender: TObject);
 begin
 If todosr.Checked = true
 then
 begin
+todosr.Checked := true;
 Todosresidentesss.Visible := true;
 RLTodos.visible := false;
 RlVolun.visible := false;
@@ -600,11 +609,12 @@ cancel.Click;
 end;
 end;
 
-procedure TRelatorio.AniversariantesClick(Sender: TObject);
+procedure TRelatorio.AniversarianteClick(Sender: TObject);
 begin
 If aniversariantes.Checked = true
 then
 begin
+aniversariantes.Checked := true;
 Ani.Visible := true;
 RLTodos.visible := false;
 RlVolun.visible := false;

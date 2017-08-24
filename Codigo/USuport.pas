@@ -11,12 +11,12 @@ type
     Image1: TImage;
     Baixo: TPanel;
     Como: TMemo;
-    BitBtn1: TBitBtn;
     Contato: TMemo;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
     SMTP: TMemo;
     URL: TEdit;
+    BitBtn1: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn2: TBitBtn;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);

@@ -20,7 +20,6 @@ type
     Pro: TBitBtn;
     Res: TBitBtn;
     S: TBitBtn;
-    T: TBitBtn;
     Vol: TBitBtn;
     PoupUP: TTimer;
     Aviso: TGroupBox;
@@ -63,6 +62,8 @@ type
     Data: TLabel;
     Hora: TLabel;
     func: TBitBtn;
+    Timer2: TTimer;
+    T: TBitBtn;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);

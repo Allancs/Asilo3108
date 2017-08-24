@@ -42,6 +42,7 @@ type
     Label6: TLabel;
     DBMemo2: TDBMemo;
     Label7: TLabel;
+    Label13: TLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);

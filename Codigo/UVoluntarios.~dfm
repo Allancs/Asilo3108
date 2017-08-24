@@ -800,13 +800,13 @@ object Voluntarios: TVoluntarios
     object Label6: TLabel
       Left = 8
       Top = 8
-      Width = 224
+      Width = 253
       Height = 22
       Caption = 'Cadastro de Volunt'#225'rios'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
-      Font.Name = 'Arial Narrow'
+      Font.Name = 'Courier New'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -899,19 +899,6 @@ object Voluntarios: TVoluntarios
     Width = 353
     Height = 201
     TabOrder = 2
-    object Label13: TLabel
-      Left = 8
-      Top = 24
-      Width = 137
-      Height = 15
-      Caption = 'Pesquisa de Voluntarios'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Label17: TLabel
       Left = 240
       Top = 144
@@ -964,9 +951,22 @@ object Voluntarios: TVoluntarios
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object edtPesquisa: TEdit
+    object Label18: TLabel
       Left = 8
-      Top = 48
+      Top = 8
+      Width = 253
+      Height = 22
+      Caption = 'Pesquisa de Volunt'#225'rios'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtPesquisa: TEdit
+      Left = 16
+      Top = 40
       Width = 153
       Height = 22
       Font.Charset = ANSI_CHARSET
@@ -989,8 +989,8 @@ object Voluntarios: TVoluntarios
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
       Visible = False
@@ -1006,8 +1006,8 @@ object Voluntarios: TVoluntarios
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
       Visible = False
@@ -1023,8 +1023,8 @@ object Voluntarios: TVoluntarios
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
       Visible = False
@@ -1040,8 +1040,8 @@ object Voluntarios: TVoluntarios
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
       Visible = False

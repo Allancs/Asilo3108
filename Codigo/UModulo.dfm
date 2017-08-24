@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 227
-  Top = 343
+  Left = 270
+  Top = 321
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -244,12 +244,12 @@ object Modulo: TModulo
     end
     object cdsLigacoesTELEFONE: TStringField
       FieldName = 'TELEFONE'
-      EditMask = '\(00)\90000-0000;1;_'
+      EditMask = '\(00)0000-0000;1;_'
       Size = 14
     end
     object cdsLigacoesCELULAR: TStringField
       FieldName = 'CELULAR'
-      EditMask = '\(00\)0000\-0000;1;_'
+      EditMask = '\(00\)00000\-0000;1;_'
       Size = 13
     end
   end

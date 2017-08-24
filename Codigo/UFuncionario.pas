@@ -72,7 +72,6 @@ type
     sdsAuxCELULAR: TStringField;
     sdsAuxTELEFONE: TStringField;
     Label15: TLabel;
-    Label13: TLabel;
     Label18: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure SelectChange(Sender: TObject);

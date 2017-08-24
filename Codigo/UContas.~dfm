@@ -1,6 +1,6 @@
 object Termor: TTermor
-  Left = 231
-  Top = 185
+  Left = 285
+  Top = 432
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Termo de Responsabilidade'

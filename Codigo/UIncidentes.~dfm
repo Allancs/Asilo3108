@@ -426,13 +426,6 @@ object Incidentes: TIncidentes
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000003FFFD9}
   end
-  object TPanel
-    Left = 416
-    Top = 8
-    Width = 353
-    Height = 201
-    TabOrder = 0
-  end
   object Baixo: TPanel
     Left = 5
     Top = 366
@@ -440,7 +433,7 @@ object Incidentes: TIncidentes
     Height = 90
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
-    TabOrder = 1
+    TabOrder = 0
     object Direita: TBitBtn
       Left = 392
       Top = 48
@@ -951,7 +944,7 @@ object Incidentes: TIncidentes
     Top = 8
     Width = 404
     Height = 353
-    TabOrder = 2
+    TabOrder = 1
     object Label1: TLabel
       Left = 8
       Top = 8

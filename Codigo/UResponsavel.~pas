@@ -45,7 +45,6 @@ type
     DBEdit6: TDBEdit;
     Label8: TLabel;
     DBEdit5: TDBEdit;
-    Label13: TLabel;
     Label17: TLabel;
     Label16: TLabel;
     Label14: TLabel;
@@ -61,6 +60,8 @@ type
     sdspesquisaNOMER: TStringField;
     sdspesquisaTELEFONE: TStringField;
     sdspesquisaCELULAR: TStringField;
+    Label18: TLabel;
+    Label9: TLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);

@@ -34,7 +34,6 @@ type
     Label6: TLabel;
     dsAux: TDataSource;
     sdsAux: TSimpleDataSet;
-    Label13: TLabel;
     edtPesquisa: TEdit;
     sdsAuxCOD_VOLUNTARIO: TIntegerField;
     sdsAuxNOME: TStringField;
@@ -49,6 +48,7 @@ type
     email: TDBEdit;
     Label7: TLabel;
     Label14: TLabel;
+    Label18: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);

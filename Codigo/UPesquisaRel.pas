@@ -31,7 +31,6 @@ type
     Respo: TQuickRep;
     DetailBand2: TQRBand;
     PageHeaderBand2: TQRBand;
-    PageFooterBand1: TQRBand;
     QRLabel12: TQRLabel;
     QRLabel19: TQRLabel;
     QRLabel21: TQRLabel;

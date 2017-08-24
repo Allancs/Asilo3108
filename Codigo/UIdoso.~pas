@@ -114,6 +114,7 @@ Modulo.cdsResidente.Post;
                   Responsavel.btnInserir.Click;
          Responsavel.DBEdit2.Text := DBEdit1.text;
          Responsavel.DBEdit3.Text := DBEdit2.Text;
+         Idoso.Close;
          end;
 
 

@@ -89,7 +89,7 @@ type
     procedure DBEdit5Enter(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
-    procedure Label5Click(Sender: TObject);
+   
   private
     { Private declarations }
   public

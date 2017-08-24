@@ -35,7 +35,6 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     sqlAux: TSQLQuery;
-    Label13: TLabel;
     Label17: TLabel;
     Label16: TLabel;
     Label7: TLabel;
@@ -49,6 +48,8 @@ type
     dsAux: TDataSource;
     Empresa: TDBEdit;
     Label8: TLabel;
+    Label18: TLabel;
+    Label9: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);

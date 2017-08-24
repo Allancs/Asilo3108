@@ -555,13 +555,14 @@ object Suporte: TSuporte
     Font.Name = 'Arial'
     Font.Style = []
     Lines.Strings = (
-      'Suporte via e-mail ou contato '
+      'Suporte via e-mail '
       ''
-      'E-mail para Suporte : '
-      'cssoftwaresuporte@hotmail.com'
       ''
-      'Contato : (**)***-**** '
-      ' ')
+      'CS Software'
+      'Sistema de Gerenciamento.'
+      ''
+      'Email Suporte t'#233'rcnico'
+      'cssoftwaresuporte@hotmail.com ')
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 2

@@ -1,6 +1,6 @@
 object CadastroAvisos: TCadastroAvisos
-  Left = 203
-  Top = 213
+  Left = 308
+  Top = 285
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Avisos da Casa'
@@ -744,7 +744,7 @@ object CadastroAvisos: TCadastroAvisos
     end
     object Label2: TLabel
       Left = 8
-      Top = 8
+      Top = 40
       Width = 65
       Height = 13
       Caption = 'Observa'#231#227'o'
@@ -757,7 +757,7 @@ object CadastroAvisos: TCadastroAvisos
     end
     object Label3: TLabel
       Left = 8
-      Top = 120
+      Top = 152
       Width = 26
       Height = 13
       Caption = 'Data'
@@ -767,6 +767,19 @@ object CadastroAvisos: TCadastroAvisos
       Font.Height = -11
       Font.Name = 'Arial'
       Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object Label13: TLabel
+      Left = 8
+      Top = 8
+      Width = 198
+      Height = 22
+      Caption = 'Cadastro de Avisos'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
       ParentFont = False
     end
     object DBEdit1: TDBEdit
@@ -791,7 +804,7 @@ object CadastroAvisos: TCadastroAvisos
     end
     object DBEdit3: TDBEdit
       Left = 8
-      Top = 136
+      Top = 168
       Width = 63
       Height = 22
       DataField = 'DATA'
@@ -808,7 +821,7 @@ object CadastroAvisos: TCadastroAvisos
     end
     object DBMemo1: TDBMemo
       Left = 8
-      Top = 24
+      Top = 56
       Width = 385
       Height = 89
       DataField = 'OBS'

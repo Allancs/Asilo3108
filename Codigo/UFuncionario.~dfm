@@ -863,7 +863,6 @@ object Funcionario: TFuncionario
       Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
-      OnClick = Label5Click
     end
     object Label6: TLabel
       Left = 8
