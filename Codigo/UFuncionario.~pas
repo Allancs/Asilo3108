@@ -7,7 +7,8 @@ uses
   Dialogs, StdCtrls, Mask, DBCtrls,
   jpeg, ExtCtrls,
   Buttons,
-  FMTBcd, DB, SqlExpr;
+  FMTBcd, DB, SqlExpr,
+  DBClient, SimpleDS;
 
 type
   TFuncionario = class(TForm)
@@ -49,6 +50,30 @@ type
     Label8: TLabel;
     Label9: TLabel;
     Select: TComboBox;
+    Label14: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Name: TDBEdit;
+    edtPesquisa: TEdit;
+    fone: TDBEdit;
+    cel: TDBEdit;
+    dsAux: TDataSource;
+    sdsAux: TSimpleDataSet;
+    sdsAuxCOD_FUN: TIntegerField;
+    sdsAuxNOME: TStringField;
+    sdsAuxSEXO: TStringField;
+    sdsAuxDATANASCIMENTO: TStringField;
+    sdsAuxIDADE: TStringField;
+    sdsAuxFUNCAO: TStringField;
+    sdsAuxSALARIO: TFMTBCDField;
+    sdsAuxCPF: TStringField;
+    sdsAuxRG: TStringField;
+    sdsAuxCARTEIRATRABALHO: TStringField;
+    sdsAuxCELULAR: TStringField;
+    sdsAuxTELEFONE: TStringField;
+    Label15: TLabel;
+    Label13: TLabel;
+    Label18: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure SelectChange(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -63,6 +88,8 @@ type
     procedure DBEdit4Exit(Sender: TObject);
     procedure DBEdit5Enter(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
+    procedure Label5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -88,7 +115,7 @@ Modulo.cdsFun.Edit;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
-
+          Estado.Enabled := true;
           DBEdit2.Enabled       := True;
           Select.Enabled       := True;
           DBEdit4.Enabled       := True;
@@ -131,6 +158,7 @@ begin
           DBEdit10.Enabled      := false;
           DBEdit11.Enabled      := false;
           DBEdit12.Enabled      := false;
+          Estado.Enabled        := false;
 
 
  If
@@ -163,6 +191,7 @@ Modulo.cdsFun.Cancel;
           DBEdit10.Enabled      := false;
           DBEdit11.Enabled      := false;
           DBEdit12.Enabled      := false;
+          Estado.Enabled        := false;
 
 
 
@@ -199,18 +228,18 @@ begin
 
 
           DBEdit2.Enabled       := True;
-          Select.Enabled       := True;
+          Select.Enabled        := True;
           DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
           DBEdit6.Enabled       := True;
           DBEdit7.Enabled       := True;
           DBEdit8.Enabled       := True;
           DBEdit9.Enabled       := True;
-          DBEdit10.Enabled       := True;
-          DBEdit11.Enabled       := True;
-          DBEdit12.Enabled       := True;
-
-          btnGravar.Enabled      := True;
+          DBEdit10.Enabled      := True;
+          DBEdit11.Enabled      := True;
+          DBEdit12.Enabled      := True;
+          Estado.Enabled        := true;
+          btnGravar.Enabled     := True;
 
 
 
@@ -294,4 +323,47 @@ DBEdit3.Text := Select.Text;
 Estado.Text := (copy(DBEdit10.Text, 13,15));
 end;
 
+procedure TFuncionario.edtPesquisaChange(Sender: TObject);
+
+var Texto, TSQL, Parametro : String;
+ begin
+      sdsAux.Close;
+
+      TSQL := 'select * from Funcionario ';
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+
+      If edtPesquisa.Text = ''
+      Then Begin
+      Texto := TSQL;
+      sdsAux.DataSet.CommandText := Texto;
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+
+      End
+      Else Begin
+      Name.Visible := true;
+      cel.Visible := true;
+      fone.Visible := true;
+
+      Texto := TSQL + ' WHERE NOME LIKE :PROCURE ' ;
+      sdsAux.DataSet.CommandText := Texto;
+      Parametro := edtPesquisa.Text + '%';
+      sdsAux.DataSet.Params.ParamByName('PROCURE').AsString := Parametro;
+
+      End;
+      sdsAux.Open;
+      //DBEdit2.Text := Cod.Text;
+      //DBEdit3.Text := Name.Text;
+      exit;
+end;
+
 end.
+procedure TFuncionario.Label5Click(Sender: TObject);
+begin
+
+end;
+
+

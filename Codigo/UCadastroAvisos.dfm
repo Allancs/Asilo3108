@@ -1,6 +1,6 @@
 object CadastroAvisos: TCadastroAvisos
-  Left = 298
-  Top = 341
+  Left = 308
+  Top = 285
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Avisos da Casa'
@@ -728,8 +728,8 @@ object CadastroAvisos: TCadastroAvisos
     Height = 353
     TabOrder = 1
     object Label1: TLabel
-      Left = 8
-      Top = 8
+      Left = 352
+      Top = 312
       Width = 40
       Height = 13
       Caption = 'Codigo'
@@ -740,10 +740,11 @@ object CadastroAvisos: TCadastroAvisos
       Font.Name = 'Arial'
       Font.Style = [fsBold, fsItalic]
       ParentFont = False
+      Visible = False
     end
     object Label2: TLabel
       Left = 8
-      Top = 48
+      Top = 40
       Width = 65
       Height = 13
       Caption = 'Observa'#231#227'o'
@@ -755,8 +756,8 @@ object CadastroAvisos: TCadastroAvisos
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 322
-      Top = 8
+      Left = 8
+      Top = 152
       Width = 26
       Height = 13
       Caption = 'Data'
@@ -768,10 +769,23 @@ object CadastroAvisos: TCadastroAvisos
       Font.Style = [fsBold, fsItalic]
       ParentFont = False
     end
-    object DBEdit1: TDBEdit
+    object Label13: TLabel
       Left = 8
-      Top = 24
-      Width = 31
+      Top = 8
+      Width = 198
+      Height = 22
+      Caption = 'Cadastro de Avisos'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBEdit1: TDBEdit
+      Left = 352
+      Top = 328
+      Width = 41
       Height = 22
       BevelEdges = []
       BiDiMode = bdRightToLeftNoAlign
@@ -785,11 +799,12 @@ object CadastroAvisos: TCadastroAvisos
       Font.Style = []
       ParentBiDiMode = False
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 2
+      Visible = False
     end
     object DBEdit3: TDBEdit
-      Left = 322
-      Top = 24
+      Left = 8
+      Top = 168
       Width = 63
       Height = 22
       DataField = 'DATA'
@@ -806,8 +821,8 @@ object CadastroAvisos: TCadastroAvisos
     end
     object DBMemo1: TDBMemo
       Left = 8
-      Top = 64
-      Width = 377
+      Top = 56
+      Width = 385
       Height = 89
       DataField = 'OBS'
       DataSource = Modulo.dsAviso
@@ -818,15 +833,8 @@ object CadastroAvisos: TCadastroAvisos
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 0
     end
-  end
-  object TPanel
-    Left = 416
-    Top = 8
-    Width = 351
-    Height = 201
-    TabOrder = 2
   end
   object sqlAux: TSQLQuery
     MaxBlobSize = -1

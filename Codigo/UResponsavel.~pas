@@ -45,6 +45,22 @@ type
     DBEdit6: TDBEdit;
     Label8: TLabel;
     DBEdit5: TDBEdit;
+    Label13: TLabel;
+    Label17: TLabel;
+    Label16: TLabel;
+    Label14: TLabel;
+    pesquisa: TEdit;
+    cel: TDBEdit;
+    fone: TDBEdit;
+    nomes: TDBEdit;
+    dspesquisa: TDataSource;
+    sdspesquisa: TSimpleDataSet;
+    sdspesquisaCOD_LIGACOES: TIntegerField;
+    sdspesquisaCOD_IDOSO: TIntegerField;
+    sdspesquisaNOME: TStringField;
+    sdspesquisaNOMER: TStringField;
+    sdspesquisaTELEFONE: TStringField;
+    sdspesquisaCELULAR: TStringField;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -55,6 +71,7 @@ type
     procedure btnDeletarClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure pesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -232,6 +249,41 @@ end;
 procedure TResponsavel.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsLigacoes.Next;
+end;
+
+procedure TResponsavel.pesquisaChange(Sender: TObject);
+var Texto, TSQL, Parametro : String;
+ begin
+      sdspesquisa.Close;
+
+      TSQL := 'select * from LIGACOES ';
+      nomes.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+
+      If pesquisa.Text = ''
+      Then Begin
+      Texto := TSQL;
+      sdspesquisa.DataSet.CommandText := Texto;
+      nomes.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+      End
+      Else Begin
+      nomes.Visible := true;
+      cel.Visible := true;
+      fone.Visible := true;
+      Texto := TSQL + ' WHERE NOME LIKE :PROCURE ' ;
+      sdspesquisa.DataSet.CommandText := Texto;
+      Parametro := pesquisa.Text + '%';
+      sdspesquisa.DataSet.Params.ParamByName('PROCURE').AsString := Parametro;
+
+      End;
+      sdspesquisa.Open;
+      //DBEdit2.Text := Cod.Text;
+      //DBEdit3.Text := Name.Text;
+      exit;
+
 end;
 
 end.

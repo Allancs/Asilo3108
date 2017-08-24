@@ -7,7 +7,8 @@ uses
   Dialogs, StdCtrls, Mask, DBCtrls,
   jpeg, ExtCtrls,
   Buttons,
-  FMTBcd, DB, SqlExpr;
+  FMTBcd, DB, SqlExpr,
+  DBClient, SimpleDS;
 
 type
   TParceiros = class(TForm)
@@ -34,6 +35,21 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     sqlAux: TSQLQuery;
+    Label17: TLabel;
+    Label16: TLabel;
+    Label7: TLabel;
+    Label14: TLabel;
+    edtPesquisa: TEdit;
+    cel: TDBEdit;
+    fone: TDBEdit;
+    Name: TDBEdit;
+    email: TDBEdit;
+    sdsAux: TSimpleDataSet;
+    dsAux: TDataSource;
+    Empresa: TDBEdit;
+    Label8: TLabel;
+    Label18: TLabel;
+    Label9: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -41,6 +57,7 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -186,6 +203,46 @@ end;
 procedure TParceiros.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsParceiro.Prior;
+end;
+
+procedure TParceiros.edtPesquisaChange(Sender: TObject);
+var Texto, TSQL, Parametro : String;
+ begin
+      sdsAux.Close;
+
+      TSQL := 'select * from Parceiro ';
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+      email.Visible := false;
+      empresa.visible := false;
+      If edtPesquisa.Text = ''
+      Then Begin
+      Texto := TSQL;
+      sdsAux.DataSet.CommandText := Texto;
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+      email.Visible := false;
+      empresa.visible := false;
+      End
+      Else Begin
+      Name.Visible := true;
+      cel.Visible := true;
+      fone.Visible := true;
+      email.Visible := true;
+      empresa.visible := true;
+      Texto := TSQL + ' WHERE NOME LIKE :PROCURE ' ;
+      sdsAux.DataSet.CommandText := Texto;
+      Parametro := edtPesquisa.Text + '%';
+      sdsAux.DataSet.Params.ParamByName('PROCURE').AsString := Parametro;
+
+      End;
+      sdsAux.Open;
+      //DBEdit2.Text := Cod.Text;
+      //DBEdit3.Text := Name.Text;
+      exit;
+
 end;
 
 end.

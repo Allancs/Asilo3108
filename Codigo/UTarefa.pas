@@ -28,6 +28,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     DBEdit2: TDBMemo;
+    Label13: TLabel;
     procedure btnInserirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);

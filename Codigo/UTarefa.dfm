@@ -1,6 +1,6 @@
 object Tarefa: TTarefa
-  Left = 280
-  Top = 262
+  Left = 428
+  Top = 455
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Tarefas da Casa'
   ClientHeight = 461
@@ -726,8 +726,8 @@ object Tarefa: TTarefa
     Height = 353
     TabOrder = 1
     object Label1: TLabel
-      Left = 8
-      Top = 8
+      Left = 80
+      Top = 248
       Width = 39
       Height = 14
       Caption = 'C'#243'digo'
@@ -738,10 +738,11 @@ object Tarefa: TTarefa
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      Visible = False
     end
     object Label2: TLabel
       Left = 8
-      Top = 48
+      Top = 32
       Width = 34
       Height = 14
       Caption = 'Tarefa'
@@ -753,8 +754,8 @@ object Tarefa: TTarefa
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 288
-      Top = 8
+      Left = 8
+      Top = 144
       Width = 23
       Height = 14
       Caption = 'Data'
@@ -766,9 +767,22 @@ object Tarefa: TTarefa
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object DBEdit1: TDBEdit
+    object Label13: TLabel
       Left = 8
-      Top = 24
+      Top = 8
+      Width = 209
+      Height = 22
+      Caption = 'Cadastro de Tarefas'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBEdit1: TDBEdit
+      Left = 80
+      Top = 264
       Width = 17
       Height = 22
       DataField = 'COD_TAREFA'
@@ -781,10 +795,11 @@ object Tarefa: TTarefa
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      Visible = False
     end
     object DBEdit3: TDBEdit
-      Left = 288
-      Top = 24
+      Left = 8
+      Top = 160
       Width = 65
       Height = 22
       DataField = 'DATA'
@@ -801,21 +816,14 @@ object Tarefa: TTarefa
     end
     object DBEdit2: TDBMemo
       Left = 8
-      Top = 64
-      Width = 345
+      Top = 48
+      Width = 385
       Height = 89
       DataField = 'TAREFA'
       DataSource = Modulo.dsTarefa
       Enabled = False
       TabOrder = 2
     end
-  end
-  object TPanel
-    Left = 416
-    Top = 8
-    Width = 353
-    Height = 201
-    TabOrder = 2
   end
   object sqlAux: TSQLQuery
     MaxBlobSize = -1

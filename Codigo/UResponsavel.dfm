@@ -761,8 +761,8 @@ object Responsavel: TResponsavel
     Height = 353
     TabOrder = 1
     object Label3: TLabel
-      Left = 59
-      Top = 204
+      Left = 8
+      Top = 212
       Width = 66
       Height = 14
       Caption = 'Nome Idoso'
@@ -775,8 +775,8 @@ object Responsavel: TResponsavel
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 8
-      Top = 204
+      Left = 336
+      Top = 220
       Width = 39
       Height = 14
       Caption = 'C'#243'digo'
@@ -787,9 +787,10 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
+      Visible = False
     end
     object Label4: TLabel
-      Left = 8
+      Left = 56
       Top = 48
       Width = 106
       Height = 14
@@ -804,7 +805,7 @@ object Responsavel: TResponsavel
     end
     object Label1: TLabel
       Left = 8
-      Top = 8
+      Top = 48
       Width = 39
       Height = 14
       Caption = 'C'#243'digo'
@@ -818,7 +819,7 @@ object Responsavel: TResponsavel
     end
     object Label5: TLabel
       Left = 8
-      Top = 248
+      Top = 256
       Width = 27
       Height = 14
       Caption = 'Fone'
@@ -831,7 +832,7 @@ object Responsavel: TResponsavel
     end
     object Label6: TLabel
       Left = 96
-      Top = 248
+      Top = 256
       Width = 39
       Height = 14
       Caption = 'Celular'
@@ -843,10 +844,23 @@ object Responsavel: TResponsavel
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label18: TLabel
+      Left = 8
+      Top = 8
+      Width = 253
+      Height = 22
+      Caption = 'Cadastro de Respons'#225'vel'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object DBEdit3: TDBEdit
-      Left = 59
-      Top = 220
-      Width = 129
+      Left = 8
+      Top = 228
+      Width = 201
       Height = 22
       DataField = 'NOME'
       DataSource = DataSource1
@@ -857,11 +871,11 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 4
     end
     object DBEdit2: TDBEdit
-      Left = 8
-      Top = 220
+      Left = 336
+      Top = 244
       Width = 17
       Height = 22
       DataField = 'COD_IDOSO'
@@ -873,10 +887,11 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 5
+      Visible = False
     end
     object DBEdit4: TDBEdit
-      Left = 8
+      Left = 56
       Top = 64
       Width = 305
       Height = 22
@@ -893,7 +908,7 @@ object Responsavel: TResponsavel
     end
     object DBEdit1: TDBEdit
       Left = 8
-      Top = 24
+      Top = 64
       Width = 33
       Height = 22
       DataField = 'COD_LIGACOES'
@@ -905,12 +920,12 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 6
     end
     object Idoso: TGroupBox
       Left = 8
-      Top = 88
-      Width = 337
+      Top = 96
+      Width = 369
       Height = 113
       Caption = 'Pesquisar Residente'
       Enabled = False
@@ -920,7 +935,7 @@ object Responsavel: TResponsavel
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 3
       object Label7: TLabel
         Left = 8
         Top = 16
@@ -965,7 +980,7 @@ object Responsavel: TResponsavel
       object Name: TDBEdit
         Left = 8
         Top = 78
-        Width = 121
+        Width = 153
         Height = 22
         DataField = 'NOME'
         DataSource = dsAux
@@ -978,8 +993,8 @@ object Responsavel: TResponsavel
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
-        Left = 168
-        Top = 32
+        Left = 216
+        Top = 56
         Width = 145
         Height = 49
         Caption = 'Inserir Registro'
@@ -1050,8 +1065,8 @@ object Responsavel: TResponsavel
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       end
       object Cod: TDBEdit
-        Left = 336
-        Top = 64
+        Left = 344
+        Top = 16
         Width = 17
         Height = 22
         DataField = 'COD_IDOSO'
@@ -1068,7 +1083,7 @@ object Responsavel: TResponsavel
     end
     object DBEdit6: TDBEdit
       Left = 96
-      Top = 264
+      Top = 272
       Width = 81
       Height = 22
       DataField = 'CELULAR'
@@ -1085,14 +1100,138 @@ object Responsavel: TResponsavel
     end
     object DBEdit5: TDBEdit
       Left = 8
-      Top = 264
-      Width = 73
+      Top = 272
+      Width = 81
       Height = 21
       DataField = 'TELEFONE'
       DataSource = DataSource1
       Enabled = False
       MaxLength = 14
-      TabOrder = 6
+      TabOrder = 1
+    end
+  end
+  object TPanel
+    Left = 400
+    Top = 8
+    Width = 377
+    Height = 201
+    TabOrder = 2
+    object Label17: TLabel
+      Left = 8
+      Top = 151
+      Width = 40
+      Height = 15
+      Caption = 'Celular'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label16: TLabel
+      Left = 8
+      Top = 107
+      Width = 48
+      Height = 15
+      Caption = 'Telefone'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 8
+      Top = 64
+      Width = 33
+      Height = 15
+      Caption = 'Nome'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 8
+      Top = 8
+      Width = 253
+      Height = 22
+      Caption = 'Pesquisa de Respons'#225'vel'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object pesquisa: TEdit
+      Left = 32
+      Top = 32
+      Width = 153
+      Height = 22
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnChange = pesquisaChange
+    end
+    object cel: TDBEdit
+      Left = 8
+      Top = 168
+      Width = 89
+      Height = 22
+      DataField = 'CELULAR'
+      DataSource = dspesquisa
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object fone: TDBEdit
+      Left = 8
+      Top = 125
+      Width = 89
+      Height = 22
+      DataField = 'TELEFONE'
+      DataSource = dspesquisa
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+    object nomes: TDBEdit
+      Left = 8
+      Top = 81
+      Width = 225
+      Height = 22
+      DataField = 'NOMER'
+      DataSource = dspesquisa
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      Visible = False
     end
   end
   object DataSource1: TDataSource
@@ -1158,5 +1297,64 @@ object Responsavel: TResponsavel
     DataSet = sdsAuxx
     Left = 720
     Top = 40
+  end
+  object dspesquisa: TDataSource
+    DataSet = sdspesquisa
+    Left = 712
+    Top = 216
+  end
+  object sdspesquisa: TSimpleDataSet
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select *  from LIGACOES'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 744
+    Top = 216
+    object sdspesquisaCOD_LIGACOES: TIntegerField
+      FieldName = 'COD_LIGACOES'
+      Required = True
+    end
+    object sdspesquisaCOD_IDOSO: TIntegerField
+      FieldName = 'COD_IDOSO'
+    end
+    object sdspesquisaNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object sdspesquisaNOMER: TStringField
+      FieldName = 'NOMER'
+      Size = 45
+    end
+    object sdspesquisaTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 14
+    end
+    object sdspesquisaCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 13
+    end
   end
 end

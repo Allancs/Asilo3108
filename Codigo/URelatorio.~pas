@@ -12,7 +12,6 @@ type
     Baixo: TPanel;
     Image1: TImage;
     LadoEsquerdo: TPanel;
-    Label1: TLabel;
     Email: TGroupBox;
     TodosE: TCheckBox;
     VoluntariosE: TCheckBox;
@@ -81,10 +80,6 @@ type
     BitBtn2: TBitBtn;
     BitBtn3: TBitBtn;
     Aniversario: TSimpleDataSet;
-    StringField1: TStringField;
-    StringField2: TStringField;
-    StringField3: TStringField;
-    StringField4: TStringField;
     Aniversarios: TDataSource;
     TodosResidentess: TDataSource;
     TodosResidentes: TSimpleDataSet;
@@ -106,6 +101,13 @@ type
     TodosResidentesINFORMACOES: TStringField;
     TodosResidentesDATASAIDA: TDateField;
     Todosresidentesss: TBitBtn;
+    Ani: TBitBtn;
+    AniversarioNOME: TStringField;
+    AniversarioDATANASCIMENTO: TStringField;
+    AniversarioIDADE: TStringField;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label18: TLabel;
     procedure RLTodosClick(Sender: TObject);
     procedure RlVolunClick(Sender: TObject);
     procedure RlParceirosClick(Sender: TObject);
@@ -116,6 +118,7 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure TodosresidentesssClick(Sender: TObject);
+    procedure AniClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -231,6 +234,28 @@ TodosResidentes.Close;
 TodosResidentes.DataSet.CommandText := 'select * from RESIDENTE';
 TodosResidentes.Open;
 PesquisaRel.Residentetodos.Preview;
+end;
+
+procedure TRelatorio.AniClick(Sender: TObject);
+var
+DtaAtual, copy1, copy2, copy3, copy4 : string;
+begin
+            DtaAtual := DateToStr(Date);
+            copy1 := (Copy(DateToStr(Date), 4, 2));
+            copy2 := (Copy(DateToStr(Date), 7, 10));
+            Copy3 := '00/'+copy1+'/1900';
+            copy4 := '31/'+copy1+'/'+copy2;
+
+          // Troca a / por . (Firebird guarda a data com . e nao /)
+
+Aniversario.Close;
+Aniversario.DataSet.CommandText := 'Select Nome, DataNascimento, Idade From Residente Where dataNascimento between '+QuotedStr(copy3)+' And '+QuotedStr(copy4)+' order by dataNascimento';
+Aniversario.Open;
+
+Label2.Caption := 'Select Nome, DataNascimento, Idade From Residente Where dataNascimento between '+QuotedStr(copy3)+' And '+QuotedStr(copy4)+' order by dataNascimento';
+Label3.Caption := copy1;
+Label4.Caption := copy2;
+PesquisaRel.Data.Preview;
 end;
 
 end.

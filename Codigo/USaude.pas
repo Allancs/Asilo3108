@@ -17,7 +17,6 @@ type
     DBEdit2: TDBEdit;
     DBEdit4: TDBEdit;
     Label1: TLabel;
-    Label2: TLabel;
     Label4: TLabel;
     sqlAux: TSQLQuery;
     sdsAux: TSimpleDataSet;
@@ -30,7 +29,6 @@ type
     Esquerda: TBitBtn;
     Direita: TBitBtn;
     Idoso: TGroupBox;
-    Label5: TLabel;
     Label9: TLabel;
     edtPesquisa: TEdit;
     Name: TDBEdit;
@@ -44,6 +42,7 @@ type
     Label6: TLabel;
     DBMemo2: TDBMemo;
     Label7: TLabel;
+    Label13: TLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);

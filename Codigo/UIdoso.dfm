@@ -801,7 +801,7 @@ object Idoso: TIdoso
     TabOrder = 1
     object Label1: TLabel
       Left = 8
-      Top = 8
+      Top = 32
       Width = 39
       Height = 14
       Caption = 'C'#243'digo'
@@ -814,8 +814,8 @@ object Idoso: TIdoso
       ParentFont = False
     end
     object Label10: TLabel
-      Left = 244
-      Top = 89
+      Left = 204
+      Top = 113
       Width = 15
       Height = 14
       Caption = 'RG'
@@ -829,7 +829,7 @@ object Idoso: TIdoso
     end
     object Label12: TLabel
       Left = 8
-      Top = 132
+      Top = 156
       Width = 68
       Height = 14
       Caption = 'Nome do Pai'
@@ -843,7 +843,7 @@ object Idoso: TIdoso
     end
     object Label13: TLabel
       Left = 195
-      Top = 132
+      Top = 156
       Width = 74
       Height = 14
       Caption = 'Nome da M'#227'e'
@@ -857,7 +857,7 @@ object Idoso: TIdoso
     end
     object Label14: TLabel
       Left = 8
-      Top = 174
+      Top = 198
       Width = 73
       Height = 14
       Caption = 'Observa'#231#245'es'
@@ -870,7 +870,7 @@ object Idoso: TIdoso
     end
     object Label15: TLabel
       Left = 8
-      Top = 243
+      Top = 267
       Width = 84
       Height = 14
       Caption = 'Data de Entrada'
@@ -884,10 +884,10 @@ object Idoso: TIdoso
     end
     object Label16: TLabel
       Left = 8
-      Top = 286
-      Width = 70
+      Top = 310
+      Width = 119
       Height = 14
-      Caption = 'Informa'#231#245'es'
+      Caption = 'Informa'#231#245'es de Saida'
       FocusControl = DBEdit16
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -898,7 +898,7 @@ object Idoso: TIdoso
     end
     object Label17: TLabel
       Left = 96
-      Top = 243
+      Top = 267
       Width = 72
       Height = 14
       Caption = 'Data de Saida'
@@ -912,7 +912,7 @@ object Idoso: TIdoso
     end
     object Label2: TLabel
       Left = 48
-      Top = 8
+      Top = 32
       Width = 32
       Height = 14
       Caption = 'Nome'
@@ -926,7 +926,7 @@ object Idoso: TIdoso
     end
     object Label3: TLabel
       Left = 208
-      Top = 8
+      Top = 32
       Width = 65
       Height = 14
       Caption = 'Nascimento'
@@ -940,7 +940,7 @@ object Idoso: TIdoso
     end
     object Label4: TLabel
       Left = 288
-      Top = 8
+      Top = 32
       Width = 30
       Height = 14
       Caption = 'Idade'
@@ -954,7 +954,7 @@ object Idoso: TIdoso
     end
     object Label5: TLabel
       Left = 8
-      Top = 48
+      Top = 72
       Width = 82
       Height = 14
       Caption = 'Nascionalidade'
@@ -968,7 +968,7 @@ object Idoso: TIdoso
     end
     object Label6: TLabel
       Left = 103
-      Top = 48
+      Top = 72
       Width = 68
       Height = 14
       Caption = 'Naturalidade'
@@ -982,7 +982,7 @@ object Idoso: TIdoso
     end
     object Label7: TLabel
       Left = 207
-      Top = 48
+      Top = 72
       Width = 63
       Height = 14
       Caption = 'Estado Civil'
@@ -996,7 +996,7 @@ object Idoso: TIdoso
     end
     object Label8: TLabel
       Left = 308
-      Top = 49
+      Top = 73
       Width = 43
       Height = 14
       Caption = 'Religi'#227'o'
@@ -1010,7 +1010,7 @@ object Idoso: TIdoso
     end
     object Label9: TLabel
       Left = 8
-      Top = 89
+      Top = 113
       Width = 53
       Height = 14
       Caption = 'Profiss'#227'o'
@@ -1024,7 +1024,7 @@ object Idoso: TIdoso
     end
     object Label11: TLabel
       Left = 264
-      Top = 88
+      Top = 112
       Width = 21
       Height = 14
       Caption = 'CPF'
@@ -1036,9 +1036,22 @@ object Idoso: TIdoso
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label18: TLabel
+      Left = 8
+      Top = 8
+      Width = 231
+      Height = 22
+      Caption = 'Cadastro de Residente'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object DBMemo1: TDBMemo
       Left = 8
-      Top = 190
+      Top = 214
       Width = 367
       Height = 49
       DataField = 'OBS'
@@ -1054,7 +1067,7 @@ object Idoso: TIdoso
     end
     object DBEdit1: TDBEdit
       Left = 8
-      Top = 24
+      Top = 48
       Width = 23
       Height = 22
       DataField = 'COD_IDOSO'
@@ -1070,7 +1083,7 @@ object Idoso: TIdoso
     end
     object DBEdit10: TDBEdit
       Left = 203
-      Top = 105
+      Top = 129
       Width = 57
       Height = 22
       DataField = 'RG'
@@ -1087,7 +1100,7 @@ object Idoso: TIdoso
     end
     object DBEdit12: TDBEdit
       Left = 8
-      Top = 148
+      Top = 172
       Width = 175
       Height = 22
       DataField = 'PAI'
@@ -1103,7 +1116,7 @@ object Idoso: TIdoso
     end
     object DBEdit13: TDBEdit
       Left = 195
-      Top = 148
+      Top = 172
       Width = 180
       Height = 22
       DataField = 'MAE'
@@ -1119,7 +1132,7 @@ object Idoso: TIdoso
     end
     object DBEdit15: TDBEdit
       Left = 8
-      Top = 259
+      Top = 283
       Width = 73
       Height = 22
       DataField = 'DATAENTRADA'
@@ -1136,7 +1149,7 @@ object Idoso: TIdoso
     end
     object DBEdit16: TDBEdit
       Left = 8
-      Top = 302
+      Top = 326
       Width = 367
       Height = 22
       DataField = 'INFORMACOES'
@@ -1152,7 +1165,7 @@ object Idoso: TIdoso
     end
     object DBEdit17: TDBEdit
       Left = 96
-      Top = 259
+      Top = 283
       Width = 81
       Height = 22
       DataField = 'DATASAIDA'
@@ -1169,7 +1182,7 @@ object Idoso: TIdoso
     end
     object DBEdit2: TDBEdit
       Left = 48
-      Top = 24
+      Top = 48
       Width = 143
       Height = 22
       DataField = 'NOME'
@@ -1185,7 +1198,7 @@ object Idoso: TIdoso
     end
     object DBEdit3: TDBEdit
       Left = 208
-      Top = 24
+      Top = 48
       Width = 73
       Height = 22
       DataField = 'DATANASCIMENTO'
@@ -1203,7 +1216,7 @@ object Idoso: TIdoso
     end
     object DBEdit4: TDBEdit
       Left = 288
-      Top = 24
+      Top = 48
       Width = 25
       Height = 22
       DataField = 'IDADE'
@@ -1221,7 +1234,7 @@ object Idoso: TIdoso
     end
     object DBEdit5: TDBEdit
       Left = 8
-      Top = 64
+      Top = 88
       Width = 82
       Height = 22
       DataField = 'NASCIONALIDADE'
@@ -1237,7 +1250,7 @@ object Idoso: TIdoso
     end
     object DBEdit6: TDBEdit
       Left = 103
-      Top = 64
+      Top = 88
       Width = 90
       Height = 22
       DataField = 'NATURALIDADE'
@@ -1253,7 +1266,7 @@ object Idoso: TIdoso
     end
     object DBEdit7: TDBEdit
       Left = 207
-      Top = 64
+      Top = 88
       Width = 87
       Height = 22
       DataField = 'ESTADOCIVIL'
@@ -1269,7 +1282,7 @@ object Idoso: TIdoso
     end
     object DBEdit8: TDBEdit
       Left = 308
-      Top = 65
+      Top = 88
       Width = 67
       Height = 22
       DataField = 'RELIGIAO'
@@ -1285,7 +1298,7 @@ object Idoso: TIdoso
     end
     object DBEdit9: TDBEdit
       Left = 8
-      Top = 105
+      Top = 129
       Width = 193
       Height = 22
       DataField = 'PROFISSAO'
@@ -1301,7 +1314,7 @@ object Idoso: TIdoso
     end
     object DBEdit11: TDBEdit
       Left = 264
-      Top = 104
+      Top = 128
       Width = 79
       Height = 22
       DataField = 'CPF'

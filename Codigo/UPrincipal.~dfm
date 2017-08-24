@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 223
-  Top = 254
+  Left = 225
+  Top = 351
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -445,7 +445,7 @@ object Principal: TPrincipal
   end
   object Env: TBitBtn
     Left = 8
-    Top = 344
+    Top = 424
     Width = 180
     Height = 33
     Caption = '&Envio Email'
@@ -663,7 +663,7 @@ object Principal: TPrincipal
   end
   object func: TBitBtn
     Left = 8
-    Top = 424
+    Top = 304
     Width = 180
     Height = 33
     Caption = '&Funcionarios'
@@ -1100,7 +1100,7 @@ object Principal: TPrincipal
   end
   object S: TBitBtn
     Left = 8
-    Top = 184
+    Top = 104
     Width = 180
     Height = 33
     Caption = '&Sa'#250'de'
@@ -1172,7 +1172,7 @@ object Principal: TPrincipal
   end
   object T: TBitBtn
     Left = 8
-    Top = 104
+    Top = 184
     Width = 180
     Height = 33
     Anchors = [akRight, akBottom]
@@ -1247,7 +1247,7 @@ object Principal: TPrincipal
   end
   object Vol: TBitBtn
     Left = 8
-    Top = 304
+    Top = 344
     Width = 180
     Height = 33
     Caption = '&Voluntario'

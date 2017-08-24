@@ -244,19 +244,6 @@ object Relatorio: TRelatorio
     Width = 404
     Height = 353
     TabOrder = 1
-    object Label1: TLabel
-      Left = 8
-      Top = 8
-      Width = 211
-      Height = 18
-      Caption = 'Selecione o Tipo de Relat'#243'rio'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -15
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Cancel: TSpeedButton
       Left = 376
       Top = 8
@@ -264,17 +251,30 @@ object Relatorio: TRelatorio
       Height = 22
       OnClick = CancelClick
     end
+    object Label18: TLabel
+      Left = 16
+      Top = 16
+      Width = 319
+      Height = 22
+      Caption = 'Selecione o Tipo de Relat'#243'rio'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object Email: TGroupBox
       Left = 8
       Top = 48
-      Width = 161
-      Height = 81
+      Width = 185
+      Height = 97
       Caption = 'Relat'#243'rio de Emails'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
       object ParceirosE: TCheckBox
@@ -287,7 +287,7 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
       end
@@ -301,7 +301,7 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
       end
@@ -315,13 +315,13 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
       end
     end
     object Telefone: TGroupBox
-      Left = 176
+      Left = 208
       Top = 48
       Width = 185
       Height = 97
@@ -330,7 +330,7 @@ object Relatorio: TRelatorio
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
       object ProfissionaisT: TCheckBox
@@ -343,7 +343,7 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
       end
@@ -357,7 +357,7 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
       end
@@ -371,7 +371,7 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
       end
@@ -385,13 +385,13 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 3
       end
     end
     object Residente: TGroupBox
-      Left = 176
+      Left = 208
       Top = 152
       Width = 185
       Height = 81
@@ -400,7 +400,7 @@ object Relatorio: TRelatorio
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
       object TodosR: TCheckBox
@@ -413,7 +413,7 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
       end
@@ -427,22 +427,22 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
       end
     end
     object Responsavel: TGroupBox
       Left = 8
-      Top = 136
-      Width = 161
-      Height = 57
+      Top = 152
+      Width = 185
+      Height = 81
       Caption = 'Relat'#243'rio de Respons'#225'veis'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Arial'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
       object Todosres: TCheckBox
@@ -455,14 +455,14 @@ object Relatorio: TRelatorio
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
       end
     end
     object RlVolun: TBitBtn
       Left = 8
-      Top = 232
+      Top = 256
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -477,7 +477,7 @@ object Relatorio: TRelatorio
     end
     object RlParceiros: TBitBtn
       Left = 8
-      Top = 264
+      Top = 288
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -492,7 +492,7 @@ object Relatorio: TRelatorio
     end
     object RLTodos: TBitBtn
       Left = 8
-      Top = 200
+      Top = 224
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -507,7 +507,7 @@ object Relatorio: TRelatorio
     end
     object todosresp: TBitBtn
       Left = 8
-      Top = 296
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -521,8 +521,8 @@ object Relatorio: TRelatorio
       OnClick = todosrespClick
     end
     object pt: TBitBtn
-      Left = 104
-      Top = 200
+      Left = 200
+      Top = 224
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -536,8 +536,8 @@ object Relatorio: TRelatorio
       OnClick = ptClick
     end
     object Parceiros: TBitBtn
-      Left = 104
-      Top = 232
+      Left = 200
+      Top = 256
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -551,8 +551,8 @@ object Relatorio: TRelatorio
       OnClick = ParceirosClick
     end
     object BitBtn2: TBitBtn
-      Left = 104
-      Top = 264
+      Left = 200
+      Top = 288
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -566,8 +566,8 @@ object Relatorio: TRelatorio
       OnClick = BitBtn2Click
     end
     object BitBtn3: TBitBtn
-      Left = 104
-      Top = 296
+      Left = 200
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -581,8 +581,8 @@ object Relatorio: TRelatorio
       OnClick = BitBtn3Click
     end
     object Todosresidentesss: TBitBtn
-      Left = 208
-      Top = 264
+      Left = 304
+      Top = 288
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -596,8 +596,8 @@ object Relatorio: TRelatorio
       OnClick = TodosresidentesssClick
     end
     object Ani: TBitBtn
-      Left = 208
-      Top = 296
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'

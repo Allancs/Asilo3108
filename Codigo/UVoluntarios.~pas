@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Buttons, DB, StdCtrls, Mask, DBCtrls, FMTBcd, SqlExpr,
-  jpeg, ExtCtrls;
+  jpeg, ExtCtrls,
+  DBClient, SimpleDS;
 
 type
   TVoluntarios = class(TForm)
@@ -30,11 +31,24 @@ type
     Label2: TLabel;
     DBEdit1: TDBEdit;
     Label1: TLabel;
-    Oquee: TButton;
-    URL: TEdit;
-    OQue: TMemo;
-    Label7: TLabel;
     Label6: TLabel;
+    dsAux: TDataSource;
+    sdsAux: TSimpleDataSet;
+    Label13: TLabel;
+    edtPesquisa: TEdit;
+    sdsAuxCOD_VOLUNTARIO: TIntegerField;
+    sdsAuxNOME: TStringField;
+    sdsAuxTELEFONE: TStringField;
+    sdsAuxCELULAR: TStringField;
+    sdsAuxEMAIL: TStringField;
+    cel: TDBEdit;
+    Label17: TLabel;
+    fone: TDBEdit;
+    Label16: TLabel;
+    Name: TDBEdit;
+    email: TDBEdit;
+    Label7: TLabel;
+    Label14: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -46,7 +60,7 @@ type
     procedure SpeedButton3Click(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure OqueeClick(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -218,11 +232,42 @@ Then Begin
       End;
 end;
 
-procedure TVoluntarios.OqueeClick(Sender: TObject);
-begin
-OQue.Visible := True;
-URL.Text := 'http://www.voluntarios.com.br/oque_e_voluntariado.htm';
-URL.Visible := True;
+procedure TVoluntarios.edtPesquisaChange(Sender: TObject);
+var Texto, TSQL, Parametro : String;
+ begin
+      sdsAux.Close;
+
+      TSQL := 'select * from Voluntario ';
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+      email.Visible := false;
+      If edtPesquisa.Text = ''
+      Then Begin
+      Texto := TSQL;
+      sdsAux.DataSet.CommandText := Texto;
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+      email.Visible := false;
+      End
+      Else Begin
+      Name.Visible := true;
+      cel.Visible := true;
+      fone.Visible := true;
+      email.Visible := true;
+      Texto := TSQL + ' WHERE NOME LIKE :PROCURE ' ;
+      sdsAux.DataSet.CommandText := Texto;
+      Parametro := edtPesquisa.Text + '%';
+      sdsAux.DataSet.Params.ParamByName('PROCURE').AsString := Parametro;
+
+      End;
+      sdsAux.Open;
+      //DBEdit2.Text := Cod.Text;
+      //DBEdit3.Text := Name.Text;
+      exit;
+
+
 end;
 
 end.

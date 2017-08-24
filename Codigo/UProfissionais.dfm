@@ -1,6 +1,6 @@
 object Profissionais: TProfissionais
-  Left = 316
-  Top = 191
+  Left = 320
+  Top = 287
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Profissionais'
@@ -207,70 +207,164 @@ object Profissionais: TProfissionais
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000003FFFD9}
   end
+  object Label9: TLabel
+    Left = 8
+    Top = 152
+    Width = 51
+    Height = 15
+    Caption = 'Empresa'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 8
+    Top = 96
+    Width = 33
+    Height = 15
+    Caption = 'Nome'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object TPanel
     Left = 416
     Top = 8
     Width = 353
     Height = 201
     TabOrder = 0
+    object Label6: TLabel
+      Left = 8
+      Top = 8
+      Width = 275
+      Height = 22
+      Caption = 'Pesquisa de Profissionais'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 8
+      Top = 112
+      Width = 33
+      Height = 15
+      Caption = 'Nome'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 8
+      Top = 152
+      Width = 51
+      Height = 15
+      Caption = 'Empresa'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 256
+      Top = 112
+      Width = 48
+      Height = 15
+      Caption = 'Telefone'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = 256
+      Top = 152
+      Width = 40
+      Height = 15
+      Caption = 'Celular'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object Name: TDBEdit
       Left = 8
-      Top = 78
-      Width = 121
+      Top = 126
+      Width = 241
       Height = 22
       DataField = 'NOME'
       DataSource = dsAux
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
       Visible = False
     end
     object edtPesquisa: TEdit
-      Left = 8
-      Top = 16
-      Width = 153
+      Left = 16
+      Top = 40
+      Width = 209
       Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
       OnChange = edtPesquisaChange
     end
     object fone: TDBEdit
-      Left = 8
-      Top = 110
-      Width = 121
+      Left = 256
+      Top = 126
+      Width = 89
       Height = 22
       DataField = 'TELEFONE'
       DataSource = dsAux
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
       Visible = False
     end
     object cel: TDBEdit
-      Left = 8
-      Top = 142
-      Width = 121
+      Left = 256
+      Top = 166
+      Width = 89
       Height = 22
       DataField = 'CELULAR'
       DataSource = dsAux
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
       Visible = False
@@ -278,15 +372,16 @@ object Profissionais: TProfissionais
     object empresa: TDBEdit
       Left = 8
       Top = 166
-      Width = 121
+      Width = 241
       Height = 22
       DataField = 'EEMPRESA'
       DataSource = dsAux
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
       Visible = False
@@ -813,7 +908,7 @@ object Profissionais: TProfissionais
     TabOrder = 2
     object Label1: TLabel
       Left = 8
-      Top = 8
+      Top = 64
       Width = 39
       Height = 14
       Caption = 'C'#243'digo'
@@ -827,7 +922,7 @@ object Profissionais: TProfissionais
     end
     object Label2: TLabel
       Left = 8
-      Top = 48
+      Top = 104
       Width = 32
       Height = 14
       Caption = 'Nome'
@@ -841,7 +936,7 @@ object Profissionais: TProfissionais
     end
     object Label3: TLabel
       Left = 8
-      Top = 88
+      Top = 144
       Width = 48
       Height = 14
       Caption = 'Telefone'
@@ -854,8 +949,8 @@ object Profissionais: TProfissionais
       ParentFont = False
     end
     object Label4: TLabel
-      Left = 8
-      Top = 128
+      Left = 96
+      Top = 144
       Width = 39
       Height = 14
       Caption = 'Celular'
@@ -868,8 +963,8 @@ object Profissionais: TProfissionais
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 8
-      Top = 168
+      Left = 200
+      Top = 104
       Width = 49
       Height = 14
       Caption = 'Empresa'
@@ -881,9 +976,22 @@ object Profissionais: TProfissionais
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label13: TLabel
+      Left = 8
+      Top = 8
+      Width = 275
+      Height = 22
+      Caption = 'Cadastro de Profissionais'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object DBEdit1: TDBEdit
       Left = 8
-      Top = 24
+      Top = 80
       Width = 41
       Height = 22
       DataField = 'COD_PRO'
@@ -899,8 +1007,8 @@ object Profissionais: TProfissionais
     end
     object DBEdit2: TDBEdit
       Left = 8
-      Top = 64
-      Width = 126
+      Top = 120
+      Width = 185
       Height = 22
       DataField = 'NOME'
       DataSource = Modulo.dsProfisional
@@ -911,12 +1019,12 @@ object Profissionais: TProfissionais
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 4
     end
     object DBEdit3: TDBEdit
       Left = 8
-      Top = 104
-      Width = 126
+      Top = 160
+      Width = 81
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsProfisional
@@ -931,9 +1039,9 @@ object Profissionais: TProfissionais
       TabOrder = 2
     end
     object DBEdit4: TDBEdit
-      Left = 8
-      Top = 144
-      Width = 126
+      Left = 96
+      Top = 160
+      Width = 85
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsProfisional
@@ -948,9 +1056,9 @@ object Profissionais: TProfissionais
       TabOrder = 3
     end
     object DBEdit5: TDBEdit
-      Left = 8
-      Top = 184
-      Width = 126
+      Left = 200
+      Top = 120
+      Width = 193
       Height = 22
       DataField = 'EEMPRESA'
       DataSource = Modulo.dsProfisional
@@ -961,7 +1069,7 @@ object Profissionais: TProfissionais
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 1
     end
   end
   object sqlAux: TSQLQuery

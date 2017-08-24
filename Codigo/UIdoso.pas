@@ -55,6 +55,7 @@ type
     Label11: TLabel;
     DBEdit11: TDBEdit;
     Resp: TBitBtn;
+    Label18: TLabel;
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);

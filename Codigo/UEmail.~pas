@@ -96,6 +96,9 @@ uses UModulo;
 
 procedure TEmails.FormCreate(Sender: TObject);
 begin
+Menssagem.Font.Color := clBlack;
+
+
 
 De.Text:=Usuario.Text;
 end;

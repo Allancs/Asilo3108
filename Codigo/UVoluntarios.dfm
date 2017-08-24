@@ -215,7 +215,7 @@ object Voluntarios: TVoluntarios
     Height = 90
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
-    TabOrder = 2
+    TabOrder = 1
     object btnEditar: TBitBtn
       Left = 8
       Top = 8
@@ -726,7 +726,7 @@ object Voluntarios: TVoluntarios
     Top = 8
     Width = 404
     Height = 353
-    TabOrder = 1
+    TabOrder = 0
     object Label5: TLabel
       Left = 8
       Top = 224
@@ -800,13 +800,13 @@ object Voluntarios: TVoluntarios
     object Label6: TLabel
       Left = 8
       Top = 8
-      Width = 224
+      Width = 253
       Height = 22
       Caption = 'Cadastro de Volunt'#225'rios'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
-      Font.Name = 'Arial Narrow'
+      Font.Name = 'Courier New'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -898,39 +898,76 @@ object Voluntarios: TVoluntarios
     Top = 8
     Width = 353
     Height = 201
-    TabOrder = 0
-    object Label7: TLabel
-      Left = 8
-      Top = 8
-      Width = 199
-      Height = 16
-      Caption = 'Um pouquinho de Sabedoria'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object Oquee: TButton
-      Left = 8
-      Top = 160
-      Width = 99
-      Height = 25
-      Caption = 'O Que '#233' Voluntario?'
+    TabOrder = 2
+    object Label17: TLabel
+      Left = 240
+      Top = 144
+      Width = 40
+      Height = 15
+      Caption = 'Celular'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial Narrow'
+      Font.Height = -12
+      Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
-      TabOrder = 0
-      OnClick = OqueeClick
     end
-    object URL: TEdit
+    object Label16: TLabel
+      Left = 240
+      Top = 96
+      Width = 48
+      Height = 15
+      Caption = 'Telefone'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label7: TLabel
       Left = 8
-      Top = 120
-      Width = 249
+      Top = 144
+      Width = 31
+      Height = 15
+      Caption = 'Email'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 8
+      Top = 96
+      Width = 33
+      Height = 15
+      Caption = 'Nome'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label18: TLabel
+      Left = 8
+      Top = 8
+      Width = 253
+      Height = 22
+      Caption = 'Pesquisa de Volunt'#225'rios'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtPesquisa: TEdit
+      Left = 16
+      Top = 40
+      Width = 153
       Height = 22
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -938,30 +975,75 @@ object Voluntarios: TVoluntarios
       Font.Name = 'Arial Narrow'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
-      Visible = False
+      TabOrder = 0
+      OnChange = edtPesquisaChange
     end
-    object OQue: TMemo
-      Left = 8
-      Top = 32
-      Width = 249
-      Height = 81
+    object cel: TDBEdit
+      Left = 240
+      Top = 166
+      Width = 84
+      Height = 22
+      DataField = 'CELULAR'
+      DataSource = dsAux
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
-      Lines.Strings = (
-        ' "o volunt'#225'rio '#233' o jovem ou o adulto que, devido a '
-        'seu interesse pessoal '
-        'e ao seu esp'#237'rito c'#237'vico, dedica parte do seu '
-        'tempo, sem remunera'#231#227'o'
-        'alguma, a diversas formas de atividades, '
-        'organizadas ou n'#227'o,'
-        'de bem estar social, ou outros campos..."')
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object fone: TDBEdit
+      Left = 240
+      Top = 118
+      Width = 80
+      Height = 22
+      DataField = 'TELEFONE'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
+      Visible = False
+    end
+    object Name: TDBEdit
+      Left = 8
+      Top = 118
+      Width = 225
+      Height = 22
+      DataField = 'NOME'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      Visible = False
+    end
+    object email: TDBEdit
+      Left = 8
+      Top = 166
+      Width = 225
+      Height = 22
+      DataField = 'EMAIL'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
       Visible = False
     end
   end
@@ -971,5 +1053,61 @@ object Voluntarios: TVoluntarios
     SQLConnection = Modulo.Conexao
     Left = 528
     Top = 464
+  end
+  object dsAux: TDataSource
+    DataSet = sdsAux
+    Left = 712
+    Top = 216
+  end
+  object sdsAux: TSimpleDataSet
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select *  from VOLUNTARIO'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 744
+    Top = 216
+    object sdsAuxCOD_VOLUNTARIO: TIntegerField
+      FieldName = 'COD_VOLUNTARIO'
+      Required = True
+    end
+    object sdsAuxNOME: TStringField
+      FieldName = 'NOME'
+      Size = 45
+    end
+    object sdsAuxTELEFONE: TStringField
+      FieldName = 'TELEFONE'
+      Size = 13
+    end
+    object sdsAuxCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Size = 14
+    end
+    object sdsAuxEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 100
+    end
   end
 end

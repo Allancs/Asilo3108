@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 223
-  Top = 254
+  Left = 215
+  Top = 295
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'

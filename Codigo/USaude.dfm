@@ -728,7 +728,7 @@ object Saudes: TSaudes
     TabOrder = 1
     object Label1: TLabel
       Left = 8
-      Top = 8
+      Top = 40
       Width = 39
       Height = 14
       Caption = 'C'#243'digo'
@@ -740,24 +740,9 @@ object Saudes: TSaudes
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object Label2: TLabel
-      Left = 264
-      Top = 8
-      Width = 73
-      Height = 14
-      Caption = 'C'#243'digo Idoso'
-      FocusControl = DBEdit2
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-      Visible = False
-    end
     object Label4: TLabel
       Left = 56
-      Top = 8
+      Top = 40
       Width = 83
       Height = 14
       Caption = 'Nome Idoso (a)'
@@ -771,7 +756,7 @@ object Saudes: TSaudes
     end
     object Label3: TLabel
       Left = 8
-      Top = 192
+      Top = 176
       Width = 184
       Height = 14
       Caption = 'Nome Medico (a) / Emfermeiro (a)'
@@ -784,9 +769,9 @@ object Saudes: TSaudes
       ParentFont = False
     end
     object Label8: TLabel
-      Left = 269
-      Top = 192
-      Width = 34
+      Left = 229
+      Top = 176
+      Width = 23
       Height = 14
       Caption = 'Data'
       FocusControl = DBEdit8
@@ -799,7 +784,7 @@ object Saudes: TSaudes
     end
     object Label6: TLabel
       Left = 8
-      Top = 234
+      Top = 218
       Width = 40
       Height = 14
       Caption = 'Receita'
@@ -811,8 +796,8 @@ object Saudes: TSaudes
       ParentFont = False
     end
     object Label7: TLabel
-      Left = 192
-      Top = 234
+      Left = 208
+      Top = 218
       Width = 73
       Height = 14
       Caption = 'Observa'#231#245'es'
@@ -823,9 +808,22 @@ object Saudes: TSaudes
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object Label13: TLabel
+      Left = 8
+      Top = 8
+      Width = 374
+      Height = 22
+      Caption = 'Cadastro de Receitas e Observa'#231#245'es'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Courier New'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
     object DBEdit1: TDBEdit
       Left = 8
-      Top = 24
+      Top = 56
       Width = 41
       Height = 22
       DataField = 'COD_SAUDE'
@@ -840,9 +838,9 @@ object Saudes: TSaudes
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
-      Left = 264
+      Left = 248
       Top = 24
-      Width = 134
+      Width = 1
       Height = 22
       DataField = 'COD_IDOSO'
       DataSource = Modulo.dsSaude
@@ -857,7 +855,7 @@ object Saudes: TSaudes
     end
     object DBEdit4: TDBEdit
       Left = 56
-      Top = 24
+      Top = 56
       Width = 169
       Height = 22
       DataField = 'NOMEI'
@@ -873,34 +871,21 @@ object Saudes: TSaudes
     end
     object Idoso: TGroupBox
       Left = 8
-      Top = 56
-      Width = 345
-      Height = 121
+      Top = 80
+      Width = 385
+      Height = 89
       Caption = 'Pesquisar Residente'
       Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Arial Narrow'
-      Font.Style = []
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
-      object Label5: TLabel
-        Left = 8
-        Top = 16
-        Width = 127
-        Height = 14
-        Caption = 'Pesquisa de Residente'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Arial Narrow'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
       object Label9: TLabel
-        Left = 8
-        Top = 64
+        Left = 16
+        Top = 40
         Width = 106
         Height = 14
         Caption = 'Resposta Pesquisa'
@@ -912,9 +897,9 @@ object Saudes: TSaudes
         ParentFont = False
       end
       object edtPesquisa: TEdit
-        Left = 8
-        Top = 32
-        Width = 153
+        Left = 16
+        Top = 16
+        Width = 177
         Height = 22
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -926,9 +911,9 @@ object Saudes: TSaudes
         OnChange = edtPesquisaChange
       end
       object Name: TDBEdit
-        Left = 8
-        Top = 80
-        Width = 153
+        Left = 16
+        Top = 56
+        Width = 177
         Height = 22
         DataField = 'NOME'
         DataSource = dsAux
@@ -941,8 +926,8 @@ object Saudes: TSaudes
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
-        Left = 192
-        Top = 80
+        Left = 232
+        Top = 48
         Width = 145
         Height = 33
         Caption = '&Inserir Cadastro'
@@ -1013,9 +998,9 @@ object Saudes: TSaudes
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       end
       object Cod: TDBEdit
-        Left = 360
-        Top = -8
-        Width = 25
+        Left = 384
+        Top = 8
+        Width = 0
         Height = 22
         DataField = 'COD_IDOSO'
         DataSource = dsAux
@@ -1031,7 +1016,7 @@ object Saudes: TSaudes
     end
     object DBEdit3: TDBEdit
       Left = 8
-      Top = 208
+      Top = 192
       Width = 217
       Height = 22
       DataField = 'NOMEM'
@@ -1046,8 +1031,8 @@ object Saudes: TSaudes
       TabOrder = 4
     end
     object DBEdit8: TDBEdit
-      Left = 267
-      Top = 208
+      Left = 227
+      Top = 192
       Width = 85
       Height = 22
       DataField = 'DATA'
@@ -1064,19 +1049,19 @@ object Saudes: TSaudes
     end
     object DBMemo1: TDBMemo
       Left = 8
-      Top = 250
-      Width = 177
-      Height = 95
+      Top = 232
+      Width = 193
+      Height = 113
       DataField = 'RECEITA'
       DataSource = Modulo.dsSaude
       Enabled = False
       TabOrder = 6
     end
     object DBMemo2: TDBMemo
-      Left = 192
-      Top = 250
-      Width = 161
-      Height = 95
+      Left = 208
+      Top = 232
+      Width = 185
+      Height = 113
       DataField = 'OBS'
       DataSource = Modulo.dsSaude
       Enabled = False

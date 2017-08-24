@@ -12,7 +12,6 @@ type
     Baixo: TPanel;
     Image1: TImage;
     LadoEsquerdo: TPanel;
-    Label1: TLabel;
     Email: TGroupBox;
     TodosE: TCheckBox;
     VoluntariosE: TCheckBox;
@@ -108,6 +107,7 @@ type
     AniversarioIDADE: TStringField;
     Label3: TLabel;
     Label4: TLabel;
+    Label18: TLabel;
     procedure RLTodosClick(Sender: TObject);
     procedure RlVolunClick(Sender: TObject);
     procedure RlParceirosClick(Sender: TObject);

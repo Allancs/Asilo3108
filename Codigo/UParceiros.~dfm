@@ -348,7 +348,7 @@ object Parceiros: TParceiros
     object DBEdit3: TDBEdit
       Left = 8
       Top = 112
-      Width = 75
+      Width = 77
       Height = 22
       DataField = 'TELEFONE'
       DataSource = Modulo.dsParceiro
@@ -365,7 +365,7 @@ object Parceiros: TParceiros
     object DBEdit4: TDBEdit
       Left = 88
       Top = 112
-      Width = 77
+      Width = 83
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsParceiro
@@ -909,11 +909,232 @@ object Parceiros: TParceiros
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     end
   end
+  object TPanel
+    Left = 408
+    Top = 8
+    Width = 369
+    Height = 201
+    TabOrder = 2
+    object Label13: TLabel
+      Left = 8
+      Top = 8
+      Width = 129
+      Height = 15
+      Caption = 'Pesquisa de Parceiros'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label17: TLabel
+      Left = 240
+      Top = 143
+      Width = 40
+      Height = 15
+      Caption = 'Celular'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label16: TLabel
+      Left = 240
+      Top = 99
+      Width = 48
+      Height = 15
+      Caption = 'Telefone'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 8
+      Top = 143
+      Width = 31
+      Height = 15
+      Caption = 'Email'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 8
+      Top = 56
+      Width = 33
+      Height = 15
+      Caption = 'Nome'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 8
+      Top = 99
+      Width = 51
+      Height = 15
+      Caption = 'Empresa'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtPesquisa: TEdit
+      Left = 8
+      Top = 32
+      Width = 153
+      Height = 22
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnChange = edtPesquisaChange
+    end
+    object cel: TDBEdit
+      Left = 240
+      Top = 160
+      Width = 84
+      Height = 22
+      DataField = 'CELULAR'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+    end
+    object fone: TDBEdit
+      Left = 240
+      Top = 117
+      Width = 80
+      Height = 22
+      DataField = 'TELEFONE'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+    end
+    object Name: TDBEdit
+      Left = 8
+      Top = 73
+      Width = 225
+      Height = 22
+      DataField = 'NOME'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      Visible = False
+    end
+    object email: TDBEdit
+      Left = 8
+      Top = 160
+      Width = 225
+      Height = 22
+      DataField = 'EMAIL'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      Visible = False
+    end
+    object Empresa: TDBEdit
+      Left = 8
+      Top = 117
+      Width = 225
+      Height = 22
+      DataField = 'EMPRESA'
+      DataSource = dsAux
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 5
+      Visible = False
+    end
+  end
   object sqlAux: TSQLQuery
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Modulo.Conexao
     Left = 752
     Top = 8
+  end
+  object sdsAux: TSimpleDataSet
+    Active = True
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select * from PARCEIRO'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 744
+    Top = 216
+  end
+  object dsAux: TDataSource
+    DataSet = sdsAux
+    Left = 712
+    Top = 216
   end
 end

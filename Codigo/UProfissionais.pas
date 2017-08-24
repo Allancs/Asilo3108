@@ -45,6 +45,14 @@ type
     fone: TDBEdit;
     cel: TDBEdit;
     empresa: TDBEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
     procedure btnDeletarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
@@ -206,12 +214,15 @@ var Texto, TSQL, Parametro : String;
       sdsAux.Close;
 
       TSQL := 'select * from PROFISSIONAIS ';
-
+      Name.Visible := false;
+      cel.Visible := false;
+      fone.Visible := false;
+      empresa.Visible := false;
       If edtPesquisa.Text = ''
       Then Begin
       Texto := TSQL;
       sdsAux.DataSet.CommandText := Texto;
-         Name.Visible := false;
+      Name.Visible := false;
       cel.Visible := false;
       fone.Visible := false;
       empresa.Visible := false;
