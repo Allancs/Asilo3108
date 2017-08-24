@@ -169,6 +169,18 @@ type
     QRDBText43: TQRDBText;
     QRLabel68: TQRLabel;
     QRDBText44: TQRDBText;
+    Data: TQuickRep;
+    DetailBand5: TQRBand;
+    SummaryBand1: TQRBand;
+    PageHeaderBand5: TQRBand;
+    QRLabel69: TQRLabel;
+    QRLabel70: TQRLabel;
+    QRLabel71: TQRLabel;
+    QRDBText45: TQRDBText;
+    QRDBText46: TQRDBText;
+    QRLabel72: TQRLabel;
+    QRDBText47: TQRDBText;
+    QRLabel73: TQRLabel;
   private
     { Private declarations }
   public

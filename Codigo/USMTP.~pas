@@ -284,6 +284,7 @@ dataBase : string;
 begin
 DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
 base2.Caption :='Caminho banco atualizado : '+ DataBase ;
+
 end;
 
 procedure TSMTPs.BancoConfigCanClose(Sender: TObject;

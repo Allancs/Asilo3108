@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, jpeg, ExtCtrls, FMTBcd, DB, DBClient, SimpleDS,
-  SqlExpr, QRCtrls, QuickRpt, Buttons;
+  SqlExpr, QRCtrls, QuickRpt, Buttons,
+  MPlayer;
 
 type
   TRelatorio = class(TForm)
@@ -13,7 +14,6 @@ type
     Image1: TImage;
     LadoEsquerdo: TPanel;
     Email: TGroupBox;
-    TodosE: TCheckBox;
     VoluntariosE: TCheckBox;
     ParceirosE: TCheckBox;
     Telefone: TGroupBox;
@@ -32,8 +32,8 @@ type
     volu: TDataSource;
     sdsTodosEMAIL: TStringField;
     sdsTodosNOME: TStringField;
-    RlVolun: TBitBtn;
     RlParceiros: TBitBtn;
+    RlVolun: TBitBtn;
     RLTodos: TBitBtn;
     sdsPar: TSimpleDataSet;
     DataSource1: TDataSource;
@@ -41,7 +41,6 @@ type
     sdsParEMAIL: TStringField;
     sdsVoluNOME: TStringField;
     sdsVoluEMAIL: TStringField;
-    Cancel: TSpeedButton;
     todosresp: TBitBtn;
     DataSource2: TDataSource;
     sdsResponsavel: TSimpleDataSet;
@@ -77,8 +76,8 @@ type
     responsaCELULAR: TStringField;
     responsaNOME: TStringField;
     Parceiros: TBitBtn;
-    BitBtn2: TBitBtn;
-    BitBtn3: TBitBtn;
+    responsaveistele: TBitBtn;
+    funtele: TBitBtn;
     Aniversario: TSimpleDataSet;
     Aniversarios: TDataSource;
     TodosResidentess: TDataSource;
@@ -102,23 +101,51 @@ type
     TodosResidentesDATASAIDA: TDateField;
     Todosresidentesss: TBitBtn;
     Ani: TBitBtn;
-    AniversarioNOME: TStringField;
-    AniversarioDATANASCIMENTO: TStringField;
-    AniversarioIDADE: TStringField;
     Label3: TLabel;
     Label4: TLabel;
     Label18: TLabel;
+    Relatorio: TTimer;
+    todosmeial: TCheckBox;
+    Edit1: TEdit;
+    AniversarioCOD_IDOSO: TIntegerField;
+    AniversarioNOME: TStringField;
+    AniversarioDATANASCIMENTO: TStringField;
+    AniversarioIDADE: TStringField;
+    AniversarioNASCIONALIDADE: TStringField;
+    AniversarioNATURALIDADE: TStringField;
+    AniversarioESTADOCIVIL: TStringField;
+    AniversarioRELIGIAO: TStringField;
+    AniversarioPROFISSAO: TStringField;
+    AniversarioRG: TStringField;
+    AniversarioCPF: TStringField;
+    AniversarioPAI: TStringField;
+    AniversarioMAE: TStringField;
+    AniversarioOBS: TStringField;
+    AniversarioDATAENTRADA: TDateField;
+    AniversarioINFORMACOES: TStringField;
+    AniversarioDATASAIDA: TDateField;
+    Cancel: TBitBtn;
     procedure RLTodosClick(Sender: TObject);
-    procedure RlVolunClick(Sender: TObject);
     procedure RlParceirosClick(Sender: TObject);
-    procedure CancelClick(Sender: TObject);
+    procedure RlVolunClick(Sender: TObject);
     procedure todosrespClick(Sender: TObject);
     procedure ptClick(Sender: TObject);
     procedure ParceirosClick(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
-    procedure BitBtn3Click(Sender: TObject);
+    procedure responsaveisteleClick(Sender: TObject);
+    procedure funteleClick(Sender: TObject);
     procedure TodosresidentesssClick(Sender: TObject);
     procedure AniClick(Sender: TObject);
+    procedure CancelClick(Sender: TObject);
+    procedure todosmeialClick(Sender: TObject);
+    procedure ParceirosEClick(Sender: TObject);
+    procedure VoluntariosEClick(Sender: TObject);
+    procedure TodosresClick(Sender: TObject);
+    procedure ProfissionaisTClick(Sender: TObject);
+    procedure ParceirosTClick(Sender: TObject);
+    procedure ResponsaveisTClick(Sender: TObject);
+    procedure FuncionariosTClick(Sender: TObject);
+    procedure TodosRClick(Sender: TObject);
+    procedure AniversariantesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -130,7 +157,8 @@ var
 
 implementation
 
-uses UModulo, UPesquisaRel, UResponsavel;
+uses UModulo, UPesquisaRel, UResponsavel,
+  UVoluntarios;
 
 {$R *.dfm}
 
@@ -146,7 +174,7 @@ Pesquisarel.Email.Caption := 'Todos email cadastrados de Parceiros e Voluntarios
 PesquisaRel.volu.Preview;
 end;
 
-procedure TRelatorio.RlVolunClick(Sender: TObject);
+procedure TRelatorio.RlParceirosClick(Sender: TObject);
 begin
 sdsPar.Close;
 sdsPar.DataSet.CommandText := 'select EMAIL , Nome FROM VOLUNTARIO';
@@ -156,7 +184,7 @@ Pesquisarel.Email.Caption := 'Todos email cadastrados de Parceiros';
 PesquisaRel.par.Preview;
 end;
 
-procedure TRelatorio.RlParceirosClick(Sender: TObject);
+procedure TRelatorio.RlVolunClick(Sender: TObject);
 begin
 
 sdsVolu.Close;
@@ -164,27 +192,6 @@ sdsVolu.DataSet.CommandText := 'select EMAIL , Nome FROM PARCEIRO';
 sdsVolu.Open;
 Pesquisarel.Email.Caption := 'Todos email cadastrados de Voluntários';
 PesquisaRel.Vol.Preview;
-end;
-
-procedure TRelatorio.CancelClick(Sender: TObject);
-begin
-Email.Enabled := true;
-Responsavel.Enabled := true;
-Residente.Enabled := true;
-TodosE.Enabled :=true;
-Voluntariose.Enabled := true;
-Parceirose.Enabled := true;
-Todosres.Enabled := true;
-profissionaist.Enabled := true;
-parceirost.Enabled    := true;
-responsaveist.Enabled := true;
-funcionariost.Enabled := true;
-todosr.Enabled       := true;
-aniversariantes.Enabled  := true;
-Email.Enabled := true;
-Responsavel.Enabled := true;
-Telefone.Enabled := true;
-residente.Enabled := true;
 end;
 
 procedure TRelatorio.todosrespClick(Sender: TObject);
@@ -211,7 +218,7 @@ Parceiro.DataSet.CommandText := 'Select NOME, TELEFONE, CELULAR, EMPRESA from PA
 PesquisaRel.Relparceiros.Preview;
 end;
 
-procedure TRelatorio.BitBtn2Click(Sender: TObject);
+procedure TRelatorio.responsaveisteleClick(Sender: TObject);
 begin
 Responsa.Close;
 Responsa.DataSet.CommandText := 'Select NOMER, TELEFONE, CELULAR, NOME from LIGACOES';
@@ -220,7 +227,7 @@ Responsa.DataSet.CommandText := 'Select NOMER, TELEFONE, CELULAR, NOME from LIGA
 PesquisaRel.ResponsaveisAgenda.Preview;
 end;
 
-procedure TRelatorio.BitBtn3Click(Sender: TObject);
+procedure TRelatorio.funteleClick(Sender: TObject);
 begin
 Funcionario.Close;
 Funcionario.DataSet.CommandText := 'Select NOME, CELULAR, TELEFONE from FUNCIONARIO';
@@ -238,24 +245,392 @@ end;
 
 procedure TRelatorio.AniClick(Sender: TObject);
 var
-DtaAtual, copy1, copy2, copy3, copy4 : string;
+DtaAtual, copy1, copy2,a,b,c,d,e,f,g : string;
 begin
             DtaAtual := DateToStr(Date);
             copy1 := (Copy(DateToStr(Date), 4, 2));
             copy2 := (Copy(DateToStr(Date), 7, 10));
-            Copy3 := '00/'+copy1+'/1900';
-            copy4 := '31/'+copy1+'/'+copy2;
 
+            a := QuotedStr('/');
+            b := QuotedStr('.');
+            c := QuotedStr(',');
+            d := QuotedStr(',');
+            e := QuotedStr('1');
+            f := QuotedStr('31');
+            g := QuotedStr(copy1);
           // Troca a / por . (Firebird guarda a data com . e nao /)
 
 Aniversario.Close;
-Aniversario.DataSet.CommandText := 'Select Nome, DataNascimento, Idade From Residente Where dataNascimento between '+QuotedStr(copy3)+' And '+QuotedStr(copy4)+' order by dataNascimento';
-Aniversario.Open;
+//Aniversario.DataSet.CommandText := 'Select Nome, DataNascimento, Idade From Residente Where dataNascimento between '+QuotedStr(copy3)+' And '+QuotedStr(copy4)+' order by dataNascimento';
+Aniversario.DataSet.CommandText := 'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(datanascimento,'+a+','+b+') AS date))between '+g+' and '+g+') and (EXTRACT(day FROM CAST (replace(datanascimento,'+a+','+b+') AS date)) between '+e+' and '+f+')';
+               Edit1.Text := 'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(datanascimento,'+a+','+b+') AS date))between '+g+' and '+g+') and (EXTRACT(day FROM CAST (replace(datanascimento,'+a+','+b+') AS date)) between '+e+' and '+f+')';
+Aniversario.Open;
 
-Label2.Caption := 'Select Nome, DataNascimento, Idade From Residente Where dataNascimento between '+QuotedStr(copy3)+' And '+QuotedStr(copy4)+' order by dataNascimento';
-Label3.Caption := copy1;
-Label4.Caption := copy2;
+Label2.Caption := 'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(datanascimento,'+a+','+b+')';
+Label3.Caption :=  'AS date))between '+g+' and '+g+') and (EXTRACT(day FROM CAST (replace(datanascimento,';
+Label4.Caption :=a+','+b+') AS date)) between '+e+' and '+f+') replace(p.valor_venda,'+c+c+d+')';
+
+
+
+
 PesquisaRel.Data.Preview;
+end;
+
+procedure TRelatorio.CancelClick(Sender: TObject);
+begin
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end;
+
+procedure TRelatorio.todosmeialClick(Sender: TObject);
+begin
+If todosmeial.Checked = true
+then
+begin
+RLTodos.Visible := true;
+//RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+//todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.ParceirosEClick(Sender: TObject);
+begin
+If Parceirose.Checked = true
+then
+begin
+RlParceiros.Visible     := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+//RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+//parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+
+
+
+procedure TRelatorio.VoluntariosEClick(Sender: TObject);
+begin
+If Voluntariose.Checked = true
+then
+begin
+RlVolun.Visible := true;
+RLTodos.visible := false;
+//RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+//voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.TodosresClick(Sender: TObject);
+begin
+If Todosres.Checked = true
+then
+begin
+todosresp.Visible := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+//todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+//todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.ProfissionaisTClick(Sender: TObject);
+begin
+If profissionaist.Checked = true
+then
+begin
+pt.Visible := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+//pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+//profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.ParceirosTClick(Sender: TObject);
+begin
+If parceirost.Checked = true
+then
+begin
+Parceiros.Visible       := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+//Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+//parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.ResponsaveisTClick(Sender: TObject);
+begin
+If responsaveist.Checked = true
+then
+begin
+responsaveistele.Visible := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+//responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+//responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.FuncionariosTClick(Sender: TObject);
+begin
+If funcionariost.Checked = true
+then
+begin
+funtele.Visible := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+//funtele.visible := false;
+Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+//funcionariost.Checked   := false;
+todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.TodosRClick(Sender: TObject);
+begin
+If todosr.Checked = true
+then
+begin
+Todosresidentesss.Visible := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+//Todosresidentesss.visible := false;
+Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+//todosr.Checked          := false;
+aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
+end;
+
+procedure TRelatorio.AniversariantesClick(Sender: TObject);
+begin
+If aniversariantes.Checked = true
+then
+begin
+Ani.Visible := true;
+RLTodos.visible := false;
+RlVolun.visible := false;
+RlParceiros.visible := false;
+todosresp.visible := false;
+pt.visible := false;
+Parceiros.visible := false;
+responsaveistele.visible := false;
+funtele.visible := false;
+Todosresidentesss.visible := false;
+//Ani.visible := false;
+todosmeial.Checked      := false;
+voluntariose.Checked    := false;
+parceirose.Checked      := false;
+todosres.Checked        := false;
+profissionaist.Checked  := false;
+parceirost.Checked      := false;
+responsaveist.Checked   := false;
+funcionariost.Checked   := false;
+todosr.Checked          := false;
+//aniversariantes.Checked := false;
+end
+else
+begin
+cancel.Click;
+end;
 end;
 
 end.

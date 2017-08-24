@@ -218,24 +218,50 @@ object Relatorio: TRelatorio
     TabOrder = 0
     object Label2: TLabel
       Left = 8
-      Top = 32
-      Width = 32
-      Height = 13
+      Top = 8
+      Width = 41
+      Height = 16
       Caption = 'Label2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
     end
     object Label3: TLabel
       Left = 8
-      Top = 48
-      Width = 32
-      Height = 13
+      Top = 32
+      Width = 41
+      Height = 16
       Caption = 'Label3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
     end
     object Label4: TLabel
       Left = 8
       Top = 64
-      Width = 32
-      Height = 13
+      Width = 41
+      Height = 16
       Caption = 'Label4'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 200
+      Top = 16
+      Width = 121
+      Height = 21
+      TabOrder = 0
+      Text = 'Edit1'
     end
   end
   object LadoEsquerdo: TPanel
@@ -244,13 +270,6 @@ object Relatorio: TRelatorio
     Width = 404
     Height = 353
     TabOrder = 1
-    object Cancel: TSpeedButton
-      Left = 376
-      Top = 8
-      Width = 23
-      Height = 22
-      OnClick = CancelClick
-    end
     object Label18: TLabel
       Left = 16
       Top = 16
@@ -289,7 +308,8 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 2
+        TabOrder = 1
+        OnClick = ParceirosEClick
       end
       object VoluntariosE: TCheckBox
         Left = 8
@@ -303,21 +323,23 @@ object Relatorio: TRelatorio
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 1
+        TabOrder = 0
+        OnClick = VoluntariosEClick
       end
-      object TodosE: TCheckBox
+      object todosmeial: TCheckBox
         Left = 8
         Top = 24
-        Width = 149
+        Width = 169
         Height = 17
-        Caption = 'Todos Emails Cadastrados'
+        Caption = 'Todos emails Cadastrados'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 0
+        TabOrder = 2
+        OnClick = todosmeialClick
       end
     end
     object Telefone: TGroupBox
@@ -346,6 +368,7 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
+        OnClick = ProfissionaisTClick
       end
       object ParceirosT: TCheckBox
         Left = 8
@@ -360,6 +383,7 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
+        OnClick = ParceirosTClick
       end
       object ResponsaveisT: TCheckBox
         Left = 8
@@ -374,6 +398,7 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
+        OnClick = ResponsaveisTClick
       end
       object FuncionariosT: TCheckBox
         Left = 8
@@ -388,6 +413,7 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 3
+        OnClick = FuncionariosTClick
       end
     end
     object Residente: TGroupBox
@@ -416,6 +442,7 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
+        OnClick = TodosRClick
       end
       object Aniversariantes: TCheckBox
         Left = 8
@@ -430,6 +457,7 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
+        OnClick = AniversariantesClick
       end
     end
     object Responsavel: TGroupBox
@@ -458,11 +486,12 @@ object Relatorio: TRelatorio
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
+        OnClick = TodosresClick
       end
     end
-    object RlVolun: TBitBtn
-      Left = 8
-      Top = 256
+    object RlParceiros: TBitBtn
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -473,11 +502,12 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
-      OnClick = RlVolunClick
+      Visible = False
+      OnClick = RlParceirosClick
     end
-    object RlParceiros: TBitBtn
-      Left = 8
-      Top = 288
+    object RlVolun: TBitBtn
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -488,11 +518,12 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
-      OnClick = RlParceirosClick
+      Visible = False
+      OnClick = RlVolunClick
     end
     object RLTodos: TBitBtn
-      Left = 8
-      Top = 224
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -503,10 +534,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
+      Visible = False
       OnClick = RLTodosClick
     end
     object todosresp: TBitBtn
-      Left = 8
+      Left = 304
       Top = 320
       Width = 95
       Height = 25
@@ -518,11 +550,12 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 7
+      Visible = False
       OnClick = todosrespClick
     end
     object pt: TBitBtn
-      Left = 200
-      Top = 224
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -533,11 +566,12 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 8
+      Visible = False
       OnClick = ptClick
     end
     object Parceiros: TBitBtn
-      Left = 200
-      Top = 256
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -548,11 +582,12 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 9
+      Visible = False
       OnClick = ParceirosClick
     end
-    object BitBtn2: TBitBtn
-      Left = 200
-      Top = 288
+    object responsaveistele: TBitBtn
+      Left = 304
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -563,10 +598,11 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 10
-      OnClick = BitBtn2Click
+      Visible = False
+      OnClick = responsaveisteleClick
     end
-    object BitBtn3: TBitBtn
-      Left = 200
+    object funtele: TBitBtn
+      Left = 304
       Top = 320
       Width = 95
       Height = 25
@@ -578,11 +614,12 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 11
-      OnClick = BitBtn3Click
+      Visible = False
+      OnClick = funteleClick
     end
     object Todosresidentesss: TBitBtn
       Left = 304
-      Top = 288
+      Top = 320
       Width = 95
       Height = 25
       Caption = 'Gerar Relat'#243'rio'
@@ -593,6 +630,7 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 12
+      Visible = False
       OnClick = TodosresidentesssClick
     end
     object Ani: TBitBtn
@@ -608,15 +646,25 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 13
+      Visible = False
       OnClick = AniClick
     end
-  end
-  object TPanel
-    Left = 416
-    Top = 8
-    Width = 353
-    Height = 201
-    TabOrder = 2
+    object Cancel: TBitBtn
+      Left = 10000
+      Top = 320
+      Width = 1
+      Height = 25
+      Caption = 'Desmarcar Op'#231#245'es'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 14
+      Visible = False
+      OnClick = CancelClick
+    end
   end
   object sdsTodos: TSimpleDataSet
     Active = True
@@ -1055,15 +1103,20 @@ object Relatorio: TRelatorio
     Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
     Connection.Connected = True
     DataSet.CommandText = 
-      'Select Nome, DataNascimento, Idade From Residente Where dataNasc' +
-      'imento between '#39'22.08.1900'#39' And '#39'23.08.1900'#39' order by dataNascim' +
-      'ento'
+      'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(d' +
+      'atanascimento,'#39'/'#39','#39'.'#39') AS date))between '#39'08'#39' and '#39'08'#39') and (EXTR' +
+      'ACT(day FROM CAST (replace(datanascimento,'#39'/'#39','#39'.'#39') AS date)) bet' +
+      'ween '#39'1'#39' and '#39'31'#39')'
     DataSet.DataSource = dsAux
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
     Left = 448
     Top = 248
+    object AniversarioCOD_IDOSO: TIntegerField
+      FieldName = 'COD_IDOSO'
+      Required = True
+    end
     object AniversarioNOME: TStringField
       FieldName = 'NOME'
       Size = 45
@@ -1075,6 +1128,56 @@ object Relatorio: TRelatorio
     object AniversarioIDADE: TStringField
       FieldName = 'IDADE'
       Size = 3
+    end
+    object AniversarioNASCIONALIDADE: TStringField
+      FieldName = 'NASCIONALIDADE'
+      Size = 45
+    end
+    object AniversarioNATURALIDADE: TStringField
+      FieldName = 'NATURALIDADE'
+      Size = 45
+    end
+    object AniversarioESTADOCIVIL: TStringField
+      FieldName = 'ESTADOCIVIL'
+      Size = 45
+    end
+    object AniversarioRELIGIAO: TStringField
+      FieldName = 'RELIGIAO'
+      Size = 45
+    end
+    object AniversarioPROFISSAO: TStringField
+      FieldName = 'PROFISSAO'
+      Size = 45
+    end
+    object AniversarioRG: TStringField
+      FieldName = 'RG'
+      Size = 9
+    end
+    object AniversarioCPF: TStringField
+      FieldName = 'CPF'
+      Size = 16
+    end
+    object AniversarioPAI: TStringField
+      FieldName = 'PAI'
+      Size = 45
+    end
+    object AniversarioMAE: TStringField
+      FieldName = 'MAE'
+      Size = 45
+    end
+    object AniversarioOBS: TStringField
+      FieldName = 'OBS'
+      Size = 10
+    end
+    object AniversarioDATAENTRADA: TDateField
+      FieldName = 'DATAENTRADA'
+    end
+    object AniversarioINFORMACOES: TStringField
+      FieldName = 'INFORMACOES'
+      Size = 100
+    end
+    object AniversarioDATASAIDA: TDateField
+      FieldName = 'DATASAIDA'
     end
   end
   object Aniversarios: TDataSource
@@ -1185,5 +1288,10 @@ object Relatorio: TRelatorio
     object TodosResidentesDATASAIDA: TDateField
       FieldName = 'DATASAIDA'
     end
+  end
+  object Relatorio: TTimer
+    Interval = 1
+    Left = 528
+    Top = 264
   end
 end

@@ -1,6 +1,6 @@
 object Incidentes: TIncidentes
-  Left = 272
-  Top = 344
+  Left = 279
+  Top = 194
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Agenda Medica'
@@ -1080,7 +1080,7 @@ object Incidentes: TIncidentes
       Enabled = False
       TabOrder = 1
     end
-    object DBEdit4: TDBEdit
+    object DBMemo1: TDBEdit
       Left = 8
       Top = 208
       Width = 193

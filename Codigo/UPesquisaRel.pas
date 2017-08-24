@@ -51,7 +51,6 @@ type
     QRBand10: TQRBand;
     QRLabel26: TQRLabel;
     QRLabel27: TQRLabel;
-    QRBand11: TQRBand;
     QRDBText7: TQRDBText;
     QRDBText8: TQRDBText;
     QRDBText9: TQRDBText;
@@ -171,12 +170,11 @@ type
     QRDBText44: TQRDBText;
     Data: TQuickRep;
     DetailBand5: TQRBand;
-    SummaryBand1: TQRBand;
     PageHeaderBand5: TQRBand;
     QRLabel69: TQRLabel;
     QRLabel70: TQRLabel;
-    QRLabel71: TQRLabel;
     QRDBText45: TQRDBText;
+    QRLabel71: TQRLabel;
     QRDBText46: TQRDBText;
     QRLabel72: TQRLabel;
     QRDBText47: TQRDBText;

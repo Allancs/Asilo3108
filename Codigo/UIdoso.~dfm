@@ -885,9 +885,9 @@ object Idoso: TIdoso
     object Label16: TLabel
       Left = 8
       Top = 310
-      Width = 70
+      Width = 119
       Height = 14
-      Caption = 'Informa'#231#245'es'
+      Caption = 'Informa'#231#245'es de Saida'
       FocusControl = DBEdit16
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText

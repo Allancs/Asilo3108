@@ -35,7 +35,7 @@ type
     btnCancelar: TBitBtn;
     btnEditar: TBitBtn;
     btnDeletar: TBitBtn;
-    DBEdit4: TDBEdit;
+    DBMemo1: TDBEdit;
     Idoso: TGroupBox;
     Label7: TLabel;
     Label8: TLabel;
