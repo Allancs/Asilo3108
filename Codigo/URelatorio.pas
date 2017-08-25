@@ -95,7 +95,6 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label18: TLabel;
-    Relatorio: TTimer;
     Edit1: TEdit;
     AniversarioCOD_IDOSO: TIntegerField;
     AniversarioNOME: TStringField;
@@ -171,7 +170,7 @@ sdsTodos.DataSet.CommandText := 'SELECT nome, email FROM voluntario union all SE
 sdsTodos.Open;
 Pesquisarel.Email.Caption := 'Todos email cadastrados de Parceiros e Voluntarios';
 
-PesquisaRel.volu.Preview;
+PesquisaRel.vol.Preview;
 end;
 
 procedure TRelatorio.RlParceirosClick(Sender: TObject);

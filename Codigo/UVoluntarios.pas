@@ -78,10 +78,17 @@ uses UModulo;
 
 procedure TVoluntarios.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsVoluntario.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -92,6 +99,7 @@ Modulo.cdsVoluntario.Edit;
           DBEdit5.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
           
 end;
 
@@ -110,6 +118,7 @@ begin
           DBEdit3.Enabled       := True;
           DBEdit4.Enabled       := True;
           DBEdit5.Enabled       := True;
+          edtPesquisa.Enabled := false;
 
 
           btnGravar.Enabled      := True;
@@ -142,8 +151,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -181,7 +190,8 @@ Modulo.cdsVoluntario.Cancel;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
-
+          edtPesquisa.Enabled := true;
+          edtPesquisa.SetFocus;
           // Ligar o Gravar
           btnGravar.Enabled      := False;
 
@@ -194,6 +204,8 @@ Modulo.cdsVoluntario.Post;
          Modulo.cdsVoluntario.ApplyUpdates(-1);
 
          btnCancelar.Click;
+
+Modulo.cdsvoluntario.Refresh;
 end;
 
 procedure TVoluntarios.btnAtualizarClick(Sender: TObject);

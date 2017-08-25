@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 270
-  Top = 321
+  Left = 329
+  Top = 259
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -31,6 +31,7 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
+    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -250,7 +251,6 @@ object Modulo: TModulo
     object cdsLigacoesCELULAR: TStringField
       FieldName = 'CELULAR'
       EditMask = '\(00\)00000\-0000;1;_'
-      Size = 13
     end
   end
   object cdsParceiro: TClientDataSet
@@ -304,6 +304,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sqsFun: TSQLDataSet
+    Active = True
     CommandText = 'select * from FUNCIONARIO'
     MaxBlobSize = -1
     Params = <>
@@ -361,6 +362,7 @@ object Modulo: TModulo
     end
   end
   object sdsInc: TSQLDataSet
+    Active = True
     CommandText = 'select * from INCIDENTES'
     MaxBlobSize = -1
     Params = <>
@@ -400,6 +402,7 @@ object Modulo: TModulo
     end
   end
   object sdsParceiro: TSQLDataSet
+    Active = True
     CommandText = 'select * from PARCEIRO'
     MaxBlobSize = -1
     Params = <>
@@ -408,6 +411,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsProfisional: TSQLDataSet
+    Active = True
     CommandText = 'select * from PROFISSIONAIS'
     MaxBlobSize = -1
     Params = <>
@@ -684,6 +688,7 @@ object Modulo: TModulo
     Top = 288
   end
   object sdsResidente: TSQLDataSet
+    Active = True
     CommandText = 'select * from RESIDENTE'
     MaxBlobSize = -1
     Params = <>
@@ -692,6 +697,7 @@ object Modulo: TModulo
     Top = 112
   end
   object sdsSaude: TSQLDataSet
+    Active = True
     CommandText = 'select * from SAUDE'
     MaxBlobSize = -1
     Params = <>
@@ -700,6 +706,7 @@ object Modulo: TModulo
     Top = 168
   end
   object sdsTarefa: TSQLDataSet
+    Active = True
     CommandText = 'select * from TAREFA'
     MaxBlobSize = -1
     Params = <>
@@ -708,6 +715,7 @@ object Modulo: TModulo
     Top = 216
   end
   object sdsVoluntario: TSQLDataSet
+    Active = True
     CommandText = 'select * from VOLUNTARIO'
     MaxBlobSize = -1
     Params = <>
@@ -760,6 +768,7 @@ object Modulo: TModulo
     Top = 64
   end
   object sdsDespesas: TSQLDataSet
+    Active = True
     CommandText = 'select * from DESPESAS'
     MaxBlobSize = -1
     Params = <>
@@ -810,6 +819,7 @@ object Modulo: TModulo
     Top = 256
   end
   object sdsEmail: TSQLDataSet
+    Active = True
     CommandText = 'select * from EMAIL'
     MaxBlobSize = -1
     Params = <>

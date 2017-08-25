@@ -1224,19 +1224,19 @@ object Responsavel: TResponsavel
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 13
+      MaxLength = 14
       ParentFont = False
       TabOrder = 2
     end
     object DBEdit5: TDBEdit
       Left = 8
       Top = 272
-      Width = 81
+      Width = 69
       Height = 21
       DataField = 'TELEFONE'
       DataSource = DataSource1
       Enabled = False
-      MaxLength = 14
+      MaxLength = 13
       TabOrder = 1
     end
   end

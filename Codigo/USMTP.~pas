@@ -71,6 +71,13 @@ uses UModulo,
 
 procedure TSMTPs.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsEmail.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -85,6 +92,7 @@ Modulo.cdsEmail.Edit;
           DBEdit5.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
 end;
 
 procedure TSMTPs.btnInserirClick(Sender: TObject);

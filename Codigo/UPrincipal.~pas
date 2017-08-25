@@ -139,6 +139,7 @@ end;
 
 procedure TPrincipal.AClick(Sender: TObject);
 begin
+
 CadastroAvisos.Visible := True;
 end;
 
@@ -194,6 +195,7 @@ end;
 
 procedure TPrincipal.TClick(Sender: TObject);
 begin
+
 Tarefa.Visible := True;
 end;
 
@@ -434,6 +436,8 @@ If (DBText3.Caption = DtaAtual)
           begin
           DBText2.Font.Color := clGreen;
           end;
+
+          
 end;
 
 procedure TPrincipal.AvisosPoPClick(Sender: TObject);

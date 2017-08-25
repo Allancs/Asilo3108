@@ -1,6 +1,6 @@
 object Termor: TTermor
-  Left = 295
-  Top = 357
+  Left = 359
+  Top = 272
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Termo de Responsabilidade'
@@ -372,7 +372,7 @@ object Termor: TTermor
       D00FE901FFD9}
   end
   object Termo: TQuickRep
-    Left = 32474
+    Left = 32767
     Top = 34
     Width = 794
     Height = 1123
@@ -467,7 +467,7 @@ object Termor: TTermor
       object QRLabel1: TQRLabel
         Left = 8
         Top = 16
-        Width = 380
+        Width = 367
         Height = 25
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -478,12 +478,12 @@ object Termor: TTermor
           66.145833333333330000
           21.166666666666670000
           42.333333333333330000
-          1005.416666666667000000)
+          971.020833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
-        Caption = 'Casa de Repouso Jardmin das Flores'
+        Caption = 'Casa de Repouso Jardim das Flores'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -498,7 +498,7 @@ object Termor: TTermor
       object QRLabel3: TQRLabel
         Left = 16
         Top = 48
-        Width = 392
+        Width = 358
         Height = 25
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -509,12 +509,12 @@ object Termor: TTermor
           66.145833333333330000
           42.333333333333330000
           127.000000000000000000
-          1037.166666666667000000)
+          947.208333333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
-        Caption = 'Termo de Responsabilidade - Chegada'
+        Caption = 'Termo de Responsabilidade - Sa'#237'da'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -617,7 +617,7 @@ object Termor: TTermor
       object QRLabel4: TQRLabel
         Left = 16
         Top = 48
-        Width = 358
+        Width = 392
         Height = 25
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -628,12 +628,12 @@ object Termor: TTermor
           66.145833333333330000
           42.333333333333330000
           127.000000000000000000
-          947.208333333333300000)
+          1037.166666666667000000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
-        Caption = 'Termo de Responsabilidade - Saida'
+        Caption = 'Termo de Responsabilidade - Chegada'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -645,10 +645,10 @@ object Termor: TTermor
         WordWrap = True
         FontSize = 16
       end
-      object QRLabel5: TQRLabel
+      object QRLabel2: TQRLabel
         Left = 8
         Top = 16
-        Width = 380
+        Width = 367
         Height = 25
         Frame.Color = clBlack
         Frame.DrawTop = False
@@ -659,12 +659,12 @@ object Termor: TTermor
           66.145833333333330000
           21.166666666666670000
           42.333333333333330000
-          1005.416666666667000000)
+          971.020833333333300000)
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = True
         AutoStretch = False
-        Caption = 'Casa de Repouso Jardmin das Flores'
+        Caption = 'Casa de Repouso Jardim das Flores'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -912,7 +912,7 @@ object Termor: TTermor
     object Idoso: TGroupBox
       Left = 8
       Top = 144
-      Width = 383
+      Width = 389
       Height = 113
       Caption = 'Pesquisar Residente'
       Font.Charset = ANSI_CHARSET
@@ -978,7 +978,7 @@ object Termor: TTermor
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
-        Left = 232
+        Left = 240
         Top = 64
         Width = 145
         Height = 41
@@ -1088,8 +1088,8 @@ object Termor: TTermor
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Modulo.Conexao
-    Left = 312
-    Top = 472
+    Left = 752
+    Top = 8
   end
   object sdsAux: TSimpleDataSet
     Active = True
@@ -1133,7 +1133,7 @@ object Termor: TTermor
   end
   object dsAux: TDataSource
     DataSet = sdsAux
-    Left = 720
+    Left = 752
     Top = 8
   end
 end

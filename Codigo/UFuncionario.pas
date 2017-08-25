@@ -107,6 +107,13 @@ uses UModulo;
 
 procedure TFuncionario.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsFun.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -127,6 +134,8 @@ Modulo.cdsFun.Edit;
           DBEdit11.Enabled       := True;
           DBEdit12.Enabled       := True;
           btnGravar.Enabled      := True;
+          edtPesquisa.Enabled := false;
+          end;
 end;
 
 procedure TFuncionario.SelectChange(Sender: TObject);
@@ -140,8 +149,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -191,7 +200,8 @@ Modulo.cdsFun.Cancel;
           DBEdit11.Enabled      := false;
           DBEdit12.Enabled      := false;
           Estado.Enabled        := false;
-
+          edtPesquisa.Enabled := true;
+          edtPesquisa.SetFocus;
 
 
           btnInserir.Enabled    := True;
@@ -211,7 +221,9 @@ Modulo.cdsFun.Post;
 
          Modulo.cdsFun.ApplyUpdates(-1);
 
-         btnCancelar.Click;
+               btnCancelar.Click;
+Modulo.cdsfun.Refresh;
+
 end;
 
 procedure TFuncionario.btnInserirClick(Sender: TObject);
@@ -224,6 +236,7 @@ begin
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
+          edtPesquisa.Enabled := false;
 
 
           DBEdit2.Enabled       := True;

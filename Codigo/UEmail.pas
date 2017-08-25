@@ -61,8 +61,8 @@ type
     BitBtn6: TBitBtn;
     BitBtn5: TBitBtn;
     Tempo: TTimer;
-    BitBtn2: TBitBtn;
     Label18: TLabel;
+    BitBtn2: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);

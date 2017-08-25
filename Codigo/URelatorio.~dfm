@@ -459,50 +459,50 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
-      object ParceirosE1: TCheckBox
+      object todosmeial: TRadioButton
         Left = 8
-        Top = 56
-        Width = 97
+        Top = 24
+        Width = 153
         Height = 17
-        Caption = 'Parceiros'
+        Caption = 'Todos enails Cadastrado'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 1
-        OnClick = ParceirosE1Click
+        TabOrder = 0
+        OnClick = todosmeial1Click
       end
-      object VoluntariosE1: TCheckBox
+      object VoluntariosE: TRadioButton
         Left = 8
         Top = 40
-        Width = 97
+        Width = 113
         Height = 17
         Caption = 'Volunt'#225'rios'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
-        TabOrder = 0
+        TabOrder = 1
         OnClick = VoluntariosE1Click
       end
-      object todosmeial1: TCheckBox
+      object ParceirosE: TRadioButton
         Left = 8
-        Top = 24
-        Width = 169
+        Top = 56
+        Width = 113
         Height = 17
-        Caption = 'Todos emails Cadastrados'
+        Caption = 'Parceiros'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        OnClick = todosmeial1Click
+        OnClick = ParceirosE1Click
       end
     end
     object Telefone: TGroupBox
@@ -518,65 +518,65 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
-      object ProfissionaisT: TCheckBox
-        Left = 8
-        Top = 24
-        Width = 97
-        Height = 17
-        Caption = 'Profissionais'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        TabOrder = 0
-        OnClick = ProfissionaisTClick
-      end
-      object ParceirosT: TCheckBox
+      object ParceirosT: TRadioButton
         Left = 8
         Top = 40
-        Width = 97
+        Width = 113
         Height = 17
         Caption = 'Parceiros'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+        OnClick = ParceirosTsClick
+      end
+      object ProfissionaisT: TRadioButton
+        Left = 8
+        Top = 24
+        Width = 113
+        Height = 17
+        Caption = 'Profissionais'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        OnClick = ParceirosTClick
+        OnClick = ProfissionaisTtClick
       end
-      object ResponsaveisT: TCheckBox
+      object ResponsaveisT: TRadioButton
         Left = 8
         Top = 56
-        Width = 97
+        Width = 113
         Height = 17
         Caption = 'Responsaveis'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        OnClick = ResponsaveisTClick
+        OnClick = ResponsaveisTsClick
       end
-      object FuncionariosT: TCheckBox
+      object FuncionariosT: TRadioButton
         Left = 8
         Top = 72
-        Width = 97
+        Width = 113
         Height = 17
         Caption = 'Funcionarios'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 3
-        OnClick = FuncionariosTClick
+        OnClick = FuncionariosTsClick
       end
     end
     object Residente: TGroupBox
@@ -592,35 +592,35 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
-      object TodosR: TCheckBox
+      object TodosR: TRadioButton
         Left = 8
         Top = 24
-        Width = 149
+        Width = 129
         Height = 17
         Caption = 'Todos Residentes'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        OnClick = TodosRClick
+        OnClick = TodosRsClick
       end
-      object Aniversariantes: TCheckBox
+      object Aniversariantes: TRadioButton
         Left = 8
         Top = 40
         Width = 161
         Height = 17
-        Caption = 'Aniversariantes do Mes'
+        Caption = 'Aniversariantes do M'#234's'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        OnClick = AniversariantesClick
+        OnClick = AniversarianteClick
       end
     end
     object Responsavel: TGroupBox
@@ -636,16 +636,16 @@ object Relatorio: TRelatorio
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
-      object Todosress: TCheckBox
+      object Todosres: TRadioButton
         Left = 8
         Top = 24
-        Width = 149
+        Width = 113
         Height = 17
-        Caption = 'Todos Responsaveis'
+        Caption = 'Todos Respons'#225'veis'
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'Arial'
+        Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
@@ -827,90 +827,6 @@ object Relatorio: TRelatorio
       TabOrder = 14
       Visible = False
       OnClick = CancelClick
-    end
-    object todosmeial: TRadioButton
-      Left = 8
-      Top = 248
-      Width = 113
-      Height = 17
-      Caption = 'todosmeial'
-      TabOrder = 15
-      OnClick = todosmeial1Click
-    end
-    object Todosres: TRadioButton
-      Left = 8
-      Top = 320
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton1'
-      TabOrder = 16
-      OnClick = TodosressClick
-    end
-    object ParceirosE: TRadioButton
-      Left = 8
-      Top = 296
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton1'
-      TabOrder = 17
-      OnClick = ParceirosClick
-    end
-    object VoluntariosE: TRadioButton
-      Left = 8
-      Top = 272
-      Width = 113
-      Height = 17
-      Caption = 'VoluntariosE'
-      TabOrder = 18
-      OnClick = VoluntariosE1Click
-    end
-    object RadioButton4: TRadioButton
-      Left = 144
-      Top = 248
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton4'
-      TabOrder = 19
-    end
-    object RadioButton5: TRadioButton
-      Left = 144
-      Top = 272
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton5'
-      TabOrder = 20
-    end
-    object RadioButton6: TRadioButton
-      Left = 144
-      Top = 296
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton6'
-      TabOrder = 21
-    end
-    object RadioButton7: TRadioButton
-      Left = 144
-      Top = 320
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton7'
-      TabOrder = 22
-    end
-    object RadioButton8: TRadioButton
-      Left = 272
-      Top = 248
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton8'
-      TabOrder = 23
-    end
-    object RadioButton9: TRadioButton
-      Left = 272
-      Top = 272
-      Width = 113
-      Height = 17
-      Caption = 'RadioButton9'
-      TabOrder = 24
     end
   end
   object sdsTodos: TSimpleDataSet

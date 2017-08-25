@@ -81,9 +81,9 @@ begin
 IF (DBEdit1.Text = '')
 then
 begin
-   MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+    MessageDlg ('Não a registros no banco',
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -115,6 +115,7 @@ begin
 
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
+          edtPesquisa.Enabled := false;
 
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
@@ -153,10 +154,19 @@ end;
 
 procedure TProfissionais.btnEditarClick(Sender: TObject);
 begin
+
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
+
 Modulo.cdsProfisional.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -167,6 +177,7 @@ Modulo.cdsProfisional.Edit;
           DBEdit5.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
 end;
 
 procedure TProfissionais.btnCancelarClick(Sender: TObject);
@@ -184,7 +195,8 @@ Modulo.cdsProfisional.Cancel;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
-
+          edtPesquisa.Enabled := true;
+          edtPesquisa.SetFocus;
           // Ligar o Gravar
           btnGravar.Enabled      := False;
 end;
@@ -196,6 +208,9 @@ Modulo.cdsProfisional.Post;
          Modulo.cdsProfisional.ApplyUpdates(-1);
 
          btnCancelar.Click;
+
+
+Modulo.cdsProfisional.Refresh;
 end;
 
 procedure TProfissionais.EsquerdaClick(Sender: TObject);

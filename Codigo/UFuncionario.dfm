@@ -1,6 +1,6 @@
 object Funcionario: TFuncionario
-  Left = 326
-  Top = 241
+  Left = 346
+  Top = 243
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Funcion'#225'rio'
@@ -1475,12 +1475,12 @@ object Funcionario: TFuncionario
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Modulo.Conexao
-    Left = 528
-    Top = 464
+    Left = 744
+    Top = 216
   end
   object dsAux: TDataSource
     DataSet = sdsAux
-    Left = 712
+    Left = 744
     Top = 216
   end
   object sdsAux: TSimpleDataSet

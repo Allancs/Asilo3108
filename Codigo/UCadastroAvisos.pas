@@ -34,7 +34,7 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +52,15 @@ uses UModulo;
 
 procedure TCadastroAvisos.btnEditarClick(Sender: TObject);
 begin
+
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
+
 Modulo.cdsAviso.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -64,6 +73,7 @@ Modulo.cdsAviso.Edit;
           DBMemo1.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
 end;
 
 procedure TCadastroAvisos.btnInserirClick(Sender: TObject);
@@ -102,7 +112,7 @@ begin
            Modulo.cdsAvisoCOD_AVISO.Value := NReg;
 
 
-           DBEdit3.SetFocus;
+           DBMemo1.SetFocus;
 end;
 
 procedure TCadastroAvisos.btnDeletarClick(Sender: TObject);
@@ -110,9 +120,9 @@ begin
 IF (DBEdit1.Text = '')
 then
 begin
-   MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+    MessageDlg ('Não a registros no banco',
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -176,15 +186,9 @@ begin
 Modulo.cdsAviso.Prior;
 end;
 
-procedure TCadastroAvisos.FormCreate(Sender: TObject);
+procedure TCadastroAvisos.FormShow(Sender: TObject);
 begin
-if DBEdit1.Text = ''
-Then Begin
-      btnEditar.Enabled := False;
-      End
-      Else Begin
-      btnEditar.Enabled := True;;
-      End;
+btnInserir.Click;
 end;
 
 end.

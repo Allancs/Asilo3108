@@ -72,7 +72,6 @@ type
     sdsAuxCELULAR: TStringField;
     sdsAuxTELEFONE: TStringField;
     Label15: TLabel;
-    Label13: TLabel;
     Label18: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure SelectChange(Sender: TObject);
@@ -108,6 +107,13 @@ uses UModulo;
 
 procedure TFuncionario.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsFun.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -128,6 +134,7 @@ Modulo.cdsFun.Edit;
           DBEdit11.Enabled       := True;
           DBEdit12.Enabled       := True;
           btnGravar.Enabled      := True;
+          end;
 end;
 
 procedure TFuncionario.SelectChange(Sender: TObject);
@@ -141,8 +148,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -212,7 +219,9 @@ Modulo.cdsFun.Post;
 
          Modulo.cdsFun.ApplyUpdates(-1);
 
-         btnCancelar.Click;
+               btnCancelar.Click;
+Modulo.cdsfun.Refresh;
+
 end;
 
 procedure TFuncionario.btnInserirClick(Sender: TObject);

@@ -102,6 +102,14 @@ end;
 
 procedure TIncidentes.btnEditarClick(Sender: TObject);
 begin
+
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsInc.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -117,6 +125,10 @@ Modulo.cdsInc.Edit;
           Idoso.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
+
+
+
 end;
 
 procedure TIncidentes.btnDeletarClick(Sender: TObject);
@@ -125,8 +137,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else

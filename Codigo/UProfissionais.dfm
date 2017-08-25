@@ -780,6 +780,7 @@ object Profissionais: TProfissionais
       Width = 90
       Height = 33
       Caption = '&Salvar'
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1166,7 +1167,7 @@ object Profissionais: TProfissionais
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 4
     end
     object DBEdit2: TDBEdit
       Left = 8
@@ -1182,7 +1183,7 @@ object Profissionais: TProfissionais
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 0
     end
     object DBEdit3: TDBEdit
       Left = 8

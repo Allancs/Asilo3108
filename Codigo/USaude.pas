@@ -162,6 +162,14 @@ end;
 
 procedure TSaudes.btnEditarClick(Sender: TObject);
 begin
+
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsSaude.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -178,6 +186,10 @@ Modulo.cdsSaude.Edit;
           btnGravar.Enabled      := True;
           DBEdit8.Enabled       := True;
           btnGravar.Enabled      := True;
+          end;
+
+
+
 end;
 
 procedure TSaudes.btnDeletarClick(Sender: TObject);
@@ -187,8 +199,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else

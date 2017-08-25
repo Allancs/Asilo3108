@@ -812,12 +812,13 @@ object CadastroContas: TCadastroContas
     end
     object DBEdit3: TDBEdit
       Left = 8
-      Top = 232
+      Top = 256
       Width = 95
       Height = 21
       DataField = 'USU_EMAIL'
       DataSource = Modulo.User
       TabOrder = 0
+      Visible = False
     end
     object DBEdit5: TDBEdit
       Left = 8
@@ -833,7 +834,7 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 6
     end
     object DBEdit4: TDBEdit
       Left = 8
@@ -849,7 +850,7 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 5
     end
     object DBEdit2: TDBEdit
       Left = 8
@@ -865,7 +866,7 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 1
     end
     object DBEdit1: TDBEdit
       Left = 8
@@ -881,10 +882,10 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 7
     end
     object Admin: TRadioButton
-      Left = 16
+      Left = 8
       Top = 112
       Width = 57
       Height = 17
@@ -895,10 +896,10 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 2
     end
     object Padrao: TRadioButton
-      Left = 72
+      Left = 64
       Top = 112
       Width = 57
       Height = 17
@@ -909,10 +910,10 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 3
     end
     object User: TRadioButton
-      Left = 136
+      Left = 120
       Top = 112
       Width = 65
       Height = 17
@@ -923,7 +924,7 @@ object CadastroContas: TCadastroContas
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 4
     end
   end
   object TPanel
@@ -971,6 +972,7 @@ object CadastroContas: TCadastroContas
     end
   end
   object sqlAux: TSQLQuery
+    DataSource = Modulo.User
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Modulo.Conexao

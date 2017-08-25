@@ -98,7 +98,14 @@ begin
 end;
 procedure TCadastroContas.btnEditarClick(Sender: TObject);
 begin
-Modulo.dsUser.Edit;
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
+Modulo.cdUser.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
 
@@ -112,6 +119,7 @@ Modulo.dsUser.Edit;
           DBEdit5.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
 
 end;
 

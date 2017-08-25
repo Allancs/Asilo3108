@@ -76,6 +76,13 @@ uses UModulo,
 
 procedure TParceiros.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsParceiro.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -94,6 +101,7 @@ Modulo.cdsParceiro.Edit;
           btnGravar.Enabled      := True;
 
           btnGravar.Enabled      := True;
+          end;
 
 end;
 
@@ -125,8 +133,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -160,6 +168,9 @@ Modulo.cdsParceiro.Post;
          Modulo.cdsParceiro.ApplyUpdates(-1);
 
          btnCancelar.Click;
+
+Modulo.cdsparceiro.Refresh;
+
 end;
 
 procedure TParceiros.btnInserirClick(Sender: TObject);

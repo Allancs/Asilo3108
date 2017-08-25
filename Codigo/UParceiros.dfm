@@ -476,7 +476,7 @@ object Parceiros: TParceiros
     object DBEdit5: TDBEdit
       Left = 8
       Top = 184
-      Width = 225
+      Width = 221
       Height = 22
       DataField = 'EMAIL'
       DataSource = Modulo.dsParceiro
@@ -1086,8 +1086,8 @@ object Parceiros: TParceiros
     end
   end
   object TPanel
-    Left = 432
-    Top = 16
+    Left = 416
+    Top = 13
     Width = 369
     Height = 201
     TabOrder = 2

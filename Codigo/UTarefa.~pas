@@ -36,6 +36,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -104,8 +105,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -132,6 +133,15 @@ end;
 
 procedure TTarefa.btnEditarClick(Sender: TObject);
 begin
+
+          If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
+
 Modulo.cdsTarefa.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -145,6 +155,7 @@ Modulo.cdsTarefa.Edit;
 
 
           btnGravar.Enabled      := True;
+          end;
 end;
 
 procedure TTarefa.EsquerdaClick(Sender: TObject);
@@ -155,6 +166,11 @@ end;
 procedure TTarefa.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsTarefa.Next;
+end;
+
+procedure TTarefa.FormShow(Sender: TObject);
+begin
+btnInserir.Click;
 end;
 
 end.

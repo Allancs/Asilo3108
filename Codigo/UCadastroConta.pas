@@ -98,6 +98,13 @@ begin
 end;
 procedure TCadastroContas.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdUser.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -112,6 +119,7 @@ Modulo.cdUser.Edit;
           DBEdit5.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
 
 end;
 
@@ -140,9 +148,9 @@ begin
 IF (DBEdit1.Text = '')
 then
 begin
-   MessageDlg ('Não a registros no banco !',
-                       mtWarning,
-                       [mbCancel],
+   MessageDlg ('Não a registros no banco',
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else

@@ -137,7 +137,7 @@ begin
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
           Idoso.Enabled := True;
-
+          pesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -165,10 +165,17 @@ end;
 
 procedure TResponsavel.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsLigacoes.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-
+          pesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -179,6 +186,7 @@ Modulo.cdsLigacoes.Edit;
           Idoso.Enabled       := True;
 
           btnGravar.Enabled      := True;
+          end;
 end;
 
 procedure TResponsavel.btnGravarClick(Sender: TObject);
@@ -197,13 +205,13 @@ Modulo.cdsLigacoes.Cancel;
           DBEdit5.Enabled       := False;
           DBEdit6.Enabled       := False;
           Idoso.Enabled       := False;
-
+          pesquisa.Enabled := true;
           btnInserir.Enabled    := True;
           btnDeletar.Enabled    := True;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
-
+          Pesquisa.SetFocus;
           // Ligar o Gravar
           btnGravar.Enabled      := False;
 end;
@@ -214,8 +222,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else

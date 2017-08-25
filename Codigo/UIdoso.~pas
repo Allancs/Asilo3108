@@ -88,12 +88,12 @@ uses UModulo,
 
 procedure TIdoso.DireitaClick(Sender: TObject);
 begin
-Modulo.cdsResidente.Prior;
+Modulo.cdsResidente.Next;
 end;
 
 procedure TIdoso.EsquerdaClick(Sender: TObject);
 begin
-Modulo.cdsResidente.Next;
+Modulo.cdsResidente.Prior;
 end;
 
 procedure TIdoso.btnGravarClick(Sender: TObject);
@@ -106,12 +106,12 @@ Modulo.cdsResidente.Post;
          If Responsavel.DBEdit3.Text = DBEdit2.Text
          then
          begin
-         Responsavel.Visible := true;
+
          end
          else
          begin
-          Responsavel.Visible := true;
-                  Responsavel.btnInserir.Click;
+         Responsavel.Visible := true;
+         Responsavel.btnInserir.Click;
          Responsavel.DBEdit2.Text := DBEdit1.text;
          Responsavel.DBEdit3.Text := DBEdit2.Text;
          Idoso.Close;
@@ -261,6 +261,13 @@ end;
 
 procedure TIdoso.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsResidente.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
@@ -288,6 +295,7 @@ Modulo.cdsResidente.Edit;
           DBEdit17.Enabled       := True;
           
           btnGravar.Enabled      := True;
+          end;
 
 end;
 

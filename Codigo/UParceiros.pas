@@ -76,10 +76,17 @@ uses UModulo,
 
 procedure TParceiros.btnEditarClick(Sender: TObject);
 begin
+If DBEdit1.Text = ''
+then
+begin
+MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
+end
+else
+begin
 Modulo.cdsParceiro.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -94,6 +101,7 @@ Modulo.cdsParceiro.Edit;
           btnGravar.Enabled      := True;
 
           btnGravar.Enabled      := True;
+          end;
 
 end;
 
@@ -106,14 +114,14 @@ Modulo.cdsParceiro.Cancel;
           DBEdit4.Enabled       := false;
           DBEdit5.Enabled       := false;
           DBEdit6.Enabled       := false;
-
+          edtPesquisa.Enabled := true;
           btnGravar.Enabled      := False;
           btnInserir.Enabled    := True;
           btnDeletar.Enabled    := True;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
-
+          edtPesquisa.SetFocus;
           // Ligar o Gravar
           btnGravar.Enabled      := False;
 end;
@@ -125,8 +133,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -160,6 +168,9 @@ Modulo.cdsParceiro.Post;
          Modulo.cdsParceiro.ApplyUpdates(-1);
 
          btnCancelar.Click;
+
+Modulo.cdsparceiro.Refresh;
+
 end;
 
 procedure TParceiros.btnInserirClick(Sender: TObject);
@@ -169,7 +180,7 @@ begin
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
           Idoso.Enabled := True;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;

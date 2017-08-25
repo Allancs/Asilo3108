@@ -1425,12 +1425,12 @@ object Responsavel: TResponsavel
   end
   object aux: TDataSource
     DataSet = sdsAuxx
-    Left = 752
-    Top = 40
+    Left = 712
+    Top = 72
   end
   object dspesquisa: TDataSource
     DataSet = sdspesquisa
-    Left = 752
+    Left = 720
     Top = 40
   end
   object sdspesquisa: TSimpleDataSet
@@ -1461,8 +1461,8 @@ object Responsavel: TResponsavel
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 752
-    Top = 40
+    Left = 728
+    Top = 88
     object sdspesquisaCOD_LIGACOES: TIntegerField
       FieldName = 'COD_LIGACOES'
       Required = True
