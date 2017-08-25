@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 294
-  Top = 184
+  Left = 233
+  Top = 187
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -1352,9 +1352,9 @@ object Principal: TPrincipal
       9EA86262726262729E9EA8F6F6F7FFFFFFFFFFFFFFFFFFFFFFFF}
   end
   object Aviso: TGroupBox
-    Left = 624
+    Left = 216
     Top = 144
-    Width = 353
+    Width = 761
     Height = 105
     Caption = '[ Avisos ]'
     Font.Charset = ANSI_CHARSET
@@ -1382,7 +1382,7 @@ object Principal: TPrincipal
     object DBText1: TDBText
       Left = 62
       Top = 48
-      Width = 265
+      Width = 683
       Height = 17
       DataField = 'OBS'
       DataSource = DataSource1
@@ -1420,7 +1420,7 @@ object Principal: TPrincipal
       ParentFont = False
     end
     object px: TButton
-      Left = 272
+      Left = 680
       Top = 72
       Width = 75
       Height = 25
@@ -1435,7 +1435,7 @@ object Principal: TPrincipal
       OnClick = pxClick
     end
     object an: TButton
-      Left = 192
+      Left = 600
       Top = 72
       Width = 75
       Height = 25
@@ -1447,6 +1447,7 @@ object Principal: TPrincipal
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
+      OnClick = anClick
     end
   end
   object Ser: TBitBtn
@@ -1583,9 +1584,9 @@ object Principal: TPrincipal
     end
   end
   object TarefaPop: TGroupBox
-    Left = 624
+    Left = 216
     Top = 256
-    Width = 353
+    Width = 761
     Height = 105
     Caption = '[ Tarefas ]'
     Font.Charset = ANSI_CHARSET
@@ -1613,7 +1614,7 @@ object Principal: TPrincipal
     object DBText4: TDBText
       Left = 68
       Top = 48
-      Width = 265
+      Width = 685
       Height = 17
       DataField = 'TAREFA'
       DataSource = DataSource2
@@ -1651,7 +1652,7 @@ object Principal: TPrincipal
       ParentFont = False
     end
     object TarefaP: TButton
-      Left = 272
+      Left = 680
       Top = 72
       Width = 75
       Height = 25
@@ -1666,7 +1667,7 @@ object Principal: TPrincipal
       OnClick = TarefaPClick
     end
     object TarefaA: TButton
-      Left = 192
+      Left = 600
       Top = 72
       Width = 75
       Height = 25

@@ -105,6 +105,7 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure suportClick(Sender: TObject);
     procedure BackupTimer(Sender: TObject);
+    procedure anClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -552,6 +553,11 @@ winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
 Label7.Caption := 'Backup Completo, 17h.'
 end;
 
+end;
+
+procedure TPrincipal.anClick(Sender: TObject);
+begin
+sdsAux.Prior;
 end;
 
 end.

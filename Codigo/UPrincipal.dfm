@@ -1447,6 +1447,7 @@ object Principal: TPrincipal
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
+      OnClick = anClick
     end
   end
   object Ser: TBitBtn

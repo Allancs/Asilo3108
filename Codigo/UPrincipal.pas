@@ -105,6 +105,7 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure suportClick(Sender: TObject);
     procedure BackupTimer(Sender: TObject);
+    procedure anClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -384,7 +385,7 @@ begin
 
           TxtConsulta :=
           'SELECT OBS, DATA FROM AVISOS WHERE DATA >= '
-           + QuotedStr(DtaAtual);
+           + QuotedStr(DtaAtual)+' order by data';
            //+ QuotedStr(DateToStr(DateTimePicker1.DateTime) com troca / por .);
 
           // Executa
@@ -392,8 +393,8 @@ begin
           sdsAux.DataSet.CommandText := TxtConsulta;
           sdsAux.Open;
           TxxtConsulta :=
-          'Select DATA, TAREFA From TAREFA WHERE DATA >='
-          + QuotedStr(DtaAtual);
+          'Select DATA, TAREFA From TAREFA WHERE DATA >= '
+          + QuotedStr(DtaAtual)+'Order by Data DESC';
           Aux.Close;
           Aux.DataSet.CommandText := TxxtConsulta;
           Aux.Open;
@@ -552,6 +553,11 @@ winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
 Label7.Caption := 'Backup Completo, 17h.'
 end;
 
+end;
+
+procedure TPrincipal.anClick(Sender: TObject);
+begin
+sdsAux.Prior;
 end;
 
 end.
