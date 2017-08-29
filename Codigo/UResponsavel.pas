@@ -121,6 +121,7 @@ end;
 
 procedure TResponsavel.FormCreate(Sender: TObject);
 begin
+Modulo.cdsLigacoes.Refresh;
 if DBEdit1.Text = ''
 Then Begin
       //btnEditar.Enabled := False;
@@ -165,6 +166,7 @@ end;
 
 procedure TResponsavel.btnEditarClick(Sender: TObject);
 begin
+
 If DBEdit1.Text = ''
 then
 begin
@@ -200,6 +202,7 @@ end;
 
 procedure TResponsavel.btnCancelarClick(Sender: TObject);
 begin
+
 Modulo.cdsLigacoes.Cancel;
           DBEdit4.Enabled       := False;
           DBEdit5.Enabled       := False;
@@ -218,6 +221,7 @@ end;
 
 procedure TResponsavel.btnDeletarClick(Sender: TObject);
 begin
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -264,7 +268,7 @@ procedure TResponsavel.pesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
       sdspesquisa.Close;
-
+    Modulo.cdsLigacoes.Refresh;
       TSQL := 'select * from LIGACOES ';
       nomes.Visible := false;
       cel.Visible := false;

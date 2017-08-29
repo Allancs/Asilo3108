@@ -1,7 +1,7 @@
 object Funcionario: TFuncionario
   Left = 346
   Top = 243
-  BorderIcons = [biSystemMenu, biMinimize]
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Funcion'#225'rio'
   ClientHeight = 500
@@ -15,6 +15,7 @@ object Funcionario: TFuncionario
   OldCreateOrder = False
   Position = poDesktopCenter
   OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -601,6 +602,7 @@ object Funcionario: TFuncionario
       Width = 90
       Height = 33
       Caption = '&Salvar'
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1112,7 +1114,6 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 15
       ParentFont = False
       TabOrder = 9
     end
@@ -1129,7 +1130,6 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 14
       ParentFont = False
       TabOrder = 11
     end
@@ -1146,7 +1146,6 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 13
       ParentFont = False
       TabOrder = 12
     end
@@ -1167,8 +1166,8 @@ object Funcionario: TFuncionario
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
-      Left = 16
-      Top = 328
+      Left = 8
+      Top = 296
       Width = 57
       Height = 22
       BevelWidth = 8
@@ -1196,7 +1195,6 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 10
       ParentFont = False
       TabOrder = 3
       OnExit = DBEdit4Exit
@@ -1263,7 +1261,6 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 14
       ParentFont = False
       TabOrder = 7
     end
@@ -1280,7 +1277,6 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
-      MaxLength = 9
       ParentFont = False
       TabOrder = 8
     end

@@ -87,16 +87,6 @@ type
     cdsDespesasDESCRICAO: TStringField;
     cdsDespesasVALOR: TStringField;
     cdsDespesasDATA: TDateField;
-    cdsFunCOD_FUN: TIntegerField;
-    cdsFunNOME: TStringField;
-    cdsFunDATANASCIMENTO: TStringField;
-    cdsFunIDADE: TStringField;
-    cdsFunFUNCAO: TStringField;
-    cdsFunSALARIO: TFMTBCDField;
-    cdsFunCPF: TStringField;
-    cdsFunRG: TStringField;
-    cdsFunCELULAR: TStringField;
-    cdsFunTELEFONE: TStringField;
     cdsIncCOD_INCIDENTE: TIntegerField;
     cdsIncCOD_IDOSO: TIntegerField;
     cdsIncNOME: TStringField;
@@ -148,8 +138,6 @@ type
     sdsUserUSU_EMAIL: TStringField;
     sdsUserUSU_LOGIN: TStringField;
     sdsUserUSU_SENHA: TStringField;
-    cdsFunCARTEIRATRABALHO: TStringField;
-    cdsFunSEXO: TStringField;
     cdsVoluntarioCOD_VOLUNTARIO: TIntegerField;
     cdsVoluntarioNOME: TStringField;
     cdsVoluntarioTELEFONE: TStringField;
@@ -193,6 +181,18 @@ type
     cdsLigacoesNOMER: TStringField;
     cdsLigacoesTELEFONE: TStringField;
     cdsLigacoesCELULAR: TStringField;
+    cdsFunCOD_FUN: TIntegerField;
+    cdsFunNOME: TStringField;
+    cdsFunSEXO: TStringField;
+    cdsFunDATANASCIMENTO: TStringField;
+    cdsFunIDADE: TStringField;
+    cdsFunFUNCAO: TStringField;
+    cdsFunSALARIO: TFMTBCDField;
+    cdsFunCPF: TStringField;
+    cdsFunRG: TStringField;
+    cdsFunCARTEIRATRABALHO: TStringField;
+    cdsFunCELULAR: TStringField;
+    cdsFunTELEFONE: TStringField;
   private
     { Private declarations }
   public

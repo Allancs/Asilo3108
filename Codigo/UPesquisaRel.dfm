@@ -15,7 +15,7 @@ object PesquisaRel: TPesquisaRel
   PixelsPerInch = 96
   TextHeight = 13
   object Volu: TQuickRep
-    Left = 10000
+    Left = 1
     Top = 80
     Width = 794
     Height = 1123
@@ -361,8 +361,8 @@ object PesquisaRel: TPesquisaRel
       end
     end
     object Vol: TQuickRep
-      Left = 73
-      Top = 192
+      Left = 41
+      Top = 176
       Width = 794
       Height = 1123
       Frame.Color = clBlack
@@ -496,7 +496,7 @@ object PesquisaRel: TPesquisaRel
           AutoSize = True
           AutoStretch = False
           Color = clWhite
-          DataSet = Relatorio.sdsTodos
+          DataSet = Relatorio.sdsVolu
           DataField = 'EMAIL'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -528,7 +528,7 @@ object PesquisaRel: TPesquisaRel
           AutoSize = True
           AutoStretch = False
           Color = clWhite
-          DataSet = Relatorio.sdsTodos
+          DataSet = Relatorio.sdsVolu
           DataField = 'NOME'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -4585,7 +4585,7 @@ object PesquisaRel: TPesquisaRel
     end
   end
   object Residentetodos: TQuickRep
-    Left = 32767
+    Left = 32511
     Top = 32
     Width = 794
     Height = 1123
@@ -5248,8 +5248,8 @@ object PesquisaRel: TPesquisaRel
     end
   end
   object Data: TQuickRep
-    Left = 1
-    Top = 120
+    Left = 593
+    Top = 104
     Width = 794
     Height = 1123
     Frame.Color = clBlack

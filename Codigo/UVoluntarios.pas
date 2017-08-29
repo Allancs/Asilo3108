@@ -78,6 +78,7 @@ uses UModulo;
 
 procedure TVoluntarios.btnEditarClick(Sender: TObject);
 begin
+
 If DBEdit1.Text = ''
 then
 begin
@@ -147,6 +148,7 @@ end;
 
 procedure TVoluntarios.btnDeletarClick(Sender: TObject);
 begin
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -180,6 +182,7 @@ end;
 
 procedure TVoluntarios.btnCancelarClick(Sender: TObject);
 begin
+
 Modulo.cdsVoluntario.Cancel;
           DBEdit2.Enabled       := False;
           DBEdit3.Enabled       := False;
@@ -199,13 +202,13 @@ end;
 
 procedure TVoluntarios.btnGravarClick(Sender: TObject);
 begin
+
 Modulo.cdsVoluntario.Post;
 
          Modulo.cdsVoluntario.ApplyUpdates(-1);
 
          btnCancelar.Click;
 
-Modulo.cdsvoluntario.Refresh;
 end;
 
 procedure TVoluntarios.btnAtualizarClick(Sender: TObject);
@@ -215,11 +218,13 @@ end;
 
 procedure TVoluntarios.DireitaClick(Sender: TObject);
 begin
+Modulo.cdsVoluntario.Refresh;
 Modulo.cdsVoluntario.Prior;
 end;
 
 procedure TVoluntarios.EsquerdaClick(Sender: TObject);
 begin
+Modulo.cdsVoluntario.Refresh;
 Modulo.cdsVoluntario.Next;
 end;
 
@@ -235,6 +240,7 @@ end;
 
 procedure TVoluntarios.FormCreate(Sender: TObject);
 begin
+Modulo.cdsVoluntario.Refresh;
 if DBEdit1.Text = ''
 Then Begin
       btnEditar.Enabled := False;
@@ -248,7 +254,7 @@ procedure TVoluntarios.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
       sdsAux.Close;
-
+Modulo.cdsVoluntario.Refresh;
       TSQL := 'select * from Voluntario ';
       Name.Visible := false;
       cel.Visible := false;

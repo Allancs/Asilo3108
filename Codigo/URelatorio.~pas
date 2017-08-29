@@ -95,7 +95,6 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label18: TLabel;
-    Relatorio: TTimer;
     Edit1: TEdit;
     AniversarioCOD_IDOSO: TIntegerField;
     AniversarioNOME: TStringField;

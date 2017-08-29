@@ -483,14 +483,14 @@ object Principal: TPrincipal
       0000000000000000000000000000000000000000003FFFD9}
   end
   object UNome: TLabel
-    Left = 8
-    Top = 8
-    Width = 45
-    Height = 19
+    Left = 6
+    Top = 46
+    Width = 33
+    Height = 15
     Caption = 'Nome'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -12
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -525,13 +525,13 @@ object Principal: TPrincipal
   end
   object Data: TLabel
     Left = 8
-    Top = 32
-    Width = 23
-    Height = 14
+    Top = 8
+    Width = 29
+    Height = 16
     Caption = 'Data'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -539,13 +539,13 @@ object Principal: TPrincipal
   end
   object Hora: TLabel
     Left = 8
-    Top = 44
-    Width = 23
-    Height = 14
+    Top = 20
+    Width = 29
+    Height = 16
     Caption = 'Data'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -1379,20 +1379,6 @@ object Principal: TPrincipal
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object DBText1: TDBText
-      Left = 62
-      Top = 48
-      Width = 683
-      Height = 17
-      DataField = 'OBS'
-      DataSource = DataSource1
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Label1: TLabel
       Left = 8
       Top = 23
@@ -1448,6 +1434,16 @@ object Principal: TPrincipal
       ParentFont = False
       TabOrder = 1
       OnClick = anClick
+    end
+    object DBMemo1: TDBMemo
+      Left = 64
+      Top = 48
+      Width = 529
+      Height = 28
+      DataField = 'OBS'
+      DataSource = DataSource1
+      ScrollBars = ssVertical
+      TabOrder = 2
     end
   end
   object Ser: TBitBtn
@@ -1611,20 +1607,6 @@ object Principal: TPrincipal
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object DBText4: TDBText
-      Left = 68
-      Top = 48
-      Width = 685
-      Height = 17
-      DataField = 'TAREFA'
-      DataSource = DataSource2
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
     object Label3: TLabel
       Left = 8
       Top = 23
@@ -1680,6 +1662,16 @@ object Principal: TPrincipal
       ParentFont = False
       TabOrder = 1
       OnClick = TarefaAClick
+    end
+    object DBMemo2: TDBMemo
+      Left = 64
+      Top = 48
+      Width = 529
+      Height = 28
+      DataField = 'DATA'
+      DataSource = DataSource2
+      ScrollBars = ssVertical
+      TabOrder = 2
     end
   end
   object Relato: TBitBtn

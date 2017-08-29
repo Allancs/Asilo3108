@@ -14,7 +14,7 @@ object CadastroAvisos: TCadastroAvisos
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
-  OnCreate = FormCreate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -963,7 +963,6 @@ object CadastroAvisos: TCadastroAvisos
       ParentBiDiMode = False
       ParentFont = False
       TabOrder = 2
-      Visible = False
     end
     object DBEdit3: TDBEdit
       Left = 8

@@ -61,6 +61,7 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,6 +79,7 @@ uses UModulo;
 
 procedure TProfissionais.btnDeletarClick(Sender: TObject);
 begin
+Modulo.cdsProfisional.Refresh;
 IF (DBEdit1.Text = '')
 then
 begin
@@ -115,6 +117,7 @@ begin
 
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
+          edtPesquisa.Enabled := false;
 
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
@@ -153,7 +156,7 @@ end;
 
 procedure TProfissionais.btnEditarClick(Sender: TObject);
 begin
-
+Modulo.cdsProfisional.Refresh;
 If DBEdit1.Text = ''
 then
 begin
@@ -165,7 +168,7 @@ begin
 Modulo.cdsProfisional.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -182,7 +185,7 @@ end;
 procedure TProfissionais.btnCancelarClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Cancel;
-          
+Modulo.cdsProfisional.Refresh;          
           DBEdit2.Enabled       := false;
           DBEdit3.Enabled       := false;
           DBEdit4.Enabled       := false;
@@ -194,7 +197,8 @@ Modulo.cdsProfisional.Cancel;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
-
+          edtPesquisa.Enabled := true;
+          edtPesquisa.SetFocus;
           // Ligar o Gravar
           btnGravar.Enabled      := False;
 end;
@@ -202,10 +206,11 @@ end;
 procedure TProfissionais.btnGravarClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Post;
-
+Modulo.cdsProfisional.Refresh;
          Modulo.cdsProfisional.ApplyUpdates(-1);
 
          btnCancelar.Click;
+
 
 Modulo.cdsProfisional.Refresh;
 end;
@@ -213,16 +218,19 @@ end;
 procedure TProfissionais.EsquerdaClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Next;
+Modulo.cdsProfisional.Refresh;
 end;
 
 procedure TProfissionais.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Prior;
+Modulo.cdsProfisional.Refresh;
 end;
 
 procedure TProfissionais.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
+ Modulo.cdsProfisional.Refresh;
       sdsAux.Close;
 
       TSQL := 'select * from PROFISSIONAIS ';
@@ -256,6 +264,11 @@ var Texto, TSQL, Parametro : String;
       exit;
 
 
+end;
+
+procedure TProfissionais.FormCreate(Sender: TObject);
+begin
+  Modulo.cdsProfisional.Refresh;
 end;
 
 end.

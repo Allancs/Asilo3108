@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Buttons, ExtCtrls, DBCtrls, Menus,
   OleCtrls, SHDocVw,
   jpeg,IniFiles,
-  DB, DBClient, SimpleDS;
+  DB, DBClient, SimpleDS, IdBaseComponent, IdComponent, IdIPWatch ;
 
 type
   TPrincipal = class(TForm)
@@ -31,7 +31,6 @@ type
     Avali: TBitBtn;
     px: TButton;
     an: TButton;
-    DBText1: TDBText;
     Label1: TLabel;
     Label2: TLabel;
     sdsAux: TSimpleDataSet;
@@ -44,7 +43,6 @@ type
     DataSource2: TDataSource;
     TarefaPop: TGroupBox;
     DBText3: TDBText;
-    DBText4: TDBText;
     Label3: TLabel;
     Label4: TLabel;
     TarefaP: TButton;
@@ -64,6 +62,8 @@ type
     func: TBitBtn;
     Timer2: TTimer;
     T: TBitBtn;
+    DBMemo1: TDBMemo;
+    DBMemo2: TDBMemo;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);

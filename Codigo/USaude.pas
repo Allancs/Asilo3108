@@ -71,7 +71,7 @@ procedure TSaudes.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
       sdsAux.Close;
-
+      Modulo.cdsSaude.Refresh;
       TSQL := 'select COD_IDOSO ,NOME from RESIDENTE ';
       If edtPesquisa.Text = ''
       Then Begin

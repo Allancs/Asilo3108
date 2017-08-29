@@ -600,6 +600,7 @@ object Saudes: TSaudes
       Width = 90
       Height = 33
       Caption = '&Salvar'
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

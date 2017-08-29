@@ -725,6 +725,7 @@ object SMTPs: TSMTPs
       Width = 90
       Height = 33
       Caption = '&Salvar'
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1296,6 +1297,15 @@ object SMTPs: TSMTPs
         FDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     end
   end
+  object user: TMemo
+    Left = 424
+    Top = 32
+    Width = 185
+    Height = 89
+    Lines.Strings = (
+      'user')
+    TabOrder = 2
+  end
   object DataSource1: TDataSource
     DataSet = Modulo.cdsEmail
     Left = 880
@@ -1315,5 +1325,10 @@ object SMTPs: TSMTPs
     OnCanClose = BancoConfigCanClose
     Left = 709
     Top = 328
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 440
+    Top = 152
   end
 end

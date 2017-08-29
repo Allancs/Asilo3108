@@ -1,6 +1,6 @@
 object PesquisaRel: TPesquisaRel
-  Left = 333
-  Top = 167
+  Left = 248
+  Top = 168
   Width = 967
   Height = 772
   Caption = 'PesquisaRel'

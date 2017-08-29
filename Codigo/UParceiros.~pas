@@ -76,6 +76,7 @@ uses UModulo,
 
 procedure TParceiros.btnEditarClick(Sender: TObject);
 begin
+Modulo.cdsparceiro.Refresh;
 If DBEdit1.Text = ''
 then
 begin
@@ -86,7 +87,7 @@ begin
 Modulo.cdsParceiro.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -107,6 +108,7 @@ end;
 
 procedure TParceiros.btnCancelarClick(Sender: TObject);
 begin
+Modulo.cdsparceiro.Refresh;
 Modulo.cdsParceiro.Cancel;
           
           DBEdit2.Enabled       := false;
@@ -114,21 +116,21 @@ Modulo.cdsParceiro.Cancel;
           DBEdit4.Enabled       := false;
           DBEdit5.Enabled       := false;
           DBEdit6.Enabled       := false;
-
+          edtPesquisa.Enabled := true;
           btnGravar.Enabled      := False;
           btnInserir.Enabled    := True;
           btnDeletar.Enabled    := True;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
-
+          edtPesquisa.SetFocus;
           // Ligar o Gravar
           btnGravar.Enabled      := False;
 end;
 
 procedure TParceiros.btnDeletarClick(Sender: TObject);
 begin
-
+Modulo.cdsparceiro.Refresh;
 IF (DBEdit1.Text = '')
 then
 begin
@@ -180,7 +182,7 @@ begin
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
           Idoso.Enabled := True;
-
+          edtPesquisa.Enabled := false;
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -208,11 +210,13 @@ end;
 
 procedure TParceiros.EsquerdaClick(Sender: TObject);
 begin
+Modulo.cdsparceiro.Refresh;
 Modulo.cdsParceiro.Next;
 end;
 
 procedure TParceiros.DireitaClick(Sender: TObject);
 begin
+Modulo.cdsparceiro.Refresh;
 Modulo.cdsParceiro.Prior;
 end;
 
@@ -220,7 +224,7 @@ procedure TParceiros.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
       sdsAux.Close;
-
+Modulo.cdsparceiro.Refresh;
       TSQL := 'select * from Parceiro ';
       Name.Visible := false;
       cel.Visible := false;

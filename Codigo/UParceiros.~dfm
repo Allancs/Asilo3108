@@ -541,7 +541,7 @@ object Parceiros: TParceiros
     object DBEdit4: TDBEdit
       Left = 88
       Top = 144
-      Width = 83
+      Width = 85
       Height = 22
       DataField = 'CELULAR'
       DataSource = Modulo.dsParceiro
@@ -802,6 +802,7 @@ object Parceiros: TParceiros
       Width = 90
       Height = 33
       Caption = '&Salvar'
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1203,7 +1204,7 @@ object Parceiros: TParceiros
     object fone: TDBEdit
       Left = 240
       Top = 125
-      Width = 80
+      Width = 83
       Height = 22
       DataField = 'TELEFONE'
       DataSource = dsAux

@@ -37,6 +37,7 @@ begin
 
   Application.Initialize;
 
+
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TModulo, Modulo);
   Application.CreateForm(TEmails, Emails);
@@ -59,13 +60,13 @@ begin
   Application.CreateForm(TPesquisaRel, PesquisaRel);
   Application.CreateForm(TSuporte, Suporte);
   soma := (Copy(Application.Exename, 1, 15));
-   ArquivoIni := TIniFile.Create(soma+'\Config.ini');
-   DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
-   Vendedor := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
-   Modulo.Conexao.ConnectionName := Nome;
-   Modulo.Conexao.Params.Values['Database'] :=DataBase;
-   Modulo.Conexao.VendorLib := Vendedor;
-   ArquivoINI.Free;
+  ArquivoIni := TIniFile.Create(soma+'\Config.ini');
+  DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
+  Vendedor := ArquivoIni.ReadString('Asilo','VENDEDORLIB','');
+  Modulo.Conexao.ConnectionName := Nome;
+  Modulo.Conexao.Params.Values['Database'] :=DataBase;
+  Modulo.Conexao.VendorLib := Vendedor;
+  ArquivoINI.Free;
   Application.Run;
 
 

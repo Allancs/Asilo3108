@@ -639,7 +639,7 @@ object Relatorio: TRelatorio
       object Todosres: TRadioButton
         Left = 8
         Top = 24
-        Width = 113
+        Width = 169
         Height = 17
         Caption = 'Todos Respons'#225'veis'
         Font.Charset = ANSI_CHARSET
@@ -1060,7 +1060,7 @@ object Relatorio: TRelatorio
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 680
+    Left = 744
     Top = 216
     object protNOME: TStringField
       FieldName = 'NOME'
@@ -1079,7 +1079,7 @@ object Relatorio: TRelatorio
   end
   object proot: TDataSource
     DataSet = prot
-    Left = 648
+    Left = 712
     Top = 216
   end
   object parceiro: TSimpleDataSet
@@ -1112,7 +1112,7 @@ object Relatorio: TRelatorio
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 680
+    Left = 744
     Top = 248
     object parceiroNOME: TStringField
       FieldName = 'NOME'
@@ -1133,7 +1133,7 @@ object Relatorio: TRelatorio
   end
   object parceiross: TDataSource
     DataSet = parceiro
-    Left = 648
+    Left = 712
     Top = 248
   end
   object Funcionario: TSimpleDataSet
@@ -1166,7 +1166,7 @@ object Relatorio: TRelatorio
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 680
+    Left = 744
     Top = 280
     object FuncionarioNOME: TStringField
       FieldName = 'NOME'
@@ -1183,7 +1183,7 @@ object Relatorio: TRelatorio
   end
   object funnc: TDataSource
     DataSet = Funcionario
-    Left = 648
+    Left = 712
     Top = 280
   end
   object responsa: TSimpleDataSet
@@ -1216,7 +1216,7 @@ object Relatorio: TRelatorio
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 680
+    Left = 744
     Top = 312
     object responsaNOMER: TStringField
       FieldName = 'NOMER'
@@ -1237,7 +1237,7 @@ object Relatorio: TRelatorio
   end
   object respp: TDataSource
     DataSet = responsa
-    Left = 648
+    Left = 712
     Top = 312
   end
   object Aniversario: TSimpleDataSet
@@ -1274,7 +1274,7 @@ object Relatorio: TRelatorio
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 448
+    Left = 744
     Top = 248
     object AniversarioCOD_IDOSO: TIntegerField
       FieldName = 'COD_IDOSO'
@@ -1345,12 +1345,12 @@ object Relatorio: TRelatorio
   end
   object Aniversarios: TDataSource
     DataSet = Aniversario
-    Left = 416
+    Left = 712
     Top = 248
   end
   object TodosResidentess: TDataSource
     DataSet = TodosResidentes
-    Left = 416
+    Left = 712
     Top = 216
   end
   object TodosResidentes: TSimpleDataSet
@@ -1383,7 +1383,7 @@ object Relatorio: TRelatorio
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 448
+    Left = 744
     Top = 216
     object TodosResidentesCOD_IDOSO: TIntegerField
       FieldName = 'COD_IDOSO'
@@ -1451,10 +1451,5 @@ object Relatorio: TRelatorio
     object TodosResidentesDATASAIDA: TDateField
       FieldName = 'DATASAIDA'
     end
-  end
-  object Relatorio: TTimer
-    Interval = 1
-    Left = 528
-    Top = 264
   end
 end

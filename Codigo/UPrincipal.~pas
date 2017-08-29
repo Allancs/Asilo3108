@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Buttons, ExtCtrls, DBCtrls, Menus,
   OleCtrls, SHDocVw,
   jpeg,IniFiles,
-  DB, DBClient, SimpleDS;
+  DB, DBClient, SimpleDS, IdBaseComponent, IdComponent, IdIPWatch ;
 
 type
   TPrincipal = class(TForm)
@@ -31,7 +31,6 @@ type
     Avali: TBitBtn;
     px: TButton;
     an: TButton;
-    DBText1: TDBText;
     Label1: TLabel;
     Label2: TLabel;
     sdsAux: TSimpleDataSet;
@@ -44,7 +43,6 @@ type
     DataSource2: TDataSource;
     TarefaPop: TGroupBox;
     DBText3: TDBText;
-    DBText4: TDBText;
     Label3: TLabel;
     Label4: TLabel;
     TarefaP: TButton;
@@ -64,6 +62,9 @@ type
     func: TBitBtn;
     Timer2: TTimer;
     T: TBitBtn;
+    DBMemo1: TDBMemo;
+    DBMemo2: TDBMemo;
+    Timer3: TTimer;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -106,6 +107,7 @@ type
     procedure suportClick(Sender: TObject);
     procedure BackupTimer(Sender: TObject);
     procedure anClick(Sender: TObject);
+    procedure Timer3Timer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -385,7 +387,7 @@ begin
 
           TxtConsulta :=
           'SELECT OBS, DATA FROM AVISOS WHERE DATA >= '
-           + QuotedStr(DtaAtual);
+           + QuotedStr(DtaAtual)+' order by data';
            //+ QuotedStr(DateToStr(DateTimePicker1.DateTime) com troca / por .);
 
           // Executa
@@ -393,8 +395,8 @@ begin
           sdsAux.DataSet.CommandText := TxtConsulta;
           sdsAux.Open;
           TxxtConsulta :=
-          'Select DATA, TAREFA From TAREFA WHERE DATA >='
-          + QuotedStr(DtaAtual);
+          'Select DATA, TAREFA From TAREFA WHERE DATA >= '
+          + QuotedStr(DtaAtual)+'Order by Data DESC';
           Aux.Close;
           Aux.DataSet.CommandText := TxxtConsulta;
           Aux.Open;
@@ -558,6 +560,17 @@ end;
 procedure TPrincipal.anClick(Sender: TObject);
 begin
 sdsAux.Prior;
+end;
+
+procedure TPrincipal.Timer3Timer(Sender: TObject);
+begin
+
+Modulo.cdsProfisional.Refresh;
+Modulo.cdsFun.Refresh;
+Modulo.cdsVoluntario.Refresh;
+Modulo.cdsParceiro.Refresh;
+Modulo.cdsLigacoes.Refresh;
+
 end;
 
 end.

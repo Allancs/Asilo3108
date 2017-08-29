@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ShellApi, StdCtrls, jpeg, ExtCtrls, Buttons, IniFiles;
+  Dialogs, ShellApi, StdCtrls, jpeg, ExtCtrls, Buttons, IniFiles, IdBaseComponent, IdComponent, IdIPWatch ;
 
 type
   TLogin = class(TForm)
@@ -25,6 +25,7 @@ type
     { Public declarations }
       ArquivoIni : TIniFile;
       UsuarioLog : string;
+      r : TIdIPWatch;
 
     DataBase , Vendedor : String;
 
@@ -93,7 +94,10 @@ begin
 
            Modulo.sqlDSLogin.RecNo; // Estaciona no Registro corrente
            UsuarioLog := Modulo.sqlDSLogin.Fields[1].AsString;;
-           Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
+            r := TIdIPWatch.Create(nil);
+            r.free;
+
+           Principal.UNome.Caption  := 'IP : '+r.LocalIP+', Usuário : ' + Modulo.sqlDSLogin.Fields[1].AsString;
            
            User := Modulo.sqlDSLogin.Fields[2].AsString;
            Principal.Caption := 'Casa de Repouso Jardim das Flores - Usuário : '+Modulo.sqlDSLogin.Fields[1].AsString;

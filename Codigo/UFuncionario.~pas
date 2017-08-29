@@ -88,6 +88,7 @@ type
     procedure DBEdit5Enter(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
    
   private
     { Private declarations }
@@ -107,6 +108,7 @@ uses UModulo;
 
 procedure TFuncionario.btnEditarClick(Sender: TObject);
 begin
+Modulo.cdsfun.Refresh;
 If DBEdit1.Text = ''
 then
 begin
@@ -134,6 +136,7 @@ Modulo.cdsFun.Edit;
           DBEdit11.Enabled       := True;
           DBEdit12.Enabled       := True;
           btnGravar.Enabled      := True;
+          edtPesquisa.Enabled := false;
           end;
 end;
 
@@ -144,6 +147,7 @@ end;
 
 procedure TFuncionario.btnDeletarClick(Sender: TObject);
 begin
+Modulo.cdsfun.Refresh;
 IF (DBEdit1.Text = '')
 then
 begin
@@ -174,8 +178,8 @@ begin
                        [mbyes,mbno],
                        0)
           = mryes Then Begin
-                         Modulo.cdsAviso.Delete;
-                         Modulo.cdsAviso.ApplyUpdates(-1);
+                         Modulo.cdsFun.Delete;
+                         Modulo.cdsFun.ApplyUpdates(-1);
                          ShowMessage ('Registro Excluido com sucesso!');
                        End
                   Else Begin
@@ -186,6 +190,7 @@ end;
 
 procedure TFuncionario.btnCancelarClick(Sender: TObject);
 begin
+Modulo.cdsfun.Refresh;
 Modulo.cdsFun.Cancel;
           DBEdit2.Enabled       := false;
           Select.Enabled        := false;
@@ -199,7 +204,8 @@ Modulo.cdsFun.Cancel;
           DBEdit11.Enabled      := false;
           DBEdit12.Enabled      := false;
           Estado.Enabled        := false;
-
+          edtPesquisa.Enabled := true;
+          edtPesquisa.SetFocus;
 
 
           btnInserir.Enabled    := True;
@@ -234,6 +240,7 @@ begin
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
+          edtPesquisa.Enabled := false;
 
 
           DBEdit2.Enabled       := True;
@@ -328,6 +335,7 @@ end;
 
 procedure TFuncionario.FormCreate(Sender: TObject);
 begin
+Modulo.cdsFun.Refresh;
 DBEdit3.Text := Select.Text;
 Estado.Text := (copy(DBEdit10.Text, 13,15));
 end;
@@ -336,6 +344,7 @@ procedure TFuncionario.edtPesquisaChange(Sender: TObject);
 
 var Texto, TSQL, Parametro : String;
  begin
+ Modulo.cdsfun.Refresh;
       sdsAux.Close;
 
       TSQL := 'select * from Funcionario ';
@@ -367,6 +376,11 @@ var Texto, TSQL, Parametro : String;
       //DBEdit2.Text := Cod.Text;
       //DBEdit3.Text := Name.Text;
       exit;
+end;
+
+procedure TFuncionario.FormShow(Sender: TObject);
+begin
+Modulo.cdsFun.Refresh;
 end;
 
 end.

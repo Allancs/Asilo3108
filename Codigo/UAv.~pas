@@ -94,7 +94,7 @@ begin
 
     IdSMTP.Host := 'smtp.gmail.com';
     IdSMTP.Username := 'asiloautomatico2.0@gmail.com';
-    IdSMTP.Password := 'senha123456789';
+    IdSMTP.Password := 'compreiumcarro123456789';
 
 
     // Tentativa de conexão e autenticação
@@ -115,7 +115,7 @@ begin
     IdMessage.From.Address := 'cssoftwaresuporte@hotmail.com';
     IdMessage.From.Name := Nome.Text;
     IdMessage.ReplyTo.EMailAddresses := IdMessage.From.Address;
-    IdMessage.Recipients.EMailAddresses := 'allancolombo@hotmail.com, allancolobo@gmail.com';
+    IdMessage.Recipients.EMailAddresses := 'cssoftwaresuporte@hotmail.com';
     IdMessage.Subject := 'Avaliação do Sistema';
     IdMessage.Body.Text := Menssagem;
 

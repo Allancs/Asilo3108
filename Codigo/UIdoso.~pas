@@ -162,9 +162,9 @@ begin
 IF (DBEdit1.Text = '')
 then
 begin
-   MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+     MessageDlg ('Não a registros no banco',
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else

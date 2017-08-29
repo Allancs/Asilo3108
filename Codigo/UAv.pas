@@ -94,7 +94,7 @@ begin
 
     IdSMTP.Host := 'smtp.gmail.com';
     IdSMTP.Username := 'asiloautomatico2.0@gmail.com';
-    IdSMTP.Password := 'senha123456789';
+    IdSMTP.Password := 'compreiumcarro123456789';
 
 
     // Tentativa de conexão e autenticação

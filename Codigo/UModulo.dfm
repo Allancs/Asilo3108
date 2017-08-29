@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 329
-  Top = 259
+  Left = 211
+  Top = 323
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -31,7 +31,6 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
-    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -65,7 +64,7 @@ object Modulo: TModulo
     object cdsAvisoOBS: TStringField
       DisplayLabel = 'Observa'#231#227'o'
       FieldName = 'OBS'
-      Size = 100
+      Size = 1000
     end
     object cdsAvisoDATA: TDateField
       DisplayLabel = 'Data'
@@ -111,67 +110,59 @@ object Modulo: TModulo
     Left = 192
     Top = 112
     object cdsFunCOD_FUN: TIntegerField
-      DisplayLabel = 'C'#243'digo'
       FieldName = 'COD_FUN'
       Required = True
     end
     object cdsFunNOME: TStringField
-      DisplayLabel = 'Nome'
       FieldName = 'NOME'
       Size = 45
     end
+    object cdsFunSEXO: TStringField
+      FieldName = 'SEXO'
+      Size = 8
+    end
     object cdsFunDATANASCIMENTO: TStringField
-      DisplayLabel = 'Data de Nascimento'
       FieldName = 'DATANASCIMENTO'
       EditMask = '!99/99/0000;1;_'
       Size = 10
     end
     object cdsFunIDADE: TStringField
-      DisplayLabel = 'Idade'
       FieldName = 'IDADE'
       Size = 3
     end
     object cdsFunFUNCAO: TStringField
-      DisplayLabel = 'Fun'#231#227'o'
       FieldName = 'FUNCAO'
       Size = 45
     end
     object cdsFunSALARIO: TFMTBCDField
-      DisplayLabel = 'Salario'
       FieldName = 'SALARIO'
       Precision = 15
       Size = 2
     end
     object cdsFunCPF: TStringField
       FieldName = 'CPF'
-      EditMask = '000\.000\-000-00;1;_'
+      EditMask = '000\.000\.000\-00;1;_'
       Size = 14
     end
     object cdsFunRG: TStringField
       FieldName = 'RG'
-      EditMask = '!9\.000.000;1;_'
+      EditMask = '0.000.000;1;_'
       Size = 9
     end
     object cdsFunCARTEIRATRABALHO: TStringField
       FieldName = 'CARTEIRATRABALHO'
-      EditMask = '0000000\ 0000\ aa;1;_'
+      EditMask = '0000000 0000 aa;1;_'
       Size = 17
     end
     object cdsFunCELULAR: TStringField
-      DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
-      EditMask = '!\(99\)\90000-0000;1;_'
+      EditMask = '(00)00000-0000;1;_'
       Size = 14
     end
     object cdsFunTELEFONE: TStringField
-      DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
-      EditMask = '!\(99\)0000-0000;1;_'
+      EditMask = '(00)0000-0000;1;_'
       Size = 13
-    end
-    object cdsFunSEXO: TStringField
-      FieldName = 'SEXO'
-      Size = 8
     end
   end
   object cdsInc: TClientDataSet
@@ -304,7 +295,6 @@ object Modulo: TModulo
     Top = 16
   end
   object sqsFun: TSQLDataSet
-    Active = True
     CommandText = 'select * from FUNCIONARIO'
     MaxBlobSize = -1
     Params = <>
@@ -371,6 +361,7 @@ object Modulo: TModulo
     Top = 160
   end
   object sdsLigacoes: TSQLDataSet
+    Active = True
     CommandText = 'select * from LIGACOES'
     MaxBlobSize = -1
     Params = <>
@@ -411,7 +402,6 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsProfisional: TSQLDataSet
-    Active = True
     CommandText = 'select * from PROFISSIONAIS'
     MaxBlobSize = -1
     Params = <>
@@ -595,7 +585,7 @@ object Modulo: TModulo
     object cdsResidenteOBS: TStringField
       DisplayLabel = 'Observa'#231#245'es'
       FieldName = 'OBS'
-      Size = 10
+      Size = 1000
     end
     object cdsResidenteDATAENTRADA: TDateField
       DisplayLabel = 'Data de Entrada'
@@ -634,7 +624,7 @@ object Modulo: TModulo
     object cdsTarefaTAREFA: TStringField
       DisplayLabel = 'Tarefa'
       FieldName = 'TAREFA'
-      Size = 100
+      Size = 1000
     end
     object cdsTarefaDATA: TDateField
       DisplayLabel = 'Data'

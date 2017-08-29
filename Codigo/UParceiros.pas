@@ -76,6 +76,7 @@ uses UModulo,
 
 procedure TParceiros.btnEditarClick(Sender: TObject);
 begin
+
 If DBEdit1.Text = ''
 then
 begin
@@ -107,6 +108,7 @@ end;
 
 procedure TParceiros.btnCancelarClick(Sender: TObject);
 begin
+
 Modulo.cdsParceiro.Cancel;
           
           DBEdit2.Enabled       := false;
@@ -169,7 +171,7 @@ Modulo.cdsParceiro.Post;
 
          btnCancelar.Click;
 
-Modulo.cdsparceiro.Refresh;
+
 
 end;
 
@@ -208,11 +210,13 @@ end;
 
 procedure TParceiros.EsquerdaClick(Sender: TObject);
 begin
+Modulo.cdsparceiro.Refresh;
 Modulo.cdsParceiro.Next;
 end;
 
 procedure TParceiros.DireitaClick(Sender: TObject);
 begin
+Modulo.cdsparceiro.Refresh;
 Modulo.cdsParceiro.Prior;
 end;
 
@@ -220,7 +224,7 @@ procedure TParceiros.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
       sdsAux.Close;
-
+Modulo.cdsparceiro.Refresh;
       TSQL := 'select * from Parceiro ';
       Name.Visible := false;
       cel.Visible := false;

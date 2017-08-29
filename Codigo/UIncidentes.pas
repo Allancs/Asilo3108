@@ -70,7 +70,7 @@ uses UModulo;
 procedure TIncidentes.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
-      sdsAux.Close;
+Modulo.cdsInc.Refresh;
 
       TSQL := 'select COD_IDOSO ,NOME from RESIDENTE ';
       If edtPesquisa.Text = ''
@@ -169,7 +169,7 @@ end;
 procedure TIncidentes.btnCancelarClick(Sender: TObject);
 begin
 Modulo.cdsInc.Cancel;
-        DBEdit3.Enabled       := False;
+          DBEdit3.Enabled       := False;
           DBEdit6.Enabled       := False;
           DBMemo1.Enabled       := False;
           DBMemo2.Enabled       := False;

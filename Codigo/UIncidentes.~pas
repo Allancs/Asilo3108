@@ -137,8 +137,8 @@ IF (DBEdit1.Text = '')
 then
 begin
    MessageDlg ('Não a registros no banco',
-                       mtWarning,
-                       [mbyes,mbno],
+                       mtInformation,
+                       [mbyes],
                        0)
 end
 else
@@ -169,7 +169,7 @@ end;
 procedure TIncidentes.btnCancelarClick(Sender: TObject);
 begin
 Modulo.cdsInc.Cancel;
-        DBEdit3.Enabled       := False;
+          DBEdit3.Enabled       := False;
           DBEdit6.Enabled       := False;
           DBMemo1.Enabled       := False;
           DBMemo2.Enabled       := False;

@@ -51,10 +51,12 @@ type
     procedure BancoConfigCanClose(Sender: TObject; var CanClose: Boolean);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
     { Public declarations }
+    auto : string;
     ArquivoIni : TIniFile;
   end;
 
@@ -65,7 +67,8 @@ implementation
 
 uses UModulo,
   UCadastroConta,
-  UPrincipal;
+  UPrincipal,
+  ULogin;
 
 {$R *.dfm}
 

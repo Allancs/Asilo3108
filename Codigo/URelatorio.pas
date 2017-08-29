@@ -176,7 +176,7 @@ end;
 procedure TRelatorio.RlParceirosClick(Sender: TObject);
 begin
 sdsPar.Close;
-sdsPar.DataSet.CommandText := 'select EMAIL , Nome FROM VOLUNTARIO';
+sdsPar.DataSet.CommandText := 'select EMAIL , Nome FROM Parceiro';
 sdsPar.Open;
 
 Pesquisarel.Email.Caption := 'Todos email cadastrados de Parceiros';
@@ -187,7 +187,7 @@ procedure TRelatorio.RlVolunClick(Sender: TObject);
 begin
 
 sdsVolu.Close;
-sdsVolu.DataSet.CommandText := 'select EMAIL , Nome FROM PARCEIRO';
+sdsVolu.DataSet.CommandText := 'select EMAIL , Nome FROM Voluntario';
 sdsVolu.Open;
 Pesquisarel.Email.Caption := 'Todos email cadastrados de Voluntários';
 PesquisaRel.Vol.Preview;

@@ -88,6 +88,7 @@ type
     procedure DBEdit5Enter(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
    
   private
     { Private declarations }
@@ -107,7 +108,7 @@ uses UModulo;
 
 procedure TFuncionario.btnEditarClick(Sender: TObject);
 begin
-If DBEdit1.Text = ''
+Modulo.cdsfun.Refresh;If DBEdit1.Text = ''
 then
 begin
 MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
@@ -145,6 +146,7 @@ end;
 
 procedure TFuncionario.btnDeletarClick(Sender: TObject);
 begin
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -175,8 +177,8 @@ begin
                        [mbyes,mbno],
                        0)
           = mryes Then Begin
-                         Modulo.cdsAviso.Delete;
-                         Modulo.cdsAviso.ApplyUpdates(-1);
+                         Modulo.cdsFun.Delete;
+                         Modulo.cdsFun.ApplyUpdates(-1);
                          ShowMessage ('Registro Excluido com sucesso!');
                        End
                   Else Begin
@@ -187,6 +189,7 @@ end;
 
 procedure TFuncionario.btnCancelarClick(Sender: TObject);
 begin
+
 Modulo.cdsFun.Cancel;
           DBEdit2.Enabled       := false;
           Select.Enabled        := false;
@@ -331,6 +334,7 @@ end;
 
 procedure TFuncionario.FormCreate(Sender: TObject);
 begin
+Modulo.cdsFun.Refresh;
 DBEdit3.Text := Select.Text;
 Estado.Text := (copy(DBEdit10.Text, 13,15));
 end;
@@ -339,6 +343,7 @@ procedure TFuncionario.edtPesquisaChange(Sender: TObject);
 
 var Texto, TSQL, Parametro : String;
  begin
+ Modulo.cdsfun.Refresh;
       sdsAux.Close;
 
       TSQL := 'select * from Funcionario ';
@@ -370,6 +375,11 @@ var Texto, TSQL, Parametro : String;
       //DBEdit2.Text := Cod.Text;
       //DBEdit3.Text := Name.Text;
       exit;
+end;
+
+procedure TFuncionario.FormShow(Sender: TObject);
+begin
+Modulo.cdsFun.Refresh;
 end;
 
 end.

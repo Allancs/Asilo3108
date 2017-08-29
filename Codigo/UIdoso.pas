@@ -123,7 +123,7 @@ end;
 
 procedure TIdoso.btnCancelarClick(Sender: TObject);
 begin
-Modulo.cdsEmail.Cancel;
+Modulo.cdsResidente.Cancel;
           DBEdit2.Enabled        := False;
           DBEdit3.Enabled        := False;
           DBEdit4.Enabled        := False;

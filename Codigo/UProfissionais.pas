@@ -61,6 +61,7 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,6 +79,7 @@ uses UModulo;
 
 procedure TProfissionais.btnDeletarClick(Sender: TObject);
 begin
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -183,7 +185,7 @@ end;
 procedure TProfissionais.btnCancelarClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Cancel;
-          
+         
           DBEdit2.Enabled       := false;
           DBEdit3.Enabled       := false;
           DBEdit4.Enabled       := false;
@@ -216,16 +218,19 @@ end;
 procedure TProfissionais.EsquerdaClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Next;
+Modulo.cdsProfisional.Refresh;
 end;
 
 procedure TProfissionais.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Prior;
+Modulo.cdsProfisional.Refresh;
 end;
 
 procedure TProfissionais.edtPesquisaChange(Sender: TObject);
 var Texto, TSQL, Parametro : String;
  begin
+ Modulo.cdsProfisional.Refresh;
       sdsAux.Close;
 
       TSQL := 'select * from PROFISSIONAIS ';
@@ -259,6 +264,11 @@ var Texto, TSQL, Parametro : String;
       exit;
 
 
+end;
+
+procedure TProfissionais.FormCreate(Sender: TObject);
+begin
+  Modulo.cdsProfisional.Refresh;
 end;
 
 end.
