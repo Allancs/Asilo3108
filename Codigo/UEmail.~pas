@@ -12,7 +12,6 @@ uses
 
 type
   TEmails = class(TForm)
-    DataSource1: TDataSource;
     IdSMTP1: TIdSMTP;
     IdSSLIOHandlerSocket1: TIdSSLIOHandlerSocket;
     IdMessage1: TIdMessage;
@@ -60,9 +59,13 @@ type
     BitBtn1: TBitBtn;
     BitBtn6: TBitBtn;
     BitBtn5: TBitBtn;
-    Tempo: TTimer;
-    BitBtn2: TBitBtn;
     Label18: TLabel;
+    BitBtn2: TBitBtn;
+    anexo: TButton;
+    EmailAnexo: TOpenDialog;
+    Label4: TLabel;
+    sdsAuxEMAIL: TStringField;
+    DataSource1: TDataSource;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);
@@ -80,6 +83,7 @@ type
     procedure BitBtn5Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure anexoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -196,9 +200,20 @@ var
   IdSSLIOHandlerSocket: TIdSSLIOHandlerSocket;
   IdSMTP: TIdSMTP;
   IdMessage: TIdMessage;
-  //CaminhoAnexo: string;
-//  i : Integer;
+  CaminhoAnexo: string;
+
 begin
+
+ If
+           MessageDlg ('Você tem certeza que deseja Enviar o Email ?',
+                       mtInformation,
+                       [mbyes,mbno],
+                       0)
+          = mrno Then Begin
+                  End
+                  Else Begin
+
+
 
   // instanciação dos objetos
   IdSSLIOHandlerSocket := TIdSSLIOHandlerSocket.Create(Self);
@@ -240,23 +255,26 @@ begin
     IdMessage.Recipients.EMailAddresses := Para.Text;
     IdMessage.Subject := Assunto.Text;
     IdMessage.Body.Text := Menssagem.Text;
+    IdMessage.Encoding := meMIME;
 
     //Anexo da mensagem (opcional)
-{    CaminhoAnexo := OpenDialog1.Files[i];
-    if FileExists(CaminhoAnexo) then
-      TIdAttachment.Create(IdMessage.MessageParts, CaminhoAnexo);
-    if ListBoxAnexos.Items.Count > 0 then
-		begin
-			for i:= 0 to ListBoxAnexos.Items.Count - 1 do
-				TIdAttachment.Create(IdMessage1.MessageParts, ListBoxAnexos.Items[i]);
-			end;   }
+   CaminhoAnexo := EmailAnexo.FileName;
+
+   if FileExists(CaminhoAnexo) then
+    begin
+         TIdAttachment.Create(IdMessage.MessageParts, CaminhoAnexo);
+         //TIdAttachment.Create(idmessage.MessageParts, 'C:\Users\allan\Desktop\Profissionais.pdf');
+    end;
+
+
 
   // Envio da mensagem
     try
       IdSMTP.Send(IdMessage);
-      grava := Emails.Caption;
-      Emails.Caption := grava + ',  enviado com Sucesso !';
+      Emails.Caption :=  'Casa de Repouso Jardim das Lores - Email enviado com Sucesso !';
       MessageDlg('Mensagem enviada com Sucesso.', mtInformation, [mbOK], 0);
+      EmailAnexo.CleanupInstance;
+      Label4.caption :='Caminho do Anexo : ';
     except
       On E:Exception do
 
@@ -264,11 +282,18 @@ begin
                     E.Message, mtWarning, [mbOK], 0);
 
     end;
+
+
   finally
     // liberação dos objetos da memória
     FreeAndNil(IdMessage);
     FreeAndNil(IdSSLIOHandlerSocket);
     FreeAndNil(IdSMTP);
+    
+                       End;
+
+
+
     
   end;
 end;
@@ -337,6 +362,12 @@ end;
 procedure TEmails.FormActivate(Sender: TObject);
 begin
 Emails.Caption := 'Envio de Email'
+end;
+
+procedure TEmails.anexoClick(Sender: TObject);
+begin
+EmailAnexo.Execute;
+Label4.caption :='Caminho do Anexo : '+EmailAnexo.FileName;
 end;
 
 end.

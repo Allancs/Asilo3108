@@ -1,6 +1,6 @@
 object Emails: TEmails
-  Left = 197
-  Top = 140
+  Left = 257
+  Top = 194
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Envio de Email'
@@ -372,6 +372,20 @@ object Emails: TEmails
       6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40
       F6F40F6F40F6F40F6F41D6DFFF001F7DC868E7FCF4028D95FB87ECC3FC0E8FEE
       D00FE901FFD9}
+  end
+  object Label4: TLabel
+    Left = 94
+    Top = 377
+    Width = 96
+    Height = 14
+    Caption = 'Caminho Anexo : '
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
   end
   object LadoEsquerdo: TPanel
     Left = 13
@@ -1092,7 +1106,6 @@ object Emails: TEmails
       Top = 41
       Width = 265
       Height = 24
-      CharCase = ecUpperCase
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -1431,10 +1444,20 @@ object Emails: TEmails
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object DataSource1: TDataSource
-    DataSet = Modulo.cdsEmail
-    Left = 1064
-    Top = 8
+  object anexo: TButton
+    Left = 13
+    Top = 373
+    Width = 75
+    Height = 23
+    Caption = '&Anexo'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = anexoClick
   end
   object IdSMTP1: TIdSMTP
     MaxLineAction = maException
@@ -1482,15 +1505,22 @@ object Emails: TEmails
     Top = 48
   end
   object sdsAux: TSimpleDataSet
+    Active = True
     Aggregates = <>
-    DataSet.CommandText = 'select EMAIL from PARCEIRO'
+    Connection = Modulo.Conexao
+    DataSet.CommandText = 'select EMAIL from PARCEIRO '
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
     Left = 1136
     Top = 48
+    object sdsAuxEMAIL: TStringField
+      FieldName = 'EMAIL'
+      Size = 45
+    end
   end
   object dsAux: TDataSource
+    AutoEdit = False
     DataSet = sdsAux
     Left = 1064
     Top = 56
@@ -1500,10 +1530,16 @@ object Emails: TEmails
     Left = 736
     Top = 16
   end
-  object Tempo: TTimer
-    Tag = 1
-    Interval = 10000
+  object EmailAnexo: TOpenDialog
+    Filter = 
+      'Todos|*.*|PDF|*.pdf|Fotos|*.bmp; *.png; *.gif; *.jpeg;|Documento' +
+      's|*.txt;  *.doc;  *.xls;|Compactados|*.zip; *.7z; *.rar;'
     Left = 424
-    Top = 240
+    Top = 296
+  end
+  object DataSource1: TDataSource
+    DataSet = Modulo.cdsEmail
+    Left = 1064
+    Top = 8
   end
 end

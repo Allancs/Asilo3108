@@ -151,6 +151,7 @@ object Modulo: TModulo
     end
     object cdsFunCARTEIRATRABALHO: TStringField
       FieldName = 'CARTEIRATRABALHO'
+      EditMask = '0000000 0000 aa;1;_'
       Size = 17
     end
     object cdsFunCELULAR: TStringField

@@ -1114,6 +1114,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 15
       ParentFont = False
       TabOrder = 9
     end
@@ -1130,6 +1131,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 14
       ParentFont = False
       TabOrder = 11
     end
@@ -1146,6 +1148,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 13
       ParentFont = False
       TabOrder = 12
     end
@@ -1195,6 +1198,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 10
       ParentFont = False
       TabOrder = 3
       OnExit = DBEdit4Exit
@@ -1261,6 +1265,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 14
       ParentFont = False
       TabOrder = 7
     end
@@ -1277,6 +1282,7 @@ object Funcionario: TFuncionario
       Font.Height = -11
       Font.Name = 'Arial Narrow'
       Font.Style = []
+      MaxLength = 9
       ParentFont = False
       TabOrder = 8
     end

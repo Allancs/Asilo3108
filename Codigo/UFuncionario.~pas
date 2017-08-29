@@ -108,8 +108,7 @@ uses UModulo;
 
 procedure TFuncionario.btnEditarClick(Sender: TObject);
 begin
-Modulo.cdsfun.Refresh;
-If DBEdit1.Text = ''
+Modulo.cdsfun.Refresh;If DBEdit1.Text = ''
 then
 begin
 MessageDlg('Não há dados para serem editados!', mtInformation, [mbOK], 0);
@@ -147,7 +146,7 @@ end;
 
 procedure TFuncionario.btnDeletarClick(Sender: TObject);
 begin
-Modulo.cdsfun.Refresh;
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -190,7 +189,7 @@ end;
 
 procedure TFuncionario.btnCancelarClick(Sender: TObject);
 begin
-Modulo.cdsfun.Refresh;
+
 Modulo.cdsFun.Cancel;
           DBEdit2.Enabled       := false;
           Select.Enabled        := false;

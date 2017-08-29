@@ -67,6 +67,8 @@ begin
   Modulo.Conexao.Params.Values['Database'] :=DataBase;
   Modulo.Conexao.VendorLib := Vendedor;
   ArquivoINI.Free;
+
+
   Application.Run;
 
 
