@@ -1,6 +1,6 @@
 object Login: TLogin
-  Left = 298
-  Top = 223
+  Left = 326
+  Top = 229
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Login'

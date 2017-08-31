@@ -11,7 +11,7 @@ uses
   UResponsavel in 'UResponsavel.pas' {Responsavel},
   UCadastroAvisos in 'UCadastroAvisos.pas' {CadastroAvisos},
   UContas in 'UContas.pas' {Termor},
-  UDespesas in 'UDespesas.pas' {medicacao},
+  USplash in 'USplash.pas' {FSplash},
   UFuncionario in 'UFuncionario.pas' {Funcionario},
   UIncidentes in 'UIncidentes.pas' {Incidentes},
   UParceiros in 'UParceiros.pas' {Parceiros},
@@ -23,21 +23,25 @@ uses
   UCadastroConta in 'UCadastroConta.pas' {CadastroContas},
   URelatorio in 'URelatorio.pas' {Relatorio},
   UPesquisaRel in 'UPesquisaRel.pas' {PesquisaRel},
-  IniFiles,
+  IniFiles, SYSUTILS,
   USuport in 'USuport.pas' {Suporte};
 
 {$R *.res}
 Var
      ArquivoIni,ArquivoC : TIniFile;
       UsuarioLog : string;
-
+      TempoFim : TDateTime;
     DataBase , Vendedor, Local, soma : String;
 begin
 
 
   Application.Initialize;
+  FSplash := TFSplash.Create(Application);
+  FSplash.Show;
+  FSplash.Update;
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TModulo, Modulo);
+  Application.CreateForm(TFSplash, FSplash);
   ArquivoC := TIniFile.create('C:\Asilo\ConfigAsilo.ini');
   Local := ArquivoC.ReadString('Local','Local','');
   ArquivoIni := TIniFile.Create(Local+'\Config.ini');
@@ -49,26 +53,10 @@ begin
   Modulo.Conexao.Params.Values['Database'] :=DataBase;
   Modulo.Conexao.VendorLib := Vendedor;
   ArquivoINI.Free;
- { Application.CreateForm(TEmails, Emails);
-  Application.CreateForm(TIdoso, Idoso);
-  Application.CreateForm(TVoluntarios, Voluntarios);
-  Application.CreateForm(TSMTPs, SMTPs);
-  Application.CreateForm(TResponsavel, Responsavel);
-  Application.CreateForm(TCadastroAvisos, CadastroAvisos);
-  Application.CreateForm(TTermor, Termor);
-  Application.CreateForm(Tmedicacao, medicacao);
-  Application.CreateForm(TFuncionario, Funcionario);
-  Application.CreateForm(TIncidentes, Incidentes);
-  Application.CreateForm(TParceiros, Parceiros);
-  Application.CreateForm(TProfissionais, Profissionais);
-  Application.CreateForm(TSaudes, Saudes);
-  Application.CreateForm(TTarefa, Tarefa);
-  Application.CreateForm(TAvaliacao, Avaliacao);
-  Application.CreateForm(TCadastroContas, CadastroContas);
-  Application.CreateForm(TRelatorio, Relatorio);
-  Application.CreateForm(TPesquisaRel, PesquisaRel);
-  Application.CreateForm(TSuporte, Suporte);}
 
+     TempoFim := Time + StrToTime('0:00:01');
+  repeat
+  until time >= TempoFim;
 
   Application.Run;
 

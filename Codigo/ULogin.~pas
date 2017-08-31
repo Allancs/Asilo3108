@@ -72,7 +72,8 @@ end;
 
 
 procedure TLogin.BitBtn1Click(Sender: TObject);
-
+var
+veri : string;
 begin
 
 Emails := TEmails.Create(Application);
@@ -86,7 +87,14 @@ Responsavel := TResponsavel.Create(Application);
   ULogin.ArquivoIni := TIniFile.Create(soma+'\Config.ini');
   DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');
   Principal.Caminhobanco.Caption := 'Caminho do Banco : '+DataBase;
+  veri := (Copy(DataBase, 1, 1));
+  If (Veri = '1')
+  then
+  begin
 
+  end
+  else
+  begin
   if not FileExists(DataBase) then Begin
   Messagedlg('Base de dados não encontrada! Caminho : '+ DataBase, mtInformation, [mbOk], 0);
   if BancoOpen.Execute then begin
@@ -95,6 +103,7 @@ Responsavel := TResponsavel.Create(Application);
   Principal.Caminhobanco.Caption := 'Caminho Banco : '+BancoOpen.FileName;
   ArquivoIni.Free;
   Messagedlg('Base de dados alterado com sucesso!', mtInformation, [mbOk], 0);
+  end;
   end;
   end;
 
