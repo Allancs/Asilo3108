@@ -14,6 +14,7 @@ object CadastroContas: TCadastroContas
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -437,6 +438,7 @@ object CadastroContas: TCadastroContas
       Width = 90
       Height = 33
       Caption = '&Salvar'
+      Enabled = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11

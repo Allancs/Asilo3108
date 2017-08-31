@@ -1,6 +1,6 @@
 object Login: TLogin
-  Left = 369
-  Top = 279
+  Left = 298
+  Top = 223
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Login'
@@ -413,14 +413,27 @@ object Login: TLogin
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000000000000000000000000000000000000000000000FFD9}
   end
-  object edtUsuario: TEdit
-    Left = 224
-    Top = 144
-    Width = 97
-    Height = 22
+  object Label1: TLabel
+    Left = 5
+    Top = 332
+    Width = 3
+    Height = 14
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object edtUsuario: TEdit
+    Left = 224
+    Top = 144
+    Width = 158
+    Height = 24
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
     Font.Name = 'Arial Narrow'
     Font.Style = []
     ParentFont = False
@@ -430,11 +443,11 @@ object Login: TLogin
   object edtSenha: TEdit
     Left = 224
     Top = 176
-    Width = 97
-    Height = 22
+    Width = 158
+    Height = 24
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -11
+    Font.Height = -13
     Font.Name = 'Arial Narrow'
     Font.Style = []
     ParentFont = False
@@ -456,8 +469,28 @@ object Login: TLogin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
-    OnClick = Image2Click
+    OnClick = BitBtn1Click
     Layout = blGlyphTop
     NumGlyphs = 4
+  end
+  object Button1: TButton
+    Left = 449
+    Top = 325
+    Width = 49
+    Height = 23
+    Caption = '&Banco'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object BancoOpen: TOpenDialog
+    Filter = 'Banco (.FDB)|*.FDB'
+    Left = 304
+    Top = 384
   end
 end

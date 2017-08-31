@@ -1,10 +1,10 @@
 object Principal: TPrincipal
-  Left = 233
-  Top = 187
+  Left = 249
+  Top = 169
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
-  ClientHeight = 550
+  ClientHeight = 552
   ClientWidth = 984
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -18,14 +18,14 @@ object Principal: TPrincipal
   OnShow = FormShow
   DesignSize = (
     984
-    550)
+    552)
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0
     Top = 0
     Width = 984
-    Height = 550
+    Height = 552
     Align = alClient
     Picture.Data = {
       0A544A504547496D61676589380000FFD8FFE000104A46494600010200006400
@@ -550,6 +550,13 @@ object Principal: TPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     Transparent = True
+  end
+  object Label8: TLabel
+    Left = 328
+    Top = 408
+    Width = 32
+    Height = 13
+    Caption = 'Label8'
   end
   object Env: TBitBtn
     Left = 8
@@ -1894,7 +1901,7 @@ object Principal: TPrincipal
   end
   object T: TBitBtn
     Left = 8
-    Top = 184
+    Top = 186
     Width = 180
     Height = 33
     Anchors = [akRight, akBottom]
@@ -1966,6 +1973,24 @@ object Principal: TPrincipal
       F3F1EAF3F1EAF3F1EAF3F1EAB37B50FFFFFFFFFFFFB47C51B47C51B47C51B47C
       51B47C51B47C51B47C51B47C51B47D51B47D51B47C51B47C51B47C51B47C51B4
       7C51B47C51B47C51B47C51B47C51B47C51B47C51B47C51FFFFFF}
+  end
+  object Button1: TButton
+    Left = 240
+    Top = 400
+    Width = 75
+    Height = 25
+    Caption = 'Cria'
+    TabOrder = 19
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 240
+    Top = 432
+    Width = 75
+    Height = 25
+    Caption = 'Le'
+    TabOrder = 20
+    OnClick = Button2Click
   end
   object PoupUP: TTimer
     Interval = 1
@@ -2074,10 +2099,5 @@ object Principal: TPrincipal
     OnTimer = BackupTimer
     Left = 8
     Top = 504
-  end
-  object Timer3: TTimer
-    OnTimer = Timer3Timer
-    Left = 304
-    Top = 424
   end
 end

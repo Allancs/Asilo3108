@@ -15,6 +15,8 @@ object Relatorio: TRelatorio
   OldCreateOrder = False
   Position = poDesktopCenter
   Scaled = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage

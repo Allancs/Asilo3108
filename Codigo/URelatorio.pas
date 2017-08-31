@@ -44,7 +44,6 @@ type
     pt: TBitBtn;
     prot: TSimpleDataSet;
     proot: TDataSource;
-    Label2: TLabel;
     protNOME: TStringField;
     protCELULAR: TStringField;
     protTELEFONE: TStringField;
@@ -92,10 +91,7 @@ type
     TodosResidentesDATASAIDA: TDateField;
     Todosresidentesss: TBitBtn;
     Ani: TBitBtn;
-    Label3: TLabel;
-    Label4: TLabel;
     Label18: TLabel;
-    Edit1: TEdit;
     AniversarioCOD_IDOSO: TIntegerField;
     AniversarioNOME: TStringField;
     AniversarioDATANASCIMENTO: TStringField;
@@ -145,6 +141,8 @@ type
     procedure FuncionariosTsClick(Sender: TObject);
     procedure TodosRsClick(Sender: TObject);
     procedure AniversarianteClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -260,18 +258,9 @@ begin
           // Troca a / por . (Firebird guarda a data com . e nao /)
 
 Aniversario.Close;
-//Aniversario.DataSet.CommandText := 'Select Nome, DataNascimento, Idade From Residente Where dataNascimento between '+QuotedStr(copy3)+' And '+QuotedStr(copy4)+' order by dataNascimento';
+
 Aniversario.DataSet.CommandText := 'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(datanascimento,'+a+','+b+') AS date))between '+g+' and '+g+') and (EXTRACT(day FROM CAST (replace(datanascimento,'+a+','+b+') AS date)) between '+e+' and '+f+')';
-               Edit1.Text := 'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(datanascimento,'+a+','+b+') AS date))between '+g+' and '+g+') and (EXTRACT(day FROM CAST (replace(datanascimento,'+a+','+b+') AS date)) between '+e+' and '+f+')';
 Aniversario.Open;
-
-Label2.Caption := 'SELECT * FROM Residente WHERE(EXTRACT(MONTH FROM CAST (replace(datanascimento,'+a+','+b+')';
-Label3.Caption :=  'AS date))between '+g+' and '+g+') and (EXTRACT(day FROM CAST (replace(datanascimento,';
-Label4.Caption :=a+','+b+') AS date)) between '+e+' and '+f+') replace(p.valor_venda,'+c+c+d+')';
-
-
-
-
 PesquisaRel.Data.Preview;
 end;
 
@@ -640,6 +629,24 @@ else
 begin
 cancel.Click;
 end;
+end;
+
+procedure TRelatorio.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Relatorio := Nil;
+PesquisaRel := Nil;
+end;
+
+procedure TRelatorio.FormCreate(Sender: TObject);
+begin
+If (PesquisaRel = Nil)
+Then
+PesquisaRel := TPesquisaRel.Create(Application);
+PesquisaRel.WindowState := wsNormal;
+//On Close do Form
+//Action := caFree;
+//PesquisaRel := Nil;
 end;
 
 end.

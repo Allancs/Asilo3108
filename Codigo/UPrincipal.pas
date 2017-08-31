@@ -90,7 +90,6 @@ type
     procedure arefas1Click(Sender: TObject);
     procedure Voluntarios1Click(Sender: TObject);
     procedure pxClick(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
@@ -130,33 +129,81 @@ uses UEmail, UVoluntarios,  UModulo,  USMTP, UIdoso,
 
 procedure TPrincipal.EnvClick(Sender: TObject);
 begin
-Emails.Visible := True;
+If (Emails = Nil)
+Then
+Emails := TEmails.Create(Application);
+Emails.WindowState := wsNormal;
+Emails.Show;
+//On Close do Form
+//Action := caFree;
+//Emails := Nil;
+
 end;
 
 procedure TPrincipal.VolClick(Sender: TObject);
 begin
-Voluntarios.visible := true;
+If (Voluntarios = Nil)
+Then
+Voluntarios := TVoluntarios.Create(Application);
+Voluntarios.WindowState := wsNormal;
+Voluntarios.Show;
+//On Close do Form
+//Action := caFree;
+//Voluntarios := Nil;
+
 end;
 
 procedure TPrincipal.AClick(Sender: TObject);
 begin
+If (CadastroAvisos = Nil)
+Then
+CadastroAvisos := TCadastroAvisos.Create(Application);
+CadastroAvisos.WindowState := wsNormal;
+CadastroAvisos.Show;
 
-CadastroAvisos.Visible := True;
+//On Close do Form
+//Action := caFree;
+//CadastroAvisos := Nil;
+//CadastroAvisos.Visible := True;
 end;
 
 procedure TPrincipal.SerClick(Sender: TObject);
 begin
-SMTPs.Visible := True;
+If (SMTPs = Nil)
+Then
+SMTPs := TSMTPs.Create(Application);
+SMTPs.WindowState := wsNormal;
+SMTPs.Show;
+//On Close do Form
+//Action := caFree;
+//SMTPs := Nil;
+
 end;
 
 procedure TPrincipal.ResClick(Sender: TObject);
 begin
-Idoso.Visible := True;
+If (Idoso = Nil)
+Then
+Idoso := TIdoso.Create(Application);
+Idoso.WindowState := wsNormal;
+Idoso.Show;
+//On Close do Form
+//Action := caFree;
+//Idoso := Nil;
+
 end;
 
 procedure TPrincipal.RespClick(Sender: TObject);
 begin
-Responsavel.Visible := True;
+If (Responsavel = Nil)
+Then
+Responsavel := TResponsavel.Create(Application);
+Responsavel.WindowState := wsNormal;
+Responsavel.Show;
+//On Close do Form
+//Action := caFree;
+//Responsavel := Nil;
+
 end;
 
 procedure TPrincipal.DesClick(Sender: TObject);
@@ -166,38 +213,96 @@ end;
 
 procedure TPrincipal.ConClick(Sender: TObject);
 begin
-Termor.Visible := true;
+If (Termor = Nil)
+Then
+Termor := TTermor.Create(Application);
+Termor.WindowState := wsNormal;
+Termor.Show;
+//On Close do Form
+//Action := caFree;
+//Termor := Nil;
 end;
 
 procedure TPrincipal.funcClick(Sender: TObject);
 begin
-Funcionario.Visible := True;
+If (Funcionario = Nil)
+Then
+Funcionario := TFuncionario.Create(Application);
+Funcionario.WindowState := wsNormal;
+Funcionario.Show;
+//On Close do Form
+//Action := caFree;
+//Funcionario := Nil;
+//Funcionario.Visible := True;
 end;
 
 procedure TPrincipal.IClick(Sender: TObject);
 begin
-Incidentes.Visible := True;
+If (Incidentes = Nil)
+Then
+Incidentes := TIncidentes.Create(Application);
+Incidentes.WindowState := wsNormal;
+Incidentes.Show;
+
+//On Close do Form
+//Action := caFree;
+//Incidentes := Nil;
+//Incidentes.Visible := True;
 end;
 
 procedure TPrincipal.ParClick(Sender: TObject);
 begin
-Parceiros.Visible := True;
+If (Parceiros = Nil)
+Then
+Parceiros := TParceiros.Create(Application);
+Parceiros.WindowState := wsNormal;
+Parceiros.Show;
+//On Close do Form
+//Action := caFree;
+//Parceiros := Nil;
+
 end;
 
 procedure TPrincipal.ProClick(Sender: TObject);
 begin
-Profissionais.Visible := True;
+If (Profissionais = Nil)
+Then
+Profissionais := TProfissionais.Create(Application);
+Profissionais.WindowState := wsNormal;
+Profissionais.Show;
+
+//On Close do Form
+//Action := caFree;
+//Profissionais := Nil;
+//Profissionais.Visible := True;
 end;
 
 procedure TPrincipal.SClick(Sender: TObject);
 begin
-Saudes.Visible := True;
+If (Saudes = Nil)
+Then
+Saudes := TSaudes.Create(Application);
+Saudes.WindowState := wsNormal;
+Saudes.Show;
+
+//On Close do Form
+//Action := caFree;
+//Saudes := Nil;
+//Saudes.Visible := True;
 end;
 
 procedure TPrincipal.TClick(Sender: TObject);
 begin
+If (Tarefa = Nil)
+Then
+Tarefa := TTarefa.Create(Application);
+Tarefa.WindowState := wsNormal;
+Tarefa.Show;
 
-Tarefa.Visible := True;
+//On Close do Form
+//Action := caFree;
+//Tarefa := Nil;
+//Tarefa.Visible := True;
 end;
 
 procedure TPrincipal.Funcionarios1Click(Sender: TObject);
@@ -262,14 +367,13 @@ sdsAux.Next;
 //Modulo.cdsAviso.Prior;
 end;
 
-procedure TPrincipal.Button2Click(Sender: TObject);
-begin
-Login.visible := true;
-end;
-
 procedure TPrincipal.FormShow(Sender: TObject);
 begin
-Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Database'];
+Incidentes := TIncidentes.Create(Application);
+Parceiros := TParceiros.Create(Application);
+Profissionais := TProfissionais.Create(Application);
+Saudes := TSaudes.Create(Application);
+Tarefa := TTarefa.Create(Application);
      If TLogin.Create(Self).ShowModal = mrCancel
      Then Begin
         Application.Terminate;
@@ -277,6 +381,7 @@ Caminhobanco.Caption := 'Caminho Banco : '+Modulo.Conexao.Params.Values['Databas
         End;
          If (ULogin.User = 'admin')
              Then Begin
+
              Tarefa.btnDeletar.Enabled := true;
              Tarefa.btnEditar.Enabled := true;
              Tarefa.btnCancelar.Enabled := true;
@@ -367,7 +472,15 @@ end;
 
 procedure TPrincipal.AvaliClick(Sender: TObject);
 begin
-Avaliacao.Visible := True;
+If (Avaliacao = Nil)
+Then
+Avaliacao := TAvaliacao.Create(Application);
+Avaliacao.WindowState := wsNormal;
+Avaliacao.Show;
+//On Close do Form
+//Action := caFree;
+//Avaliacao := Nil;
+
 end;
 
 procedure TPrincipal.FormActivate(Sender: TObject);
@@ -520,12 +633,29 @@ end;
 
 procedure TPrincipal.BitBtn1Click(Sender: TObject);
 begin
-Relatorio.Visible := true;
+If (Relatorio = Nil)
+Then
+Relatorio := TRelatorio.Create(Application);
+Relatorio.WindowState := wsNormal;
+Relatorio.Show;
+//On Close do Form
+//Action := caFree;
+//Relatorio := Nil;
+
 end;
 
 procedure TPrincipal.suportClick(Sender: TObject);
 begin
-Suporte.Visible := True;
+If (Suporte = Nil)
+Then
+Suporte := TSuporte.Create(Application);
+Suporte.WindowState := wsNormal;
+Suporte.Show;
+
+//On Close do Form
+//Action := caFree;
+//Suporte := Nil;
+//Suporte.Visible := True;
 end;
 
 procedure TPrincipal.BackupTimer(Sender: TObject);

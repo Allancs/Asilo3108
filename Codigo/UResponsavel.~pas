@@ -166,7 +166,7 @@ end;
 
 procedure TResponsavel.btnEditarClick(Sender: TObject);
 begin
-Modulo.cdsLigacoes.Refresh;
+
 If DBEdit1.Text = ''
 then
 begin
@@ -194,7 +194,7 @@ end;
 procedure TResponsavel.btnGravarClick(Sender: TObject);
 begin
 Modulo.cdsLigacoes.Post;
-Modulo.cdsLigacoes.Refresh;
+
          Modulo.cdsLigacoes.ApplyUpdates(-1);
 
          btnCancelar.Click;
@@ -202,7 +202,7 @@ end;
 
 procedure TResponsavel.btnCancelarClick(Sender: TObject);
 begin
-Modulo.cdsLigacoes.Refresh;
+
 Modulo.cdsLigacoes.Cancel;
           DBEdit4.Enabled       := False;
           DBEdit5.Enabled       := False;
@@ -221,7 +221,7 @@ end;
 
 procedure TResponsavel.btnDeletarClick(Sender: TObject);
 begin
-Modulo.cdsLigacoes.Refresh;
+
 IF (DBEdit1.Text = '')
 then
 begin

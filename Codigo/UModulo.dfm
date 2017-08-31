@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 211
-  Top = 323
+  Left = 290
+  Top = 164
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -31,7 +31,6 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
-    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -888,7 +887,6 @@ object Modulo: TModulo
     Top = 312
   end
   object sqlDSLogin: TSQLDataSet
-    Active = True
     CommandText = 'select * from USUARIOS'
     DataSource = dsUser
     MaxBlobSize = -1

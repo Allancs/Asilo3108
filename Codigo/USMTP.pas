@@ -38,6 +38,7 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     BancoConfig: TOpenDialog;
+    Label7: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
@@ -51,6 +52,7 @@ type
     procedure BancoConfigCanClose(Sender: TObject; var CanClose: Boolean);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
     { Private declarations }
@@ -271,16 +273,37 @@ end;
 
 procedure TSMTPs.BitBtn1Click(Sender: TObject);
 begin
-CadastroCOntas.Visible := true;
+If (CadastroCOntas = Nil)
+Then
+CadastroCOntas := TCadastroCOntas.Create(Application);
+CadastroCOntas.WindowState := wsNormal;
+CadastroCOntas.Show;
+//On Close do Form
+//Action := caFree;
+//CadastroCOntas := Nil;
+
 end;
 
 procedure TSMTPs.BitBtn2Click(Sender: TObject);
 var
-hora : string;
-begin
+hora,Local, Jun : string;
+ArquivoC : TIniFile;
+  Begin
+
+ArquivoC := TIniFile.create('C:\Asilo\ConfigAsilo.ini');
+Local := ArquivoC.ReadString('Local','Local','');
+
 hora := (copy(TimeToStr(Time), 1 , 5 ));
-winexec('C:\Asilo\Codigo\Backup.bat',SW_SHOWMINIMIZED);
+Jun := (Local+'Backup.bat');
+label7.Caption := jun;
+winexec(PChar(Jun),SW_SHOWMINIMIZED);
 Principal.Label7.Caption := 'Backup manual '+ hora+'h';
+end;
+
+procedure TSMTPs.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+SMTPs := Nil;
 end;
 
 end.

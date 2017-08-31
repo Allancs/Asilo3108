@@ -52,6 +52,7 @@ type
     procedure btnDeletarClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -241,6 +242,12 @@ end;
 procedure TSaudes.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsSaude.Next;
+end;
+
+procedure TSaudes.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Saudes := Nil;
 end;
 
 end.

@@ -145,6 +145,8 @@ type
     procedure FuncionariosTsClick(Sender: TObject);
     procedure TodosRsClick(Sender: TObject);
     procedure AniversarianteClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -176,7 +178,7 @@ end;
 procedure TRelatorio.RlParceirosClick(Sender: TObject);
 begin
 sdsPar.Close;
-sdsPar.DataSet.CommandText := 'select EMAIL , Nome FROM VOLUNTARIO';
+sdsPar.DataSet.CommandText := 'select EMAIL , Nome FROM Parceiro';
 sdsPar.Open;
 
 Pesquisarel.Email.Caption := 'Todos email cadastrados de Parceiros';
@@ -187,7 +189,7 @@ procedure TRelatorio.RlVolunClick(Sender: TObject);
 begin
 
 sdsVolu.Close;
-sdsVolu.DataSet.CommandText := 'select EMAIL , Nome FROM PARCEIRO';
+sdsVolu.DataSet.CommandText := 'select EMAIL , Nome FROM Voluntario';
 sdsVolu.Open;
 Pesquisarel.Email.Caption := 'Todos email cadastrados de Voluntários';
 PesquisaRel.Vol.Preview;
@@ -640,6 +642,24 @@ else
 begin
 cancel.Click;
 end;
+end;
+
+procedure TRelatorio.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Relatorio := Nil;
+PesquisaRel := Nil;
+end;
+
+procedure TRelatorio.FormCreate(Sender: TObject);
+begin
+If (PesquisaRel = Nil)
+Then
+PesquisaRel := TPesquisaRel.Create(Application);
+PesquisaRel.WindowState := wsNormal;
+//On Close do Form
+//Action := caFree;
+//PesquisaRel := Nil;
 end;
 
 end.

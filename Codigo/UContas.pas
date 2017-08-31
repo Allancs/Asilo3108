@@ -56,6 +56,7 @@ type
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -143,6 +144,12 @@ Corpo2.Caption :=
 '________________________';
 Termo.Preview;
 
+end;
+
+procedure TTermor.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Termor := Nil;
 end;
 
 end.

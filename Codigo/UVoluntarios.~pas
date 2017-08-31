@@ -78,7 +78,7 @@ uses UModulo;
 
 procedure TVoluntarios.btnEditarClick(Sender: TObject);
 begin
-Modulo.cdsVoluntario.Refresh;
+
 If DBEdit1.Text = ''
 then
 begin
@@ -148,7 +148,7 @@ end;
 
 procedure TVoluntarios.btnDeletarClick(Sender: TObject);
 begin
-Modulo.cdsVoluntario.Refresh;
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -182,7 +182,7 @@ end;
 
 procedure TVoluntarios.btnCancelarClick(Sender: TObject);
 begin
-Modulo.cdsVoluntario.Refresh;
+
 Modulo.cdsVoluntario.Cancel;
           DBEdit2.Enabled       := False;
           DBEdit3.Enabled       := False;
@@ -202,14 +202,13 @@ end;
 
 procedure TVoluntarios.btnGravarClick(Sender: TObject);
 begin
-Modulo.cdsVoluntario.Refresh;
+
 Modulo.cdsVoluntario.Post;
 
          Modulo.cdsVoluntario.ApplyUpdates(-1);
 
          btnCancelar.Click;
 
-Modulo.cdsvoluntario.Refresh;
 end;
 
 procedure TVoluntarios.btnAtualizarClick(Sender: TObject);

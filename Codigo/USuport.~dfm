@@ -378,9 +378,9 @@ object Suporte: TSuporte
     ParentBiDiMode = False
     TabOrder = 0
     object BitBtn1: TBitBtn
-      Left = 277
+      Left = 13
       Top = 48
-      Width = 193
+      Width = 196
       Height = 33
       Caption = 'Como Usar o Sistema'
       Font.Charset = ANSI_CHARSET
@@ -451,8 +451,8 @@ object Suporte: TSuporte
       Style = bsNew
     end
     object BitBtn3: TBitBtn
-      Left = 13
-      Top = 48
+      Left = 213
+      Top = 8
       Width = 257
       Height = 33
       Caption = 'Como Configurar Servidor SMTP'
@@ -524,8 +524,8 @@ object Suporte: TSuporte
       Style = bsNew
     end
     object BitBtn2: TBitBtn
-      Left = 13
-      Top = 8
+      Left = 213
+      Top = 48
       Width = 97
       Height = 33
       Caption = 'Contato'
@@ -596,9 +596,9 @@ object Suporte: TSuporte
         7735B87735B87735BD8C5AD2B18DF3E9DFFFFFFFFFFFFFFFFFFF}
     end
     object BitBtn4: TBitBtn
-      Left = 277
+      Left = 13
       Top = 8
-      Width = 172
+      Width = 196
       Height = 33
       Caption = 'Requisitos do Sistema'
       Font.Charset = ANSI_CHARSET
@@ -861,27 +861,29 @@ object Suporte: TSuporte
     Lines.Strings = (
       'Requisitos para utiliza'#231#227'o do Sistema'
       ''
+      'campos com * s'#227'o opcionais.'
+      ''
       '- Acesso a Internet. '
       ''
-      '  * Para fun'#231#227'o de Envio de Email'
+      '  * Para fun'#231#227'o de Envio de Email *.'
       ''
       '- Requisitos de Hardware.'
       '  '
       '  - Requisitos M'#237'nimo.'
       ''
-      '  * Processador  1 GHz '
+      '     - Processador  1 GHz '
       ''
-      '  * 1 GB de RAM '
+      '     - 1 GB de RAM '
       ''
-      '  * 250 MB de espa'#231'o em disco dispon'#237'vel'
+      '     - 250 MB de espa'#231'o em disco dispon'#237'vel'
       ''
-      '  - Requisitos Recomendado.'
+      '   - Requisitos Recomendado.'
       ''
-      '  * Processador  2 GHz '
+      '     - Processador  2 GHz '
       ''
-      '  * 2 GB de RAM '
+      '     - 2 GB de RAM '
       ''
-      '  * 500 MB de espa'#231'o em disco dispon'#237'vel')
+      '     - 500 MB de espa'#231'o em disco dispon'#237'vel')
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 5

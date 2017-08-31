@@ -37,6 +37,7 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -171,6 +172,12 @@ end;
 procedure TTarefa.FormShow(Sender: TObject);
 begin
 btnInserir.Click;
+end;
+
+procedure TTarefa.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Tarefa := Nil;
 end;
 
 end.

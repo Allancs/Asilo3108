@@ -15,6 +15,7 @@ object Termor: TTermor
   OldCreateOrder = False
   Position = poDesktopCenter
   Scaled = False
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -372,7 +373,7 @@ object Termor: TTermor
       D00FE901FFD9}
   end
   object Termo: TQuickRep
-    Left = 32767
+    Left = 32400
     Top = 34
     Width = 794
     Height = 1123

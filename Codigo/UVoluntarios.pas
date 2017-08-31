@@ -61,6 +61,7 @@ type
     procedure SpeedButton4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -286,6 +287,13 @@ Modulo.cdsVoluntario.Refresh;
       exit;
 
 
+end;
+
+procedure TVoluntarios.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+Action := caFree;
+Voluntarios := Nil;
 end;
 
 end.

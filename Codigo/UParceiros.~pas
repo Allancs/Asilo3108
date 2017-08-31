@@ -76,7 +76,7 @@ uses UModulo,
 
 procedure TParceiros.btnEditarClick(Sender: TObject);
 begin
-Modulo.cdsparceiro.Refresh;
+
 If DBEdit1.Text = ''
 then
 begin
@@ -108,7 +108,7 @@ end;
 
 procedure TParceiros.btnCancelarClick(Sender: TObject);
 begin
-Modulo.cdsparceiro.Refresh;
+
 Modulo.cdsParceiro.Cancel;
           
           DBEdit2.Enabled       := false;
@@ -130,7 +130,7 @@ end;
 
 procedure TParceiros.btnDeletarClick(Sender: TObject);
 begin
-Modulo.cdsparceiro.Refresh;
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -171,7 +171,7 @@ Modulo.cdsParceiro.Post;
 
          btnCancelar.Click;
 
-Modulo.cdsparceiro.Refresh;
+
 
 end;
 

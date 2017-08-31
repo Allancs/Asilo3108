@@ -1,10 +1,10 @@
 object Principal: TPrincipal
-  Left = 233
-  Top = 187
+  Left = 249
+  Top = 169
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
-  ClientHeight = 550
+  ClientHeight = 552
   ClientWidth = 984
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -18,14 +18,14 @@ object Principal: TPrincipal
   OnShow = FormShow
   DesignSize = (
     984
-    550)
+    552)
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0
     Top = 0
     Width = 984
-    Height = 550
+    Height = 552
     Align = alClient
     Picture.Data = {
       0A544A504547496D61676589380000FFD8FFE000104A46494600010200006400
@@ -1894,7 +1894,7 @@ object Principal: TPrincipal
   end
   object T: TBitBtn
     Left = 8
-    Top = 184
+    Top = 186
     Width = 180
     Height = 33
     Anchors = [akRight, akBottom]
@@ -2072,7 +2072,7 @@ object Principal: TPrincipal
   end
   object Timer2: TTimer
     OnTimer = BackupTimer
-    Left = 8
-    Top = 504
+    Left = 952
+    Top = 8
   end
 end

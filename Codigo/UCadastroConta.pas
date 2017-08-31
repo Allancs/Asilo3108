@@ -46,6 +46,7 @@ type
     procedure DireitaClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure VeryfiTimer(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -243,6 +244,13 @@ begin
       end;
 
 
+end;
+
+procedure TCadastroContas.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+Action := caFree;
+CadastroCOntas := Nil;
 end;
 
 end.

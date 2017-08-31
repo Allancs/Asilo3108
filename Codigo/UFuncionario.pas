@@ -89,6 +89,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
    
   private
     { Private declarations }
@@ -380,6 +381,13 @@ end;
 procedure TFuncionario.FormShow(Sender: TObject);
 begin
 Modulo.cdsFun.Refresh;
+end;
+
+procedure TFuncionario.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+Action := caFree;
+Funcionario := Nil;
 end;
 
 end.

@@ -84,6 +84,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure anexoClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -368,6 +369,12 @@ procedure TEmails.anexoClick(Sender: TObject);
 begin
 EmailAnexo.Execute;
 Label4.caption :='Caminho do Anexo : '+EmailAnexo.FileName;
+end;
+
+procedure TEmails.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Emails := Nil;
 end;
 
 end.

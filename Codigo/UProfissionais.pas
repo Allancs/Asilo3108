@@ -62,6 +62,7 @@ type
     procedure DireitaClick(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -269,6 +270,13 @@ end;
 procedure TProfissionais.FormCreate(Sender: TObject);
 begin
   Modulo.cdsProfisional.Refresh;
+end;
+
+procedure TProfissionais.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+Action := caFree;
+Profissionais := Nil;
 end;
 
 end.

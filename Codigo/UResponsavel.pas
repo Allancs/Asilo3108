@@ -73,6 +73,7 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure pesquisaChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -297,6 +298,13 @@ var Texto, TSQL, Parametro : String;
       //DBEdit3.Text := Name.Text;
       exit;
 
+end;
+
+procedure TResponsavel.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+Action := caFree;
+Responsavel := Nil;
 end;
 
 end.

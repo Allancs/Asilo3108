@@ -23,6 +23,7 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -71,6 +72,12 @@ Como.Visible := false;
 Contato.Visible := false;
 SMTP.Visible := false;
 URL.Visible := false;
+end;
+
+procedure TSuporte.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Suporte := Nil;
 end;
 
 end.

@@ -52,6 +52,7 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -235,6 +236,12 @@ end;
 procedure TIncidentes.DireitaClick(Sender: TObject);
 begin
 Modulo.cdsInc.Next;
+end;
+
+procedure TIncidentes.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Incidentes := Nil;
 end;
 
 end.

@@ -51,8 +51,8 @@ type
     QRLabel3: TQRLabel;
     Corpo2: TQRLabel;
     QRLabel4: TQRLabel;
-    QRLabel5: TQRLabel;
     Label13: TLabel;
+    QRLabel2: TQRLabel;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);

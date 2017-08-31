@@ -14,6 +14,7 @@ object CadastroAvisos: TCadastroAvisos
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnClose = FormClose
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13

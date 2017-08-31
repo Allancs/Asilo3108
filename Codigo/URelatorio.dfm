@@ -15,6 +15,8 @@ object Relatorio: TRelatorio
   OldCreateOrder = False
   Position = poDesktopCenter
   Scaled = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -379,53 +381,6 @@ object Relatorio: TRelatorio
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
     TabOrder = 0
-    object Label2: TLabel
-      Left = 8
-      Top = 8
-      Width = 41
-      Height = 16
-      Caption = 'Label2'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label3: TLabel
-      Left = 8
-      Top = 32
-      Width = 41
-      Height = 16
-      Caption = 'Label3'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Label4: TLabel
-      Left = 8
-      Top = 64
-      Width = 41
-      Height = 16
-      Caption = 'Label4'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -13
-      Font.Name = 'MS Sans Serif'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Edit1: TEdit
-      Left = 200
-      Top = 16
-      Width = 121
-      Height = 21
-      TabOrder = 0
-      Text = 'Edit1'
-    end
   end
   object LadoEsquerdo: TPanel
     Left = 13

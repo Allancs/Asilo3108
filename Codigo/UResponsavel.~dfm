@@ -1215,7 +1215,7 @@ object Responsavel: TResponsavel
     object DBEdit6: TDBEdit
       Left = 96
       Top = 272
-      Width = 81
+      Width = 84
       Height = 22
       DataField = 'CELULAR'
       DataSource = DataSource1
@@ -1232,7 +1232,7 @@ object Responsavel: TResponsavel
     object DBEdit5: TDBEdit
       Left = 8
       Top = 272
-      Width = 69
+      Width = 79
       Height = 21
       DataField = 'TELEFONE'
       DataSource = DataSource1

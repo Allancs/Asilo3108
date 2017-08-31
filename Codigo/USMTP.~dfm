@@ -1,6 +1,6 @@
 object SMTPs: TSMTPs
-  Left = 277
-  Top = 305
+  Left = 303
+  Top = 147
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Configura'#231#245'es '
@@ -371,6 +371,13 @@ object SMTPs: TSMTPs
       F6F40F6F40F6F40F6F41D6DFFF001F7DC868E7FCF4028D95FB87ECC3FC0E8FEE
       D00FE901FFD9}
   end
+  object Label7: TLabel
+    Left = 464
+    Top = 192
+    Width = 32
+    Height = 13
+    Caption = 'Label7'
+  end
   object LadoEsquerdo: TPanel
     Left = 13
     Top = 16
@@ -380,8 +387,8 @@ object SMTPs: TSMTPs
     object Label5: TLabel
       Left = 8
       Top = 200
-      Width = 31
-      Height = 14
+      Width = 26
+      Height = 15
       Caption = 'Senha'
       FocusControl = DBEdit5
       Font.Charset = ANSI_CHARSET
@@ -394,8 +401,8 @@ object SMTPs: TSMTPs
     object Label4: TLabel
       Left = 8
       Top = 160
-      Width = 37
-      Height = 14
+      Width = 32
+      Height = 15
       Caption = 'Usuario'
       FocusControl = DBEdit4
       Font.Charset = ANSI_CHARSET
@@ -408,8 +415,8 @@ object SMTPs: TSMTPs
     object Label3: TLabel
       Left = 8
       Top = 120
-      Width = 19
-      Height = 14
+      Width = 16
+      Height = 15
       Caption = 'Port'
       FocusControl = DBEdit3
       Font.Charset = ANSI_CHARSET
@@ -422,8 +429,8 @@ object SMTPs: TSMTPs
     object Label2: TLabel
       Left = 8
       Top = 80
-      Width = 27
-      Height = 14
+      Width = 26
+      Height = 15
       Caption = 'SMTP'
       FocusControl = DBEdit2
       Font.Charset = ANSI_CHARSET
@@ -436,8 +443,8 @@ object SMTPs: TSMTPs
     object Label1: TLabel
       Left = 8
       Top = 40
-      Width = 33
-      Height = 14
+      Width = 29
+      Height = 15
       Caption = 'C'#243'digo'
       FocusControl = DBEdit1
       Font.Charset = ANSI_CHARSET
@@ -450,8 +457,8 @@ object SMTPs: TSMTPs
     object Label6: TLabel
       Left = 8
       Top = 8
-      Width = 259
-      Height = 22
+      Width = 207
+      Height = 23
       Caption = 'Cadastro de Servidor SMTP'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -464,7 +471,7 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 216
       Width = 113
-      Height = 22
+      Height = 23
       DataField = 'SENHA'
       DataSource = DataSource1
       Enabled = False
@@ -481,7 +488,7 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 176
       Width = 161
-      Height = 22
+      Height = 23
       DataField = 'EMAIL'
       DataSource = DataSource1
       Enabled = False
@@ -497,7 +504,7 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 136
       Width = 43
-      Height = 22
+      Height = 23
       DataField = 'PORT'
       DataSource = DataSource1
       Enabled = False
@@ -513,7 +520,7 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 96
       Width = 89
-      Height = 22
+      Height = 23
       DataField = 'SMTP'
       DataSource = DataSource1
       Enabled = False
@@ -529,7 +536,7 @@ object SMTPs: TSMTPs
       Left = 8
       Top = 56
       Width = 17
-      Height = 22
+      Height = 23
       DataField = 'ID'
       DataSource = DataSource1
       Enabled = False
@@ -1297,15 +1304,6 @@ object SMTPs: TSMTPs
         FDFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     end
   end
-  object user: TMemo
-    Left = 424
-    Top = 32
-    Width = 185
-    Height = 89
-    Lines.Strings = (
-      'user')
-    TabOrder = 2
-  end
   object DataSource1: TDataSource
     DataSet = Modulo.cdsEmail
     Left = 880
@@ -1325,10 +1323,5 @@ object SMTPs: TSMTPs
     OnCanClose = BancoConfigCanClose
     Left = 709
     Top = 328
-  end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
-    Left = 440
-    Top = 152
   end
 end

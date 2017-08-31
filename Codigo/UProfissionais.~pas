@@ -79,7 +79,7 @@ uses UModulo;
 
 procedure TProfissionais.btnDeletarClick(Sender: TObject);
 begin
-Modulo.cdsProfisional.Refresh;
+
 IF (DBEdit1.Text = '')
 then
 begin
@@ -156,7 +156,7 @@ end;
 
 procedure TProfissionais.btnEditarClick(Sender: TObject);
 begin
-Modulo.cdsProfisional.Refresh;
+
 If DBEdit1.Text = ''
 then
 begin
@@ -185,7 +185,7 @@ end;
 procedure TProfissionais.btnCancelarClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Cancel;
-Modulo.cdsProfisional.Refresh;          
+         
           DBEdit2.Enabled       := false;
           DBEdit3.Enabled       := false;
           DBEdit4.Enabled       := false;
@@ -206,7 +206,7 @@ end;
 procedure TProfissionais.btnGravarClick(Sender: TObject);
 begin
 Modulo.cdsProfisional.Post;
-Modulo.cdsProfisional.Refresh;
+
          Modulo.cdsProfisional.ApplyUpdates(-1);
 
          btnCancelar.Click;

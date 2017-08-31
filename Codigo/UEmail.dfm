@@ -15,6 +15,7 @@ object Emails: TEmails
   OldCreateOrder = False
   Position = poDesktopCenter
   OnActivate = FormActivate
+  OnClose = FormClose
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   PixelsPerInch = 96

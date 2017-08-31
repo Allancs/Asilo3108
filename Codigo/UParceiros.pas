@@ -58,6 +58,7 @@ type
     procedure EsquerdaClick(Sender: TObject);
     procedure DireitaClick(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -258,6 +259,12 @@ Modulo.cdsparceiro.Refresh;
       //DBEdit3.Text := Name.Text;
       exit;
 
+end;
+
+procedure TParceiros.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Parceiros := Nil;
 end;
 
 end.

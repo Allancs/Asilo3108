@@ -47,6 +47,7 @@ type
     procedure N3Click(Sender: TObject);
     procedure N4Click(Sender: TObject);
     procedure N5Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -271,6 +272,12 @@ begin
           N55 := '5, O Sistema esta 100%, Otimo!';
           Image1.Picture.LoadFromFile('C:\Asilo\Icones\Avaliacao5.jpg');
           END;
+end;
+
+procedure TAvaliacao.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Avaliacao := Nil;
 end;
 
 end.

@@ -1,6 +1,6 @@
 object SMTPs: TSMTPs
-  Left = 277
-  Top = 305
+  Left = 303
+  Top = 147
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Casa de Repouso Jardim das Flores - Configura'#231#245'es '
@@ -14,6 +14,7 @@ object SMTPs: TSMTPs
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -370,6 +371,13 @@ object SMTPs: TSMTPs
       6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40F6F40
       F6F40F6F40F6F40F6F41D6DFFF001F7DC868E7FCF4028D95FB87ECC3FC0E8FEE
       D00FE901FFD9}
+  end
+  object Label7: TLabel
+    Left = 464
+    Top = 192
+    Width = 32
+    Height = 13
+    Caption = 'Label7'
   end
   object LadoEsquerdo: TPanel
     Left = 13
