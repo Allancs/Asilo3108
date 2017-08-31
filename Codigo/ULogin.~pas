@@ -36,10 +36,26 @@ var
  ArquivoIni : TIniFile;
   Login: TLogin;
   User, Nome : string;
-     NomeArquivo, DataBase, soma: string;
+  NomeArquivo, DataBase, soma: string;
 implementation
 
-uses UModulo, UPrincipal;
+uses UModulo, UPrincipal,
+  UEmail,
+  UVoluntarios,
+  UCadastroAvisos,
+  USMTP,
+  UIdoso,
+  UResponsavel,
+  UContas,
+  UFuncionario,
+  UIncidentes,
+  UParceiros,
+  UProfissionais,
+  USaude,
+  UTarefa,
+  UAv,
+  URelatorio,
+  USuport;
 
 {$R *.dfm}
 
@@ -56,7 +72,16 @@ end;
 
 
 procedure TLogin.BitBtn1Click(Sender: TObject);
+
 begin
+
+Emails := TEmails.Create(Application);
+Voluntarios := TVoluntarios.Create(Application);
+CadastroAvisos := TCadastroAvisos.Create(Application);
+Idoso := TIdoso.Create(Application);
+Responsavel := TResponsavel.Create(Application);
+
+
   soma := (Copy(Application.Exename, 1, 15));
   ULogin.ArquivoIni := TIniFile.Create(soma+'\Config.ini');
   DataBase := ArquivoIni.ReadString('Asilo','DATABASE','');

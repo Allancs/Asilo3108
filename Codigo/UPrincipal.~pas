@@ -64,9 +64,6 @@ type
     T: TBitBtn;
     DBMemo1: TDBMemo;
     DBMemo2: TDBMemo;
-    Button1: TButton;
-    Button2: TButton;
-    Label8: TLabel;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -93,7 +90,6 @@ type
     procedure arefas1Click(Sender: TObject);
     procedure Voluntarios1Click(Sender: TObject);
     procedure pxClick(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
@@ -109,7 +105,6 @@ type
     procedure suportClick(Sender: TObject);
     procedure BackupTimer(Sender: TObject);
     procedure anClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -370,16 +365,6 @@ begin
 sdsAux.Next;
 
 //Modulo.cdsAviso.Prior;
-end;
-
-procedure TPrincipal.Button2Click(Sender: TObject);
-Var
-  ArquivoIni : TIniFile;
-  Local : String;
-begin
-ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
-Local := ArquivoIni.ReadString('Local','Local','');
-Label8.Caption := Local;
 end;
 
 procedure TPrincipal.FormShow(Sender: TObject);
@@ -703,14 +688,6 @@ end;
 procedure TPrincipal.anClick(Sender: TObject);
 begin
 sdsAux.Prior;
-end;
-
-procedure TPrincipal.Button1Click(Sender: TObject);
-Var
-  ArquivoIni : TIniFile;
-begin
-ArquivoIni := TIniFile.Create('C:\Asilo\Codigo\Config.ini');
-ArquivoIni.WriteString('Local','Local','');
 end;
 
 end.

@@ -551,13 +551,6 @@ object Principal: TPrincipal
     ParentFont = False
     Transparent = True
   end
-  object Label8: TLabel
-    Left = 328
-    Top = 408
-    Width = 32
-    Height = 13
-    Caption = 'Label8'
-  end
   object Env: TBitBtn
     Left = 8
     Top = 424
@@ -1974,24 +1967,6 @@ object Principal: TPrincipal
       51B47C51B47C51B47C51B47C51B47D51B47D51B47C51B47C51B47C51B47C51B4
       7C51B47C51B47C51B47C51B47C51B47C51B47C51B47C51FFFFFF}
   end
-  object Button1: TButton
-    Left = 240
-    Top = 400
-    Width = 75
-    Height = 25
-    Caption = 'Cria'
-    TabOrder = 19
-    OnClick = Button1Click
-  end
-  object Button2: TButton
-    Left = 240
-    Top = 432
-    Width = 75
-    Height = 25
-    Caption = 'Le'
-    TabOrder = 20
-    OnClick = Button2Click
-  end
   object PoupUP: TTimer
     Interval = 1
     Left = 952
@@ -2097,7 +2072,7 @@ object Principal: TPrincipal
   end
   object Timer2: TTimer
     OnTimer = BackupTimer
-    Left = 8
-    Top = 504
+    Left = 952
+    Top = 8
   end
 end

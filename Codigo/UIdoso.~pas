@@ -68,6 +68,7 @@ type
     procedure DBEdit4Click(Sender: TObject);
     procedure DBEdit4Enter(Sender: TObject);
     procedure RespClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -357,6 +358,12 @@ end;
 procedure TIdoso.RespClick(Sender: TObject);
 begin
 Responsavel.Visible := true;
+end;
+
+procedure TIdoso.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree;
+Idoso := Nil;
 end;
 
 end.
